@@ -1,0 +1,228 @@
+.navbar {
+  width: 100%;
+  height: 77px;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  text-decoration: none;
+  z-index: 99;
+    font-family: 'kufam';
+top:0;
+  right: 0;
+  min-height: 50px;
+  display: flex;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+  align-items: center;
+  align-content: center;
+  border-bottom: 1px solid var(--ocean1);
+}
+.navbar.scrolled {
+  top: 0px;
+  padding-top: 0px;
+  height: 90px;
+  background-color: white;
+  box-shadow: 0 4px 8px #888;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.IconLogo {
+  width: 210px;
+  height: 65px;
+  align-self: center;
+}
+.navbarContainer {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  gap: 290px;
+  height: 100%;
+}
+.navbarLogo {
+  width: 20%;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  text-decoration: none;
+}
+.navbarLogo {
+  font-size: 24px;
+  font-weight: bold;
+}
+.navbarLinksContainer {
+  display: flex;
+  gap: 24px;
+  text-decoration: none;
+
+}
+
+.navbarLink {
+  font-size: 17px;
+    font-family: 'kufam';
+
+  transition: color 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.navbarLink a {
+  text-decoration: none;
+  color: var(--darkBlue);
+  padding: 13px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.navbar.scrolled .navbarLink a {
+  color: rgb(0, 0, 0);
+}
+.navbarLink a:hover {
+  color: var(--ocean);
+  text-decoration: none;
+}
+
+.activeLink a {
+  background-color: var(--darkBlue);
+  color: white;
+  z-index: 1;
+  padding: 7px;
+
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+}
+.navbar.scrolled .activeLink a {
+  color: white;
+  text-decoration: none;
+}
+
+/* ###################################################################### */
+@media (max-width: 480px) {
+}
+/* ###################################################################### */
+@media (max-width: 600px) {
+  .navbar {
+    width: 100%;
+    height: 80px;
+    color: rgb(2, 34, 129);
+    position: fixed;
+    top: 0;
+    /*   font-family: 'kufam'; */
+    left: 0;
+    z-index: 50;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+  }
+  .IconLogo {
+    width: 100%;
+    height: 45px;
+    align-self: center;
+  }
+  .navbarLinksContainer {
+    display: flex;
+    width: 60%;
+    align-items: center;
+    align-self: center;
+  }
+  .navbarLogo {
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+  }
+  .navbarContainer {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(15, 39, 39);
+
+    align-items: center;
+    height: 100%;
+  }
+  .navbarLink {
+    font-size: 10px;
+  }
+  .navbarLink a {
+    text-decoration: none;
+    color: rgb(2, 34, 129);
+  }
+}
+
+
+@media (min-width: 601px) and (max-width: 768px) {
+  .navbarLinksContainer {
+    display: flex;
+  }
+}
+.navbarLogoText {
+  padding: 5px;
+  width: 90px;
+  height: 70px;
+  align-self: center;
+  transition: color 0.3s ease;
+}
+
+.navbar.scrolled .navbarLogoText {
+  width: 90px;
+  height: 90px;
+}
+
+.navbarLinkContainer {
+  position: relative;
+
+
+}
+/* .navbarLinkContainer::after {
+    content: '▼';
+    margin-left: 5px;
+    font-size: 12px;
+    color: black;
+  } */
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  margin-top: 5px;
+  min-width: 150px;
+  z-index: 10;
+}
+
+.dropdownItem {
+  padding: 10px 15px;
+  color: var(--darkBlue);
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.dropdownItem:hover {
+  background-color: #f0f0f0;
+}
+.navbarLogin{
+  display: flex;
+  align-items: center;
+
+}
+.LoginContainer{
+  background-color: var(--blue);
+  border-radius: 8px;
+  width: 109px;
+  display: flex;
+height: 30px;
+align-items: center;
+align-content: center;
+justify-content: center;
+}
+.LoginText{
+text-align: center;
+color: white;
+font-size: 14px;
+font-weight: regular;
+font-family: "kufam";
+align-self: center;
+}
