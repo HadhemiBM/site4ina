@@ -76,8 +76,8 @@ const Contact: React.FC = () => {
             would respond your inquiry shortly.
           </p>
 
-          <div className={styles.row}>
-            <i className="fa-solid fa-paper-plane"></i>
+          <div className={styles.rowContact}>
+          <i className="fa-solid fa-paper-plane"></i>
             <div className={styles.columnContact}>
               <p>Send an email</p>
 

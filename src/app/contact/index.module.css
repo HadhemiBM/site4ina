@@ -37,6 +37,13 @@
   flex-direction: row;
 
 }
+.rowContact{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(112, 81, 42);
+  color: #000;
+}
 .column {
   width: 100%;
   display: flex;
