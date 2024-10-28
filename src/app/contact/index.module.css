@@ -618,7 +618,7 @@ border-top: var(--darkGrey) 1px solid;
   align-self: center;
   margin-top: 30px;
   align-self: center;
-  gap:50px;
+  gap:20px;
 }
 .Team1{
 
@@ -630,8 +630,8 @@ border-top: var(--darkGrey) 1px solid;
   justify-content: center;
   /* gap: 10px; */
   margin: 0px 0px 0px 0px;
-  /* border-bottom: 1px ridge  var(--blue); */
-  border-bottom: 2mm double rgba(230, 241, 245, 0.6);
+  border-bottom: var(--blue) 1px solid;
+
 width: 300px;
 height: 9rem;
 gap: 10px;

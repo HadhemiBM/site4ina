@@ -8,42 +8,116 @@ width: 100%;
   display: block;
   border-top: 1px solid var(--ocean1);
   box-shadow: 4px 8px 8px #888;
-
+margin-top: 30px;
  
 }
 
 .container {
-  max-width: 1200px;
+  min-width: 100%;
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
 }
 
-.text {
-  margin-bottom: 10px;
-  font-size: 14px;
-}
-
-.socialLinks {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.Right{
   display: flex;
-  gap: 15px;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  /* background-color: rgb(20, 95, 160); */
+  height: 100%;
+  gap:10px;  
+  align-items: center;
+  align-content: center;
+  justify-content: center;
 }
+.middle{
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+  /* background-color: rgb(70, 110, 145); */
+  align-items: center;
+  align-content: center;
+  justify-content: center;
 
-.socialLinks li {
-  display: inline;
+  align-items: center;
 }
+.Left{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
 
-.socialLinks a {
-  color: var(--darkBlue);
-  text-decoration: none;
-  font-size: 16px;
-  transition: color 0.3s ease;
 }
+.navigation , .contact {
+ display: flex;
+ flex-direction: column;
+ width: 50%;
 
-.socialLinks a:hover {
-  color: #1e90ff;
+
+}
+.navigation h6 , .contact h6 ,.Left h6{
+  color: var(--blue);
+  font-family: 'kufam';
+ }
+.RightLogo{
+  width: 200px;
+  height: 160px;
+}
+.TeamSocial{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  /* width: 100%; */
+}
+.TeamSocial i{
+  background-color: var(--blue);
+  color: white;
+  width:40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.row{
+
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.form{
+border: var(--blue) 1px solid;
+width: 432px;
+height: 48px;
+border-radius: 8px;
+display: flex;
+flex-direction: row;
+align-items: center;
+align-content: center;
+  justify-content: space-between;
+align-self: center;
+padding: 0;
+
+}
+.input{
+align-content: center;justify-content: center;
+  padding: 4px;
+
+}
+.SUb{
+
+  border-left: var(--blue) 1px solid;
+  width: 150px;
+  height: 48px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  align-content: center;
+  justify-content: center;
+  right: 0;
+  color: var(--blue);
+  align-self: flex-end;
 }

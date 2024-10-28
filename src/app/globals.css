@@ -31,21 +31,24 @@ body {
 
 }
 .page{
-  margin-top: 75px;
+  /* margin-top: 75px; */
   /* padding: 4px; */
   width: 100%;
   min-height: 100vh - 75px;
 
 }
-/* .page-container {
+ /* .page-container {
   display: flex;
   flex-direction: column;
 
   min-height: 100vh;
   position: relative;
-}
-.content-wrapper {
+} */
+ .content-wrapper {
   flex: 1;
   display: flex;
+  margin-top: 75px;
+
   flex-direction: column;
-} */
+  position: relative;
+} 

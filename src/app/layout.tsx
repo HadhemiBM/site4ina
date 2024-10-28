@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/style.css";
 import { Kufam } from "next/font/google";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 // Metadata configuration
 export const metadata: Metadata = {
@@ -40,8 +41,10 @@ export default function RootLayout({
       <body className={kufam.className}>
         <div className="page-container">
           <Navbar />
+          
           <main className="content-wrapper">{children}</main>
         </div>
+          <Footer/>
       </body>
     </html>
   );

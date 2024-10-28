@@ -16,10 +16,11 @@ import arrowService from "../Assests/svg/arrowService.svg";
 import blog from "../Assests/svg/blog.svg";
 import team1 from "../Assests/team1.png";
 import Link from "next/link";
-
+import { useRouter } from 'next/navigation';
+import { motion } from 'framer-motion';
 const Homee: React.FC = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
-
+ 
   const scrollLeft = () => {
     if (scrollRef.current) {
       scrollRef.current.scrollBy({
@@ -28,7 +29,10 @@ const Homee: React.FC = () => {
       });
     }
   };
-
+  const router = useRouter();
+  const navigateToService = () => {
+    router.push('/service'); 
+  };
   const scrollRight = () => {
     if (scrollRef.current) {
       scrollRef.current.scrollBy({
@@ -83,7 +87,23 @@ const Homee: React.FC = () => {
             From small businesses to large enterprises, we offer tailored energy
             management solutions designed to fit your unique needs
           </p>
-          <button className={styles.buttonDiscover}>Discover</button>
+          {/* <button
+          onClick={
+
+            () => {
+              scrollRef.current?.scrollIntoView({ behavior: "smooth" });
+            }
+
+          } 
+           className={styles.buttonDiscover}>Discover</button> */}
+            <motion.button
+        onClick={navigateToService}
+        className={styles.buttonDiscover}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+      >
+        Discover
+      </motion.button>
         </div>
         <div className={styles.CibleRight}>
           <div className={styles.SpinnerWrapper}>
@@ -449,15 +469,50 @@ const Homee: React.FC = () => {
           years.
         </p>
         <div className={styles.AllTeam}>
+        <style>{`
+       @keyframes shakeLinkedIn {
+    0% { transform: translate(1px, 0); }
+    25% { transform: translate(-1px, 0); }
+    50% { transform: translate(1px, 0); }
+    75% { transform: translate(-1px, 0); }
+    100% { transform: translate(1px, 0); }
+}
+
+@keyframes shakeFacebook {
+    0% { transform: rotate(5deg); }
+    25% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(5deg); }
+}
+
+.fa-shake-linkedin {
+    animation: shakeLinkedIn 1s infinite; /* Adjust duration and iteration as needed */
+}
+
+.fa-shake-facebook {
+    animation: shakeFacebook 1s infinite; /* Adjust duration and iteration as needed */
+}
+      `}</style>
           {/* team1 */}
           <div className={styles.Team1}>
             <div className={styles.TeamIcon}>
-              <Image className={styles.TeamImage} src={team1} alt="team" />
+            <Image className={styles.TeamImage} src={team1} alt="team" />
+
             </div>
+            <div className={styles.column}>
+
             <div className={styles.TeamContent}>
-              <h6 className={styles.TeamName}>John Doe</h6>
-              <p className={styles.TeamDesc}>Software Engineer</p>
+            
+              <h6 className={styles.TeamName}>Jane Doe</h6>
+              <p className={styles.TeamDesc}>Project Manager</p>
             </div>
+            <div className={styles.TeamSocial}>
+            <i className="fa-brands fa-linkedin fa-shake-facebook "  ></i>
+            <i className="fa-brands fa-facebook fa-shake-facebook"></i>
+            </div>
+            </div>
+
           </div>
           {/* team2 */}
           <div className={styles.Team1}>
@@ -465,10 +520,99 @@ const Homee: React.FC = () => {
             <Image className={styles.TeamImage} src={team1} alt="team" />
 
             </div>
+            <div className={styles.column}>
+
             <div className={styles.TeamContent}>
+            
               <h6 className={styles.TeamName}>Jane Doe</h6>
               <p className={styles.TeamDesc}>Project Manager</p>
             </div>
+            <div className={styles.TeamSocial}>
+            <i className="fa-brands fa-linkedin fa-shake-facebook "  ></i>
+            <i className="fa-brands fa-facebook fa-shake-facebook"></i>
+            </div>
+            </div>
+
+          </div>
+             {/* team3 */}
+             <div className={styles.Team1}>
+            <div className={styles.TeamIcon}>
+            <Image className={styles.TeamImage} src={team1} alt="team" />
+
+            </div>
+            <div className={styles.column}>
+
+            <div className={styles.TeamContent}>
+            
+              <h6 className={styles.TeamName}>Jane Doe</h6>
+              <p className={styles.TeamDesc}>Project Manager</p>
+            </div>
+            <div className={styles.TeamSocial}>
+            <i className="fa-brands fa-linkedin fa-shake-facebook "  ></i>
+            <i className="fa-brands fa-facebook fa-shake-facebook"></i>
+            </div>
+            </div>
+
+          </div>
+             {/* team4 */}
+             <div className={styles.Team1}>
+            <div className={styles.TeamIcon}>
+            <Image className={styles.TeamImage} src={team1} alt="team" />
+
+            </div>
+            <div className={styles.column}>
+
+            <div className={styles.TeamContent}>
+            
+              <h6 className={styles.TeamName}>Jane Doe</h6>
+              <p className={styles.TeamDesc}>Project Manager</p>
+            </div>
+            <div className={styles.TeamSocial}>
+            <i className="fa-brands fa-linkedin fa-shake-facebook "  ></i>
+            <i className="fa-brands fa-facebook fa-shake-facebook"></i>
+            </div>
+            </div>
+
+          </div>
+             {/* team5 */}
+             <div className={styles.Team1}>
+            <div className={styles.TeamIcon}>
+            <Image className={styles.TeamImage} src={team1} alt="team" />
+
+            </div>
+            <div className={styles.column}>
+
+            <div className={styles.TeamContent}>
+            
+              <h6 className={styles.TeamName}>Jane Doe</h6>
+              <p className={styles.TeamDesc}>Project Manager</p>
+            </div>
+            <div className={styles.TeamSocial}>
+            <i className="fa-brands fa-linkedin fa-shake-facebook "  ></i>
+            <i className="fa-brands fa-facebook fa-shake-facebook"></i>
+            </div>
+            </div>
+
+          </div>
+                       {/* team6 */}
+                       <div className={styles.Team1}>
+            <div className={styles.TeamIcon}>
+            <Image className={styles.TeamImage} src={team1} alt="team" />
+
+            </div>
+            <div className={styles.column}>
+
+            <div className={styles.TeamContent}>
+            
+              <h6 className={styles.TeamName}>Jane Doe</h6>
+              <p className={styles.TeamDesc}>Project Manager</p>
+            </div>
+            <div className={styles.TeamSocial}>
+            <i className="fa-brands fa-linkedin fa-shake-facebook "  ></i>
+            <i className="fa-brands fa-facebook fa-shake-facebook"></i>
+            </div>
+            </div>
+
           </div>
         </div>
       </div>

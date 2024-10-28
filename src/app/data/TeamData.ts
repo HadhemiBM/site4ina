@@ -22,6 +22,7 @@ export const teams: Team[] = [
     name: "Hina Zribi",
     post: "Co-Founder",
     image: team1,
+
   },
   {
     name: "Sabri Mhimdi",
@@ -29,7 +30,7 @@ export const teams: Team[] = [
     image: team2,
   },
   {
-    name: "Mariem Zouaoui",
+    name: "Mariem Zouaoui",   
     post: "Embedded System Engineer",
     image: team1,
   },
