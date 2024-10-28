@@ -5,195 +5,213 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+  font-family: "kufam";
 }
-.Header{
+.Header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width:100%;
+  width: 100%;
   height: auto;
-margin-top: 70px;
+  margin-top: 70px;
 
   justify-content: space-between;
 }
-.Left{
+.Left {
   flex: 0.6;
   display: flex;
   flex-direction: column;
   gap: 40px;
-
 }
-.Right{
+.Right {
   flex: 0.3;
 
   display: flex;
   flex-direction: column;
-  background-image: url('./../Assests/svg/ServiceCircle.svg');
+  background-image: url("./../Assests/svg/ServiceCircle.svg");
   background-repeat: no-repeat;
-  
-  background-position: center  right;
+
+  background-position: center right;
   height: 600px;
-   align-items: flex-start; 
-  align-content: center; 
+  align-items: flex-start;
+  align-content: center;
   justify-content: center;
   text-align: start;
-
 }
-.content{
+.content {
   display: flex;
   flex-direction: column;
   width: 60%;
   align-self: end;
-  gap:10px
-
+  gap: 10px;
 }
-.title{
+.title {
   color: var(--blue);
   font-size: 46px;
   background-color: white;
   padding: 10px;
-  border-bottom:2px var(--blue) solid ;
-  border-right:2px var(--blue) solid ;
+  border-bottom: 2px var(--blue) solid;
+  border-right: 2px var(--blue) solid;
   border-radius: 50px;
   width: 681px;
   display: flex;
   height: 100px;
   align-items: center;
+  font-family: "kufam";
+
   align-content: center;
   justify-content: flex-end;
-padding-right: 80px;
+  padding-right: 80px;
 }
-.desc{
+.desc {
   color: black;
   font-size: 24px;
 
   padding: 10px;
 
   display: flex;
+  font-family: "kufam";
 
   align-items: center;
   align-content: center;
   /* justify-content: flex-start; */
   margin-left: 50px;
 }
-.RightDesc{
-display: flex;
-flex-direction: row;
+.RightDesc {
+  display: flex;
+  flex-direction: row;
 
-gap:20px;
-
-
+  gap: 20px;
 }
-.RightDesc p:hover{
-cursor: pointer;
-color: #000;
-font-size: 20px;
+.RightDesc p:hover {
+  cursor: pointer;
+  color: #000;
+  font-size: 20px;
 }
 
 .loader {
   width: 20px;
   height: 20px;
   display: flex;
-  color: #3a8efc69;
-  --c:#0000 calc(100% - 20px),currentColor calc(100% - 19px) 98%,#0000;
-  background:
-    radial-gradient(farthest-side at left,var(--c)) right /50% 100%,
-    radial-gradient(farthest-side at top ,var(--c)) bottom/100% 50%;
+  color: #d38c07dc;
+  /* color: #3a8efc69; */
+  --c: #0000 calc(100% - 20px), currentColor calc(100% - 19px) 98%, #0000;
+  background: radial-gradient(farthest-side at left, var(--c)) right / 50% 100%,
+    radial-gradient(farthest-side at top, var(--c)) bottom/100% 50%;
   background-repeat: no-repeat;
-  animation: l18-0 2s infinite linear .25s;
+  animation: l18-0 2s infinite linear 0.25s;
 }
-.loader::before{
-  content:"";
-  width:50%;
+.loader::before {
+  content: "";
+  width: 50%;
   height: 50%;
-  background:radial-gradient(farthest-side at bottom right,var(--c));
-  animation: l18-1 .5s infinite linear;
+  background: radial-gradient(farthest-side at bottom right, var(--c));
+  animation: l18-1 0.5s infinite linear;
 }
 @keyframes l18-0 {
-  0%   ,12.49% {transform: rotate(0deg)}
-  12.5%,37.49% {transform: rotate(90deg)}
-  37.5%,62.49% {transform: rotate(180deg)}
-  62.5%,87.49% {transform: rotate(270deg)}
-  87.5%,100%   {transform: rotate(360deg)}
+  0%,
+  12.49% {
+    transform: rotate(0deg);
+  }
+  12.5%,
+  37.49% {
+    transform: rotate(90deg);
+  }
+  37.5%,
+  62.49% {
+    transform: rotate(180deg);
+  }
+  62.5%,
+  87.49% {
+    transform: rotate(270deg);
+  }
+  87.5%,
+  100% {
+    transform: rotate(360deg);
+  }
 }
 @keyframes l18-1 {
-  0%      {transform: perspective(150px) rotateY(0)      rotate(0)} 
-  50%     {transform: perspective(150px) rotateY(180deg) rotate(0)} 
-  80%,100%{transform: perspective(150px) rotateY(180deg) rotate(90deg)}
+  0% {
+    transform: perspective(150px) rotateY(0) rotate(0);
+  }
+  50% {
+    transform: perspective(150px) rotateY(180deg) rotate(0);
+  }
+  80%,
+  100% {
+    transform: perspective(150px) rotateY(180deg) rotate(90deg);
+  }
 }
-.AllService{
+.AllService {
   display: flex;
   flex-direction: column;
   width: 100%;
   height: auto;
   gap: 100px;
 }
-.service{
+.service {
   display: flex;
   flex-direction: row;
-  width:100%;
+  width: 100%;
   align-items: center;
   align-content: center;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.serviceRight{
+.serviceRight {
   display: flex;
   flex-direction: row;
-  width:100%;
+  width: 100%;
   align-items: center;
   align-content: flex-end;
-  justify-content:flex-end;
+  justify-content: flex-end;
   flex-wrap: wrap;
 
   align-self: flex-end;
 }
-.serviceIconLeft{
- width: 50%;
-
+.serviceIconLeft {
+  width: 50%;
 }
-.serviceIcon{
- width: 40%;
- align-self: flex-end;
-
-
+.serviceIcon {
+  width: 40%;
+  align-self: flex-end;
 }
-.serviceContentLeft{
+.serviceContentLeft {
   width: 45%;
 
-display: flex;
-gap:10px;
+  display: flex;
+  gap: 10px;
   flex-direction: column;
 }
-.serviceContentRight{
+.serviceContentRight {
   width: 60%;
   background-color: white;
   display: flex;
-  gap:10px;
+  gap: 10px;
   padding-left: 50px;
   flex-direction: column;
 }
-.serviceContent_desc{
+.serviceContent_desc {
   width: 90%;
   color: #000;
   font-size: 22px;
-
+  font-family: "kufam";
 }
-.ImageSpin{
+.ImageSpin {
   width: 24px;
   height: 24px;
 }
-.row{
+.row {
   display: flex;
   flex-direction: row;
   width: 100%;
-gap: 10px;
-align-items: center;
-align-content: center;
-justify-content: flex-start;
+  gap: 10px;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-start;
 }
-.row h6{
+.row h6 {
   color: var(--blue);
   font-size: 24px;
-
+  font-family: "kufam";
 }

@@ -1,0 +1,119 @@
+.container {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.Header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  margin-top: 70px;
+  gap: 20px;
+  justify-content: space-between;
+}
+.title {
+  color: var(--blue);
+  font-size: 46px;
+  background-color: white;
+  padding: 10px;
+  border-bottom: 2px var(--blue) solid;
+  border-right: 2px var(--blue) solid;
+  border-radius: 50px;
+  width: 681px;
+  display: flex;
+  height: 100px;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-end;
+  padding-right: 80px;
+}
+.desc {
+  color: black;
+  font-size: 24px;
+  padding: 10px;
+  display: flex;
+  width: 80%;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  align-self: center;
+  margin-left: 50px;
+}
+.AllBlog {
+  display: grid;
+  flex-direction: row;
+  width: 80%;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  margin-top: 30px;
+  /* gap:10px; */
+  grid-template-columns: repeat(3, 1fr);
+}
+.Blog1 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  /* gap: 10px; */
+  margin: 0px 0px 50px 0px;
+  /* background-color: aqua; */
+  border-bottom: var(--darkGrey) 1px solid;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  width: 419px;
+}
+.BlogContent {
+  font-size: 20px;
+  color: black;
+  font-family: "kufam";
+  padding-left: 1.5rem;
+  /* margin-left: 1.5rem; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.BlogDesc,
+.BlogDateText {
+  font-size: 14px;
+  color: black;
+  font-family: "kufam";
+  width: 100%;
+  margin: 10px 0px 0px 0px;
+}
+.BlogDateText {
+  width: 75%;
+}
+.BlogTitle {
+  font-size: 22px;
+  font-family: "kufam";
+  margin: 10px 0px 10px 0px;
+}
+.BlogButton {
+  color: black;
+  font-size: 14px;
+  font-family: "kufam";
+  text-decoration: none;
+}
+.Blogfooter {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 20px 0px 10px 0px;
+  border-top: var(--darkGrey) 1px solid;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+}

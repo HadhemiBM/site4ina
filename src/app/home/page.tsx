@@ -171,7 +171,7 @@ const Homee: React.FC = () => {
             <p className={styles.SolutionDesc1}>
               An all-in-one, intuitive dashboard that enables you to visualize
               your energy usage data, make informed decisions, and reduce energy
-              costs.{" "}
+              costs.
             </p>
           </div>
           <div className={styles.Solution2}>
