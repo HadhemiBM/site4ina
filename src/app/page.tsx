@@ -5,7 +5,7 @@ import Homee from "./home/page";
 export default function Home() {
   return (
     <div className="page">
-   <Homee/>
+   {/* <Homee/> */}
     </div>
   );
 }

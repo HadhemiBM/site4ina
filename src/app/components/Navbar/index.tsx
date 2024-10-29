@@ -14,22 +14,25 @@ const Navbar: React.FC = () => {
   const [postDrop, setPostDrop] = useState(false);
 
   const links = [
-    { id: 1, link: "/", name: "Accueil" },
+    { id: 1, link: "/home", name: "Accueil" },
     { id: 2, link: "/about", name: "AboutUs" },
     { id: 3, link: "/services", name: "Services" },
     { id: 4, link: "/solutions", name: "Solutions" },
     { id: 5, link: "/posts", name: "Posts" },
     { id: 6, link: "/contact", name: "Contact" },
   ];
+  
   const solutionsLinks = [
     { id: 1, link: "/solutions/explore", name: "Explore" },
     { id: 2, link: "/solutions/demo", name: "Demo" },
   ];
-  const PostsLinks = [
+  
+  const postsLinks = [
     { id: 1, link: "/posts/events", name: "Events" },
     { id: 2, link: "/posts/blog", name: "Blog" },
     { id: 3, link: "/posts/whitePapers", name: "White Papers" },
   ];
+  
   useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY;
@@ -45,11 +48,17 @@ const Navbar: React.FC = () => {
   return (
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
       <div className={styles.navbarContainer}>
+        <Link href="/">
         <Image
           className={styles.navbarLogoText}
           src={logo}
-          alt="Logo"
+          alt="Logo 4ina"
+          width={90}  
+          height={70} 
+       
         />
+        </Link>
+       
         <div className={styles.navbarLinksContainer}>
           {links.map(({ id, link, name }) => (
             <div
@@ -85,7 +94,7 @@ const Navbar: React.FC = () => {
               )}
    {name === "Posts" && postDrop && (
                 <div className={styles.dropdownMenu}>
-                  {PostsLinks.map(({ id, link, name }) => (
+                  {postsLinks.map(({ id, link, name }) => (
                     <Link key={id} href={link} className={styles.dropdownItem}>
                       {name}
                     </Link>

@@ -14,15 +14,30 @@ import assistance from "../Assests/svg/AssistanceService.svg";
 
 const Service: React.FC = () => {
   const router = useRouter();
-  const firstSectionRef = useRef<HTMLDivElement | null>(null);
-  const secondSectionRef = useRef<HTMLDivElement | null>(null);
-  const scrollToFirstSection = () => {
-    firstSectionRef.current?.scrollIntoView({ behavior: 'smooth' });
+  const SmartSectionRef = useRef<HTMLDivElement | null>(null);
+  const DataSectionRef = useRef<HTMLDivElement | null>(null);
+  const MobileSectionRef = useRef<HTMLDivElement | null>(null);
+  const WebSectionRef = useRef<HTMLDivElement | null>(null);
+  const AssistSectionRef = useRef<HTMLDivElement | null>(null);
+  const SmartSection = () => {
+    SmartSectionRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const scrollToSecondSection = () => {
-    secondSectionRef.current?.scrollIntoView({ behavior: 'smooth' });
+  const DataSection = () => {
+    DataSectionRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
+  const WebSection = () => {
+    WebSectionRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+  const MobileSection = () => {
+    MobileSectionRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const AssistanceSection = () => {
+    AssistSectionRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+
 
   return (
     <PageTransition>
@@ -49,31 +64,31 @@ const Service: React.FC = () => {
             <div className={styles.content}>
               <div className={styles.RightDesc}>
                 <div className={styles.loader}></div>
-                <p onClick={scrollToFirstSection}>Smart Device Based on IA</p>
+                <p onClick={SmartSection}>Smart Device Based on IA</p>
               </div>
               <div className={styles.RightDesc}>
                 <div className={styles.loader}></div>
 
-                <p onClick={scrollToSecondSection}>Data Analytics</p>
+                <p onClick={DataSection}>Data Analytics</p>
               </div>
               <div className={styles.RightDesc}>
                 <div className={styles.loader}></div>
-                <p>Web Development</p>
+                <p onClick={WebSection}>Web Development</p>
               </div>
               <div className={styles.RightDesc}>
                 <div className={styles.loader}></div>
-                <p>Mobile Development</p>
+                <p onClick={MobileSection}>Mobile Development</p>
               </div>
               <div className={styles.RightDesc}>
                 <div className={styles.loader}></div>
-                <p>Assistance after installation</p>
+                <p onClick={AssistanceSection}>Assistance after installation</p>
               </div>
             </div>
           </div>
         </div>
 
         <div className={styles.AllService}>
-          <div ref={firstSectionRef} className={styles.service}>
+          <div ref={SmartSectionRef} className={styles.service}>
             <div className={styles.serviceIconLeft}>
               <Image src={service} alt="service" />
             </div>
@@ -94,7 +109,7 @@ const Service: React.FC = () => {
             </div>
           </div>
 
-          <div  ref={secondSectionRef} className={styles.serviceRight}>
+          <div  ref={DataSectionRef} className={styles.serviceRight}>
             <div className={styles.serviceContentRight}>
               <div className={styles.row}>
                 <h6> • Data Analytics</h6>
@@ -113,7 +128,7 @@ const Service: React.FC = () => {
               <Image src={Data} alt="service" />
             </div>
           </div>
-          <div className={styles.service}>
+          <div ref={WebSectionRef} className={styles.service}>
             <div className={styles.serviceIconLeft}>
               <Image src={web} alt="service" />
             </div>
@@ -134,7 +149,7 @@ const Service: React.FC = () => {
             </div>
           </div>
 
-          <div className={styles.serviceRight}>
+          <div  ref={MobileSectionRef} className={styles.serviceRight}>
             <div className={styles.serviceContentRight}>
               <div className={styles.row}>
                 <h6> • Mobile Development</h6>
@@ -153,7 +168,7 @@ const Service: React.FC = () => {
               <Image src={mobile} alt="service" />
             </div>
           </div>
-          <div className={styles.service}>
+          <div ref={AssistSectionRef} className={styles.service}>
             <div className={styles.serviceIconLeft}>
               <Image src={assistance} alt="service" />
             </div>

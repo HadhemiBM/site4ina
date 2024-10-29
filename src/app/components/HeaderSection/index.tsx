@@ -14,8 +14,10 @@ const Header: React.FC = () => {
   return (
     <div className={styles.container}>
     <div className={styles.HeaderText}>
-      <h1  className={styles.HeaderTitle}>Leading the Way in Energy Management</h1>
-      <p className={styles.HeaderDesc}>Impowering businesses to achieve sustainability and efficiency through Smart energy management solutions & services</p>
+    {/* <h1  className={styles.HeaderTitle}>4InA Technologie</h1> */}
+
+      <h1  className={styles.HeaderTitle}>Redefining Energy Management with AI and IoT Excellence</h1>
+      <p className={styles.HeaderDesc}>Elevating energy management by integrating AI and IoT, enabling proactive monitoring, real-time analytics, and smarter decision-making to enhance your operational efficiency</p>
       </div>
     <div className={styles.Imagecontainer}>
       <Image className={styles.HeadImage} src = {dme} alt="IA" />
