@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+
 import "./globals.css";
 import "../app/css/bootstrap.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -28,7 +28,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      
       <head>
+      <link rel="icon" href="./favicon.ico" />
         <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
         <link href="css/bootstrap.min.css" rel="stylesheet" />
         <link href="lib/animate/animate.min.css" rel="stylesheet" />

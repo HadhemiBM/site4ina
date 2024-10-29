@@ -14,7 +14,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
 .formContainer {
@@ -28,21 +27,33 @@
   background-color: rgb(255, 255, 255);
   gap:20px;
   border-radius: 20px;
-
 }
 .row {
   width: 100%;
   gap: 10px;
   display: flex;
   flex-direction: row;
-
 }
 .rowContact{
   width: 100%;
   display: flex;
   flex-direction: row;
-  background-color: rgb(112, 81, 42);
+
   color: #000;
+  align-items: center;
+  justify-content: center;
+  gap:15px;
+  align-items: center;
+}
+.rowContact i{
+  color: var(--blue);
+  width: 40px;
+  height: 40px;
+  font-size: 32px; 
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .column {
   width: 100%;
@@ -50,11 +61,17 @@
   flex-direction: column;
 gap: 15px;
 }
+.columnContact_p{
+color: var(--blue);
+  font-size: 16px;
+
+}
 .columnContact{
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: bisque;
+
+
 }
 .input , .inputMessage{
   background-color: var(--lightGrey);
@@ -80,18 +97,29 @@ gap: 15px;
   padding: 10px;
   flex-direction: column;
   justify-content: center;
-  background-color: rgb(47, 88, 88);
+
   /* align-items: center; */
 }
 .RightTitle{
   font-size: 32px;
 font-family: 'kufam';
   color: black;
-
 }
 .RightDesc{
   font-size: 16px;
   color: black;
   font-family: 'kufam';
-
+}
+.submitbtn{
+  background-color: var(--blue);
+  border-radius: 8px;
+  width: 200px;
+  display: flex;
+height: 35px;
+align-items: center;
+align-content: center;
+color: white;
+justify-content: center;
+align-self: center;
+margin-top: 10px;
 }
