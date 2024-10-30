@@ -10,6 +10,8 @@ import SpinnerImage from "../Assests/svg/spinner.svg";
 import hardware from "../Assests/svg/hardware.svg";
 import algo from "../Assests/svg/algo.svg";
 import indus from "../Assests/svg/indus.svg";
+import decarbonization from "../Assests/svg/decarbonization.svg";
+import agritec from "../Assests/svg/agritec.svg";
 import software from "../Assests/svg/software.svg";
 import power from "../Assests/svg/power.svg";
 import arrowLeft from "../Assests/svg/arrowLeft.svg";
@@ -268,7 +270,7 @@ From small businesses to large enterprises, we provide scalable and adaptive AI-
             </div>
             <div className={styles.Solution1}>
               <div className={styles.SolutionCircle}>
-                <Image className={styles.Image} src={indus} alt="hardware" />
+                <Image className={styles.Image} src={decarbonization} alt="hardware" />
               </div>
               <h3 className={styles.SolTitle1}>Decarbonization</h3>
               <p className={styles.SolutionDesc1}>
@@ -285,7 +287,7 @@ From small businesses to large enterprises, we provide scalable and adaptive AI-
                 energy you need, when you need it.
               </p>
               <div className={styles.SolutionCircle}>
-                <Image className={styles.Image} src={indus} alt="hardware" />
+                <Image className={styles.Image} src={agritec} alt="hardware" />
               </div>
             </div>
           </div>

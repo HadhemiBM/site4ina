@@ -151,13 +151,13 @@ color: #000;
   height: 70px;
   align-items: center;
   justify-content: center;
-  background-color: #c8d3f62a;
+  /* background-color: #c8d3f62a; */
   margin-top: 30px;
   border-radius: 8px;
-  border-bottom: var(--blue) 1px solid;
-  border-left: var(--blue) 1px solid;
+  /* border-bottom: var(--blue) 1px solid; */
+  border-left: #495469 1px solid;
   opacity: 0;
-  transform: translateX(50px);
+  transform: transl 4ateX(50px);
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
@@ -174,11 +174,12 @@ color: #000;
   align-items: center;
   align-content: center;
   justify-content: center;
-  background-color: #c8d3f62a;
+  /* background-color: #c8d3f62a; */
   margin-top: 30px;
-  border-radius: 8px;
-  border-bottom: var(--blue) 1px solid;
-  border-left: var(--blue) 1px solid;
+  background: linear-gradient(90deg, #CED7E8 0%, #F0F3F9 42%, #ffffff 79%);
+  border-radius: 50px;
+  /* border-bottom: var(--blue) 1px solid; */
+  /* border-left: var(--blue) 1px solid; */
   opacity: 0; 
   transform: translateX(100%); 
   padding: 15px;
@@ -212,7 +213,7 @@ color: #000;
   margin-top: 55%;
   margin-left: -50px;
 }
-.SpinnerDesc  {
+/* .SpinnerDesc  {
   font-size: 20px;
   width: 100%;
   font-family: "kufam";
@@ -222,7 +223,7 @@ color: #000;
 
   padding: 3px;
   border-radius: 50px;
-}
+} */
 .SpinnerDescu ,.SpinnerDescu1{
   font-size: 30px;
   /* width: 100%; */
@@ -593,10 +594,10 @@ color: #000;
   height: auto;
   align-items: center;
   /* justify-content: center; */
-  background-color: #1f499738;
-  margin-top:-50px;
+  background-color: #1f499718;
+  /* background: linear-gradient( #ffffff ,#1f499731 ,#ffffff ); */
+  margin-top:50px;
   padding: 40px;
-
 }
 /* Blog Section */
 .BlogSection{
@@ -607,7 +608,7 @@ color: #000;
   align-items: center;
   justify-content: center;
 
-  /* margin-top: -50px; */
+  margin-top: 50px;
 }
 .AllBlog {
   display: flex;
@@ -712,6 +713,7 @@ border-top: var(--darkGrey) 1px solid;
   height: auto;
   align-items: center;
   justify-content: center;
+  margin-top: 50px;
 
 }
 .AllTeam{
