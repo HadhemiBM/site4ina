@@ -17,8 +17,8 @@ const Navbar: React.FC = () => {
     { id: 1, link: "/home", name: "Accueil" },
     { id: 2, link: "/about", name: "AboutUs" },
     { id: 3, link: "/services", name: "Services" },
-    { id: 4, link: "/solutions", name: "Solutions" },
-    { id: 5, link: "/posts", name: "Posts" },
+    { id: 4, link: "", name: "Solutions" },
+    { id: 5, link: "", name: "Posts" },
     { id: 6, link: "/contact", name: "Contact" },
   ];
   

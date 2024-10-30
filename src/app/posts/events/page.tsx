@@ -3,7 +3,7 @@ import styles from "./index.module.css";
 import React from "react";
 import { useRef } from "react";
 import PageTransition from "../../components/PageTransition";
-import blog from "../../Assests/svg/blog.svg";
+import parti from "../../Assests/svg/parti.svg";
 
 import { useRouter } from "next/navigation";
 import Image from "next/image";
@@ -63,6 +63,19 @@ const Events: React.FC = () => {
                 transformation of agriculture!
               </p>
             </div>
+          </div>
+          <div className={styles.events1}>
+            <div className={styles.eventHeader}>
+              <h2 className={styles.eventTitle}>
+              4InA Technologie Shines in the Digital Energy Challenge
+              </h2>
+              <p className={styles.eventDesc}>
+              We are proud to announce 4InA Technologie’s remarkable achievement in the Digital Energy Challenge, organized by the French Development Agency (AFD) in partnership with ADEME and the European Union. Selected from 168 applicants, 4InA Technologie stood out as one of only nine winners from Africa, including five innovative startups and four energy operators.
+
+This experience has not only enriched our journey but also strengthened our dedication to excellence and innovation in the energy sector. Being part of this esteemed program is both a milestone and a motivation to continue driving impactful solutions for a sustainable energy future in Africa.
+              </p>
+            </div>
+       <Image src={parti}  height="300" width="700" alt="Participation" />
           </div>
         </div>
       </div>

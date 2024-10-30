@@ -43,7 +43,7 @@ const Homee: React.FC = () => {
 
     // Cleanup timers on unmount
     return () => {
-      timers.forEach(timer => clearTimeout(timer));
+      timers.forEach((timer) => clearTimeout(timer));
     };
   }, []);
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -144,7 +144,7 @@ const Homee: React.FC = () => {
     "Hospitals",
     "Healthcare facilities",
     "Agriculture & Farming",
-    "Manufacturing & Industrial"
+    "Manufacturing & Industrial",
   ];
   return (
     <PageTransition>
@@ -153,11 +153,14 @@ const Homee: React.FC = () => {
         <div className={styles.CibleSection}>
           <div className={styles.CibleLeft}>
             <h1 className={styles.CibleTitle}>
-            Tailored Energy Management Solutions for Key Sectors and Businesses of All Sizes
+              Tailored Energy Management Solutions for Key Sectors and
+              Businesses of All Sizes
             </h1>
             <p className={styles.CibleDesc}>
-            Our expertise spans agriculture, manufacturing, healthcare, and hospitality. 
-From small businesses to large enterprises, we provide scalable and adaptive AI-powered energy solutions aligned with Industry 4.0 standards.
+              Our expertise spans agriculture, manufacturing, healthcare, and
+              hospitality. From small businesses to large enterprises, we
+              provide scalable and adaptive AI-powered energy solutions aligned
+              with Industry 4.0 standards.
             </p>
             {/* <button
           onClick={
@@ -216,7 +219,7 @@ From small businesses to large enterprises, we provide scalable and adaptive AI-
         </div>
       )}
     </div> */}
-    {/* <div className={styles.CibleRight}>
+          {/* <div className={styles.CibleRight}>
       {visibleItems.includes(0) && (
         <div className={`${styles.CibleCont} ${visibleItems.includes(0) ? styles.show : ''}`}>
           <p className={styles.SpinnerDescu1}>Hospitals</p>
@@ -238,15 +241,21 @@ From small businesses to large enterprises, we provide scalable and adaptive AI-
         </div>
       )}
     </div> */}
-    <div className={styles.CibleRight}>
-      {cibles.map((item, index) => (
-        visibleItems.includes(index) && (
-          <div key={index} className={`${styles.CibleCont} ${styles[`CibleCont${index + 1}`]} ${visibleItems.includes(index) ? styles.show : ''}`}>
-            <p className={styles.SpinnerDescu}>{item}</p>
+          <div className={styles.CibleRight}>
+            {cibles.map(
+              (item, index) =>
+                visibleItems.includes(index) && (
+                  <div
+                    key={index}
+                    className={`${styles.CibleCont} ${
+                      styles[`CibleCont${index + 1}`]
+                    } ${visibleItems.includes(index) ? styles.show : ""}`}
+                  >
+                    <p className={styles.SpinnerDescu}>{item}</p>
+                  </div>
+                )
+            )}
           </div>
-        )
-      ))}
-    </div>
         </div>
         <div className={styles.SolutionSection}>
           <div className={styles.SolutionTitle}>
@@ -254,11 +263,12 @@ From small businesses to large enterprises, we provide scalable and adaptive AI-
             <h1 className={styles.SolutionTitle2}>Solutions</h1>
           </div>
           <p className={styles.SolutionsDesc}>
-          The powerful combination of our solutions  ensures reliable performance, seamless monitoring, and real-time optimization, driving efficiency and innovation across various industries.
+            The powerful combination of our solutions ensures reliable
+            performance, seamless monitoring, and real-time optimization,
+            driving efficiency and innovation across various industries.
           </p>
           <div className={styles.AllSolutions}>
             <div className={styles.Solution2}>
-              
               <h3 className={styles.SolTitle1}>Industrial</h3>
               <p className={styles.SolutionDesc1}>
                 Our advanced sensors collect real-time energy usage data and
@@ -270,7 +280,11 @@ From small businesses to large enterprises, we provide scalable and adaptive AI-
             </div>
             <div className={styles.Solution1}>
               <div className={styles.SolutionCircle}>
-                <Image className={styles.Image} src={decarbonization} alt="hardware" />
+                <Image
+                  className={styles.Image}
+                  src={decarbonization}
+                  alt="hardware"
+                />
               </div>
               <h3 className={styles.SolTitle1}>Decarbonization</h3>
               <p className={styles.SolutionDesc1}>
@@ -280,7 +294,6 @@ From small businesses to large enterprises, we provide scalable and adaptive AI-
               </p>
             </div>
             <div className={styles.Solution2}>
-              
               <h3 className={styles.SolTitle1}>Agritech</h3>
               <p className={styles.SolutionDesc1}>
                 Data aggregation and forecasting to ensure that you have the
@@ -293,13 +306,16 @@ From small businesses to large enterprises, we provide scalable and adaptive AI-
           </div>
         </div>
         <div className={styles.DemoSection}>
-          <h1 className={styles.SolutionTitle2}>Unlock your potential</h1>
+          <h1 className={styles.SolutionTitle2}>
+            Experience 4InA Technologie’s EMS in Action Book a Demo Today!
+          </h1>
           <p className={styles.SolutionsDesc}>
-            Book a demo now and discover how we can elevate your operations.
-            Don’t wait, experience the future of efficiency and performance!
+            Schedule a personalized demo with our experts to explore how we can
+            help you optimize energy usage, reduce costs, and drive sustainable
+            growth
           </p>
           <Link href="/solutions/demo" passHref>
-            <button className={styles.buttonDemo}>Try the Demo</button>
+            <button className={styles.buttonDemo}>Book a Demo</button>
           </Link>
         </div>
         <div className={styles.ServicesSection}>
@@ -308,9 +324,7 @@ From small businesses to large enterprises, we provide scalable and adaptive AI-
             <h1 className={styles.SolutionTitle2}>Services</h1>
           </div>
           <p className={styles.SolutionsDesc}>
-            We work closely with you to ensure seamless implementation and
-            ongoing success, empowering you to optimize performance and achieve
-            your goals.
+          We ensure smooth implementation and long-term success 
           </p>
           <div className={styles.AllServices}>
             {/* service1 */}
@@ -326,11 +340,10 @@ From small businesses to large enterprises, we provide scalable and adaptive AI-
               <div className={styles.ServiceContent}>
                 <div className={styles.ServiceContentCol}>
                   <h6 className={styles.ServiceTitle}>
-                    Smart device Based on IA
+                  Technical Support
                   </h6>
                   <p className={styles.ServiceDesc}>
-                    Electrical device with an HMI screen with a local
-                    application based on HMI
+                  Our dedicated team is here to resolve issues and maximize system efficiency.
                   </p>
                 </div>
                 <Link className={styles.ServiceImg} href="/services">
@@ -349,10 +362,9 @@ From small businesses to large enterprises, we provide scalable and adaptive AI-
               </div>
               <div className={styles.ServiceContent}>
                 <div className={styles.ServiceContentCol}>
-                  <h6 className={styles.ServiceTitle}>Data Analytics</h6>
+                  <h6 className={styles.ServiceTitle}>Development (Web and Mobile)</h6>
                   <p className={styles.ServiceDesc}>
-                    Control, monitoring of energy and consumption of each device
-                    / machine and prediction of anomalies with AI
+                  Our intuitive platforms, available on both web and mobile, are tailored to meet your business needs
                   </p>
                 </div>
                 <Link className={styles.ServiceImg} href="/services">
@@ -371,10 +383,9 @@ From small businesses to large enterprises, we provide scalable and adaptive AI-
               </div>
               <div className={styles.ServiceContent}>
                 <div className={styles.ServiceContentCol}>
-                  <h6 className={styles.ServiceTitle}>Web Development</h6>
+                  <h6 className={styles.ServiceTitle}>Migration</h6>
                   <p className={styles.ServiceDesc}>
-                    Development of web platform to monitor your energy daily and
-                    predect futur consumption .
+                  Our team facilitates EMS upgrades for a seamless transition to enhanced solutions without disrupting your operations
                   </p>
                 </div>
                 <Link className={styles.ServiceImg} href="/services">
@@ -393,11 +404,9 @@ From small businesses to large enterprises, we provide scalable and adaptive AI-
               </div>
               <div className={styles.ServiceContent}>
                 <div className={styles.ServiceContentCol}>
-                  <h6 className={styles.ServiceTitle}>Mobile Development</h6>
+                  <h6 className={styles.ServiceTitle}>Training & Accompaniement</h6>
                   <p className={styles.ServiceDesc}>
-                    Application isolated or linked to the device: monitoring of
-                    energy consumption, technical assistance by AI, prediction
-                    of future consumption, factory and workshop management.
+                  We offer on-site and computer-based training to ensure your team is fully equipped to utilize our solutions effectively
                   </p>
                 </div>
                 <Link className={styles.ServiceImg} href="/services">
@@ -406,7 +415,7 @@ From small businesses to large enterprises, we provide scalable and adaptive AI-
               </div>
             </div>
             {/* service5 */}
-            <div className={styles.Service1}>
+            {/* <div className={styles.Service1}>
               <div className={styles.ServiceIcon}>
                 <Image
                   className={styles.ServicePower}
@@ -428,7 +437,7 @@ From small businesses to large enterprises, we provide scalable and adaptive AI-
                   <Image src={arrowService} alt="service" />
                 </Link>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className={styles.PartnerSection}>
@@ -585,7 +594,7 @@ From small businesses to large enterprises, we provide scalable and adaptive AI-
             </div>
             {/* see all */}
           </div>
-          <div className={styles.SeeAll}>
+          {/* <div className={styles.SeeAll}>
             <Link className={styles.SeeAllText} href="/blog">
               See All Blogs
             </Link>
@@ -595,7 +604,17 @@ From small businesses to large enterprises, we provide scalable and adaptive AI-
               src={arrowService}
               alt="see all"
             />
-          </div>
+          </div> */}
+          {/* <div className={styles.SeeAll}> */}
+          <Link className={styles.SeeAllText} href="/posts/blog">
+            <div className={styles.arrow}>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </Link>
+
+          {/* </div> */}
         </div>
         <div className={styles.TeamSection}>
           <div className={styles.SolutionTitle}>
