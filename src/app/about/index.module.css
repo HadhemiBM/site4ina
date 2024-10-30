@@ -1,0 +1,149 @@
+.CibleTitle {
+    font-family: "kufam";
+    color: white;
+    margin-left: 20px;
+    font-size: 32px;
+    align-self: center;
+    /* text-align: center; */
+  }
+  .CibleDesc {
+    font-size: 28px;
+    font-family: "kufam";
+  
+    width: 80%;
+    margin-top: 40px;
+    margin-left: 20px;
+  color: #fff;
+    align-self: center;
+    text-align: center;
+  }
+  .CibleSection {
+    display: flex;
+    background-image:linear-gradient(
+        rgba(45, 51, 85, 0.5),
+        rgba(0, 0, 0, 0.7)
+      ),url('../Assests/workers.jpg') ;
+    flex-direction: column;
+    width: 100%;
+    height: 700px;
+    flex-wrap: wrap;
+
+    background-repeat: no-repeat;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+
+  }
+/* Team Section */
+.TeamSection{
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  
+  }
+  .AllTeam{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    margin-top: 30px;
+    align-self: center;
+    gap:50px;
+  }
+  .Team1 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    /* gap: 10px; */
+    margin: 0px 0px 0px 0px;
+    /* border-bottom: 1px ridge  var(--blue); */
+    border-bottom: 2mm double rgba(230, 241, 245, 0.6);
+  width: 300px;
+  height: 9rem;
+  gap: 10px;
+  }
+  
+  .TeamIcon {
+    width: 100px; /* Fixed width for the icon */
+    height: 100px; /* Fixed height for the icon */
+    border-radius: 50%; /* Circular shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Required for absolute positioning of the Image */
+  }
+  
+  .TeamImageWrapper {
+    position: relative; /* Required for fill to work */
+    width: 100%; /* Full width of the parent */
+    height: 100%; /* Full height of the parent */
+  }
+  
+  .TeamImage {
+    border-radius: 50%; /* Keep the border radius for a circular image */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+  }
+  .column{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .TeamContent p{
+    margin : 0px 0px 0px 0px;
+  }
+  .TeamSocial{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+  }
+  .TeamSocial i{
+    background-color: var(--blue);
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+  .SolutionTitle {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  .SolutionTitle1,
+  .SolutionTitle2 {
+    font-size: 46px;
+    color: var(--blue);
+    font-family: "kufam";
+  }
+  .SolutionTitle1 {
+    color: var(--darkGrey);
+  }
+  .SolutionsDesc {
+    font-size: 28px;
+    width: 70%;
+    text-align: center;
+  color: #000;
+  
+    font-family: "kufam";
+  }

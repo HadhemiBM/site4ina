@@ -704,6 +704,7 @@ border-top: var(--darkGrey) 1px solid;
   gap:10px;
 }
 .SeeAllText{
+
   text-decoration: none;
   color: black;
 }
@@ -715,6 +716,7 @@ border-top: var(--darkGrey) 1px solid;
   width: 100%;
   height: auto;
   align-items: center;
+  align-content: center;
   justify-content: center;
   margin-top: 50px;
 
@@ -738,9 +740,9 @@ border-top: var(--darkGrey) 1px solid;
   align-content: center;
   align-items: center;
   justify-content: center;
-  /* gap: 10px; */
+
   margin: 0px 0px 0px 0px;
-  /* border-bottom: 1px ridge  var(--blue); */
+  
   border-bottom: 2mm double rgba(230, 241, 245, 0.6);
 width: 300px;
 height: 9rem;
@@ -748,24 +750,24 @@ gap: 10px;
 }
 
 .TeamIcon {
-  width: 100px; /* Fixed width for the icon */
-  height: 100px; /* Fixed height for the icon */
-  border-radius: 50%; /* Circular shape */
+  width: 100px; 
+  height: 100px;
+  border-radius: 50%; 
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative; /* Required for absolute positioning of the Image */
+  position: relative; 
 }
 
 .TeamImageWrapper {
-  position: relative; /* Required for fill to work */
-  width: 100%; /* Full width of the parent */
-  height: 100%; /* Full height of the parent */
+  position: relative; 
+  width: 100%; 
+  height: 100%; 
 }
 
 .TeamImage {
-  border-radius: 50%; /* Keep the border radius for a circular image */
-  object-fit: cover; /* Maintain aspect ratio and cover the area */
+  border-radius: 50%; 
+  object-fit: cover; 
 }
 .column{
   display: flex;

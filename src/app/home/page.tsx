@@ -616,7 +616,7 @@ const Homee: React.FC = () => {
 
           {/* </div> */}
         </div>
-        <div className={styles.TeamSection}>
+        {/* <div className={styles.TeamSection}>
           <div className={styles.SolutionTitle}>
             <h1 className={styles.SolutionTitle1}>Our</h1>
             <h1 className={styles.SolutionTitle2}>Team</h1>
@@ -644,19 +644,19 @@ const Homee: React.FC = () => {
 }
 
 .fa-shake-linkedin {
-    animation: shakeLinkedIn 1s infinite; /* Adjust duration and iteration as needed */
+    animation: shakeLinkedIn 1s infinite;
 }
 
 .fa-shake-facebook {
-    animation: shakeFacebook 1s infinite; /* Adjust duration and iteration as needed */
+    animation: shakeFacebook 1s infinite;
 }
       `}</style>
             {team.map((item, index) => (
               <div key={index} className={styles.Team1}>
                 <div className={styles.TeamIcon}>
                   <div className={styles.TeamImageWrapper}>
-                    {" "}
-                    {/* New wrapper for Image */}
+                   
+                
                     <Image
                       className={styles.TeamImage}
                       src={item.img}
@@ -683,9 +683,9 @@ const Homee: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
-    </PageTransition>
+    // </PageTransition>
   );
 };
 
