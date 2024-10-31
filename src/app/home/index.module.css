@@ -30,7 +30,7 @@
   width: 80%;
   margin-top: 40px;
   margin-left: 20px;
-color: #000;
+  color: #000;
   align-self: center;
 }
 
@@ -77,7 +77,6 @@ color: #000;
   padding: 0;
   align-items: flex-end;
   align-content: center;
-
 }
 .buttonDiscover {
   background-color: var(--blue);
@@ -157,7 +156,7 @@ color: #000;
   /* border-bottom: var(--blue) 1px solid; */
   border-left: #495469 1px solid;
   opacity: 0;
-  transform: transl 4ateX(50px);
+  transform: transl 4ateX (50px);
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
@@ -176,7 +175,7 @@ color: #000;
   justify-content: center;
   /* background-color: #c8d3f62a; */
   margin-top: 30px;
-  background: linear-gradient(90deg, #CED7E8 0%, #F0F3F9 42%, #ffffff 79%);
+  background: linear-gradient(90deg, #ced7e8 0%, #f0f3f9 42%, #ffffff 79%);
   border-radius: 50px;
   /* border-bottom: var(--blue) 1px solid; */
   /* border-left: var(--blue) 1px solid; */
@@ -190,16 +189,16 @@ color: #000;
   opacity: 1;
   transform: translateX(0);
 }
-.CibleCont1{
+.CibleCont1 {
   width: 230px;
 }
-.CibleCont2{
+.CibleCont2 {
   width: 330px;
 }
-.CibleCont3{
+.CibleCont3 {
   width: 430px;
 }
-.CibleCont4{
+.CibleCont4 {
   width: 530px;
 }
 .row3 {
@@ -224,12 +223,13 @@ color: #000;
   padding: 3px;
   border-radius: 50px;
 } */
-.SpinnerDescu ,.SpinnerDescu1{
+.SpinnerDescu,
+.SpinnerDescu1 {
   font-size: 30px;
   /* width: 100%; */
   font-family: "kufam";
   margin: 0px 0px 0px 0px;
-color: #000;
+  color: #000;
   padding: 3px;
   border-radius: 50px;
 }
@@ -266,7 +266,7 @@ color: #000;
   font-size: 28px;
   width: 70%;
   text-align: center;
-color: #000;
+  color: #000;
 
   font-family: "kufam";
 }
@@ -278,7 +278,7 @@ color: #000;
   align-items: center;
   align-content: center;
   justify-content: center;
-  gap:100px;
+  gap: 100px;
   margin-bottom: 30px;
   margin-top: 80px;
 }
@@ -291,7 +291,7 @@ color: #000;
   */
   width: 250px;
   height: 400px;
-  background: linear-gradient(0deg, #CED7E8 0%, #F0F3F9 42%, #ffffff 79%);
+  background: linear-gradient(0deg, #ced7e8 0%, #f0f3f9 42%, #ffffff 79%);
   align-self: center;
   justify-content: center;
   align-items: center;
@@ -305,10 +305,9 @@ color: #000;
   border-bottom-right-radius: 50% 100px;
 }
 .Solution1 {
-
   width: 250px;
   height: 400px;
-  background: linear-gradient(180deg, #CED7E8 0%, #F0F3F9 42%, #ffffff 79%);
+  background: linear-gradient(180deg, #ced7e8 0%, #f0f3f9 42%, #ffffff 79%);
   align-self: center;
   justify-content: center;
   align-items: center;
@@ -323,7 +322,6 @@ color: #000;
 }
 
 .SolutionCircle {
-
   width: 97%;
   height: auto;
   align-items: center;
@@ -363,7 +361,7 @@ color: #000;
   height: 530px;
   align-items: center;
   justify-content: center;
-  background: linear-gradient( #ffffff ,#1f499738 );
+  background: linear-gradient(#ffffff, #1f499738);
   /* background-color: #1f499738; */
   /* background-image: url("../Assests/svg/arrowHeart.svg"); */
   background-repeat: no-repeat;
@@ -433,19 +431,19 @@ color: #000;
   border: var(--blue) 1px solid;
   height: auto;
 }
-.ServiceContentCol{
+.ServiceContentCol {
   /* background-color:aquamarine ; */
   width: 97%;
   align-self: flex-start;
 }
-.ServiceImg{
+.ServiceImg {
   align-self: end;
 }
 .ServiceTitle,
 .ServiceDesc {
   font-size: 20px;
   font-family: "kufam";
-color: #000;
+  color: #000;
 
   margin-left: 40px;
 }
@@ -472,8 +470,7 @@ color: #000;
 }
 /* Partners Section */
 
-.PartnerSection
-{
+.PartnerSection {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -596,11 +593,11 @@ color: #000;
   /* justify-content: center; */
   background-color: #1f499718;
   /* background: linear-gradient( #ffffff ,#1f499731 ,#ffffff ); */
-  margin-top:50px;
+  margin-top: 50px;
   padding: 40px;
 }
 /* Blog Section */
-.BlogSection{
+.BlogSection {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -621,10 +618,9 @@ color: #000;
   align-self: center;
   background-color: transparent;
   margin-top: 30px;
-  gap:20px;
-
+  gap: 20px;
 }
-.Blog1{
+.Blog1 {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -634,83 +630,94 @@ color: #000;
   /* gap: 10px; */
   margin: 0px 0px 10px 0px;
   /* background-color: aqua; */
-border-bottom: var(--darkGrey) 1px solid;
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-border-radius: 8px;
+  border-bottom: var(--darkGrey) 1px solid;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
   width: 419px;
+  max-height: 580px;
+  min-height: 490px;
 }
-.BlogContent{
+.BlogContent {
   font-size: 20px;
   color: black;
   font-family: "kufam";
-padding-left: 1.5rem;
+  padding-left: 1.5rem;
   /* margin-left: 1.5rem; */
   width: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-
-
+  max-height: 250px;
+  min-height: 250px;
   justify-content: center;
 }
-.BlogDesc ,.BlogDateText{
+.BlogDesc,
+.BlogDateText {
   font-size: 14px;
   color: black;
   font-family: "kufam";
   width: 100%;
   margin: 10px 0px 0px 0px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* limits to 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.BlogDateText{
+.BlogImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.BlogDateText {
   width: 75%;
 }
-.BlogTitle{
-  font-size: 22px;
+.BlogTitle {
+  font-size: 18px;
   font-family: "kufam";
   margin: 10px 0px 10px 0px;
 }
-.BlogButton{
+.BlogButton {
   color: black;
   font-size: 14px;
   font-family: "kufam";
 
-
   text-decoration: none;
-
 }
 
-.Blogfooter{
+.Blogfooter {
   display: flex;
   flex-direction: row;
   width: 100%;
   margin: 20px 0px 10px 0px;
-border-top: var(--darkGrey) 1px solid;
+  border-top: var(--darkGrey) 1px solid;
   flex-wrap: wrap;
   align-content: center;
   align-items: center;
   align-self: center;
   justify-content: center;
 }
-.SeeAll{
+.SeeAll {
   color: var(--blue);
   font-size: 16px;
   font-family: "kufam";
   text-decoration: none;
   align-self: flex-end;
   margin-right: 3rem;
-  background-color:transparent;
+  background-color: transparent;
   display: flex;
   flex-direction: row;
-  margin-top:-30px;
-  gap:10px;
+  margin-top: -30px;
+  gap: 10px;
 }
-.SeeAllText{
-
+.SeeAllText {
   text-decoration: none;
   color: black;
 }
 /* Team Section */
-.TeamSection{
-
+.TeamSection {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -719,9 +726,8 @@ border-top: var(--darkGrey) 1px solid;
   align-content: center;
   justify-content: center;
   margin-top: 50px;
-
 }
-.AllTeam{
+.AllTeam {
   display: flex;
   flex-direction: row;
   width: 80%;
@@ -731,7 +737,7 @@ border-top: var(--darkGrey) 1px solid;
   align-self: center;
   margin-top: 30px;
   align-self: center;
-  gap:50px;
+  gap: 50px;
 }
 .Team1 {
   display: flex;
@@ -742,49 +748,49 @@ border-top: var(--darkGrey) 1px solid;
   justify-content: center;
 
   margin: 0px 0px 0px 0px;
-  
+
   border-bottom: 2mm double rgba(230, 241, 245, 0.6);
-width: 300px;
-height: 9rem;
-gap: 10px;
+  width: 300px;
+  height: 9rem;
+  gap: 10px;
 }
 
 .TeamIcon {
-  width: 100px; 
+  width: 100px;
   height: 100px;
-  border-radius: 50%; 
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative; 
+  position: relative;
 }
 
 .TeamImageWrapper {
-  position: relative; 
-  width: 100%; 
-  height: 100%; 
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .TeamImage {
-  border-radius: 50%; 
-  object-fit: cover; 
+  border-radius: 50%;
+  object-fit: cover;
 }
-.column{
+.column {
   display: flex;
   flex-direction: column;
   gap: 10px;
   flex-wrap: wrap;
 }
-.TeamContent p{
-  margin : 0px 0px 0px 0px;
+.TeamContent p {
+  margin: 0px 0px 0px 0px;
 }
-.TeamSocial{
+.TeamSocial {
   display: flex;
   flex-direction: row;
   gap: 20px;
   width: 100%;
 }
-.TeamSocial i{
+.TeamSocial i {
   background-color: var(--blue);
   color: white;
   width: 24px;
@@ -798,14 +804,13 @@ gap: 10px;
 /* arrow animation */
 .arrow {
   position: fixed;
-  top: 90%; 
-  left: 90%; 
+  top: 90%;
+  left: 90%;
   transform: translate(-50%, -50%) rotate(270deg);
   cursor: pointer;
 
-
-  padding: 10px; 
-  border-radius: 5px; 
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .arrow span {
@@ -815,7 +820,7 @@ gap: 10px;
   border-bottom: 5px solid rgb(50, 49, 117);
   border-right: 5px solid rgb(90, 83, 83);
   transform: rotate(45deg);
-  margin: -10px; 
+  margin: -10px;
   animation: animate 2s infinite;
 }
 

@@ -162,15 +162,7 @@ const Homee: React.FC = () => {
               provide scalable and adaptive AI-powered energy solutions aligned
               with Industry 4.0 standards.
             </p>
-            {/* <button
-          onClick={
 
-            () => {
-              scrollRef.current?.scrollIntoView({ behavior: "smooth" });
-            }
-
-          } 
-           className={styles.buttonDiscover}>Discover</button> */}
             <Link href="/services" passHref>
               <motion.button
                 onClick={navigateToService}
@@ -182,65 +174,6 @@ const Homee: React.FC = () => {
               </motion.button>
             </Link>
           </div>
-          {/* <div className={styles.CibleRight}>
-            <div className={styles.CibleCont1}>
-            <p className={styles.SpinnerDescu1}>Hospitals</p>
-</div>
-<div className={styles.CibleCont2}>
-            <p className={styles.SpinnerDescu}>Healthcare facilities</p>
-</div>
-<div className={styles.CibleCont3}>
-            <p className={styles.SpinnerDescu}>Agriculture & Farming</p>
-</div>
-<div className={styles.CibleCont4}>
-            <p className={styles.SpinnerDescu}>Manufacturing & Industrial</p>
-</div>
-
-          </div> */}
-          {/* <div className={styles.CibleRight}>
-      {visibleItems.includes(0) && (
-        <div className={styles.CibleCont1}>
-          <p className={styles.SpinnerDescu1}>Hospitals</p>
-        </div>
-      )}
-      {visibleItems.includes(1) && (
-        <div className={styles.CibleCont2}>
-          <p className={styles.SpinnerDescu}>Healthcare facilities</p>
-        </div>
-      )}
-      {visibleItems.includes(2) && (
-        <div className={styles.CibleCont3}>
-          <p className={styles.SpinnerDescu}>Agriculture & Farming</p>
-        </div>
-      )}
-      {visibleItems.includes(3) && (
-        <div className={styles.CibleCont4}>
-          <p className={styles.SpinnerDescu}>Manufacturing & Industrial</p>
-        </div>
-      )}
-    </div> */}
-          {/* <div className={styles.CibleRight}>
-      {visibleItems.includes(0) && (
-        <div className={`${styles.CibleCont} ${visibleItems.includes(0) ? styles.show : ''}`}>
-          <p className={styles.SpinnerDescu1}>Hospitals</p>
-        </div>
-      )}
-      {visibleItems.includes(1) && (
-        <div className={`${styles.CibleCont} ${visibleItems.includes(1) ? styles.show : ''}`}>
-          <p className={styles.SpinnerDescu}>Healthcare facilities</p>
-        </div>
-      )}
-      {visibleItems.includes(2) && (
-        <div className={`${styles.CibleCont} ${visibleItems.includes(2) ? styles.show : ''}`}>
-          <p className={styles.SpinnerDescu}>Agriculture & Farming</p>
-        </div>
-      )}
-      {visibleItems.includes(3) && (
-        <div className={`${styles.CibleCont} ${visibleItems.includes(3) ? styles.show : ''}`}>
-          <p className={styles.SpinnerDescu}>Manufacturing & Industrial</p>
-        </div>
-      )}
-    </div> */}
           <div className={styles.CibleRight}>
             {cibles.map(
               (item, index) =>
@@ -324,7 +257,7 @@ const Homee: React.FC = () => {
             <h1 className={styles.SolutionTitle2}>Services</h1>
           </div>
           <p className={styles.SolutionsDesc}>
-          We ensure smooth implementation and long-term success 
+            We ensure smooth implementation and long-term success
           </p>
           <div className={styles.AllServices}>
             {/* service1 */}
@@ -339,11 +272,10 @@ const Homee: React.FC = () => {
               </div>
               <div className={styles.ServiceContent}>
                 <div className={styles.ServiceContentCol}>
-                  <h6 className={styles.ServiceTitle}>
-                  Technical Support
-                  </h6>
+                  <h6 className={styles.ServiceTitle}>Technical Support</h6>
                   <p className={styles.ServiceDesc}>
-                  Our dedicated team is here to resolve issues and maximize system efficiency.
+                    Our dedicated team is here to resolve issues and maximize
+                    system efficiency.
                   </p>
                 </div>
                 <Link className={styles.ServiceImg} href="/services">
@@ -362,9 +294,12 @@ const Homee: React.FC = () => {
               </div>
               <div className={styles.ServiceContent}>
                 <div className={styles.ServiceContentCol}>
-                  <h6 className={styles.ServiceTitle}>Development (Web and Mobile)</h6>
+                  <h6 className={styles.ServiceTitle}>
+                    Development (Web and Mobile)
+                  </h6>
                   <p className={styles.ServiceDesc}>
-                  Our intuitive platforms, available on both web and mobile, are tailored to meet your business needs
+                    Our intuitive platforms, available on both web and mobile,
+                    are tailored to meet your business needs
                   </p>
                 </div>
                 <Link className={styles.ServiceImg} href="/services">
@@ -385,7 +320,8 @@ const Homee: React.FC = () => {
                 <div className={styles.ServiceContentCol}>
                   <h6 className={styles.ServiceTitle}>Migration</h6>
                   <p className={styles.ServiceDesc}>
-                  Our team facilitates EMS upgrades for a seamless transition to enhanced solutions without disrupting your operations
+                    Our team facilitates EMS upgrades for a seamless transition
+                    to enhanced solutions without disrupting your operations
                   </p>
                 </div>
                 <Link className={styles.ServiceImg} href="/services">
@@ -404,9 +340,12 @@ const Homee: React.FC = () => {
               </div>
               <div className={styles.ServiceContent}>
                 <div className={styles.ServiceContentCol}>
-                  <h6 className={styles.ServiceTitle}>Training & Accompaniement</h6>
+                  <h6 className={styles.ServiceTitle}>
+                    Training & Accompaniement
+                  </h6>
                   <p className={styles.ServiceDesc}>
-                  We offer on-site and computer-based training to ensure your team is fully equipped to utilize our solutions effectively
+                    We offer on-site and computer-based training to ensure your
+                    team is fully equipped to utilize our solutions effectively
                   </p>
                 </div>
                 <Link className={styles.ServiceImg} href="/services">
@@ -529,18 +468,26 @@ const Homee: React.FC = () => {
             {/* blog1 */}
             <div className={styles.Blog1}>
               <div className={styles.BlogIcon}>
-                <Image className={styles.BlogImage} src={blog} alt="blog" />
+                <Image
+                  width={419}
+                  height={100}
+                  className={styles.BlogImage}
+                  src="https://res.cloudinary.com/ddngbriyu/image/upload/v1730384624/blog1_trufpf.png"
+                  alt="blog"
+                />
               </div>
               <div className={styles.BlogContent}>
-                <h6 className={styles.BlogTitle}>Low energy costs</h6>
+                <h6 className={styles.BlogTitle}>
+                  The Power of Artificial Intelligence in Transforming Energy
+                  Management Systems
+                </h6>
                 <p className={styles.BlogDesc}>
-                  One of the most significant benefits of owning an Eco Haven
-                  Realty Home is lower energy costs. Our eco-friendly homes are
-                  designed to use less energy with our solar powered system,
-                  saving money on bills.
+                  With the rise of renewable energy sources and the urgent need
+                  to combat climate change, the traditional electrical grid is
+                  undergoing a rapid transformation.
                 </p>
                 <div className={styles.Blogfooter}>
-                  <p className={styles.BlogDateText}>July 12, 2021</p>
+                  <p className={styles.BlogDateText}>Oct 10, 2024</p>
 
                   <Link className={styles.BlogButton} href="/blog">
                     Read More
@@ -551,10 +498,19 @@ const Homee: React.FC = () => {
             {/* blog2 */}
             <div className={styles.Blog1}>
               <div className={styles.BlogIcon}>
-                <Image className={styles.BlogImage} src={blog} alt="blog" />
+                <Image
+                  width={419}
+                  height={100}
+                  className={styles.BlogImage}
+                  src="https://res.cloudinary.com/ddngbriyu/image/upload/v1730385010/blog1_1_ncgmwr.png"
+                  alt="blog"
+                />
               </div>
               <div className={styles.BlogContent}>
-                <h6 className={styles.BlogTitle}>Low energy costs</h6>
+                <h6 className={styles.BlogTitle}>
+                  Smart Energy Solutions for Farming: Revolutionizing Energy
+                  Management in Agriculture
+                </h6>
                 <p className={styles.BlogDesc}>
                   One of the most significant benefits of owning an Eco Haven
                   Realty Home is lower energy costs. Our eco-friendly homes are
@@ -685,7 +641,8 @@ const Homee: React.FC = () => {
           </div>
         </div> */}
       </div>
-    // </PageTransition>
+      //{" "}
+    </PageTransition>
   );
 };
 
