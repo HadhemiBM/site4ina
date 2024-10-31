@@ -7,6 +7,8 @@ import "./css/style.css";
 import { Kufam } from "next/font/google";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import logo from './Assests/logo4ina.png'
+import Head from "next/head";
 
 // Metadata configuration
 export const metadata: Metadata = {
@@ -30,7 +32,10 @@ export default function RootLayout({
     <html lang="en">
       
       <head>
-      <link rel="icon" href="./favicon.ico" />
+
+                <link rel="icon" href="/logo4ina.png" />
+       
+
         <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
         <link href="css/bootstrap.min.css" rel="stylesheet" />
         <link href="lib/animate/animate.min.css" rel="stylesheet" />

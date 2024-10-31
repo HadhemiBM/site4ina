@@ -5,7 +5,7 @@ import { useRef } from "react";
 import PageTransition from "../components/PageTransition";
 
 import service from "../Assests/svg/IaService.svg";
-import { useRouter } from "next/navigation";
+
 import Image from "next/image";
 import Data from "../Assests/svg/DataService.svg";
 import web from "../Assests/svg/webService.svg";
@@ -13,7 +13,7 @@ import mobile from "../Assests/svg/mobileService.svg";
 import assistance from "../Assests/svg/AssistanceService.svg";
 
 const Service: React.FC = () => {
-  const router = useRouter();
+  
   const SmartSectionRef = useRef<HTMLDivElement | null>(null);
   const DataSectionRef = useRef<HTMLDivElement | null>(null);
   const MobileSectionRef = useRef<HTMLDivElement | null>(null);
@@ -47,17 +47,7 @@ const Service: React.FC = () => {
             <h1 className={styles.title}>Services</h1>
             <p className={styles.desc}>
             
-              4InA Technology delivers cutting-edge solutions designed to
-              enhance efficiency and optimize operations. Our Smart Device
-              offerings, powered by advanced AI, help reduce energy consumption
-              and automate processes, driving sustainability and intelligent
-              management. We also specialize in Web and Mobile Development,
-              providing robust monitoring and dashboard solutions that offer
-              real-time insights and data visualization. In addition, our Data
-              Analytics services turn complex information into actionable
-              strategies, while our dedicated support ensures that all solutions
-              perform optimally after installation. Discover how we can empower
-              your business with technology-driven innovation.
+            4InA Technology delivers cutting-edge solutions designed to enhance efficiency and optimize operations. Our Smart Device offerings, powered by advanced AI, help reduce energy consumption and automate processes, driving sustainability and intelligent management. We also specialize in Web and Mobile Development, providing robust monitoring and dashboard solutions that offer real-time insights and data visualization. In addition, our Data Analytics services turn complex information into actionable strategies, while our dedicated support ensures that all solutions perform optimally after installation. Discover how we can empower your business with technology-driven innovation.
             </p>
           </div>
           <div className={styles.Right}>
