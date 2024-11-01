@@ -37,7 +37,7 @@
 
   background-position: center right;
   height: 600px;
-  align-items: flex-start;
+  align-items: center;
   align-content: center;
   justify-content: center;
   text-align: start;
@@ -149,7 +149,7 @@
 .AllService {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
   height: auto;
   gap: 100px;
 }
@@ -174,14 +174,14 @@
   align-self: flex-end;
 }
 .serviceIconLeft {
-  width: 50%;
+  width: 40%;
 }
 .serviceIcon {
   width: 40%;
   align-self: flex-end;
 }
 .serviceContentLeft {
-  width: 50%;
+  width: 60%;
 
   display: flex;
   gap: 10px;
@@ -231,4 +231,9 @@
   font-family: "kufam";
   margin-left: 50px;
   align-self: flex-start;
+}
+.techImage{
+  width: 90%;
+  height: auto;
+  border-radius: 35px;
 }

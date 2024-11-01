@@ -4,13 +4,14 @@ import React from "react";
 import { useRef } from "react";
 import PageTransition from "../components/PageTransition";
 
-import service from "../Assests/svg/IaService.svg";
+import service from "../Assests/tech.jpg";
 
 import Image from "next/image";
-import Data from "../Assests/svg/DataService.svg";
-import web from "../Assests/svg/webService.svg";
-import mobile from "../Assests/svg/mobileService.svg";
-import assistance from "../Assests/svg/AssistanceService.svg";
+import Data from "../Assests/hard.jpg";
+import web from "../Assests/soft.png";
+import iso from "../Assests/iso.png";
+import consult from "../Assests/consult.jpg";
+import integration from "../Assests/integration.jpg";
 
 const Service: React.FC = () => {
   const SmartSectionRef = useRef<HTMLDivElement | null>(null);
@@ -95,7 +96,7 @@ const Service: React.FC = () => {
         <div className={styles.AllService}>
           <div ref={SmartSectionRef} className={styles.service}>
             <div className={styles.serviceIconLeft}>
-              <Image src={service} alt="service" />
+              <Image src={service} alt="service" className={styles.techImage} />
             </div>
             <div className={styles.serviceContentLeft}>
               <div className={styles.row}>
@@ -143,12 +144,12 @@ const Service: React.FC = () => {
               </p>
             </div>
             <div className={styles.serviceIcon}>
-              <Image src={Data} alt="service" />
+              <Image src={Data} alt="service" className={styles.techImage} />
             </div>
           </div>
           <div ref={WebSectionRef} className={styles.service}>
             <div className={styles.serviceIconLeft}>
-              <Image src={web} alt="service" />
+              <Image src={web} alt="service"  className={styles.techImage} />
             </div>
             <div className={styles.serviceContentLeft}>
               <div className={styles.row}>
@@ -189,12 +190,12 @@ const Service: React.FC = () => {
               </p>
             </div>
             <div className={styles.serviceIcon}>
-              <Image src={mobile} alt="service" />
+              <Image src={consult} alt="service" className={styles.techImage} />
             </div>
           </div>
           <div ref={AssistSectionRef} className={styles.service}>
             <div className={styles.serviceIconLeft}>
-              <Image src={assistance} alt="service" />
+              <Image src={integration} alt="service"  className={styles.techImage}/>
             </div>
             <div className={styles.serviceContentLeft}>
               <div className={styles.row}>
@@ -229,7 +230,7 @@ const Service: React.FC = () => {
               </p>
             </div>
             <div className={styles.serviceIcon}>
-              <Image src={mobile} alt="service" />
+              <Image src={iso} alt="service" className={styles.techImage} />
             </div>
           </div>
         </div>

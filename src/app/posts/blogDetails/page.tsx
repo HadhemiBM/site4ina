@@ -2,16 +2,14 @@
 import { useRouter, useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import styles from './index.module.css';
-import { useEffect, useState } from 'react';
-
+import { useEffect, useState, Suspense } from 'react';
 import { Blog, blogs } from "../../data/BlogData";
 
-export default function BlogDetails() {
+const  BlogDetails: React.FC = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const id = searchParams.get("id"); 
-  
-  // Allow `null` as a possible value for `blog` state
+
   const [blog, setBlog] = useState<Blog | null>(null);
 
   useEffect(() => {
@@ -26,22 +24,31 @@ export default function BlogDetails() {
   }
 
   return (
-   
-    <div className={styles.BlogDetails}>
-      <h1 className={styles.Title}>{blog.title}</h1>
-      <p className={styles.Date}>{blog.date}</p>
-      <Image
-        src={blog.imageUrl}
-        alt={blog.title}
-        width={800}
-        height={400}
-        className={styles.Image}
-      />
-    
-      <p
-        className={styles.Content}
-        dangerouslySetInnerHTML={{ __html: blog.description }}
-      />
-    </div>
+    <>
+      <div className={styles.BlogDetails}>
+        <h1 className={styles.Title}>{blog.title}</h1>
+        <p className={styles.Date}>{blog.date}</p>
+        <Image
+          src={blog.imageUrl}
+          alt={blog.title}
+          width={800}
+          height={400}
+          className={styles.Image}
+        />
+        <p
+          className={styles.Content}
+          dangerouslySetInnerHTML={{ __html: blog.description }}
+        />
+      </div>
+    </>
+  );
+}
+
+// Wrap with Suspense in the main export for the page
+export default function BlogDetailsPage() {
+  return (
+    <Suspense fallback={<p>Loading blog details...</p>}>
+      <BlogDetails />
+    </Suspense>
   );
 }
