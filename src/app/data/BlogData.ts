@@ -33,7 +33,7 @@ export const blogs: Blog[] = [
     id: 3,
     title:
       "The Future of Energy Management Systems: Paving the Way to a Carbon-Free World",
-    date: "Sep 12, 2024",
+    date: "Jul 12, 2024",
     imageUrl:
       "https://res.cloudinary.com/ddngbriyu/image/upload/v1730451409/blog1_2_acktaz.png",
     description:

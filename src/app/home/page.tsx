@@ -232,6 +232,59 @@ const Homee: React.FC = () => {
               {/* </div> */} 
             </div>
           </div>
+           <div className={styles.AvantagesSection}>
+          <h1 className={styles.InnovationTitle}>
+            Advantages of Installing Our Solution
+          </h1>
+          <div className={styles.Allavant}>
+            <div className={`${styles.item} ${styles.item1}`}>
+              <div className={styles.number}>1</div>
+              <div className={styles.content}>
+                <h3>Monitoring of energy consumption</h3>
+                <p className={styles.contentP}>
+                  4InA Technologie is a Tunisian startup empowering businesses
+                  across industries to enhance and optimize their energy
+                  management operations, supporting sustainable growth through
+                  AI and IoT solutions.
+                </p>
+              </div>
+            </div>
+
+            <div className={`${styles.item} ${styles.item2}`}>
+              <div className={styles.number}>2</div>
+              <div className={styles.content}>
+                <h3>Guidance for energy managers</h3>
+                <p className={styles.contentP}>
+                  Provide actionable insights for energy and electricity
+                  managers through intelligent machines to enhance
+                  decision-making.
+                </p>
+              </div>
+            </div>
+
+            <div className={`${styles.item} ${styles.item3}`}>
+              <div className={styles.number}>3</div>
+              <div className={styles.content}>
+                <h3>Monitoring Machine Behavior and Predicting Failures</h3>
+                <p className={styles.contentP}>
+                  Analyze machine behavior to predict future energy consumption
+                  and detect potential faults before they escalate.
+                </p>
+              </div>
+            </div>
+
+            <div className={`${styles.item} ${styles.item4}`}>
+              <div className={styles.number}>4</div>
+              <div className={styles.content}>
+                <h3>Reducing Maintenance Costs</h3>
+                <p className={styles.contentP}>
+                  Lower maintenance costs, reduce energy bills, and mitigate the
+                  effects of harmonics for improved operational efficiency.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
         </div>
         <div className={styles.DemoSection}>
           <h1 className={styles.SolutionTitle2}>

@@ -49,17 +49,9 @@ const Service: React.FC = () => {
           <div className={styles.Left}>
             <h1 className={styles.title}>Services</h1>
             <p className={styles.desc}>
-              4InA Technologie delivers cutting-edge solutions designed to
-              enhance efficiency and optimize operations. Our Smart Device
-              offerings, powered by advanced AI, help reduce energy consumption
-              and automate processes, driving sustainability and intelligent
-              management. We also specialize in Web and Mobile Development,
-              providing robust monitoring and dashboard solutions that offer
-              real-time insights and data visualization. In addition, our Data
-              Analytics services turn complex information into actionable
-              strategies, while our dedicated support ensures that all solutions
-              perform optimally after installation. Discover how we can empower
-              your business with technologie-driven innovation.
+              Explore our comprehensive services that cover every aspect of
+              energy management. We are committed to assisting your company in
+              prospering in the context of sustainable energy.
             </p>
           </div>
           <div className={styles.Right}>
@@ -149,7 +141,7 @@ const Service: React.FC = () => {
           </div>
           <div ref={WebSectionRef} className={styles.service}>
             <div className={styles.serviceIconLeft}>
-              <Image src={web} alt="service"  className={styles.techImage} />
+              <Image src={web} alt="service" className={styles.techImage} />
             </div>
             <div className={styles.serviceContentLeft}>
               <div className={styles.row}>
@@ -195,7 +187,11 @@ const Service: React.FC = () => {
           </div>
           <div ref={AssistSectionRef} className={styles.service}>
             <div className={styles.serviceIconLeft}>
-              <Image src={integration} alt="service"  className={styles.techImage}/>
+              <Image
+                src={integration}
+                alt="service"
+                className={styles.techImage}
+              />
             </div>
             <div className={styles.serviceContentLeft}>
               <div className={styles.row}>
@@ -204,29 +200,40 @@ const Service: React.FC = () => {
               </div>
 
               <p className={styles.serviceContent_desc}>
-              Our Integration services ensure that new updates and customized features are seamlessly incorporated into your existing energy management systems. We implement new updates and integrations without disrupting your current operation.
+                Our Integration services ensure that new updates and customized
+                features are seamlessly incorporated into your existing energy
+                management systems. We implement new updates and integrations
+                without disrupting your current operation.
               </p>
               <p className={styles.serviceContent_desc}>
-              We offer as well post-integration service to verify compatibility and performance.
+                We offer as well post-integration service to verify
+                compatibility and performance.
               </p>
             </div>
           </div>
-          
+
           <div ref={certifSectionRef} className={styles.serviceRight}>
-          <div className={styles.serviceContentRight}>
+            <div className={styles.serviceContentRight}>
               <div className={styles.row}>
                 {/* <i className="fa-solid fa-circle"></i> */}
                 <h6> • Accredited Certification</h6>
               </div>
 
               <p className={styles.serviceContent_desc}>
-              ISO 50001 is an international standard that applies to organizations of any size and provides requirements for establishing, managing and improving their energy consumption and efficiency.  It helps organizations establish, implement, and maintain practices for more efficient energy use.
+                ISO 50001 is an international standard that applies to
+                organizations of any size and provides requirements for
+                establishing, managing and improving their energy consumption
+                and efficiency. It helps organizations establish, implement, and
+                maintain practices for more efficient energy use.
               </p>
               <p className={styles.serviceContent_desc}>
-              The Certification in ISO 50001 reflects your dedication to reducing energy consumption, enhancing operational efficiency, and minimizing environmental impact.
+                The Certification in ISO 50001 reflects your dedication to
+                reducing energy consumption, enhancing operational efficiency,
+                and minimizing environmental impact.
               </p>
               <p className={styles.serviceContent_desc}>
-              We guide through each step of the ISO 50001 Certification process.
+                We guide through each step of the ISO 50001 Certification
+                process.
               </p>
             </div>
             <div className={styles.serviceIcon}>
