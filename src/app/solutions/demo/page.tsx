@@ -1,14 +1,13 @@
 "use client";
 import styles from "./index.module.css";
 import React, { useState } from "react";
-import PageTransition from "../components/PageTransition";
+import PageTransition from "../../components/PageTransition";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phoneNumber:"",
-    subject: "",
     message: "",
   });
   const handleChange = (
@@ -78,27 +77,7 @@ const Contact: React.FC = () => {
                 required
               />
             </div>
-            <div className={styles.column}>
-              <label className={styles.label}>
-                What is your enquiry about?*
-              </label>
-              <select
-                value={formData.subject}
-                onChange={handleChange}
-                className={styles.select}
-            name="subject"
-               
-                required
-              >
-                <option value="Select one" disabled>
-                  Select one
-                </option>
-                <option value="General inquiry">General inquiry</option>
-                <option value="Bug report">Bug report</option>
-                <option value="Feature request">Feature request</option>
-                <option value="Other">Other</option>
-              </select>
-            </div>
+        
             <div className={styles.column}>
               <label className={styles.label}>Additional information*</label>
               <textarea
@@ -116,7 +95,7 @@ const Contact: React.FC = () => {
         </div>
         <div className={styles.Right}>
           <h2 className={styles.RightTitle}>
-            Connect with 4ina Technology Innovate, Collaborate, Succeed
+          Book Demo – Let's Bring Your Vision to Life
           </h2>
           <p className={styles.RightDesc}>
             Kindly fill this form with your details about your inquiries and we

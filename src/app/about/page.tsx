@@ -71,7 +71,7 @@ const About: React.FC = () => {
   ];
   return (
     <PageTransition>
-                <style>{`
+      <style>{`
        @keyframes shakeLinkedIn {
     0% { transform: translate(1px, 0); }
     25% { transform: translate(-1px, 0); }
@@ -135,47 +135,25 @@ const About: React.FC = () => {
           </div>
         </div>
         <div className={styles.InnovationSection}>
-          <h1 className={styles.InnovationTitle}>
-            Innovation and Digital Aspects
-          </h1>
-          <div className={styles.AllASPECT}>
-            <div className={styles.column}>
-              <div className={styles.InnovationTit}>
-                <h1>Real Time Electric System</h1>
-              </div>
+          <h1 className={styles.InnovationTitle}>Our Mission</h1>
 
-              <p className={styles.InnovationDes}>
-                We use real-time electricity data to optimize energy
-                consumption, reduce costs, and drive sustainable growth. Our
-                goal is to make energy management more efficient and effective.
-              </p>
-            </div>
-            <div className={styles.column}>
-              <div className={styles.InnovationTit}>
-                <h1>AI Anomaly Detection & Analyse</h1>
-              </div>
-              <p className={styles.InnovationDes}>
-                Our AI algorithms help detect and analyze anomalies in
-                electricity data, such as unusual spikes, outliers, and sudden
-                drops in energy consumption. This helps us make more informed
-                decisions and improve our energy management systems.
-              </p>
-            </div>
-            <div className={styles.column}>
-              <div className={styles.InnovationTit}>
-                <h1>Digitisation of manual processes</h1>
-              </div>
+          <p className={styles.InnovationDes}>
+            We use real-time electricity data to optimize energy consumption,
+            reduce costs, and drive sustainable growth. Our goal is to make
+            energy management more efficient and effective.
+          </p>
 
-              <p className={styles.InnovationDes}>
-                We digitise manual processes, such as energy meters, power
-                plants, and control systems, making them more efficient,
-                reliable, and accessible to all. This helps us improve our
-                energy management systems and reduce costs.
-              </p>
-            </div>
-          </div>
+          <h1 className={styles.InnovationTitle}>Our Vision</h1>
+
+          <p className={styles.InnovationDes}>
+            We envision 4InA Technologie as a catalyst reshaping the future of
+            energy management through digitalization and transformative
+            AI-driven solutions. We are paving the way for a carbon-free future
+            where sustainability and profitability go hand in hand.
+          </p>
         </div>
-        <div className={styles.AvantagesSection}>
+  
+        {/* <div className={styles.AvantagesSection}>
           <h1 className={styles.InnovationTitle}>
             Advantages of Installing Our Solution
           </h1>
@@ -185,8 +163,10 @@ const About: React.FC = () => {
               <div className={styles.content}>
                 <h3>Monitoring of energy consumption</h3>
                 <p className={styles.contentP}>
-                  Monitor energy consumption on-site or remotely to optimize
-                  resource usage and identify anomalies.
+                  4InA Technologie is a Tunisian startup empowering businesses
+                  across industries to enhance and optimize their energy
+                  management operations, supporting sustainable growth through
+                  AI and IoT solutions.
                 </p>
               </div>
             </div>
@@ -225,8 +205,18 @@ const About: React.FC = () => {
               </div>
             </div>
           </div>
+        </div> */}
+        <div className={styles.DemoSection}>
+          <p className={styles.SolutionsDesc}>
+          Want to learn more about our innovative approach?
+          </p>
+          <p className={styles.SolutionsDesc}>
+          Request a demo to see our solutions in action
+          </p>
+          <Link href="/solutions/demo" passHref>
+            <button className={styles.buttonDemo}>Book a Demo</button>
+          </Link>
         </div>
-
         <div className={styles.TeamSection}>
           <div className={styles.SolutionTitle}>
             <h1 className={styles.SolutionTitle1}>Our</h1>
@@ -237,65 +227,61 @@ const About: React.FC = () => {
             years.
           </p>
           <div className={styles.AllTeam}>
-
-          
-              {founder.map((item, index) => (
-                <div key={index} className={styles.Team1}>
-                  <div className={styles.TeamIcon}>
-                    <div className={styles.TeamImageWrapper}>
-                      <Image
-                        className={styles.TeamImage}
-                        src={item.img}
-                        alt="team"
-                        fill
-                        style={{ objectFit: "cover" }}
-                      />
-                    </div>
-                  </div>
-                  <div className={styles.column}>
-                    <div className={styles.TeamContent}>
-                      <h6 className={styles.TeamName}>{item.name}</h6>
-                      <p className={styles.TeamDesc}>{item.post}</p>
-                    </div>
-                    <div className={styles.TeamSocial}>
-                      <Link href={item.linkedin}>
-                        <i className="fa-brands fa-linkedin fa-shake-facebook"></i>
-                      </Link>
-                    </div>
+            {founder.map((item, index) => (
+              <div key={index} className={styles.Team1}>
+                <div className={styles.TeamIcon}>
+                  <div className={styles.TeamImageWrapper}>
+                    <Image
+                      className={styles.TeamImage}
+                      src={item.img}
+                      alt="team"
+                      fill
+                      style={{ objectFit: "cover" }}
+                    />
                   </div>
                 </div>
-              ))}
-            </div>
-            <div className={styles.AllTeam}>
-           
-          
-              {team.map((item, index) => (
-                <div key={index} className={styles.Team2}>
-                  <div className={styles.TeamIcon}>
-                    <div className={styles.TeamImageWrapper}>
-                      <Image
-                        className={styles.TeamImage}
-                        src={item.img}
-                        alt="team"
-                        fill
-                        style={{ objectFit: "cover" }}
-                      />
-                    </div>
+                <div className={styles.column}>
+                  <div className={styles.TeamContent}>
+                    <h6 className={styles.TeamName}>{item.name}</h6>
+                    <p className={styles.TeamDesc}>{item.post}</p>
                   </div>
-                  <div className={styles.column}>
-                    <div className={styles.TeamContent}>
-                      <h6 className={styles.TeamName}>{item.name}</h6>
-                      <p className={styles.TeamDesc}>{item.post}</p>
-                    </div>
-                    <div className={styles.TeamSocial}>
-                      <Link href={item.linkedin}>
-                        <i className="fa-brands fa-linkedin fa-shake-facebook"></i>
-                      </Link>
-                    </div>
+                  <div className={styles.TeamSocial}>
+                    <Link href={item.linkedin}>
+                      <i className="fa-brands fa-linkedin fa-shake-facebook"></i>
+                    </Link>
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
+          </div>
+          <div className={styles.AllTeam}>
+            {team.map((item, index) => (
+              <div key={index} className={styles.Team2}>
+                <div className={styles.TeamIcon}>
+                  <div className={styles.TeamImageWrapper}>
+                    <Image
+                      className={styles.TeamImage}
+                      src={item.img}
+                      alt="team"
+                      fill
+                      style={{ objectFit: "cover" }}
+                    />
+                  </div>
+                </div>
+                <div className={styles.column}>
+                  <div className={styles.TeamContent}>
+                    <h6 className={styles.TeamName}>{item.name}</h6>
+                    <p className={styles.TeamDesc}>{item.post}</p>
+                  </div>
+                  <div className={styles.TeamSocial}>
+                    <Link href={item.linkedin}>
+                      <i className="fa-brands fa-linkedin fa-shake-facebook"></i>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </PageTransition>

@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
   const [solutionsDrop, setSolutionsDrop] = useState(false);
   const [postDrop, setPostDrop] = useState(false);
   const links = [
-    { id: 1, link: "/home", name: "Accueil" },
+    { id: 1, link: "/home", name: "Home" },
     { id: 2, link: "/about", name: "AboutUs" },
     { id: 3, link: "/services", name: "Services" },
     { id: 4, link: "", name: "Solutions" },

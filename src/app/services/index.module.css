@@ -6,6 +6,10 @@
   flex-direction: column;
   gap: 30px;
   font-family: "kufam";
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  justify-content: center;
 }
 .Header {
   display: flex;
@@ -177,7 +181,7 @@
   align-self: flex-end;
 }
 .serviceContentLeft {
-  width: 45%;
+  width: 50%;
 
   display: flex;
   gap: 10px;
@@ -214,4 +218,17 @@
   color: var(--blue);
   font-size: 24px;
   font-family: "kufam";
+}
+.serviceContent_desccc{
+  color: var(--darkBlue);
+  font-size: 14px;
+  font-family: "kufam";
+  align-self: center;
+}
+.serviceContent_descc {
+  color: var(--darkBlue);
+  font-size: 18px;
+  font-family: "kufam";
+  margin-left: 50px;
+  align-self: flex-start;
 }

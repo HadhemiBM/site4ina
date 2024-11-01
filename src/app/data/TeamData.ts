@@ -1,11 +1,7 @@
 
-import analytics from "../Assests/analytics.png";
-import smart_devices from "../Assests/smart-devices.png";
-import web from "../Assests/web.png";
-import mobile from "../Assests/mobile.png";
+
 import team1 from "../Assests/team1.png";
 import team2 from "../Assests/team2.jpg";
-import assistance  from "../Assests/assistance.png";
 
 
 

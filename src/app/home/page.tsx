@@ -18,10 +18,12 @@ import arrowLeft from "../Assests/svg/arrowLeft.svg";
 import arrowRight from "../Assests/svg/arrowRight.svg";
 import arrowService from "../Assests/svg/arrowService.svg";
 import blog from "../Assests/svg/blog.svg";
+import { Blog, blogs } from "../data/BlogData";
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
+
 const Homee: React.FC = () => {
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
 
@@ -141,11 +143,14 @@ const Homee: React.FC = () => {
     },
   ];
   const cibles = [
-    "Hospitals",
-    "Healthcare facilities",
-    "Agriculture & Farming",
-    "Manufacturing & Industrial",
+    "Manufacturing Industries",
+    "Agriculture and Agri-food",
+    "Healthcare and Hospitality",
+    "Business facilities",
   ];
+  const handleGo = (id: number) => {
+    router.push(`/posts/blogDetails?id=${id}`);
+  };
   return (
     <PageTransition>
       <div className={styles.container}>
@@ -196,45 +201,35 @@ const Homee: React.FC = () => {
             <h1 className={styles.SolutionTitle2}>Solutions</h1>
           </div>
           <p className={styles.SolutionsDesc}>
-            The powerful combination of our solutions ensures reliable
-            performance, seamless monitoring, and real-time optimization,
-            driving efficiency and innovation across various industries.
+            Our solutions at 4InA Technologie encompass both hardware and
+            software, designed to optimize your energy management
           </p>
           <div className={styles.AllSolutions}>
-            <div className={styles.Solution2}>
-              <h3 className={styles.SolTitle1}>Industrial</h3>
-              <p className={styles.SolutionDesc1}>
-                Our advanced sensors collect real-time energy usage data and
-                sends information directly to our software.
-              </p>
-              <div className={styles.SolutionCircle}>
-                <Image className={styles.Image} src={indus} alt="hardware" />
-              </div>
-            </div>
+            
             <div className={styles.Solution1}>
-              <div className={styles.SolutionCircle}>
-                <Image
+              {/* <div className={styles.SolutionCircle}> */}
+                {/* <Image
                   className={styles.Image}
                   src={decarbonization}
                   alt="hardware"
-                />
-              </div>
-              <h3 className={styles.SolTitle1}>Decarbonization</h3>
+                /> */}
+              {/* </div> */}
+              <h3 className={styles.SolTitle1}>Hardware</h3>
               <p className={styles.SolutionDesc1}>
-                An all-in-one, intuitive dashboard that enables you to visualize
-                your energy usage data, make informed decisions, and reduce
-                energy costs.
+              Our precision sensors collect real-time energy usage data continuously , seamlessly connecting with our platform to provide a clear, data-driven view of your consumption patterns.
+
               </p>
             </div>
+            <h1>+</h1>
             <div className={styles.Solution2}>
-              <h3 className={styles.SolTitle1}>Agritech</h3>
+              <h3 className={styles.SolTitle1}>Software</h3>
               <p className={styles.SolutionDesc1}>
-                Data aggregation and forecasting to ensure that you have the
-                energy you need, when you need it.
+              Our cloud-based software analyzes data from each device and offers intelligent automation that adapts to your energy needs, providing easy, remote access ( Web & Mobile) to insights while optimizing consumption and minimizing waste
+
               </p>
-              <div className={styles.SolutionCircle}>
-                <Image className={styles.Image} src={agritec} alt="hardware" />
-              </div>
+              {/* <div className={styles.SolutionCircle}>
+               
+              {/* </div> */} 
             </div>
           </div>
         </div>
@@ -272,10 +267,9 @@ const Homee: React.FC = () => {
               </div>
               <div className={styles.ServiceContent}>
                 <div className={styles.ServiceContentCol}>
-                  <h6 className={styles.ServiceTitle}>Technical Support</h6>
+                  <h6 className={styles.ServiceTitle}>Technical Support and Maintenance</h6>
                   <p className={styles.ServiceDesc}>
-                    Our dedicated team is here to resolve issues and maximize
-                    system efficiency.
+                  Our dedicated team is here to resolve issues and maximize system efficiency. 
                   </p>
                 </div>
                 <Link className={styles.ServiceImg} href="/services">
@@ -295,11 +289,10 @@ const Homee: React.FC = () => {
               <div className={styles.ServiceContent}>
                 <div className={styles.ServiceContentCol}>
                   <h6 className={styles.ServiceTitle}>
-                    Development (Web and Mobile)
+                  Hardware Devolopment
                   </h6>
                   <p className={styles.ServiceDesc}>
-                    Our intuitive platforms, available on both web and mobile,
-                    are tailored to meet your business needs
+                  We develop advanced hardware solutions tailored to meet your unique needs
                   </p>
                 </div>
                 <Link className={styles.ServiceImg} href="/services">
@@ -318,11 +311,9 @@ const Homee: React.FC = () => {
               </div>
               <div className={styles.ServiceContent}>
                 <div className={styles.ServiceContentCol}>
-                  <h6 className={styles.ServiceTitle}>Migration</h6>
+                  <h6 className={styles.ServiceTitle}>Software devolopment ( Web and Mobile) </h6>
                   <p className={styles.ServiceDesc}>
-                    Our team facilitates EMS upgrades for a seamless transition
-                    to enhanced solutions without disrupting your operations
-                  </p>
+                  We provide custom development and upgrades for your mobile and web software to meet your evolving energy management demand.</p>
                 </div>
                 <Link className={styles.ServiceImg} href="/services">
                   <Image src={arrowService} alt="service" />
@@ -341,11 +332,10 @@ const Homee: React.FC = () => {
               <div className={styles.ServiceContent}>
                 <div className={styles.ServiceContentCol}>
                   <h6 className={styles.ServiceTitle}>
-                    Training & Accompaniement
+                  Consulting
                   </h6>
                   <p className={styles.ServiceDesc}>
-                    We offer on-site and computer-based training to ensure your
-                    team is fully equipped to utilize our solutions effectively
+                  We offer expert consulting tailored to your unique energy management needs, helping to identify inefficiencies and ensure your team is fully equipped to utilize our solutions effectively
                   </p>
                 </div>
                 <Link className={styles.ServiceImg} href="/services">
@@ -353,8 +343,8 @@ const Homee: React.FC = () => {
                 </Link>
               </div>
             </div>
-            {/* service5 */}
-            {/* <div className={styles.Service1}>
+                {/* service5 */}
+                <div className={styles.Service1}>
               <div className={styles.ServiceIcon}>
                 <Image
                   className={styles.ServicePower}
@@ -365,18 +355,41 @@ const Homee: React.FC = () => {
               <div className={styles.ServiceContent}>
                 <div className={styles.ServiceContentCol}>
                   <h6 className={styles.ServiceTitle}>
-                    Assistance after installation
+                  Integration
                   </h6>
                   <p className={styles.ServiceDesc}>
-                    We provide experts and engineers for energy audit and remote
-                    assistance
+                  The integration of new updates and specific features tailored to your business's current energy situation.
                   </p>
                 </div>
                 <Link className={styles.ServiceImg} href="/services">
                   <Image src={arrowService} alt="service" />
                 </Link>
               </div>
-            </div> */}
+            </div>
+          {/* service6 */}
+          <div className={styles.Service1}>
+              <div className={styles.ServiceIcon}>
+                <Image
+                  className={styles.ServicePower}
+                  src={power}
+                  alt="hardware"
+                />
+              </div>
+              <div className={styles.ServiceContent}>
+                <div className={styles.ServiceContentCol}>
+                  <h6 className={styles.ServiceTitle}>
+                  Accredited Certification
+                  </h6>
+                  <p className={styles.ServiceDesc}>
+                  We provide training programs  for certifications such as ISO 50001 and more, ensuring your organization meets industry standards.
+
+                  </p>
+                </div>
+                <Link className={styles.ServiceImg} href="/services">
+                  <Image src={arrowService} alt="service" />
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
         <div className={styles.PartnerSection}>
@@ -462,106 +475,41 @@ const Homee: React.FC = () => {
             <h1 className={styles.SolutionTitle2}>Blogs</h1>
           </div>
           <p className={styles.SolutionsDesc}>
-            Stay informed about our latest developments, updates, and trends.
+          Your resource for the latest insights in Energy Management, AI-powered Solutions, and Industry 4.0 trends.
           </p>
           <div className={styles.AllBlog}>
-            {/* blog1 */}
-            <div className={styles.Blog1}>
-              <div className={styles.BlogIcon}>
-                <Image
-                  width={419}
-                  height={100}
-                  className={styles.BlogImage}
-                  src="https://res.cloudinary.com/ddngbriyu/image/upload/v1730384624/blog1_trufpf.png"
-                  alt="blog"
-                />
-              </div>
-              <div className={styles.BlogContent}>
-                <h6 className={styles.BlogTitle}>
-                  The Power of Artificial Intelligence in Transforming Energy
-                  Management Systems
-                </h6>
-                <p className={styles.BlogDesc}>
-                  With the rise of renewable energy sources and the urgent need
-                  to combat climate change, the traditional electrical grid is
-                  undergoing a rapid transformation.
-                </p>
-                <div className={styles.Blogfooter}>
-                  <p className={styles.BlogDateText}>Oct 10, 2024</p>
-
-                  <Link className={styles.BlogButton} href="/blog">
-                    Read More
-                  </Link>
+            {blogs.map((blog) => (
+              <div key={blog.id} className={styles.Blog1}>
+                <div className={styles.BlogIcon}>
+                  <Image
+                    width={419}
+                    height={100}
+                    className={styles.BlogImage}
+                    src={blog.imageUrl}
+                    alt="blog"
+                  />
+                </div>
+                <div className={styles.BlogContent}>
+                  <h6
+                    onClick={() => handleGo(blog.id)}
+                    className={styles.BlogTitle}
+                  >
+                    {blog.title}
+                  </h6>
+                  <p className={styles.BlogDesc}>{blog.description}</p>
+                  <div className={styles.Blogfooter}>
+                    <p className={styles.BlogDateText}>{blog.date}</p>
+                    <Link
+                      className={styles.BlogButton}
+                      href={`/blog/${blog.id}`}
+                    >
+                      Read More
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
-            {/* blog2 */}
-            <div className={styles.Blog1}>
-              <div className={styles.BlogIcon}>
-                <Image
-                  width={419}
-                  height={100}
-                  className={styles.BlogImage}
-                  src="https://res.cloudinary.com/ddngbriyu/image/upload/v1730385010/blog1_1_ncgmwr.png"
-                  alt="blog"
-                />
-              </div>
-              <div className={styles.BlogContent}>
-                <h6 className={styles.BlogTitle}>
-                  Smart Energy Solutions for Farming: Revolutionizing Energy
-                  Management in Agriculture
-                </h6>
-                <p className={styles.BlogDesc}>
-                  One of the most significant benefits of owning an Eco Haven
-                  Realty Home is lower energy costs. Our eco-friendly homes are
-                  designed to use less energy with our solar powered system,
-                  saving money on bills.
-                </p>
-                <div className={styles.Blogfooter}>
-                  <p className={styles.BlogDateText}>July 12, 2021</p>
-
-                  <Link className={styles.BlogButton} href="/blog">
-                    Read More
-                  </Link>
-                </div>
-              </div>
-            </div>
-            {/* blog3 */}
-            <div className={styles.Blog1}>
-              <div className={styles.BlogIcon}>
-                <Image className={styles.BlogImage} src={blog} alt="blog" />
-              </div>
-              <div className={styles.BlogContent}>
-                <h6 className={styles.BlogTitle}>Low energy costs</h6>
-                <p className={styles.BlogDesc}>
-                  One of the most significant benefits of owning an Eco Haven
-                  Realty Home is lower energy costs. Our eco-friendly homes are
-                  designed to use less energy with our solar powered system,
-                  saving money on bills.
-                </p>
-                <div className={styles.Blogfooter}>
-                  <p className={styles.BlogDateText}>July 12, 2021</p>
-
-                  <Link href="/blog" className={styles.BlogButton}>
-                    Read More
-                  </Link>
-                </div>
-              </div>
-            </div>
-            {/* see all */}
+            ))}
           </div>
-          {/* <div className={styles.SeeAll}>
-            <Link className={styles.SeeAllText} href="/blog">
-              See All Blogs
-            </Link>
-
-            <Image
-              className={styles.SeeAllImage}
-              src={arrowService}
-              alt="see all"
-            />
-          </div> */}
-          {/* <div className={styles.SeeAll}> */}
           <Link className={styles.SeeAllText} href="/posts/blog">
             <div className={styles.arrow}>
               <span></span>
@@ -569,79 +517,8 @@ const Homee: React.FC = () => {
               <span></span>
             </div>
           </Link>
-
-          {/* </div> */}
         </div>
-        {/* <div className={styles.TeamSection}>
-          <div className={styles.SolutionTitle}>
-            <h1 className={styles.SolutionTitle1}>Our</h1>
-            <h1 className={styles.SolutionTitle2}>Team</h1>
-          </div>
-          <p className={styles.SolutionsDesc}>
-            Meet our team of experts who have been working together for over 20
-            years.
-          </p>
-          <div className={styles.AllTeam}>
-            <style>{`
-       @keyframes shakeLinkedIn {
-    0% { transform: translate(1px, 0); }
-    25% { transform: translate(-1px, 0); }
-    50% { transform: translate(1px, 0); }
-    75% { transform: translate(-1px, 0); }
-    100% { transform: translate(1px, 0); }
-}
-
-@keyframes shakeFacebook {
-    0% { transform: rotate(5deg); }
-    25% { transform: rotate(-5deg); }
-    50% { transform: rotate(5deg); }
-    75% { transform: rotate(-5deg); }
-    100% { transform: rotate(5deg); }
-}
-
-.fa-shake-linkedin {
-    animation: shakeLinkedIn 1s infinite;
-}
-
-.fa-shake-facebook {
-    animation: shakeFacebook 1s infinite;
-}
-      `}</style>
-            {team.map((item, index) => (
-              <div key={index} className={styles.Team1}>
-                <div className={styles.TeamIcon}>
-                  <div className={styles.TeamImageWrapper}>
-                   
-                
-                    <Image
-                      className={styles.TeamImage}
-                      src={item.img}
-                      alt="team"
-                      fill // Use fill for responsive behavior
-                      style={{ objectFit: "cover" }} // Maintain aspect ratio
-                    />
-                  </div>
-                </div>
-                <div className={styles.column}>
-                  <div className={styles.TeamContent}>
-                    <h6 className={styles.TeamName}>{item.name}</h6>
-                    <p className={styles.TeamDesc}>{item.post}</p>
-                  </div>
-                  <div className={styles.TeamSocial}>
-                    <Link href={item.linkedin}>
-                      <i className="fa-brands fa-linkedin fa-shake-facebook"></i>
-                    </Link>
-                    <Link href={item.facebook}>
-                      <i className="fa-brands fa-facebook fa-shake-facebook"></i>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div> */}
       </div>
-      //{" "}
     </PageTransition>
   );
 };

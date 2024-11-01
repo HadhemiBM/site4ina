@@ -13,31 +13,33 @@ import mobile from "../Assests/svg/mobileService.svg";
 import assistance from "../Assests/svg/AssistanceService.svg";
 
 const Service: React.FC = () => {
-  
   const SmartSectionRef = useRef<HTMLDivElement | null>(null);
   const DataSectionRef = useRef<HTMLDivElement | null>(null);
   const MobileSectionRef = useRef<HTMLDivElement | null>(null);
   const WebSectionRef = useRef<HTMLDivElement | null>(null);
   const AssistSectionRef = useRef<HTMLDivElement | null>(null);
+  const certifSectionRef = useRef<HTMLDivElement | null>(null);
   const SmartSection = () => {
-    SmartSectionRef.current?.scrollIntoView({ behavior: 'smooth' });
+    SmartSectionRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   const DataSection = () => {
-    DataSectionRef.current?.scrollIntoView({ behavior: 'smooth' });
+    DataSectionRef.current?.scrollIntoView({ behavior: "smooth" });
   };
   const WebSection = () => {
-    WebSectionRef.current?.scrollIntoView({ behavior: 'smooth' });
+    WebSectionRef.current?.scrollIntoView({ behavior: "smooth" });
   };
   const MobileSection = () => {
-    MobileSectionRef.current?.scrollIntoView({ behavior: 'smooth' });
+    MobileSectionRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   const AssistanceSection = () => {
-    AssistSectionRef.current?.scrollIntoView({ behavior: 'smooth' });
+    AssistSectionRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-
+  const certifSection = () => {
+    certifSectionRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <PageTransition>
@@ -46,32 +48,45 @@ const Service: React.FC = () => {
           <div className={styles.Left}>
             <h1 className={styles.title}>Services</h1>
             <p className={styles.desc}>
-            
-            4InA Technology delivers cutting-edge solutions designed to enhance efficiency and optimize operations. Our Smart Device offerings, powered by advanced AI, help reduce energy consumption and automate processes, driving sustainability and intelligent management. We also specialize in Web and Mobile Development, providing robust monitoring and dashboard solutions that offer real-time insights and data visualization. In addition, our Data Analytics services turn complex information into actionable strategies, while our dedicated support ensures that all solutions perform optimally after installation. Discover how we can empower your business with technology-driven innovation.
+              4InA Technology delivers cutting-edge solutions designed to
+              enhance efficiency and optimize operations. Our Smart Device
+              offerings, powered by advanced AI, help reduce energy consumption
+              and automate processes, driving sustainability and intelligent
+              management. We also specialize in Web and Mobile Development,
+              providing robust monitoring and dashboard solutions that offer
+              real-time insights and data visualization. In addition, our Data
+              Analytics services turn complex information into actionable
+              strategies, while our dedicated support ensures that all solutions
+              perform optimally after installation. Discover how we can empower
+              your business with technology-driven innovation.
             </p>
           </div>
           <div className={styles.Right}>
             <div className={styles.content}>
               <div className={styles.RightDesc}>
                 <div className={styles.loader}></div>
-                <p onClick={SmartSection}>Smart Device Based on IA</p>
+                <p onClick={SmartSection}>Technical Support and Maintenance</p>
               </div>
               <div className={styles.RightDesc}>
                 <div className={styles.loader}></div>
 
-                <p onClick={DataSection}>Data Analytics</p>
+                <p onClick={DataSection}>Hardware Devolopment</p>
               </div>
               <div className={styles.RightDesc}>
                 <div className={styles.loader}></div>
-                <p onClick={WebSection}>Web Development</p>
+                <p onClick={WebSection}>Software devolopment</p>
               </div>
               <div className={styles.RightDesc}>
                 <div className={styles.loader}></div>
-                <p onClick={MobileSection}>Mobile Development</p>
+                <p onClick={MobileSection}>Consulting</p>
               </div>
               <div className={styles.RightDesc}>
                 <div className={styles.loader}></div>
-                <p onClick={AssistanceSection}>Assistance after installation</p>
+                <p onClick={AssistanceSection}>Integration</p>
+              </div>
+              <div className={styles.RightDesc}>
+                <div className={styles.loader}></div>
+                <p onClick={certifSection}>Accredited Certification</p>
               </div>
             </div>
           </div>
@@ -85,33 +100,46 @@ const Service: React.FC = () => {
             <div className={styles.serviceContentLeft}>
               <div className={styles.row}>
                 {/* <i className="fa-solid fa-circle"></i> */}
-                <h6> • Smart Device Based on IA</h6>
+                <h6> • Technical Support and Maintenance</h6>
               </div>
 
               <p className={styles.serviceContent_desc}>
-                Lörem ipsum antev håhesk och sen i plasavis reism plasm. Pebel
-                presk kaktig alltså dide säsam tills spess. Suserade reang
-                tetraheska. Besk ambimeter alternativa fakta och dehälogi bilig.
-                Disk ov stenosade selfie för häd. Speska milig i maling uväd
-                måpanade såd. Sede tårat sorad. Perade sel viren om tålig multir
-                då biomal ar.
+                At 4InA Technologie, we understand the importance of effectively
+                managing your energy operations by providing the right support
+                at the right time.
+              </p>
+              <p className={styles.serviceContent_desc}>
+                We provide prompt, expert assistance to resolve any technical
+                issues, ensuring minimal downtime and uninterrupted operations.
+                Our support and maintenance service include:
+              </p>
+              <p className={styles.serviceContent_descc}>
+                • On-Demand 24/7 Availability
+                <br></br>• Certified Expertise Advanced
+                <br></br>• Tools and Methodology
+                <br></br> • Specialized Support Team
               </p>
             </div>
           </div>
 
-          <div  ref={DataSectionRef} className={styles.serviceRight}>
+          <div ref={DataSectionRef} className={styles.serviceRight}>
             <div className={styles.serviceContentRight}>
               <div className={styles.row}>
-                <h6> • Data Analytics</h6>
+                <h6> • Hardware Devolopment</h6>
               </div>
 
               <p className={styles.serviceContent_desc}>
-                Lörem ipsum antev håhesk och sen i plasavis reism plasm. Pebel
-                presk kaktig alltså dide säsam tills spess. Suserade reang
-                tetraheska. Besk ambimeter alternativa fakta och dehälogi bilig.
-                Disk ov stenosade selfie för häd. Speska milig i maling uväd
-                måpanade såd. Sede tårat sorad. Perade sel viren om tålig multir
-                då biomal ar.
+                From concept to production, our hardware development service
+                specialized in creating hardware that are customized to meet
+                your unique energy management requirements.
+              </p>
+              <p className={styles.serviceContent_desc}>
+                We develop robust, high-performance devices that seamlessly
+                integrate with your existing systems. It includes:
+              </p>
+              <p className={styles.serviceContent_descc}>
+                • Tailored design
+                <br></br>• Advanced technology AI and IOT
               </p>
             </div>
             <div className={styles.serviceIcon}>
@@ -125,33 +153,39 @@ const Service: React.FC = () => {
             <div className={styles.serviceContentLeft}>
               <div className={styles.row}>
                 {/* <i className="fa-solid fa-circle"></i> */}
-                <h6> • Web Development</h6>
+                <h6> • Software devolopment</h6>
               </div>
 
               <p className={styles.serviceContent_desc}>
-                Lörem ipsum antev håhesk och sen i plasavis reism plasm. Pebel
-                presk kaktig alltså dide säsam tills spess. Suserade reang
-                tetraheska. Besk ambimeter alternativa fakta och dehälogi bilig.
-                Disk ov stenosade selfie för häd. Speska milig i maling uväd
-                måpanade såd. Sede tårat sorad. Perade sel viren om tålig multir
-                då biomal ar.
+                4InA Technology work closely with you to develop intuitive,
+                scalable, and tailored web and mobile easy to use dashboard that
+                generates instantous insight and report to manage your energy
+                with ease and with precision at the same time. Our offerings
+                include:
+              </p>
+              <p className={styles.serviceContent_descc}>
+                • Software built specifically for your energy management goals
+                <br></br>• Web and mobile applications designed to ensure
+                accessibility from any device
+                <br></br>• Tools that enable you to monitor, analyze, and
+                optimize energy usage on the go with real time data access.
               </p>
             </div>
           </div>
 
-          <div  ref={MobileSectionRef} className={styles.serviceRight}>
+          <div ref={MobileSectionRef} className={styles.serviceRight}>
             <div className={styles.serviceContentRight}>
               <div className={styles.row}>
-                <h6> • Mobile Development</h6>
+                <h6> • Consulting</h6>
               </div>
 
               <p className={styles.serviceContent_desc}>
-                Lörem ipsum antev håhesk och sen i plasavis reism plasm. Pebel
-                presk kaktig alltså dide säsam tills spess. Suserade reang
-                tetraheska. Besk ambimeter alternativa fakta och dehälogi bilig.
-                Disk ov stenosade selfie för häd. Speska milig i maling uväd
-                måpanade såd. Sede tårat sorad. Perade sel viren om tålig multir
-                då biomal ar.
+                Your business can confidently address its energy challenges
+                while building a path toward sustainable growth and greater ROI.
+                We offer personalized recommendations aligned with your business
+                goal after conducting in-depth assessments to uncover
+                inefficiencies to enable targeted improvement and develop
+                customized strategies.
               </p>
             </div>
             <div className={styles.serviceIcon}>
@@ -165,17 +199,37 @@ const Service: React.FC = () => {
             <div className={styles.serviceContentLeft}>
               <div className={styles.row}>
                 {/* <i className="fa-solid fa-circle"></i> */}
-                <h6> • Assistance after installation</h6>
+                <h6> • Integration</h6>
               </div>
 
               <p className={styles.serviceContent_desc}>
-                Lörem ipsum antev håhesk och sen i plasavis reism plasm. Pebel
-                presk kaktig alltså dide säsam tills spess. Suserade reang
-                tetraheska. Besk ambimeter alternativa fakta och dehälogi bilig.
-                Disk ov stenosade selfie för häd. Speska milig i maling uväd
-                måpanade såd. Sede tårat sorad. Perade sel viren om tålig multir
-                då biomal ar.
+              Our Integration services ensure that new updates and customized features are seamlessly incorporated into your existing energy management systems. We implement new updates and integrations without disrupting your current operation.
               </p>
+              <p className={styles.serviceContent_desc}>
+              We offer as well post-integration service to verify compatibility and performance.
+              </p>
+            </div>
+          </div>
+          
+          <div ref={certifSectionRef} className={styles.serviceRight}>
+          <div className={styles.serviceContentRight}>
+              <div className={styles.row}>
+                {/* <i className="fa-solid fa-circle"></i> */}
+                <h6> • Accredited Certification</h6>
+              </div>
+
+              <p className={styles.serviceContent_desc}>
+              ISO 50001 is an international standard that applies to organizations of any size and provides requirements for establishing, managing and improving their energy consumption and efficiency.  It helps organizations establish, implement, and maintain practices for more efficient energy use.
+              </p>
+              <p className={styles.serviceContent_desc}>
+              The Certification in ISO 50001 reflects your dedication to reducing energy consumption, enhancing operational efficiency, and minimizing environmental impact.
+              </p>
+              <p className={styles.serviceContent_desc}>
+              We guide through each step of the ISO 50001 Certification process.
+              </p>
+            </div>
+            <div className={styles.serviceIcon}>
+              <Image src={mobile} alt="service" />
             </div>
           </div>
         </div>

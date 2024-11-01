@@ -20,11 +20,11 @@
 
   margin-left: 20px;
   font-size: 32px;
-  align-self: center;
   margin-right: 50px;
   margin-bottom: 50px;
   margin-top: 50px;
-  /* text-align: center; */
+  align-self: flex-start;
+
 }
 .InnovationTit h1 {
   /* background: linear-gradient(#212d323b, rgba(46, 57, 75, 0.089)); */
@@ -364,4 +364,39 @@
 
   width: 100%;
   margin: auto;
+}
+/* Demo Section */
+.DemoSection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 50px;
+  height: 330px;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(#ffffff, #1f499738);
+  background-repeat: no-repeat;
+  gap: 30px;
+}
+.buttonDemo {
+  background-color: var(--blue);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  width: 251px;
+  height: 52px;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: "kufam";
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-top: 40px;
+  margin-left: 20px;
+}
+.buttonDemo:hover {
+  background-color: white;
+  color: var(--blue);
+  border: 2px;
+  border-color: var(--blue) 2px solid;
 }

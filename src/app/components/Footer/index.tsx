@@ -54,17 +54,7 @@ const Footer =  () => {
             <i className="fa-brands fa-facebook fa-shake-facebook"></i>
             </div> 
         </div>
-        {/* <div className={styles.Left}>
-        <h6>Newsletter</h6>
-
-        <form className={styles.form}>
-        <input className={styles.input} type="email" placeholder="Enter your email" />
-        <button  className={styles.SUb} type="submit">Subscribe</button>
-        </form>
-        <div>
-
-        </div>
-        </div> */}
+     
       </div>
     </footer>
   );
