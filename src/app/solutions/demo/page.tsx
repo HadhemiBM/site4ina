@@ -2,7 +2,6 @@
 import styles from "./index.module.css";
 import React, { useState } from "react";
 import PageTransition from "../../components/PageTransition";
-
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -21,20 +20,16 @@ const Contact: React.FC = () => {
       [name]: value,
     });
   };
-
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
     console.log("Form Data:", formData);
   };
-
   return (
     <PageTransition>
       <div className={styles.container}>
         <div className={styles.Left}>
           <form className={styles.formContainer}  
                   action="https://formsubmit.co/4inatechnologie@gmail.com"
-
           method="POST"
           encType="multipart/form-data" >
             <div className={styles.row}>
@@ -71,19 +66,16 @@ const Contact: React.FC = () => {
                onChange={handleChange}
                 className={styles.input}
             name="email"
-
                 type="email"
                 placeholder="Enter your email"
                 required
               />
             </div>
-        
             <div className={styles.column}>
               <label className={styles.label}>Additional information*</label>
               <textarea
                value={formData.message}
             name="message"
-
                onChange={handleChange}
                 className={styles.inputMessage}
                 placeholder="Your Message"
@@ -101,12 +93,10 @@ const Contact: React.FC = () => {
             Kindly fill this form with your details about your inquiries and we
             would respond your inquiry shortly.
           </p>
-
           <div className={styles.rowContact}>
           <i className="fa-solid fa-paper-plane" ></i>
             <div className={styles.columnContact}>
               <p>Send an email</p>
-
               <p className={styles.columnContact_p}>contact@4inatechnologie.com</p>
             </div>
           </div>
@@ -114,7 +104,6 @@ const Contact: React.FC = () => {
           <i className="fa-solid fa-phone"></i>
             <div className={styles.columnContact}>
               <p>Give us a call</p>
-
               <p className={styles.columnContact_p}>+216 23 507 648</p>
             </div>
           </div>
@@ -122,16 +111,14 @@ const Contact: React.FC = () => {
           <i className="fa-solid fa-location-dot"></i>
             <div className={styles.columnContact}>
               <p>Office address</p>
-
-              <p className={styles.columnContact_p}>11,Odo-Olowu, Ijeshatedo B/Stop, Surulere</p>
+              <p className={styles.columnContact_p}>Technopark manouba, Manouba Tunisia</p>
             </div>
           </div>
           <div className={styles.rowContact}>
           <i className="fa-solid fa-clock"></i>
             <div className={styles.columnContact}>
               <p>Working hours</p>
-
-              <p className={styles.columnContact_p}>Mon - Sat: 10am - 4pm</p>
+              <p className={styles.columnContact_p}>Mon - Fri: 10am - 5pm</p>
             </div>
           </div>
         </div>

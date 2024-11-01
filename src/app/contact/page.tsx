@@ -116,7 +116,7 @@ const Contact: React.FC = () => {
         </div>
         <div className={styles.Right}>
           <h2 className={styles.RightTitle}>
-            Connect with 4ina Technology Innovate, Collaborate, Succeed
+            Connect with 4ina Technologie Innovate, Collaborate, Succeed
           </h2>
           <p className={styles.RightDesc}>
             Kindly fill this form with your details about your inquiries and we
@@ -144,7 +144,7 @@ const Contact: React.FC = () => {
             <div className={styles.columnContact}>
               <p>Office address</p>
 
-              <p className={styles.columnContact_p}>11,Odo-Olowu, Ijeshatedo B/Stop, Surulere</p>
+              <p className={styles.columnContact_p}>Technopark manouba, Manouba Tunisia</p>
             </div>
           </div>
           <div className={styles.rowContact}>

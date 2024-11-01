@@ -49,7 +49,7 @@ const Service: React.FC = () => {
           <div className={styles.Left}>
             <h1 className={styles.title}>Services</h1>
             <p className={styles.desc}>
-              4InA Technology delivers cutting-edge solutions designed to
+              4InA Technologie delivers cutting-edge solutions designed to
               enhance efficiency and optimize operations. Our Smart Device
               offerings, powered by advanced AI, help reduce energy consumption
               and automate processes, driving sustainability and intelligent
@@ -59,7 +59,7 @@ const Service: React.FC = () => {
               Analytics services turn complex information into actionable
               strategies, while our dedicated support ensures that all solutions
               perform optimally after installation. Discover how we can empower
-              your business with technology-driven innovation.
+              your business with technologie-driven innovation.
             </p>
           </div>
           <div className={styles.Right}>
@@ -158,7 +158,7 @@ const Service: React.FC = () => {
               </div>
 
               <p className={styles.serviceContent_desc}>
-                4InA Technology work closely with you to develop intuitive,
+                4InA Technologie work closely with you to develop intuitive,
                 scalable, and tailored web and mobile easy to use dashboard that
                 generates instantous insight and report to manage your energy
                 with ease and with precision at the same time. Our offerings

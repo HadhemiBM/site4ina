@@ -37,7 +37,7 @@ const Events: React.FC = () => {
                 latest trends, challenges, and the evolving landscape of our
                 startup. Whether you're a professional, enthusiast, or simply
                 curious, this interview provides a compelling glimpse into the
-                innovations and ideas shaping the future of technology. Don’t
+                innovations and ideas shaping the future of technologie. Don’t
                 miss it!
               </p>
             </div>

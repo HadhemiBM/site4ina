@@ -8,7 +8,7 @@ const Footer =  () => {
       <div className={styles.container}>
       <div className={styles.Right}>
         <Image  className={styles.RightLogo} src={logo} alt="Log4ina" />
-        <p>Connect with 4ina Technology Innovate, Collaborate, Succeed </p>
+        <p>Connect with 4ina Technologie Innovate, Collaborate, Succeed </p>
         
         </div>
         <div className={styles.middle}>
@@ -50,8 +50,12 @@ const Footer =  () => {
         </div>
         </div> 
         <div className={styles.TeamSocial}>
+          <Link href
+          ="https://www.linkedin.com/company/4ina-technologie/posts/?feedView=all">
+
             <i className="fa-brands fa-linkedin fa-shake-facebook "  ></i>
-            <i className="fa-brands fa-facebook fa-shake-facebook"></i>
+          </Link>
+            {/* <i className="fa-brands fa-facebook fa-shake-facebook"></i> */}
             </div> 
         </div>
      

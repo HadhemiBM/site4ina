@@ -398,7 +398,7 @@ const Homee: React.FC = () => {
             <h1 className={styles.SolutionTitle2}>Partners</h1>
           </div>
           <p className={styles.SolutionsDesc}>
-            4ina Technology, we believe in the power of collaboration. Together,
+            4ina Technologie, we believe in the power of collaboration. Together,
             we leverage our strengths to create cutting-edge solutions that
             drive success across various sectors.
           </p>
@@ -435,34 +435,22 @@ const Homee: React.FC = () => {
           </p>
           <div className={styles.AllPrices}>
             <div className={styles.price1}>
-              <div className={styles.priceHed}>
-                <Image
-                  className={styles.ImageSpin}
-                  src={SpinnerImage}
-                  alt="spinner"
-                />
+              <div className={styles.rowloa}>
+            <div className={styles.loader}></div>
                 <h3 className={styles.PriceTitle1}>Basic Plan</h3>
               </div>
               <p className={styles.Desc1}>For Small Size Business</p>
             </div>
             <div className={styles.price1}>
-              <div className={styles.priceHed}>
-                <Image
-                  className={styles.ImageSpin}
-                  src={SpinnerImage}
-                  alt="spinner"
-                />
+            <div className={styles.rowloa}>
+            <div className={styles.loader}></div>
                 <h3 className={styles.PriceTitle1}>Standard Plan</h3>
               </div>
               <p className={styles.Desc1}>For Medium Size Business</p>
             </div>
             <div className={styles.price1}>
-              <div className={styles.priceHed}>
-                <Image
-                  className={styles.ImageSpin}
-                  src={SpinnerImage}
-                  alt="spinner"
-                />
+            <div className={styles.rowloa}>
+            <div className={styles.loader}></div>
                 <h3 className={styles.PriceTitle1}>Advanced Plan</h3>
               </div>
               <p className={styles.Desc1}>For Large Size Business</p>
