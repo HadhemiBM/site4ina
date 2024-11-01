@@ -126,7 +126,7 @@ const Homee: React.FC = () => {
         "https://www.linkedin.com/in/oumaimabenaziza?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       facebook:
         "https://www.facebook.com/share/95iqP7MBQDRPiHvX/?mibextid=qi2Omg",
-      img: "https://res.cloudinary.com/ddngbriyu/image/upload/v1730198659/team1_dwmsk4.jpg",
+      img: "https://res.cloudinary.com/ddngbriyu/image/upload/v1730446516/oumaima_kd346i.webp",
 
       post: "Data",
     },

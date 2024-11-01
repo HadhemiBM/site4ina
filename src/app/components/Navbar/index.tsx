@@ -12,7 +12,6 @@ const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [solutionsDrop, setSolutionsDrop] = useState(false);
   const [postDrop, setPostDrop] = useState(false);
-
   const links = [
     { id: 1, link: "/home", name: "Accueil" },
     { id: 2, link: "/about", name: "AboutUs" },
@@ -21,18 +20,15 @@ const Navbar: React.FC = () => {
     { id: 5, link: "", name: "Posts" },
     { id: 6, link: "/contact", name: "Contact" },
   ];
-  
   const solutionsLinks = [
     { id: 1, link: "/solutions/explore", name: "Explore" },
     { id: 2, link: "/solutions/demo", name: "Demo" },
   ];
-  
   const postsLinks = [
     { id: 1, link: "/posts/events", name: "Events" },
     { id: 2, link: "/posts/blog", name: "Blog" },
     { id: 3, link: "/posts/whitePapers", name: "White Papers" },
   ];
-  
   useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY;

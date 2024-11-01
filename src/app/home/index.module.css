@@ -605,7 +605,6 @@ color: #000;
   align-items: center;
   background-color: transparent;
   justify-content: center;
-
   margin-top: 50px;
 }
 .AllBlog {
@@ -627,9 +626,7 @@ color: #000;
   align-content: center;
   align-items: center;
   justify-content: center;
-  /* gap: 10px; */
   margin: 0px 0px 10px 0px;
-  /* background-color: aqua; */
   border-bottom: var(--darkGrey) 1px solid;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
@@ -642,7 +639,7 @@ color: #000;
   color: black;
   font-family: "kufam";
   padding-left: 1.5rem;
-  /* margin-left: 1.5rem; */
+
   width: 100%;
   display: flex;
   flex-direction: column;

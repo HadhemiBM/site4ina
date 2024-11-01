@@ -96,25 +96,50 @@
   align-self: center;
   gap: 5px;
 }
-.Team1 {
+.contTeam{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* background-color: aqua; */
+
+}
+.Team2 {
+  display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   align-content: center;
   align-items: center;
+  /* background-color: rgb(60, 73, 73); */
+
   justify-content: center;
   margin: 0px 0px 0px 0px;
   /* background-color: aqua; */
   /* border-bottom: 1px ridge  var(--blue); */
   border-bottom: 2mm double rgba(230, 241, 245, 0.6);
-  min-width: 300px;
+  min-width: 24%;
   height: 9rem;
   gap: 10px;
 }
+.Team1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  /* background-color: rgb(60, 73, 73); */
 
+  justify-content: center;
+  margin: 0px 0px 10px 0px;
+  /* background-color: aqua; */
+  /* border-bottom: 1px ridge  var(--blue); */
+ 
+  min-width: 24%;
+  height: 9rem;
+  gap: 10px;
+}
 .TeamIcon {
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   display: flex;
   align-items: center;
