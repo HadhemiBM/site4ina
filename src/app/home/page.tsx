@@ -154,7 +154,7 @@ const Homee: React.FC = () => {
   return (
     <PageTransition>
       <div className={styles.container}>
-        <Header />
+        <Header  />
         <div className={styles.CibleSection}>
           <div className={styles.CibleLeft}>
             <h1 className={styles.CibleTitle}>
