@@ -17,8 +17,48 @@ import { Blog, blogs } from "../data/BlogData";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-
+import Data from "../Assests/hard.jpg";
+import web from "../Assests/soft.png";
+import iso from "../Assests/iso.png";
+import consult from "../Assests/consult.jpg";
+import integration from "../Assests/integration.jpg";
 const Homee: React.FC = () => {
+  const games = [
+    {
+      title: 'Technical Support and Maintenance',
+      description: ' At 4InA Technologie, we understand the importance of effectively managing your energy operations by providing the right support at the right time.',
+      image: 'https://res.cloudinary.com/ddngbriyu/image/upload/v1730734704/tech_fqa1bw.jpg',
+    },
+    {
+      title: 'Hardware Devolopment',
+      description: ' From concept to production, our hardware development service specialized in creating hardware that are customized to meet your unique energy management requirements.',
+      image: 'https://res.cloudinary.com/ddngbriyu/image/upload/v1730734500/hard_nlr99m.jpg',
+    },
+    {
+      title: 'Software devolopment',
+      description: ' 4InA Technologie work closely with you to develop intuitive, scalable, and tailored web and mobile easy to use dashboard that           generates instantous insight and report to manage your energy with ease and with precision at the same time. Our offerings include:.',
+      image: 'https://res.cloudinary.com/ddngbriyu/image/upload/v1730734519/soft_rkfmli.jpg',
+    },
+    {
+      title: 'Consulting',
+      description: ' Your business can confidently address its energy challenges while building a path toward sustainable growth and greater ROI. We offer personalized recommendations aligned with your business goal after conducting in-depth assessments to uncover  inefficiencies to enable targeted improvement and develop customized strategies..',
+      image: 'https://res.cloudinary.com/ddngbriyu/image/upload/v1730734559/consult_ohfu1s.jpg',
+    },
+    {
+      title: 'Integration',
+      description: 'Our Integration services ensure that new updates and customized features are seamlessly incorporated into your existing energy management systems. We implement new updates and integrations without disrupting your current operation.',
+      image: 'https://res.cloudinary.com/ddngbriyu/image/upload/v1730734596/integration_nucds8.jpg',
+    },
+    {
+      title: 'Accredited Certification',
+      description: '  The Certification in ISO 50001 reflects your dedication to reducing energy consumption, enhancing operational efficiency, and minimizing environmental impact.',
+      image: 'https://res.cloudinary.com/ddngbriyu/image/upload/v1730734549/iso_kvcqa0.png',
+    },
+  ];
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const handleCardClick = (index: number) => {
+    setActiveIndex(index === activeIndex ? null : index); // Toggle active state if clicked again
+  };
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
   const [showDetails, setShowDetails] = useState(false);
   const [showDetails2, setShowDetails2] = useState(false);
@@ -240,7 +280,7 @@ const Homee: React.FC = () => {
               {/* </div> */}
             </div>
           </div>
-          <div className={styles.AvantagesSection}>
+          {/* <div className={styles.AvantagesSection}>
             <h1 className={styles.InnovationTitle}>
               Advantages of Installing Our Solution
             </h1>
@@ -294,7 +334,7 @@ const Homee: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className={styles.DemoSection}>
           <h1 className={styles.SolutionTitle2}>
@@ -320,7 +360,7 @@ const Homee: React.FC = () => {
           <div className={styles.AllServices}>
             {/* service1 */}
 
-            <div className={styles.Service1}>
+            {/* <div className={styles.Service1}>
               <div className={styles.ServiceIcon}>
                 <Image
                   className={styles.ServicePower}
@@ -342,9 +382,9 @@ const Homee: React.FC = () => {
                   <Image src={arrowService} alt="service" />
                 </Link>
               </div>
-            </div>
+            </div> */}
             {/* service2 */}
-            <div className={styles.Service1}>
+            {/* <div className={styles.Service1}>
               <div className={styles.ServiceIcon}>
                 <Image
                   className={styles.ServicePower}
@@ -364,9 +404,9 @@ const Homee: React.FC = () => {
                   <Image src={arrowService} alt="service" />
                 </Link>
               </div>
-            </div>
+            </div> */}
             {/* service3 */}
-            <div className={styles.Service1}>
+            {/* <div className={styles.Service1}>
               <div className={styles.ServiceIcon}>
                 <Image
                   className={styles.ServicePower}
@@ -389,9 +429,9 @@ const Homee: React.FC = () => {
                   <Image src={arrowService} alt="service" />
                 </Link>
               </div>
-            </div>
+            </div> */}
             {/* service4 */}
-            <div className={styles.Service1}>
+            {/* <div className={styles.Service1}>
               <div className={styles.ServiceIcon}>
                 <Image
                   className={styles.ServicePower}
@@ -413,9 +453,9 @@ const Homee: React.FC = () => {
                   <Image src={arrowService} alt="service" />
                 </Link>
               </div>
-            </div>
+            </div> */}
             {/* service5 */}
-            <div className={styles.Service1}>
+            {/* <div className={styles.Service1}>
               <div className={styles.ServiceIcon}>
                 <Image
                   className={styles.ServicePower}
@@ -435,9 +475,9 @@ const Homee: React.FC = () => {
                   <Image src={arrowService} alt="service" />
                 </Link>
               </div>
-            </div>
+            </div> */}
             {/* service6 */}
-            <div className={styles.Service1}>
+            {/* <div className={styles.Service1}>
               <div className={styles.ServiceIcon}>
                 <Image
                   className={styles.ServicePower}
@@ -460,7 +500,28 @@ const Homee: React.FC = () => {
                   <Image src={arrowService} alt="service" />
                 </Link>
               </div>
+            </div> */}
+<div className={styles.game_section}>
+
+      <div className={styles.owl_carousel_custom_carousel_owl_theme}>
+        {games.map((game, index) => (
+          <div
+            key={index}
+            className={`${styles.item} ${activeIndex === index ? styles.item_active : ''}`}
+            onClick={() => handleCardClick(index)}
+            style={{ backgroundImage: `url(${game.image})` }}
+          >
+            <div className={styles.item_desc}>
+              {/* <h3 className={styles.item_descH3}>{game.title}</h3> */}
+              <p>{game.description}</p>
             </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+
+
           </div>
         </div>
         <div className={styles.PartnerSection}>
@@ -671,7 +732,8 @@ const Homee: React.FC = () => {
             </div>
           </Link>
         </div>
-      </div>
+      
+     
     </PageTransition>
   );
 };
