@@ -1063,12 +1063,12 @@
 }
 
 .game_section {
-  /* padding: 60px 50px; */
-  /* background-color: #e73700; */
+
   width: 100%;
   display: flex;
   gap: 20px;
   flex-direction: row;
+  margin-bottom: 50px;
 }
 
 .owl_carousel_custom_carousel_owl_theme {
@@ -1076,13 +1076,12 @@
   gap: 20px;
   width: 100%;
   overflow-x: auto;
-  /* background-color: #495469; */
   scroll-snap-type: x mandatory;
 }
 
 .item {
-  width: 450px; /* Set a fixed width */
-  height: 380px; /* Ensure all cards have the same height */
+  width: 450px; 
+  height: 380px; 
   background-size: cover;
   background-position: center;
   border-radius: 16px;
@@ -1112,7 +1111,6 @@
   left: 0;
   width: 100%;
   padding: 20px;
-  /* background-color: #1353c97e; */
 
   z-index: 1;
   transform: translateY(calc(100% - 40px));
@@ -1124,9 +1122,7 @@
   left: 0;
   text-align: center;
   width: 100%;
-  /* padding: 20px; */
-  /* background-color: #1353c97e; */
-
+  
   z-index: 1;
   transform: translateY(calc(100% - 40px));
   transition: transform 0.3s ease;
