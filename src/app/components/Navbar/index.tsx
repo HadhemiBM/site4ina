@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import styles from "./index.module.css";
 import Image from "next/image";
-import logo from '../../Assests/logo4ina.png';
+import logo from "../../Assests/logo4ina.png";
 
 const Navbar: React.FC = () => {
   const pathname = usePathname();
@@ -16,13 +16,14 @@ const Navbar: React.FC = () => {
     { id: 1, link: "/home", name: "Home" },
     { id: 2, link: "/about", name: "AboutUs" },
     { id: 3, link: "/services", name: "Services" },
-    { id: 4, link: "", name: "Solutions" },
+    { id: 4, link: "", name: "technical platform" },
     { id: 5, link: "", name: "Posts" },
     { id: 6, link: "/contact", name: "Contact" },
   ];
   const solutionsLinks = [
     { id: 1, link: "/solutions/explore", name: "Explore" },
     { id: 2, link: "/solutions/demo", name: "Demo" },
+
   ];
   const postsLinks = [
     { id: 1, link: "/posts/events", name: "Events" },
@@ -45,16 +46,15 @@ const Navbar: React.FC = () => {
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
       <div className={styles.navbarContainer}>
         <Link href="/">
-        <Image
-          className={styles.navbarLogoText}
-          src={logo}
-          alt="Logo 4ina"
-          width={90}  
-          height={70} 
-       
-        />
+          <Image
+            className={styles.navbarLogoText}
+            src={logo}
+            alt="Logo 4ina"
+            width={90}
+            height={70}
+          />
         </Link>
-       
+
         <div className={styles.navbarLinksContainer}>
           {links.map(({ id, link, name }) => (
             <div
@@ -67,9 +67,12 @@ const Navbar: React.FC = () => {
                   setPostDrop(true);
                 }
               }}
-              onMouseLeave={() =>{ if (name === "Solutions") {
-                setSolutionsDrop(false);}else if (name === "Posts") {
-                    setPostDrop(false);}
+              onMouseLeave={() => {
+                if (name === "Solutions") {
+                  setSolutionsDrop(false);
+                } else if (name === "Posts") {
+                  setPostDrop(false);
+                }
               }}
             >
               <h3
@@ -88,7 +91,7 @@ const Navbar: React.FC = () => {
                   ))}
                 </div>
               )}
-   {name === "Posts" && postDrop && (
+              {name === "Posts" && postDrop && (
                 <div className={styles.dropdownMenu}>
                   {postsLinks.map(({ id, link, name }) => (
                     <Link key={id} href={link} className={styles.dropdownItem}>
@@ -102,7 +105,9 @@ const Navbar: React.FC = () => {
         </div>
         <div className={styles.navbarLogin}>
           <h3 className={styles.LoginContainer}>
-            <Link className={styles.LoginText} href="/login">Login</Link>
+            <Link className={styles.LoginText} href="/login">
+              Login
+            </Link>
           </h3>
         </div>
       </div>

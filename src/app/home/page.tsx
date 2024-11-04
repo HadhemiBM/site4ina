@@ -6,18 +6,12 @@ import PageTransition from "../components/PageTransition";
 
 import Image from "next/image";
 import Header from "../components/HeaderSection";
-import SpinnerImage from "../Assests/svg/spinner.svg";
-import hardware from "../Assests/svg/hardware.svg";
-import algo from "../Assests/svg/algo.svg";
-import indus from "../Assests/svg/indus.svg";
-import decarbonization from "../Assests/svg/decarbonization.svg";
-import agritec from "../Assests/svg/agritec.svg";
-import software from "../Assests/svg/software.svg";
+
 import power from "../Assests/svg/power.svg";
 import arrowLeft from "../Assests/svg/arrowLeft.svg";
 import arrowRight from "../Assests/svg/arrowRight.svg";
 import arrowService from "../Assests/svg/arrowService.svg";
-import blog from "../Assests/svg/blog.svg";
+
 import { Blog, blogs } from "../data/BlogData";
 
 import Link from "next/link";
@@ -26,28 +20,40 @@ import { motion } from "framer-motion";
 
 const Homee: React.FC = () => {
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
+  const [showDetails, setShowDetails] = useState(false);
+  const [showDetails2, setShowDetails2] = useState(false);
+  const [showDetails3, setShowDetails3] = useState(false);
+  const toggleDetails = () => {
+    setShowDetails((prev) => !prev);
+  };
 
   useEffect(() => {
-    const timers: NodeJS.Timeout[] = []; // Explicitly declare the type here
+    const timers: NodeJS.Timeout[] = [];
 
-    // Show each item one after the other
     const showItems = () => {
       for (let i = 0; i < 4; i++) {
         timers.push(
           setTimeout(() => {
             setVisibleItems((prev) => [...prev, i]);
-          }, i * 300) // Adjust timing as necessary (300ms delay)
+          }, i * 300)
         );
       }
     };
 
     showItems();
 
-    // Cleanup timers on unmount
     return () => {
       timers.forEach((timer) => clearTimeout(timer));
     };
   }, []);
+
+  const toggleDetails2 = () => {
+    setShowDetails2((prev) => !prev);
+  };
+  const toggleDetails3 = () => {
+    setShowDetails3((prev) => !prev);
+  };
+
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const scrollLeft = () => {
@@ -154,7 +160,7 @@ const Homee: React.FC = () => {
   return (
     <PageTransition>
       <div className={styles.container}>
-        <Header  />
+        <Header />
         <div className={styles.CibleSection}>
           <div className={styles.CibleLeft}>
             <h1 className={styles.CibleTitle}>
@@ -205,10 +211,9 @@ const Homee: React.FC = () => {
             software, designed to optimize your energy management
           </p>
           <div className={styles.AllSolutions}>
-            
             <div className={styles.Solution1}>
               {/* <div className={styles.SolutionCircle}> */}
-                {/* <Image
+              {/* <Image
                   className={styles.Image}
                   src={decarbonization}
                   alt="hardware"
@@ -216,75 +221,80 @@ const Homee: React.FC = () => {
               {/* </div> */}
               <h3 className={styles.SolTitle1}>Hardware</h3>
               <p className={styles.SolutionDesc1}>
-              Our precision sensors collect real-time energy usage data continuously , seamlessly connecting with our platform to provide a clear, data-driven view of your consumption patterns.
-
+                Our precision sensors collect real-time energy usage data
+                continuously , seamlessly connecting with our platform to
+                provide a clear, data-driven view of your consumption patterns.
               </p>
             </div>
             <h1>+</h1>
             <div className={styles.Solution2}>
               <h3 className={styles.SolTitle1}>Software</h3>
               <p className={styles.SolutionDesc1}>
-              Our cloud-based software analyzes data from each device and offers intelligent automation that adapts to your energy needs, providing easy, remote access ( Web & Mobile) to insights while optimizing consumption and minimizing waste
-
+                Our cloud-based software analyzes data from each device and
+                offers intelligent automation that adapts to your energy needs,
+                providing easy, remote access ( Web & Mobile) to insights while
+                optimizing consumption and minimizing waste
               </p>
               {/* <div className={styles.SolutionCircle}>
                
-              {/* </div> */} 
+              {/* </div> */}
             </div>
           </div>
-           <div className={styles.AvantagesSection}>
-          <h1 className={styles.InnovationTitle}>
-            Advantages of Installing Our Solution
-          </h1>
-          <div className={styles.Allavant}>
-            <div className={`${styles.item} ${styles.item1}`}>
-              <div className={styles.number}>1</div>
-              <div className={styles.content}>
-                <h3>Monitoring of energy consumption</h3>
-                <p className={styles.contentP}>
-                  4InA Technologie is a Tunisian startup empowering businesses
-                  across industries to enhance and optimize their energy
-                  management operations, supporting sustainable growth through
-                  AI and IoT solutions.
-                </p>
+          <div className={styles.AvantagesSection}>
+            <h1 className={styles.InnovationTitle}>
+              Advantages of Installing Our Solution
+            </h1>
+            <div className={styles.Allavant}>
+              <div className={`${styles.item} ${styles.item1}`}>
+                <div className={styles.number}>1</div>
+                <div className={styles.content}>
+                  <h3>Monitoring of energy consumption</h3>
+                  <p className={styles.contentP}>
+                    4InA Technologie is a Tunisian startup empowering businesses
+                    across industries to enhance and optimize their energy
+                    management operations, supporting sustainable growth through
+                    AI and IoT solutions.
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <div className={`${styles.item} ${styles.item2}`}>
-              <div className={styles.number}>2</div>
-              <div className={styles.content}>
-                <h3>Guidance for energy managers</h3>
-                <p className={styles.contentP}>
-                  Provide actionable insights for energy and electricity
-                  managers through intelligent machines to enhance
-                  decision-making.
-                </p>
+              <div className={`${styles.item} ${styles.item2}`}>
+                <div className={styles.number}>2</div>
+                <div className={styles.content}>
+                  <h3>Guidance for energy managers</h3>
+                  <p className={styles.contentP}>
+                    Provide actionable insights for energy and electricity
+                    managers through intelligent machines to enhance
+                    decision-making.
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <div className={`${styles.item} ${styles.item3}`}>
-              <div className={styles.number}>3</div>
-              <div className={styles.content}>
-                <h3>Monitoring Machine Behavior and Predicting Failures</h3>
-                <p className={styles.contentP}>
-                  Analyze machine behavior to predict future energy consumption
-                  and detect potential faults before they escalate.
-                </p>
+              <div className={`${styles.item} ${styles.item3}`}>
+                <div className={styles.number}>3</div>
+                <div className={styles.content}>
+                  <h3>Monitoring Machine Behavior and Predicting Failures</h3>
+                  <p className={styles.contentP}>
+                    Analyze machine behavior to predict future energy
+                    consumption and detect potential faults before they
+                    escalate.
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <div className={`${styles.item} ${styles.item4}`}>
-              <div className={styles.number}>4</div>
-              <div className={styles.content}>
-                <h3>Reducing Maintenance Costs</h3>
-                <p className={styles.contentP}>
-                  Lower maintenance costs, reduce energy bills, and mitigate the
-                  effects of harmonics for improved operational efficiency.
-                </p>
+              <div className={`${styles.item} ${styles.item4}`}>
+                <div className={styles.number}>4</div>
+                <div className={styles.content}>
+                  <h3>Reducing Maintenance Costs</h3>
+                  <p className={styles.contentP}>
+                    Lower maintenance costs, reduce energy bills, and mitigate
+                    the effects of harmonics for improved operational
+                    efficiency.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
         </div>
         <div className={styles.DemoSection}>
           <h1 className={styles.SolutionTitle2}>
@@ -320,9 +330,12 @@ const Homee: React.FC = () => {
               </div>
               <div className={styles.ServiceContent}>
                 <div className={styles.ServiceContentCol}>
-                  <h6 className={styles.ServiceTitle}>Technical Support and Maintenance</h6>
+                  <h6 className={styles.ServiceTitle}>
+                    Technical Support and Maintenance
+                  </h6>
                   <p className={styles.ServiceDesc}>
-                  Our dedicated team is here to resolve issues and maximize system efficiency. 
+                    Our dedicated team is here to resolve issues and maximize
+                    system efficiency.
                   </p>
                 </div>
                 <Link className={styles.ServiceImg} href="/services">
@@ -341,11 +354,10 @@ const Homee: React.FC = () => {
               </div>
               <div className={styles.ServiceContent}>
                 <div className={styles.ServiceContentCol}>
-                  <h6 className={styles.ServiceTitle}>
-                  Hardware Devolopment
-                  </h6>
+                  <h6 className={styles.ServiceTitle}>Hardware Devolopment</h6>
                   <p className={styles.ServiceDesc}>
-                  We develop advanced hardware solutions tailored to meet your unique needs
+                    We develop advanced hardware solutions tailored to meet your
+                    unique needs
                   </p>
                 </div>
                 <Link className={styles.ServiceImg} href="/services">
@@ -364,9 +376,14 @@ const Homee: React.FC = () => {
               </div>
               <div className={styles.ServiceContent}>
                 <div className={styles.ServiceContentCol}>
-                  <h6 className={styles.ServiceTitle}>Software devolopment ( Web and Mobile) </h6>
+                  <h6 className={styles.ServiceTitle}>
+                    Software devolopment ( Web and Mobile){" "}
+                  </h6>
                   <p className={styles.ServiceDesc}>
-                  We provide custom development and upgrades for your mobile and web software to meet your evolving energy management demand.</p>
+                    We provide custom development and upgrades for your mobile
+                    and web software to meet your evolving energy management
+                    demand.
+                  </p>
                 </div>
                 <Link className={styles.ServiceImg} href="/services">
                   <Image src={arrowService} alt="service" />
@@ -384,11 +401,12 @@ const Homee: React.FC = () => {
               </div>
               <div className={styles.ServiceContent}>
                 <div className={styles.ServiceContentCol}>
-                  <h6 className={styles.ServiceTitle}>
-                  Consulting
-                  </h6>
+                  <h6 className={styles.ServiceTitle}>Consulting</h6>
                   <p className={styles.ServiceDesc}>
-                  We offer expert consulting tailored to your unique energy management needs, helping to identify inefficiencies and ensure your team is fully equipped to utilize our solutions effectively
+                    We offer expert consulting tailored to your unique energy
+                    management needs, helping to identify inefficiencies and
+                    ensure your team is fully equipped to utilize our solutions
+                    effectively
                   </p>
                 </div>
                 <Link className={styles.ServiceImg} href="/services">
@@ -396,8 +414,30 @@ const Homee: React.FC = () => {
                 </Link>
               </div>
             </div>
-                {/* service5 */}
-                <div className={styles.Service1}>
+            {/* service5 */}
+            <div className={styles.Service1}>
+              <div className={styles.ServiceIcon}>
+                <Image
+                  className={styles.ServicePower}
+                  src={power}
+                  alt="hardware"
+                />
+              </div>
+              <div className={styles.ServiceContent}>
+                <div className={styles.ServiceContentCol}>
+                  <h6 className={styles.ServiceTitle}>Integration</h6>
+                  <p className={styles.ServiceDesc}>
+                    The integration of new updates and specific features
+                    tailored to your business's current energy situation.
+                  </p>
+                </div>
+                <Link className={styles.ServiceImg} href="/services">
+                  <Image src={arrowService} alt="service" />
+                </Link>
+              </div>
+            </div>
+            {/* service6 */}
+            <div className={styles.Service1}>
               <div className={styles.ServiceIcon}>
                 <Image
                   className={styles.ServicePower}
@@ -408,34 +448,12 @@ const Homee: React.FC = () => {
               <div className={styles.ServiceContent}>
                 <div className={styles.ServiceContentCol}>
                   <h6 className={styles.ServiceTitle}>
-                  Integration
+                    Accredited Certification
                   </h6>
                   <p className={styles.ServiceDesc}>
-                  The integration of new updates and specific features tailored to your business's current energy situation.
-                  </p>
-                </div>
-                <Link className={styles.ServiceImg} href="/services">
-                  <Image src={arrowService} alt="service" />
-                </Link>
-              </div>
-            </div>
-          {/* service6 */}
-          <div className={styles.Service1}>
-              <div className={styles.ServiceIcon}>
-                <Image
-                  className={styles.ServicePower}
-                  src={power}
-                  alt="hardware"
-                />
-              </div>
-              <div className={styles.ServiceContent}>
-                <div className={styles.ServiceContentCol}>
-                  <h6 className={styles.ServiceTitle}>
-                  Accredited Certification
-                  </h6>
-                  <p className={styles.ServiceDesc}>
-                  We provide training programs  for certifications such as ISO 50001 and more, ensuring your organization meets industry standards.
-
+                    We provide training programs for certifications such as ISO
+                    50001 and more, ensuring your organization meets industry
+                    standards.
                   </p>
                 </div>
                 <Link className={styles.ServiceImg} href="/services">
@@ -451,9 +469,9 @@ const Homee: React.FC = () => {
             <h1 className={styles.SolutionTitle2}>Partners</h1>
           </div>
           <p className={styles.SolutionsDesc}>
-            4ina Technologie, we believe in the power of collaboration. Together,
-            we leverage our strengths to create cutting-edge solutions that
-            drive success across various sectors.
+            4ina Technologie, we believe in the power of collaboration.
+            Together, we leverage our strengths to create cutting-edge solutions
+            that drive success across various sectors.
           </p>
           <div className={styles.wrapper}>
             <button className={styles.scrollButton} onClick={scrollLeft}>
@@ -479,34 +497,127 @@ const Homee: React.FC = () => {
         </div>
         <div className={styles.PricingSection}>
           <div className={styles.SolutionTitle}>
-            <h1 className={styles.SolutionTitle1}>Pricing</h1>
-            <h1 className={styles.SolutionTitle2}>Plans</h1>
+            <h1 className={styles.SolutionTitle1}>Solution</h1>
+            <h1 className={styles.SolutionTitle2}>Proposal</h1>
           </div>
           <p className={styles.SolutionsDesc}>
-            We offer flexible pricing options designed to meet the diverse needs
-            of our clients.
+            We offer you a complete solution of different services and
+            categories
           </p>
           <div className={styles.AllPrices}>
             <div className={styles.price1}>
               <div className={styles.rowloa}>
-            <div className={styles.loader}></div>
-                <h3 className={styles.PriceTitle1}>Basic Plan</h3>
+                <div className={styles.loader}></div>
+                <h3 className={styles.PriceTitle1}>Basic Solution</h3>
               </div>
-              <p className={styles.Desc1}>For Small Size Business</p>
+
+              <Link
+                href=""
+                className={styles.SeeAllTextPrice}
+                onClick={(e) => {
+                  e.preventDefault();
+                  toggleDetails();
+                }}
+              >
+                <div>
+                  {showDetails ? (
+                    <div className={styles.arrow2}>
+                      <span className={styles.close}></span>
+                      <span className={styles.close}></span>
+                    </div>
+                  ) : (
+                    <div className={styles.arrow1}>
+                      <span className={styles.arrowLine}></span>
+                      <span className={styles.arrowLine}></span>
+                    </div>
+                  )}
+                </div>
+              </Link>
+
+              {showDetails && (
+                <div className={styles.details}>
+                  <ul>
+                    <li>• Device + Platform</li>
+                    <li>• Maintenance contract with AI model updates</li>
+                  </ul>
+                </div>
+              )}
             </div>
             <div className={styles.price1}>
-            <div className={styles.rowloa}>
-            <div className={styles.loader}></div>
-                <h3 className={styles.PriceTitle1}>Standard Plan</h3>
+              <div className={styles.rowloa}>
+                <div className={styles.loader}></div>
+                <h3 className={styles.PriceTitle1}>Silver Solution</h3>
               </div>
-              <p className={styles.Desc1}>For Medium Size Business</p>
+              <Link
+                href=""
+                className={styles.SeeAllTextPrice}
+                onClick={(e) => {
+                  e.preventDefault();
+                  toggleDetails2();
+                }}
+              >
+                <div>
+                  {showDetails2 ? (
+                    <div className={styles.arrow2}>
+                      <span className={styles.close}></span>
+                      <span className={styles.close}></span>
+                    </div>
+                  ) : (
+                    <div className={styles.arrow1}>
+                      <span className={styles.arrowLine}></span>
+                      <span className={styles.arrowLine}></span>
+                    </div>
+                  )}
+                </div>
+              </Link>
+
+              {showDetails2 && (
+                <div className={styles.details}>
+                  <ul>
+                    <li>• Device + Platform</li>
+                    <li>• Web Application</li>
+                    <li>• Maintenance contract with AI model updates</li>
+                  </ul>
+                </div>
+              )}
             </div>
             <div className={styles.price1}>
-            <div className={styles.rowloa}>
-            <div className={styles.loader}></div>
-                <h3 className={styles.PriceTitle1}>Advanced Plan</h3>
+              <div className={styles.rowloa}>
+                <div className={styles.loader}></div>
+                <h3 className={styles.PriceTitle1}>Gold Solution</h3>
               </div>
-              <p className={styles.Desc1}>For Large Size Business</p>
+
+              <div
+                className={styles.SeeAllTextPrice}
+                onClick={(e) => {
+                  e.preventDefault();
+                  toggleDetails3();
+                }}
+              >
+                {showDetails3 ? (
+                  <div className={styles.arrow2}>
+                    <span className={styles.close}></span>
+                    <span className={styles.close}></span>
+                  </div>
+                ) : (
+                  <div className={styles.arrow1}>
+                    <span className={styles.arrowLine}></span>
+                    <span className={styles.arrowLine}></span>
+                  </div>
+                )}
+              </div>
+
+              {showDetails3 && (
+                <div className={styles.details}>
+                  <ul>
+                    <li> • Device + Platform</li>
+                    <li> • Web Application</li>
+                    <li>• Mobile Application</li>
+
+                    <li>• Maintenance contract with AI model updates</li>
+                  </ul>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -516,7 +627,8 @@ const Homee: React.FC = () => {
             <h1 className={styles.SolutionTitle2}>Blogs</h1>
           </div>
           <p className={styles.SolutionsDesc}>
-          Your resource for the latest insights in Energy Management, AI-powered Solutions, and Industry 4.0 trends.
+            Your resource for the latest insights in Energy Management,
+            AI-powered Solutions, and Industry 4.0 trends.
           </p>
           <div className={styles.AllBlog}>
             {blogs.map((blog) => (
