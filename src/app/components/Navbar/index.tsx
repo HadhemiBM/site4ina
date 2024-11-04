@@ -23,7 +23,6 @@ const Navbar: React.FC = () => {
   const solutionsLinks = [
     { id: 1, link: "/solutions/explore", name: "Explore" },
     { id: 2, link: "/solutions/demo", name: "Demo" },
-
   ];
   const postsLinks = [
     { id: 1, link: "/posts/events", name: "Events" },
@@ -61,14 +60,14 @@ const Navbar: React.FC = () => {
               key={id}
               className={styles.navbarLinkContainer}
               onMouseEnter={() => {
-                if (name === "Solutions") {
+                if (name === "technical platform") {
                   setSolutionsDrop(true);
                 } else if (name === "Posts") {
                   setPostDrop(true);
                 }
               }}
               onMouseLeave={() => {
-                if (name === "Solutions") {
+                if (name === "technical platform") {
                   setSolutionsDrop(false);
                 } else if (name === "Posts") {
                   setPostDrop(false);
@@ -82,7 +81,7 @@ const Navbar: React.FC = () => {
               >
                 <Link href={link}>{name}</Link>
               </h3>
-              {name === "Solutions" && solutionsDrop && (
+              {name === "technical platform" && solutionsDrop && (
                 <div className={styles.dropdownMenu}>
                   {solutionsLinks.map(({ id, link, name }) => (
                     <Link key={id} href={link} className={styles.dropdownItem}>

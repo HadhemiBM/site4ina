@@ -126,3 +126,7 @@ align-content: center;justify-content: center;
   color: var(--blue);
   align-self: flex-end;
 }
+.textNo{
+  text-decoration: none;
+  color: #000;
+}
