@@ -556,7 +556,7 @@
   width: 390px;
   height: 87.72px;
   display: flex;
-flex-direction: column;
+  flex-direction: column;
   align-content: center;
   align-items: center;
   justify-content: center;
@@ -644,7 +644,7 @@ flex-direction: column;
   width: 100%;
   margin: 10px 0px 0px 0px;
   display: -webkit-box;
-  -webkit-line-clamp: 3; 
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -701,7 +701,7 @@ flex-direction: column;
   text-decoration: none;
   color: black;
 }
-.SeeAllTextPrice{
+.SeeAllTextPrice {
   text-decoration: none;
   color: black;
 }
@@ -813,19 +813,17 @@ flex-direction: column;
   animation: animate 2s infinite;
 }
 .arrow2 {
-
   transform: translate(-0%, -0%) rotate(90deg);
-  cursor:grab;
+  cursor: grab;
 
   padding: 10px;
   border-radius: 5px;
 }
 .arrow1 {
- 
   /* top: 100%; */
   /* left: 50%; */
   transform: translate(-20%, -20%) rotate(0deg);
-  cursor:grab;
+  cursor: grab;
 
   padding: 10px;
   border-radius: 5px;
@@ -839,19 +837,16 @@ flex-direction: column;
   transform: rotate(45deg);
   margin: -10px;
   animation: animate 2s infinite;
-
 }
 .arrow2 span {
   /* display: block; */
   width: 35px;
-  height:35px;
+  height: 35px;
 
-left:5px;
-top: 180px;
-/* background-color: #ffffffde; */
+  left: 5px;
+  top: 180px;
+  /* background-color: #ffffffde; */
   transform: rotate(0deg);
-
-
 }
 .arrow1 span:nth-child(2) {
   animation-delay: -0.2s;
@@ -862,8 +857,7 @@ top: 180px;
   margin-top: 0px;
   color: #000;
   border-radius: 4px;
-  box-shadow: 
-    0 0 5px rgba(224, 219, 219, 0.5),
+  box-shadow: 0 0 5px rgba(224, 219, 219, 0.5),
     0 0 10px rgba(211, 205, 205, 0.5);
 }
 .arrow1 span:nth-child(3) {
@@ -903,10 +897,11 @@ top: 180px;
 .close:hover {
   opacity: 1;
 }
-.close:before, .close:after {
+.close:before,
+.close:after {
   position: absolute;
   left: 15px;
-  content: ' ';
+  content: " ";
   height: 33px;
   width: 2px;
   background-color: var(--blue);
@@ -971,11 +966,11 @@ top: 180px;
     transform: perspective(150px) rotateY(180deg) rotate(90deg);
   }
 }
-.rowloa{
+.rowloa {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap : 20px
+  gap: 20px;
 }
 
 .AvantagesSection {
@@ -997,7 +992,6 @@ top: 180px;
   margin-bottom: 50px;
   margin-top: 50px;
   align-self: flex-start;
-
 }
 .InnovationTit h1 {
   /* background: linear-gradient(#212d323b, rgba(46, 57, 75, 0.089)); */
@@ -1007,10 +1001,9 @@ top: 180px;
   padding: 5px 10px;
   font-size: 24px;
   font-family: "kufam";
-  box-shadow:  
-  0 2px 4px rgba(46, 57, 75, 0.253);
+  box-shadow: 0 2px 4px rgba(46, 57, 75, 0.253);
 }
-.Allavant{
+.Allavant {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -1037,7 +1030,7 @@ top: 180px;
 }
 
 .item2 .number {
-  color:var(--blue);
+  color: var(--blue);
 }
 
 .item3 .number {
@@ -1045,12 +1038,14 @@ top: 180px;
 }
 
 .item4 .number {
-  color:var(--blue);
+  color: var(--blue);
 }
-.item4 , .item2 {
+.item4,
+.item2 {
   border-left: 4px solid var(--orange);
 }
-.item1 , .item3 {
+.item1,
+.item3 {
   border-left: 4px solid var(--blue);
 }
 .content h3 {
@@ -1068,75 +1063,52 @@ top: 180px;
 }
 
 .game_section {
-  padding: 60px 50px;
+  /* padding: 60px 50px; */
   /* background-color: #e73700; */
   width: 100%;
-}
-
-.line_title {
-  position: relative;
-  width: 400px;
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
-
-.line_title::before,
-.line_title::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 4px;
-  border-radius: 2px;
-}
-
-.line_title::before {
-  width: 100%;
-  background: #f2f2f2;
-}
-
-.line_title::after {
-  width: 32px;
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
 }
 
 .owl_carousel_custom_carousel_owl_theme {
   display: flex;
   gap: 20px;
   width: 100%;
-
   overflow-x: auto;
-
+  /* background-color: #495469; */
   scroll-snap-type: x mandatory;
 }
 
 .item {
-  width: 400px;
-  height: 380px;
+  width: 450px; /* Set a fixed width */
+  height: 380px; /* Ensure all cards have the same height */
   background-size: cover;
   background-position: center;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 
-  0 2px 4px rgba(0, 0, 0, 0.253);
-;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.253);
   position: relative;
   cursor: pointer;
   transition: width 0.3s ease, box-shadow 0.3s ease;
   scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+}
+.row10 {
+  display: flex;
+  flex-direction: column;
 }
 
 .item_active {
-  width: 40%;
+  width: 500px;
   box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
   transition: width 0.4s ease, box-shadow 0.4s ease;
 }
 
 .item_desc {
   position: relative;
-  top:-30px;
+  top: -0px;
   left: 0;
   width: 100%;
   padding: 20px;
@@ -1146,17 +1118,44 @@ top: 180px;
   transform: translateY(calc(100% - 40px));
   transition: transform 0.3s ease;
 }
+.item_View {
+  position: relative;
+  bottom: 0px;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  /* padding: 20px; */
+  /* background-color: #1353c97e; */
 
+  z-index: 1;
+  transform: translateY(calc(100% - 40px));
+  transition: transform 0.3s ease;
+}
 
 .item_active .item_desc {
   transform: translateY(0);
   /* background-color: #1353c97e; */
-  background-color: #c2c7cf94;
-
+  background-color: #d7deeb94;
 }
-
-
+.item_active .item_View {
+  transform: translateY(0);
+  background-color: #f4f5f7bb;
+}
 .item_desc p {
+  font-size: 20px;
+  margin-top: 30px;
+  opacity: 0;
+  color: #000;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* Limit to 4 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+.item_View p {
   font-size: 20px;
   margin-top: 10px;
   opacity: 0;
@@ -1170,8 +1169,17 @@ top: 180px;
   text-overflow: ellipsis;
   margin: 0;
 }
-
+.item_active .item_View p {
+  opacity: 1;
+  transform: translateY(0);
+}
 .item_active .item_desc p {
   opacity: 1;
   transform: translateY(0);
+}
+.item_title {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 10px;
+  color: #333;
 }

@@ -25,34 +25,46 @@ import integration from "../Assests/integration.jpg";
 const Homee: React.FC = () => {
   const games = [
     {
-      title: 'Technical Support and Maintenance',
-      description: ' At 4InA Technologie, we understand the importance of effectively managing your energy operations by providing the right support at the right time.',
-      image: 'https://res.cloudinary.com/ddngbriyu/image/upload/v1730734704/tech_fqa1bw.jpg',
+      title: "Technical Support and Maintenance",
+      description:
+        " At 4InA Technologie, we understand the importance of effectively managing your energy operations by providing the right support at the right time.",
+      image:
+        "https://res.cloudinary.com/ddngbriyu/image/upload/v1730734704/tech_fqa1bw.jpg",
     },
     {
-      title: 'Hardware Devolopment',
-      description: ' From concept to production, our hardware development service specialized in creating hardware that are customized to meet your unique energy management requirements.',
-      image: 'https://res.cloudinary.com/ddngbriyu/image/upload/v1730734500/hard_nlr99m.jpg',
+      title: "Hardware Devolopment",
+      description:
+        " From concept to production, our hardware development service specialized in creating hardware that are customized to meet your unique energy management requirements.",
+      image:
+        "https://res.cloudinary.com/ddngbriyu/image/upload/v1730734500/hard_nlr99m.jpg",
     },
     {
-      title: 'Software devolopment',
-      description: ' 4InA Technologie work closely with you to develop intuitive, scalable, and tailored web and mobile easy to use dashboard that           generates instantous insight and report to manage your energy with ease and with precision at the same time. Our offerings include:.',
-      image: 'https://res.cloudinary.com/ddngbriyu/image/upload/v1730734519/soft_rkfmli.jpg',
+      title: "Software devolopment",
+      description:
+        " 4InA Technologie work closely with you to develop intuitive, scalable, and tailored web and mobile easy to use dashboard that           generates instantous insight and report to manage your energy with ease and with precision at the same time. Our offerings include:.",
+      image:
+        "https://res.cloudinary.com/ddngbriyu/image/upload/v1730734519/soft_rkfmli.jpg",
     },
     {
-      title: 'Consulting',
-      description: ' Your business can confidently address its energy challenges while building a path toward sustainable growth and greater ROI. We offer personalized recommendations aligned with your business goal after conducting in-depth assessments to uncover  inefficiencies to enable targeted improvement and develop customized strategies..',
-      image: 'https://res.cloudinary.com/ddngbriyu/image/upload/v1730734559/consult_ohfu1s.jpg',
+      title: "Consulting",
+      description:
+        " Your business can confidently address its energy challenges while building a path toward sustainable growth and greater ROI. We offer personalized recommendations aligned with your business goal after conducting in-depth assessments to uncover  inefficiencies to enable targeted improvement and develop customized strategies..",
+      image:
+        "https://res.cloudinary.com/ddngbriyu/image/upload/v1730734559/consult_ohfu1s.jpg",
     },
     {
-      title: 'Integration',
-      description: 'Our Integration services ensure that new updates and customized features are seamlessly incorporated into your existing energy management systems. We implement new updates and integrations without disrupting your current operation.',
-      image: 'https://res.cloudinary.com/ddngbriyu/image/upload/v1730734596/integration_nucds8.jpg',
+      title: "Integration",
+      description:
+        "Our Integration services ensure that new updates and customized features are seamlessly incorporated into your existing energy management systems. We implement new updates and integrations without disrupting your current operation.",
+      image:
+        "https://res.cloudinary.com/ddngbriyu/image/upload/v1730734596/integration_nucds8.jpg",
     },
     {
-      title: 'Accredited Certification',
-      description: '  The Certification in ISO 50001 reflects your dedication to reducing energy consumption, enhancing operational efficiency, and minimizing environmental impact.',
-      image: 'https://res.cloudinary.com/ddngbriyu/image/upload/v1730734549/iso_kvcqa0.png',
+      title: "Accredited Certification",
+      description:
+        "  The Certification in ISO 50001 reflects your dedication to reducing energy consumption, enhancing operational efficiency, and minimizing environmental impact.",
+      image:
+        "https://res.cloudinary.com/ddngbriyu/image/upload/v1730734549/iso_kvcqa0.png",
     },
   ];
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -501,161 +513,92 @@ const Homee: React.FC = () => {
                 </Link>
               </div>
             </div> */}
-<div className={styles.game_section}>
+            <div className={styles.game_section}>
+              <div className={styles.owl_carousel_custom_carousel_owl_theme}>
+                {games.map((game, index) => (
+                  <div className={styles.row10} key={index}>
+                    <div
+                      key={index}
+                      className={`${styles.item} ${
+                        activeIndex === index ? styles.item_active : ""
+                      }`}
+                      onClick={() => handleCardClick(index)}
+                      style={{ backgroundImage: `url(${game.image})` }}
+                    >
+                      <div className={styles.item_desc}>
+                        <p>{game.description}</p>
+                      </div>
+                      <div className={styles.item_View}>
+                        <p>View more</p>
+                      </div>
 
-      <div className={styles.owl_carousel_custom_carousel_owl_theme}>
-        {games.map((game, index) => (
-          <div
-            key={index}
-            className={`${styles.item} ${activeIndex === index ? styles.item_active : ''}`}
-            onClick={() => handleCardClick(index)}
-            style={{ backgroundImage: `url(${game.image})` }}
-          >
-            <div className={styles.item_desc}>
-              {/* <h3 className={styles.item_descH3}>{game.title}</h3> */}
-              <p>{game.description}</p>
+                      {/* Game title */}
+                    </div>
+                    <h3 className={styles.item_title}>{game.title}</h3>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-        ))}
+        </div>
       </div>
-    </div>
-  </div>
-
-
-          </div>
+      <div className={styles.PartnerSection}>
+        <div className={styles.SolutionTitle}>
+          <h1 className={styles.SolutionTitle1}>Our</h1>
+          <h1 className={styles.SolutionTitle2}>Partners</h1>
         </div>
-        <div className={styles.PartnerSection}>
-          <div className={styles.SolutionTitle}>
-            <h1 className={styles.SolutionTitle1}>Our</h1>
-            <h1 className={styles.SolutionTitle2}>Partners</h1>
+        <p className={styles.SolutionsDesc}>
+          4ina Technologie, we believe in the power of collaboration. Together,
+          we leverage our strengths to create cutting-edge solutions that drive
+          success across various sectors.
+        </p>
+        <div className={styles.wrapper}>
+          <button className={styles.scrollButton} onClick={scrollLeft}>
+            <Image src={arrowLeft} alt="left" width={11} height={20} />
+          </button>
+          <div className={styles.scrollContainer} ref={scrollRef}>
+            {items.map((item, index) => (
+              <div key={index} className={styles.scrollItem}>
+                <Image
+                  width={100}
+                  height={100}
+                  src={item.img}
+                  alt={item.alt}
+                  className={styles.imge}
+                />
+              </div>
+            ))}
           </div>
-          <p className={styles.SolutionsDesc}>
-            4ina Technologie, we believe in the power of collaboration.
-            Together, we leverage our strengths to create cutting-edge solutions
-            that drive success across various sectors.
-          </p>
-          <div className={styles.wrapper}>
-            <button className={styles.scrollButton} onClick={scrollLeft}>
-              <Image src={arrowLeft} alt="left" width={11} height={20} />
-            </button>
-            <div className={styles.scrollContainer} ref={scrollRef}>
-              {items.map((item, index) => (
-                <div key={index} className={styles.scrollItem}>
-                  <Image
-                    width={100}
-                    height={100}
-                    src={item.img}
-                    alt={item.alt}
-                    className={styles.imge}
-                  />
-                </div>
-              ))}
-            </div>
-            <button className={styles.scrollButton} onClick={scrollRight}>
-              <Image src={arrowRight} alt="left" width={11} height={20} />
-            </button>
-          </div>
+          <button className={styles.scrollButton} onClick={scrollRight}>
+            <Image src={arrowRight} alt="left" width={11} height={20} />
+          </button>
         </div>
-        <div className={styles.PricingSection}>
-          <div className={styles.SolutionTitle}>
-            <h1 className={styles.SolutionTitle1}>Solution</h1>
-            <h1 className={styles.SolutionTitle2}>Proposal</h1>
-          </div>
-          <p className={styles.SolutionsDesc}>
-            We offer you a complete solution of different services and
-            categories
-          </p>
-          <div className={styles.AllPrices}>
-            <div className={styles.price1}>
-              <div className={styles.rowloa}>
-                <div className={styles.loader}></div>
-                <h3 className={styles.PriceTitle1}>Basic Solution</h3>
-              </div>
-
-              <Link
-                href=""
-                className={styles.SeeAllTextPrice}
-                onClick={(e) => {
-                  e.preventDefault();
-                  toggleDetails();
-                }}
-              >
-                <div>
-                  {showDetails ? (
-                    <div className={styles.arrow2}>
-                      <span className={styles.close}></span>
-                      <span className={styles.close}></span>
-                    </div>
-                  ) : (
-                    <div className={styles.arrow1}>
-                      <span className={styles.arrowLine}></span>
-                      <span className={styles.arrowLine}></span>
-                    </div>
-                  )}
-                </div>
-              </Link>
-
-              {showDetails && (
-                <div className={styles.details}>
-                  <ul>
-                    <li>• Device + Platform</li>
-                    <li>• Maintenance contract with AI model updates</li>
-                  </ul>
-                </div>
-              )}
+      </div>
+      <div className={styles.PricingSection}>
+        <div className={styles.SolutionTitle}>
+          <h1 className={styles.SolutionTitle1}>Solution</h1>
+          <h1 className={styles.SolutionTitle2}>Proposal</h1>
+        </div>
+        <p className={styles.SolutionsDesc}>
+          We offer you a complete solution of different services and categories
+        </p>
+        <div className={styles.AllPrices}>
+          <div className={styles.price1}>
+            <div className={styles.rowloa}>
+              <div className={styles.loader}></div>
+              <h3 className={styles.PriceTitle1}>Basic Solution</h3>
             </div>
-            <div className={styles.price1}>
-              <div className={styles.rowloa}>
-                <div className={styles.loader}></div>
-                <h3 className={styles.PriceTitle1}>Silver Solution</h3>
-              </div>
-              <Link
-                href=""
-                className={styles.SeeAllTextPrice}
-                onClick={(e) => {
-                  e.preventDefault();
-                  toggleDetails2();
-                }}
-              >
-                <div>
-                  {showDetails2 ? (
-                    <div className={styles.arrow2}>
-                      <span className={styles.close}></span>
-                      <span className={styles.close}></span>
-                    </div>
-                  ) : (
-                    <div className={styles.arrow1}>
-                      <span className={styles.arrowLine}></span>
-                      <span className={styles.arrowLine}></span>
-                    </div>
-                  )}
-                </div>
-              </Link>
 
-              {showDetails2 && (
-                <div className={styles.details}>
-                  <ul>
-                    <li>• Device + Platform</li>
-                    <li>• Web Application</li>
-                    <li>• Maintenance contract with AI model updates</li>
-                  </ul>
-                </div>
-              )}
-            </div>
-            <div className={styles.price1}>
-              <div className={styles.rowloa}>
-                <div className={styles.loader}></div>
-                <h3 className={styles.PriceTitle1}>Gold Solution</h3>
-              </div>
-
-              <div
-                className={styles.SeeAllTextPrice}
-                onClick={(e) => {
-                  e.preventDefault();
-                  toggleDetails3();
-                }}
-              >
-                {showDetails3 ? (
+            <Link
+              href=""
+              className={styles.SeeAllTextPrice}
+              onClick={(e) => {
+                e.preventDefault();
+                toggleDetails();
+              }}
+            >
+              <div>
+                {showDetails ? (
                   <div className={styles.arrow2}>
                     <span className={styles.close}></span>
                     <span className={styles.close}></span>
@@ -667,73 +610,142 @@ const Homee: React.FC = () => {
                   </div>
                 )}
               </div>
+            </Link>
 
-              {showDetails3 && (
-                <div className={styles.details}>
-                  <ul>
-                    <li> • Device + Platform</li>
-                    <li> • Web Application</li>
-                    <li>• Mobile Application</li>
+            {showDetails && (
+              <div className={styles.details}>
+                <ul>
+                  <li>• Device + Platform</li>
+                  <li>• Maintenance contract with AI model updates</li>
+                </ul>
+              </div>
+            )}
+          </div>
+          <div className={styles.price1}>
+            <div className={styles.rowloa}>
+              <div className={styles.loader}></div>
+              <h3 className={styles.PriceTitle1}>Silver Solution</h3>
+            </div>
+            <Link
+              href=""
+              className={styles.SeeAllTextPrice}
+              onClick={(e) => {
+                e.preventDefault();
+                toggleDetails2();
+              }}
+            >
+              <div>
+                {showDetails2 ? (
+                  <div className={styles.arrow2}>
+                    <span className={styles.close}></span>
+                    <span className={styles.close}></span>
+                  </div>
+                ) : (
+                  <div className={styles.arrow1}>
+                    <span className={styles.arrowLine}></span>
+                    <span className={styles.arrowLine}></span>
+                  </div>
+                )}
+              </div>
+            </Link>
 
-                    <li>• Maintenance contract with AI model updates</li>
-                  </ul>
+            {showDetails2 && (
+              <div className={styles.details}>
+                <ul>
+                  <li>• Device + Platform</li>
+                  <li>• Web Application</li>
+                  <li>• Maintenance contract with AI model updates</li>
+                </ul>
+              </div>
+            )}
+          </div>
+          <div className={styles.price1}>
+            <div className={styles.rowloa}>
+              <div className={styles.loader}></div>
+              <h3 className={styles.PriceTitle1}>Gold Solution</h3>
+            </div>
+
+            <div
+              className={styles.SeeAllTextPrice}
+              onClick={(e) => {
+                e.preventDefault();
+                toggleDetails3();
+              }}
+            >
+              {showDetails3 ? (
+                <div className={styles.arrow2}>
+                  <span className={styles.close}></span>
+                  <span className={styles.close}></span>
+                </div>
+              ) : (
+                <div className={styles.arrow1}>
+                  <span className={styles.arrowLine}></span>
+                  <span className={styles.arrowLine}></span>
                 </div>
               )}
             </div>
+
+            {showDetails3 && (
+              <div className={styles.details}>
+                <ul>
+                  <li> • Device + Platform</li>
+                  <li> • Web Application</li>
+                  <li>• Mobile Application</li>
+
+                  <li>• Maintenance contract with AI model updates</li>
+                </ul>
+              </div>
+            )}
           </div>
         </div>
-        <div className={styles.BlogSection}>
-          <div className={styles.SolutionTitle}>
-            <h1 className={styles.SolutionTitle1}>Our</h1>
-            <h1 className={styles.SolutionTitle2}>Blogs</h1>
-          </div>
-          <p className={styles.SolutionsDesc}>
-            Your resource for the latest insights in Energy Management,
-            AI-powered Solutions, and Industry 4.0 trends.
-          </p>
-          <div className={styles.AllBlog}>
-            {blogs.map((blog) => (
-              <div key={blog.id} className={styles.Blog1}>
-                <div className={styles.BlogIcon}>
-                  <Image
-                    width={419}
-                    height={100}
-                    className={styles.BlogImage}
-                    src={blog.imageUrl}
-                    alt="blog"
-                  />
-                </div>
-                <div className={styles.BlogContent}>
-                  <h6
-                    onClick={() => handleGo(blog.id)}
-                    className={styles.BlogTitle}
-                  >
-                    {blog.title}
-                  </h6>
-                  <p className={styles.BlogDesc}>{blog.description}</p>
-                  <div className={styles.Blogfooter}>
-                    <p className={styles.BlogDateText}>{blog.date}</p>
-                    <Link
-                      className={styles.BlogButton}
-                      href={`/blog/${blog.id}`}
-                    >
-                      Read More
-                    </Link>
-                  </div>
+      </div>
+      <div className={styles.BlogSection}>
+        <div className={styles.SolutionTitle}>
+          <h1 className={styles.SolutionTitle1}>Our</h1>
+          <h1 className={styles.SolutionTitle2}>Blogs</h1>
+        </div>
+        <p className={styles.SolutionsDesc}>
+          Your resource for the latest insights in Energy Management, AI-powered
+          Solutions, and Industry 4.0 trends.
+        </p>
+        <div className={styles.AllBlog}>
+          {blogs.map((blog) => (
+            <div key={blog.id} className={styles.Blog1}>
+              <div className={styles.BlogIcon}>
+                <Image
+                  width={419}
+                  height={100}
+                  className={styles.BlogImage}
+                  src={blog.imageUrl}
+                  alt="blog"
+                />
+              </div>
+              <div className={styles.BlogContent}>
+                <h6
+                  onClick={() => handleGo(blog.id)}
+                  className={styles.BlogTitle}
+                >
+                  {blog.title}
+                </h6>
+                <p className={styles.BlogDesc}>{blog.description}</p>
+                <div className={styles.Blogfooter}>
+                  <p className={styles.BlogDateText}>{blog.date}</p>
+                  <Link className={styles.BlogButton} href={`/blog/${blog.id}`}>
+                    Read More
+                  </Link>
                 </div>
               </div>
-            ))}
-          </div>
-          <Link className={styles.SeeAllText} href="/posts/blog">
-            <div className={styles.arrow}>
-              <span></span>
-              <span></span>
-              <span></span>
             </div>
-          </Link>
+          ))}
         </div>
-      
-     
+        <Link className={styles.SeeAllText} href="/posts/blog">
+          <div className={styles.arrow}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </Link>
+      </div>
     </PageTransition>
   );
 };
