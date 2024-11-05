@@ -47,7 +47,7 @@ export default function RootLayout({
       </head>
       <body className={kufam.className}>
         <div className="page-container">
-          <Navbar />
+          <Navbar  />
           
           <main className="content-wrapper">{children}</main>
         </div>

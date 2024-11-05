@@ -1235,7 +1235,6 @@
 	align-items             : center;
 	justify-content         : center;
 }
-
 .back_case{
 	z-index    : 0;
 	position   : absolute;
@@ -1252,7 +1251,6 @@
 
 	justify-content         : center;
 }
-
 .back_case2{
 	z-index    : 0;
 	position   : absolute;
@@ -1267,12 +1265,11 @@
   .front_case2, .back_case2 {
 		transform: translateX(300px);
 	}
-  
 	.disc{
-		transform: translateX(180px) rotate(360deg);
+		transform: translateX(190px) rotate(360deg);
 	}
   .disc2{
-		transform: translateX(-100px) rotate(360deg);
+		transform: translateX(-150px) rotate(360deg);
 	}
 }
 .hole{
@@ -1323,8 +1320,8 @@
 	/* box-shadow       : 0 5px 10px rgba(0,0,0,.3); */
 	/* background-image : repeating-radial-gradient(circle 10em at center,rgb(10, 17, 19) 0%,rgb(2, 41, 50) 2.2%,rgb(19, 31, 33) 3.6%,rgb(11, 29, 33) 4.8%,rgb(11, 29, 33) 4.8%,rgb(16, 43, 49) 6.7%); */
 	will-change      : transform;
-  background-image: url('https://res.cloudinary.com/ddngbriyu/image/upload/v1730809006/WhatsApp_Image_2024-11-04_at_2.02.04_PM-01_vsujwy.png');
-	/* background-size: cover; */
+  background-image: url('https://res.cloudinary.com/ddngbriyu/image/upload/v1730810045/image_2024-11-05_123457957_flnpmw.png');
+	background-size: cover;
   background-repeat: no-repeat;
 	/* Dish Shine Effect */
 	&:before,&:after{
@@ -1351,8 +1348,8 @@
 }
 
 .disc2{
-	width            : 380px;
-	height           : 380px;
+	width            : 480px;
+	height           : 480px;
 	border-radius    : 50%;
 
 	position         : absolute;
