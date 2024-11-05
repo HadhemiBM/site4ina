@@ -13,7 +13,7 @@ import arrowRight from "../Assests/svg/arrowRight.svg";
 import arrowService from "../Assests/svg/arrowService.svg";
 
 import { Blog, blogs } from "../data/BlogData";
-
+import { UrlObject } from "url";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
@@ -22,9 +22,12 @@ import web from "../Assests/soft.png";
 import iso from "../Assests/iso.png";
 import consult from "../Assests/consult.jpg";
 import integration from "../Assests/integration.jpg";
+import { Url } from "next/dist/shared/lib/router/router";
+
 const Homee: React.FC = () => {
   const games = [
     {
+     id: "technical-support",
       title: "Technical Support and Maintenance",
       description:
         " At 4InA Technologie, we understand the importance of effectively managing your energy operations by providing the right support at the right time.",
@@ -32,6 +35,8 @@ const Homee: React.FC = () => {
         "https://res.cloudinary.com/ddngbriyu/image/upload/v1730734704/tech_fqa1bw.jpg",
     },
     {
+      id: "hardware-development",
+
       title: "Hardware Devolopment",
       description:
         " From concept to production, our hardware development service specialized in creating hardware that are customized to meet your unique energy management requirements.",
@@ -39,6 +44,8 @@ const Homee: React.FC = () => {
         "https://res.cloudinary.com/ddngbriyu/image/upload/v1730734500/hard_nlr99m.jpg",
     },
     {
+      id: "software-development",
+
       title: "Software devolopment",
       description:
         " 4InA Technologie work closely with you to develop intuitive, scalable, and tailored web and mobile easy to use dashboard that           generates instantous insight and report to manage your energy with ease and with precision at the same time. Our offerings include:.",
@@ -46,6 +53,8 @@ const Homee: React.FC = () => {
         "https://res.cloudinary.com/ddngbriyu/image/upload/v1730734519/soft_rkfmli.jpg",
     },
     {
+      id: "consulting",
+
       title: "Consulting",
       description:
         " Your business can confidently address its energy challenges while building a path toward sustainable growth and greater ROI. We offer personalized recommendations aligned with your business goal after conducting in-depth assessments to uncover  inefficiencies to enable targeted improvement and develop customized strategies..",
@@ -53,6 +62,8 @@ const Homee: React.FC = () => {
         "https://res.cloudinary.com/ddngbriyu/image/upload/v1730734559/consult_ohfu1s.jpg",
     },
     {
+      id: "integration",
+
       title: "Integration",
       description:
         "Our Integration services ensure that new updates and customized features are seamlessly incorporated into your existing energy management systems. We implement new updates and integrations without disrupting your current operation.",
@@ -60,6 +71,8 @@ const Homee: React.FC = () => {
         "https://res.cloudinary.com/ddngbriyu/image/upload/v1730734596/integration_nucds8.jpg",
     },
     {
+      id: "accredited-certification",
+
       title: "Accredited Certification",
       description:
         "  The Certification in ISO 50001 reflects your dedication to reducing energy consumption, enhancing operational efficiency, and minimizing environmental impact.",
@@ -69,7 +82,7 @@ const Homee: React.FC = () => {
   ];
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const handleCardClick = (index: number) => {
-    setActiveIndex(index === activeIndex ? null : index); // Toggle active state if clicked again
+    setActiveIndex(index === activeIndex ? null : index);
   };
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
   const [showDetails, setShowDetails] = useState(false);
@@ -98,6 +111,11 @@ const Homee: React.FC = () => {
       timers.forEach((timer) => clearTimeout(timer));
     };
   }, []);
+  const handleViewMoreClick = (sectionId: string) => {
+
+    router.push(`/services?section={sectionId}`);
+
+  };
 
   const toggleDetails2 = () => {
     setShowDetails2((prev) => !prev);
@@ -128,6 +146,7 @@ const Homee: React.FC = () => {
       });
     }
   };
+
   const items = [
     {
       img: "https://res.cloudinary.com/dyrh4zwb1/image/upload/v1729242530/AFD_wfgxdi.png",
@@ -162,44 +181,7 @@ const Homee: React.FC = () => {
       alt: "Tekup Logo",
     },
   ];
-  const team = [
-    {
-      name: "Nouressafa Chaabani",
-      linkedin: "https://www.linkedin.com/in/nouressafa-c-753456216/",
-      facebook: "https://www.facebook.com/nour.essafa.73",
-      img: "https://res.cloudinary.com/ddngbriyu/image/upload/v1730198659/team1_dwmsk4.jpg",
 
-      post: "Data",
-    },
-    {
-      name: "Hadhemi Ben Mansour",
-      linkedin:
-        "https://www.linkedin.com/in/hadhemi-ben-mansour-0241701a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-      facebook: "https://www.facebook.com/share/1gHaTjDcGmz2JKWJ/",
-      img: "https://res.cloudinary.com/ddngbriyu/image/upload/v1730198659/team1_dwmsk4.jpg",
-
-      post: "Data",
-    },
-    {
-      name: "Oumaima Ben Aziza",
-      linkedin:
-        "https://www.linkedin.com/in/oumaimabenaziza?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-      facebook:
-        "https://www.facebook.com/share/95iqP7MBQDRPiHvX/?mibextid=qi2Omg",
-      img: "https://res.cloudinary.com/ddngbriyu/image/upload/v1730446516/oumaima_kd346i.webp",
-
-      post: "Data",
-    },
-    {
-      name: "Meriam Zouaoui",
-      linkedin:
-        "https://www.linkedin.com/in/meriam-zouaoui-b08a51234?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-      facebook: "https://www.facebook.com/meriam.zouaoui.1?mibextid=ZbWKwL",
-      img: "https://res.cloudinary.com/ddngbriyu/image/upload/v1730198659/team1_dwmsk4.jpg",
-
-      post: "Data",
-    },
-  ];
   const cibles = [
     "Manufacturing Industries",
     "Agriculture and Agri-food",
@@ -263,14 +245,7 @@ const Homee: React.FC = () => {
             software, designed to optimize your energy management
           </p>
           <div className={styles.AllSolutions}>
-            <div className={styles.Solution1}>
-              {/* <div className={styles.SolutionCircle}> */}
-              {/* <Image
-                  className={styles.Image}
-                  src={decarbonization}
-                  alt="hardware"
-                /> */}
-              {/* </div> */}
+            {/* <div className={styles.Solution1}>
               <h3 className={styles.SolTitle1}>Hardware</h3>
               <p className={styles.SolutionDesc1}>
                 Our precision sensors collect real-time energy usage data
@@ -287,66 +262,41 @@ const Homee: React.FC = () => {
                 providing easy, remote access ( Web & Mobile) to insights while
                 optimizing consumption and minimizing waste
               </p>
-              {/* <div className={styles.SolutionCircle}>
-               
-              {/* </div> */}
-            </div>
+            </div> */}
+            <div className={styles.music_case}>
+  <div className={styles.front_case}>
+    {/* <div className={styles.icon}></div> */}
+    {/* <div className={styles.Solution1}> */}
+              <h3 className={styles.SolTitle1}>Hardware</h3>
+              <p className={styles.SolutionDesc1}>
+                Our precision sensors collect real-time energy usage data
+                continuously , seamlessly connecting with our platform to
+                provide a clear, data-driven view of your consumption patterns.
+              </p>
+            {/* </div> */}
+  </div>
+  <div className={styles.disc}>
+    {/* <div className={styles.hole}></div> */}
+  </div>
+  <div className={styles.back_case}></div>
+</div>
+<div className={styles.music_case}>
+  <div className={styles.front_case2}>
+    {/* <div className={styles.icon}></div> */}
+    <h3 className={styles.SolTitle1}>Software</h3>
+              <p className={styles.SolutionDesc1}>
+                Our cloud-based software analyzes data from each device and
+                offers intelligent automation that adapts to your energy needs,
+                providing easy, remote access ( Web & Mobile) to insights while
+                optimizing consumption and minimizing waste
+              </p>
+  </div>
+  <div className={styles.disc2}>
+    {/* <div className={styles.hole}></div> */}
+  </div>
+  <div className={styles.back_case2}></div>
+</div>
           </div>
-          {/* <div className={styles.AvantagesSection}>
-            <h1 className={styles.InnovationTitle}>
-              Advantages of Installing Our Solution
-            </h1>
-            <div className={styles.Allavant}>
-              <div className={`${styles.item} ${styles.item1}`}>
-                <div className={styles.number}>1</div>
-                <div className={styles.content}>
-                  <h3>Monitoring of energy consumption</h3>
-                  <p className={styles.contentP}>
-                    4InA Technologie is a Tunisian startup empowering businesses
-                    across industries to enhance and optimize their energy
-                    management operations, supporting sustainable growth through
-                    AI and IoT solutions.
-                  </p>
-                </div>
-              </div>
-
-              <div className={`${styles.item} ${styles.item2}`}>
-                <div className={styles.number}>2</div>
-                <div className={styles.content}>
-                  <h3>Guidance for energy managers</h3>
-                  <p className={styles.contentP}>
-                    Provide actionable insights for energy and electricity
-                    managers through intelligent machines to enhance
-                    decision-making.
-                  </p>
-                </div>
-              </div>
-
-              <div className={`${styles.item} ${styles.item3}`}>
-                <div className={styles.number}>3</div>
-                <div className={styles.content}>
-                  <h3>Monitoring Machine Behavior and Predicting Failures</h3>
-                  <p className={styles.contentP}>
-                    Analyze machine behavior to predict future energy
-                    consumption and detect potential faults before they
-                    escalate.
-                  </p>
-                </div>
-              </div>
-
-              <div className={`${styles.item} ${styles.item4}`}>
-                <div className={styles.number}>4</div>
-                <div className={styles.content}>
-                  <h3>Reducing Maintenance Costs</h3>
-                  <p className={styles.contentP}>
-                    Lower maintenance costs, reduce energy bills, and mitigate
-                    the effects of harmonics for improved operational
-                    efficiency.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div> */}
         </div>
         <div className={styles.DemoSection}>
           <h1 className={styles.SolutionTitle2}>
@@ -370,149 +320,6 @@ const Homee: React.FC = () => {
             We ensure smooth implementation and long-term success
           </p>
           <div className={styles.AllServices}>
-            {/* service1 */}
-
-            {/* <div className={styles.Service1}>
-              <div className={styles.ServiceIcon}>
-                <Image
-                  className={styles.ServicePower}
-                  src={power}
-                  alt="hardware"
-                />
-              </div>
-              <div className={styles.ServiceContent}>
-                <div className={styles.ServiceContentCol}>
-                  <h6 className={styles.ServiceTitle}>
-                    Technical Support and Maintenance
-                  </h6>
-                  <p className={styles.ServiceDesc}>
-                    Our dedicated team is here to resolve issues and maximize
-                    system efficiency.
-                  </p>
-                </div>
-                <Link className={styles.ServiceImg} href="/services">
-                  <Image src={arrowService} alt="service" />
-                </Link>
-              </div>
-            </div> */}
-            {/* service2 */}
-            {/* <div className={styles.Service1}>
-              <div className={styles.ServiceIcon}>
-                <Image
-                  className={styles.ServicePower}
-                  src={power}
-                  alt="hardware"
-                />
-              </div>
-              <div className={styles.ServiceContent}>
-                <div className={styles.ServiceContentCol}>
-                  <h6 className={styles.ServiceTitle}>Hardware Devolopment</h6>
-                  <p className={styles.ServiceDesc}>
-                    We develop advanced hardware solutions tailored to meet your
-                    unique needs
-                  </p>
-                </div>
-                <Link className={styles.ServiceImg} href="/services">
-                  <Image src={arrowService} alt="service" />
-                </Link>
-              </div>
-            </div> */}
-            {/* service3 */}
-            {/* <div className={styles.Service1}>
-              <div className={styles.ServiceIcon}>
-                <Image
-                  className={styles.ServicePower}
-                  src={power}
-                  alt="hardware"
-                />
-              </div>
-              <div className={styles.ServiceContent}>
-                <div className={styles.ServiceContentCol}>
-                  <h6 className={styles.ServiceTitle}>
-                    Software devolopment ( Web and Mobile){" "}
-                  </h6>
-                  <p className={styles.ServiceDesc}>
-                    We provide custom development and upgrades for your mobile
-                    and web software to meet your evolving energy management
-                    demand.
-                  </p>
-                </div>
-                <Link className={styles.ServiceImg} href="/services">
-                  <Image src={arrowService} alt="service" />
-                </Link>
-              </div>
-            </div> */}
-            {/* service4 */}
-            {/* <div className={styles.Service1}>
-              <div className={styles.ServiceIcon}>
-                <Image
-                  className={styles.ServicePower}
-                  src={power}
-                  alt="hardware"
-                />
-              </div>
-              <div className={styles.ServiceContent}>
-                <div className={styles.ServiceContentCol}>
-                  <h6 className={styles.ServiceTitle}>Consulting</h6>
-                  <p className={styles.ServiceDesc}>
-                    We offer expert consulting tailored to your unique energy
-                    management needs, helping to identify inefficiencies and
-                    ensure your team is fully equipped to utilize our solutions
-                    effectively
-                  </p>
-                </div>
-                <Link className={styles.ServiceImg} href="/services">
-                  <Image src={arrowService} alt="service" />
-                </Link>
-              </div>
-            </div> */}
-            {/* service5 */}
-            {/* <div className={styles.Service1}>
-              <div className={styles.ServiceIcon}>
-                <Image
-                  className={styles.ServicePower}
-                  src={power}
-                  alt="hardware"
-                />
-              </div>
-              <div className={styles.ServiceContent}>
-                <div className={styles.ServiceContentCol}>
-                  <h6 className={styles.ServiceTitle}>Integration</h6>
-                  <p className={styles.ServiceDesc}>
-                    The integration of new updates and specific features
-                    tailored to your business's current energy situation.
-                  </p>
-                </div>
-                <Link className={styles.ServiceImg} href="/services">
-                  <Image src={arrowService} alt="service" />
-                </Link>
-              </div>
-            </div> */}
-            {/* service6 */}
-            {/* <div className={styles.Service1}>
-              <div className={styles.ServiceIcon}>
-                <Image
-                  className={styles.ServicePower}
-                  src={power}
-                  alt="hardware"
-                />
-              </div>
-              <div className={styles.ServiceContent}>
-                <div className={styles.ServiceContentCol}>
-                  <h6 className={styles.ServiceTitle}>
-                    Accredited Certification
-                  </h6>
-                  <p className={styles.ServiceDesc}>
-                    We provide training programs for certifications such as ISO
-                    50001 and more, ensuring your organization meets industry
-                    standards.
-                  </p>
-                </div>
-                <Link className={styles.ServiceImg} href="/services">
-                  <Image src={arrowService} alt="service" />
-                </Link>
-              </div>
-            </div> */}
             <div className={styles.game_section}>
               <div className={styles.owl_carousel_custom_carousel_owl_theme}>
                 {games.map((game, index) => (
@@ -528,11 +335,12 @@ const Homee: React.FC = () => {
                       <div className={styles.item_desc}>
                         <p>{game.description}</p>
                       </div>
-                      <div className={styles.item_View}>
+                      <div
+                        className={styles.item_View}
+                        onClick={() => handleViewMoreClick(game.id)}
+                      >
                         <p>View more</p>
                       </div>
-
-                      {/* Game title */}
                     </div>
                     <h3 className={styles.item_title}>{game.title}</h3>
                   </div>

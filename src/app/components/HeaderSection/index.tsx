@@ -60,7 +60,7 @@ const Header = () => {
             <div className={styles.col}>
               <h3 className={styles.HeaderTitle3}>
            
-                80% Reduction in Lost Time Duttes
+                80% Reduction in Lost Time Duties
               </h3>
 
               <Image
