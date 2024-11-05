@@ -7,22 +7,19 @@ import PageTransition from "../components/PageTransition";
 import Image from "next/image";
 import Header from "../components/HeaderSection";
 
-
 import arrowLeft from "../Assests/svg/arrowLeft.svg";
 import arrowRight from "../Assests/svg/arrowRight.svg";
 
-
-import {  blogs } from "../data/BlogData";
+import { blogs } from "../data/BlogData";
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 
-
 const Homee: React.FC = () => {
   const games = [
     {
-     id: "technical-support",
+      id: "technical-support",
       title: "Technical Support and Maintenance",
       description:
         " At 4InA Technologie, we understand the importance of effectively managing your energy operations by providing the right support at the right time.",
@@ -107,9 +104,7 @@ const Homee: React.FC = () => {
     };
   }, []);
   const handleViewMoreClick = (sectionId: string) => {
-
     router.push(`/services?section={sectionId}`);
-
   };
 
   const toggleDetails2 = () => {
@@ -240,39 +235,34 @@ const Homee: React.FC = () => {
             software, designed to optimize your energy management
           </p>
           <div className={styles.AllSolutions}>
-         
             <div className={styles.music_case}>
-  <div className={styles.front_case}>
- 
-              <h3 className={styles.SolTitle1}>Hardware</h3>
-              <p className={styles.SolutionDesc1}>
-                Our precision sensors collect real-time energy usage data
-                continuously , seamlessly connecting with our platform to
-                provide a clear, data-driven view of your consumption patterns.
-              </p>
-           
-  </div>
-  <div className={styles.disc}>
- 
-  </div>
-  <div className={styles.back_case}></div>
-</div>
-<div className={styles.music_case}>
-  <div className={styles.front_case2}>
-
-    <h3 className={styles.SolTitle1}>Software</h3>
-              <p className={styles.SolutionDesc1}>
-                Our cloud-based software analyzes data from each device and
-                offers intelligent automation that adapts to your energy needs,
-                providing easy, remote access ( Web & Mobile) to insights while
-                optimizing consumption and minimizing waste
-              </p>
-  </div>
-  <div className={styles.disc2}>
-    {/* <div className={styles.hole}></div> */}
-  </div>
-  <div className={styles.back_case2}></div>
-</div>
+              <div className={styles.front_case}>
+                <h3 className={styles.SolTitle1}>Hardware</h3>
+                <p className={styles.SolutionDesc1}>
+                  Our precision sensors collect real-time energy usage data
+                  continuously , seamlessly connecting with our platform to
+                  provide a clear, data-driven view of your consumption
+                  patterns.
+                </p>
+              </div>
+              <div className={styles.disc}></div>
+              <div className={styles.back_case}></div>
+            </div>
+            <div className={styles.music_case}>
+              <div className={styles.front_case2}>
+                <h3 className={styles.SolTitle1}>Software</h3>
+                <p className={styles.SolutionDesc12}>
+                  Our cloud-based software analyzes data from each device and
+                  offers intelligent automation that adapts to your energy
+                  needs, providing easy, remote access ( Web & Mobile) to
+                  insights while optimizing consumption and minimizing waste
+                </p>
+              </div>
+              <div className={styles.disc2}>
+                {/* <div className={styles.hole}></div> */}
+              </div>
+              <div className={styles.back_case2}></div>
+            </div>
           </div>
         </div>
         <div className={styles.DemoSection}>

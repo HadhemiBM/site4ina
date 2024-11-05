@@ -9,7 +9,7 @@ const Footer = () => {
         
         {/* <div className={styles.middle}> */}
           <div className={styles.navigation}>
-            <h6>Navigation</h6>
+            {/* <h6>Navigation</h6> */}
             <Link href={"/home"}>
               <p>Home</p>
             </Link>

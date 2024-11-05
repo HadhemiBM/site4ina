@@ -13,22 +13,21 @@ margin-top: 30px;
 }
 
 .container {
-  min-width: 100%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
   align-items: center;
+  align-content: center;
+  justify-content: center;
   gap: 50px;
-  /* background-color: rgb(20, 95, 160); */
-
   align-content: center;
 }
-
 .Right{
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 30%;
+  /* width: 30%; */
   /* background-color: rgb(57, 73, 87); */
   height: 100%;
   gap:10px;  
@@ -41,24 +40,24 @@ margin-top: 30px;
   display: flex;
   flex-direction: column;
   width: 30%;
-
 }
  .contact {
  display: flex;
  flex-direction: column;
- width: 30%;
+ /* width:35%; */
 gap: 20px;
 
 }
 .navigation  {
   display: flex;
   flex-direction: row;
-  width:35%;
+  width:30%;
  gap: 20px;
  align-items: center;
  align-content: center;
  justify-content: center;
- 
+ /* margin-left: 40px; */
+
  }
 .navigation h6 , .contact h6 ,.Left h6{
   color: var(--blue);
