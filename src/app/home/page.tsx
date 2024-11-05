@@ -7,22 +7,17 @@ import PageTransition from "../components/PageTransition";
 import Image from "next/image";
 import Header from "../components/HeaderSection";
 
-import power from "../Assests/svg/power.svg";
+
 import arrowLeft from "../Assests/svg/arrowLeft.svg";
 import arrowRight from "../Assests/svg/arrowRight.svg";
-import arrowService from "../Assests/svg/arrowService.svg";
 
-import { Blog, blogs } from "../data/BlogData";
-import { UrlObject } from "url";
+
+import {  blogs } from "../data/BlogData";
+
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import Data from "../Assests/hard.jpg";
-import web from "../Assests/soft.png";
-import iso from "../Assests/iso.png";
-import consult from "../Assests/consult.jpg";
-import integration from "../Assests/integration.jpg";
-import { Url } from "next/dist/shared/lib/router/router";
+
 
 const Homee: React.FC = () => {
   const games = [
@@ -245,44 +240,26 @@ const Homee: React.FC = () => {
             software, designed to optimize your energy management
           </p>
           <div className={styles.AllSolutions}>
-            {/* <div className={styles.Solution1}>
-              <h3 className={styles.SolTitle1}>Hardware</h3>
-              <p className={styles.SolutionDesc1}>
-                Our precision sensors collect real-time energy usage data
-                continuously , seamlessly connecting with our platform to
-                provide a clear, data-driven view of your consumption patterns.
-              </p>
-            </div>
-            <h1>+</h1>
-            <div className={styles.Solution2}>
-              <h3 className={styles.SolTitle1}>Software</h3>
-              <p className={styles.SolutionDesc1}>
-                Our cloud-based software analyzes data from each device and
-                offers intelligent automation that adapts to your energy needs,
-                providing easy, remote access ( Web & Mobile) to insights while
-                optimizing consumption and minimizing waste
-              </p>
-            </div> */}
+         
             <div className={styles.music_case}>
   <div className={styles.front_case}>
-    {/* <div className={styles.icon}></div> */}
-    {/* <div className={styles.Solution1}> */}
+ 
               <h3 className={styles.SolTitle1}>Hardware</h3>
               <p className={styles.SolutionDesc1}>
                 Our precision sensors collect real-time energy usage data
                 continuously , seamlessly connecting with our platform to
                 provide a clear, data-driven view of your consumption patterns.
               </p>
-            {/* </div> */}
+           
   </div>
   <div className={styles.disc}>
-    {/* <div className={styles.hole}></div> */}
+ 
   </div>
   <div className={styles.back_case}></div>
 </div>
 <div className={styles.music_case}>
   <div className={styles.front_case2}>
-    {/* <div className={styles.icon}></div> */}
+
     <h3 className={styles.SolTitle1}>Software</h3>
               <p className={styles.SolutionDesc1}>
                 Our cloud-based software analyzes data from each device and

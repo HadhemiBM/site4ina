@@ -7,7 +7,8 @@ import reduction from "../../Assests/svg/reductionEnergy.svg";
 import timeincrease from "../../Assests/svg/timeincrease.svg";
 import moneySave from "../../Assests/svg/moneySave.svg";
 import TimeReduce from "../../Assests/svg/TimeReduce.svg";
-import edge from "../../Assests/edge.webp";
+// import edge from "../../Assests/edge.webp";
+import edge from "../../Assests/ms.gif";
 import { BarChart, Card } from "@tremor/react";
 const Header = () => {
   const settings = {

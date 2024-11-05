@@ -1228,10 +1228,11 @@
 }
 
 .front_case{
-	-webkit-backdrop-filter : blur(100px);
-	backdrop-filter         : blur(100px);
+	-webkit-backdrop-filter : blur(10px);
+	backdrop-filter         : blur(10px);
 	display                 : flex;
   flex-direction: column;
+  background-color: #ffffff;
 	align-items             : center;
 	justify-content         : center;
 }
@@ -1248,6 +1249,7 @@
 	display                 : flex;
 	align-items             : center;
   flex-direction: column;
+  background-color: #ffffff;
 
 	justify-content         : center;
 }
@@ -1272,34 +1274,7 @@
 		transform: translateX(-150px) rotate(360deg);
 	}
 }
-.hole{
-	width            : 100px;
-	height           : 100px;
-	background-color : #e74c3c;
-	border-radius    : 50%;
-	left             : 0;
-	top              : 0;
-	right            : 0;
-	bottom           : 0;
-	margin           : auto;
-	position         : absolute;
-	z-index          : 1;
-	
-	&:before{
-		content          :" ";
-		width            : 40px;
-		height           : 40px;
-		border-radius    : 50%;
-		background-color : #ac4343 ;
-		left             : 0;
-		right            : 0;
-		top              : 0;
-		bottom           : 0;
-		position         : absolute;
-		margin           : auto;
-		box-shadow       : inset 5px 5px 10px rgba(0,0,0,.2);
-	}
-}
+
 
 .disc{
 	width            : 350px;
@@ -1324,27 +1299,7 @@
 	background-size: cover;
   background-repeat: no-repeat;
 	/* Dish Shine Effect */
-	&:before,&:after{
-		content       :" ";
-		border-bottom : 140px solid rgba(223, 203, 203, 0.1);
-		border-left   : 20px solid transparent;
-		border-right  : 20px solid transparent;
-		height        : 0;
-		width         : 10px;
-		position      : absolute;
-	}
-	&:before{
-		left   : 0;
-		right  : 0;
-		margin : auto;
-		top    : 50%;
-	}
-	&:after{
-		left      : 0;
-		right     : 0;
-		margin    : auto;
-		transform : rotate(180deg);
-	}
+	
 }
 
 .disc2{
@@ -1367,26 +1322,5 @@
 	will-change      : transform;
 	background-image: url('https://res.cloudinary.com/ddngbriyu/image/upload/v1730807453/Brown_Simple_Email_Newsletter_Digital_Product_Mockup_Instagram_Post_xxhnvi.png');
 	background-size: cover;
-	/* Dish Shine Effect */
-	&:before,&:after{
-		content       :" ";
-		border-bottom : 140px solid rgba(223, 203, 203, 0.1);
-		border-left   : 20px solid transparent;
-		border-right  : 20px solid transparent;
-		height        : 0;
-		width         : 10px;
-		position      : absolute;
-	}
-	&:before{
-		left   : 0;
-		right  : 0;
-		margin : auto;
-		top    : 50%;
-	}
-	&:after{
-		left      : 0;
-		right     : 0;
-		margin    : auto;
-		transform : rotate(180deg);
-	}
+	
 }
