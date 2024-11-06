@@ -1,0 +1,50 @@
+/* index.module.css */
+
+.BlogDetails {
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "kufam";
+  display: flex;
+  flex-direction: column;
+}
+
+.BackLink {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.BackLink:hover {
+  text-decoration: underline;
+}
+
+.Title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-family: "kufam";
+
+  color: #333;
+}
+
+.Date {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.Image {
+  border-radius: 8px;
+  margin-bottom: 20px;
+  align-self: center;
+}
+
+.Content {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-family: "kufam";
+
+  color: #444;
+}

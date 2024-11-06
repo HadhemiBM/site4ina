@@ -5,9 +5,8 @@ import { useRef } from "react";
 import PageTransition from "../../components/PageTransition";
 import parti from "../../Assests/svg/parti.svg";
 
-import { useRouter } from "next/navigation";
 import Image from "next/image";
-import Link from "next/link";
+
 import Video from "./video";
 import Video2 from "./video2";
 
