@@ -13,11 +13,11 @@ import { BarChart, Card } from "@tremor/react";
 const Header = () => {
   const settings = {
     showArrows: true,
-    // autoPlay: true,
+    autoPlay: true,
     infiniteLoop: true,
     showThumbs: false,
     showStatus: false,
-    interval: 5000,
+    interval: 4000,
   };
 
   return (

@@ -86,7 +86,9 @@ const Service: React.FC = () => {
         </div>
 
         <div className={styles.AllService}>
-          <div   id="technical-support" ref={SmartSectionRef} className={styles.service}>
+        <div ref={SmartSectionRef}></div>
+
+          <div   id="technical-support" className={styles.service}>
             <div  className={styles.serviceIconLeft}>
               <Image src={service} alt="service" className={styles.techImage} />
             </div>
@@ -114,8 +116,9 @@ const Service: React.FC = () => {
               </p>
             </div>
           </div>
+          <div ref={DataSectionRef}></div>
 
-          <div ref={DataSectionRef} className={styles.serviceRight}>
+          <div  className={styles.serviceRight}>
             <div className={styles.serviceContentRight}>
               <div className={styles.row}>
                 <h6> • Hardware Devolopment</h6>
@@ -139,7 +142,9 @@ const Service: React.FC = () => {
               <Image src={Data} alt="service" className={styles.techImage} />
             </div>
           </div>
-          <div ref={WebSectionRef} className={styles.service}>
+          <div ref={WebSectionRef}></div>
+
+          <div  className={styles.service}>
             <div className={styles.serviceIconLeft}>
               <Image src={web} alt="service" className={styles.techImage} />
             </div>
@@ -165,8 +170,8 @@ const Service: React.FC = () => {
               </p>
             </div>
           </div>
-
-          <div ref={MobileSectionRef} className={styles.serviceRight}>
+<div ref={MobileSectionRef}></div>
+          <div  className={styles.serviceRight}>
             <div className={styles.serviceContentRight}>
               <div className={styles.row}>
                 <h6> • Consulting</h6>
@@ -185,7 +190,9 @@ const Service: React.FC = () => {
               <Image src={consult} alt="service" className={styles.techImage} />
             </div>
           </div>
-          <div ref={AssistSectionRef} className={styles.service}>
+<div ref={AssistSectionRef}></div>
+
+          <div  className={styles.service}>
             <div className={styles.serviceIconLeft}>
               <Image
                 src={integration}
@@ -211,8 +218,9 @@ const Service: React.FC = () => {
               </p>
             </div>
           </div>
+          <div ref={certifSectionRef}></div>
 
-          <div ref={certifSectionRef} className={styles.serviceRight}>
+          <div  className={styles.serviceRight}>
             <div className={styles.serviceContentRight}>
               <div className={styles.row}>
                 {/* <i className="fa-solid fa-circle"></i> */}

@@ -337,6 +337,8 @@
 .SolutionDesc1 {
   font-size: 20px;
   color: black;
+  border-left: 3px solid var(--blue);
+  padding-left: 10px;
 
   font-family: "kufam";
   width: 90%;
@@ -345,6 +347,8 @@
 .SolutionDesc12 {
   font-size: 20px;
   color: black;
+  border-right: 3px solid var(--blue);
+padding-right: 10px;
 
   font-family: "kufam";
   width: 90%;
@@ -393,6 +397,7 @@
   height: auto;
   align-items: center;
   justify-content: center;
+  padding: 10px;
 }
 .AllServices {
   width: 100%;

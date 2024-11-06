@@ -18,7 +18,7 @@ const About: React.FC = () => {
       name: "Nouressafa Chaabani",
       linkedin: "https://www.linkedin.com/in/nouressafa-c-753456216/",
       facebook: "https://www.facebook.com/nour.essafa.73",
-      img: "https://res.cloudinary.com/ddngbriyu/image/upload/v1730375202/nour_jrsh79.webp",
+      img: "https://res.cloudinary.com/ddngbriyu/image/upload/v1730885407/nour_tyujtfcgyj_coewza.jpg",
 
       post: "Data Science Engineer",
     },
@@ -27,7 +27,7 @@ const About: React.FC = () => {
       linkedin:
         "https://www.linkedin.com/in/hadhemi-ben-mansour-0241701a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       facebook: "https://www.facebook.com/share/1gHaTjDcGmz2JKWJ/",
-      img: "https://res.cloudinary.com/ddngbriyu/image/upload/v1730375552/hadhemi_ixxqaq.jpg",
+      img: "https://res.cloudinary.com/ddngbriyu/image/upload/v1730884967/hadhemi_72011_vz4iry.jpg",
 
       post: "FullStack Engineer",
     },
@@ -37,7 +37,7 @@ const About: React.FC = () => {
         "https://www.linkedin.com/in/oumaimabenaziza?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       facebook:
         "https://www.facebook.com/share/95iqP7MBQDRPiHvX/?mibextid=qi2Omg",
-      img: "https://res.cloudinary.com/ddngbriyu/image/upload/v1730446516/oumaima_kd346i.webp",
+      img: "https://res.cloudinary.com/ddngbriyu/image/upload/v1730884975/oumaima_4801_cvjawx.png",
 
       post: "Marketing & Communication Assistant",
     },
@@ -46,7 +46,7 @@ const About: React.FC = () => {
       linkedin:
         "https://www.linkedin.com/in/meriam-zouaoui-b08a51234?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       facebook: "https://www.facebook.com/meriam.zouaoui.1?mibextid=ZbWKwL",
-      img: "https://res.cloudinary.com/ddngbriyu/image/upload/v1730377673/mariem_hgjohw.webp",
+      img: "https://res.cloudinary.com/ddngbriyu/image/upload/v1730884958/mariem_4801_p9vo8o.png",
 
       post: "Embedded System Engineer",
     },
@@ -64,7 +64,7 @@ const About: React.FC = () => {
       name: "Sabri Mhimdi",
       linkedin: "https://www.linkedin.com/in/nouressafa-c-753456216/",
       facebook: "https://www.facebook.com/nour.essafa.73",
-      img: "https://res.cloudinary.com/ddngbriyu/image/upload/v1730379861/image_2024-10-31_130511808_ozum3u.png",
+      img: "https://res.cloudinary.com/ddngbriyu/image/upload/v1730885413/Capture_d_%C3%A9cran_2024-11-06_102522_efj596.png",
 
       post: "Co-Founder",
     },
