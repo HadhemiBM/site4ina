@@ -18,8 +18,9 @@
   flex-direction: row;
   gap: 0.5rem;
   width: 100%;
-align-items: center;
+/* align-items: center; */
   justify-content: space-between;
+  /* padding: 20px; */
   align-self: center;
   align-content: center;
 }
@@ -27,11 +28,16 @@ align-items: center;
   width: 50%;
   display: flex;
   flex-direction: column;
+  padding: 20px;
+
 }
 .Right {
   width: 50%;
   display: flex;
   flex-direction: column;
+  padding: 20px;
+
+  border-left: 1px solid black ;
 }
 .input[type='text'],
 .textarea {
@@ -39,12 +45,13 @@ align-items: center;
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 5px;
+  min-height: 100px;
 }
 
-.textarea {
-  height: 100px;
+.textEditor{
+  min-height: 400px;
+  /* background-color: #0070f3; */
 }
-
 .button {
   padding: 0.5rem 1rem;
   background-color: #0070f3;
@@ -74,11 +81,37 @@ align-items: center;
   border-radius: 5px;
   border: 1px solid #ddd;
 }
+.Left h2  , .Right h2 {
+  text-align: center;
+}
 
 .blogList {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+.imagePreview,
+.imageContainer {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.imagePreview img,
+.imageContainer img {
+  width: 100px;
+  height: auto;
+  border-radius: 5px;
+}
+.livePreview {
+  /* border: 1px solid #332d2d; */
+  padding: 1rem;
+  max-width: 90%;
+  border-radius: 5px;
+  word-wrap: break-word; 
+}
+
+.livePreview p {
+  white-space: pre-wrap; 
 }
 
 .blogItem {
@@ -87,15 +120,47 @@ align-items: center;
   border-radius: 5px;
   background-color: #f9f9f9;
 }
-
 .imageContainer {
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
 }
-
 .imageContainer img {
   width: 150px;
   height: auto;
   border-radius: 5px;
+}
+.imageWrapper{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.removeButton {
+  color: rgb(224, 11, 11);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 2px 6px;
+  font-size: 16px;
+align-self: end;
+background-color: #ffffff;
+position: relative;
+  top: 20px;
+}
+.textEditorControls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.textEditorControls button {
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  background-color: #f0f0f0;
+}
+
+.textEditorControls button:hover {
+  background-color: #e0e0e0;
 }
