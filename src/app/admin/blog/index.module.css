@@ -1,0 +1,101 @@
+.container {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  width: 100%;
+align-items: center;
+  justify-content: space-between;
+  align-self: center;
+  align-content: center;
+}
+.Left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.Right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.input[type='text'],
+.textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.textarea {
+  height: 100px;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  background-color: #0070f3;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #005bb5;
+}
+
+.previewContainer {
+  margin-top: 1rem;
+}
+
+.imagePreview {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.imagePreview img {
+  width: 100px;
+  height: auto;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.blogList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.blogItem {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.imageContainer {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.imageContainer img {
+  width: 150px;
+  height: auto;
+  border-radius: 5px;
+}
