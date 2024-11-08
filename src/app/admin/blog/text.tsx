@@ -33,10 +33,10 @@ const TextInputComponent: React.FC<TextInputComponentProps> = ({ className, onCh
     setLines(updatedLines);
   
     if (onChange) {
-      // Join the lines with a newline character (`\n`)
+    
       const combinedContent = updatedLines
         .map((line) => line.content)
-        .join('\n');  // Joining with actual newline
+        .join('\n'); 
       onChange(combinedContent);
     }
   };
