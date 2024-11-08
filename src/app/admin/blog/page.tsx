@@ -138,6 +138,7 @@
 
 // export default BlogPage;
 "use client";
+
 import React, { useState } from "react";
 import styles from "./index.module.css";
 import TextInputComponent from "./text";
@@ -182,12 +183,21 @@ const BlogPage: React.FC = () => {
     }
   };
 
+  // Function to convert newlines in description to <br> tags
+  const formatDescription = (description: string) => {
+    return description.split("\n").map((line, index) => (
+      <React.Fragment key={index}>
+        {line}
+        <br />
+      </React.Fragment>
+    ));
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.row}>
         <div className={styles.Left}>
           <h2>Add a New Blog</h2>
-
           <form onSubmit={handleSubmit} className={styles.form}>
             <input
               type="text"
@@ -232,9 +242,13 @@ const BlogPage: React.FC = () => {
           <h2>Live Preview</h2>
           <div className={styles.livePreview}>
             <h3>{title || "Title"}</h3>
-            <div
-              dangerouslySetInnerHTML={{ __html: description || "Description" }}
-            />
+            {/* <div
+  dangerouslySetInnerHTML={{
+    __html: description.replace(/\n/g, '<br />') || 'Description',
+  }}
+/> */}
+
+            <div>{formatDescription(description || "Description")}</div>
             {images.length > 0 && (
               <div className={styles.imageContainer}>
                 {images.map((image, i) => (
@@ -246,23 +260,23 @@ const BlogPage: React.FC = () => {
         </div>
       </div>
       <h2>Blogs</h2>
-       <div className={styles.blogList}>
-         {blogs.map((blog, index) => (
-           <div key={index} className={styles.blogItem}>
-             <h3>{blog.title}</h3>
-             <div dangerouslySetInnerHTML={{ __html: blog.description }} />
-             <div className={styles.imageContainer}>
-               {blog.images.map((image, i) => (
-                 <img
-                   key={i}
-                   src={image}
-                   alt={`Blog ${index + 1} - Image ${i + 1}`}
-                 />
-               ))}
-             </div>
-           </div>
-         ))}
-       </div>
+      <div className={styles.blogList}>
+        {blogs.map((blog, index) => (
+          <div key={index} className={styles.blogItem}>
+            <h3>{blog.title}</h3>
+            <div>{formatDescription(blog.description)}</div>
+            <div className={styles.imageContainer}>
+              {blog.images.map((image, i) => (
+                <img
+                  key={i}
+                  src={image}
+                  alt={`Blog ${index + 1} - Image ${i + 1}`}
+                />
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
