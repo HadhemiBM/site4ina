@@ -18,9 +18,7 @@
   flex-direction: row;
   gap: 0.5rem;
   width: 100%;
-/* align-items: center; */
   justify-content: space-between;
-  /* padding: 20px; */
   align-self: center;
   align-content: center;
 }
@@ -29,7 +27,6 @@
   display: flex;
   flex-direction: column;
   padding: 20px;
-
 }
 .Right {
   width: 50%;
@@ -50,6 +47,7 @@
 
 .textEditor{
   min-height: 400px;
+  width: 100%;
   /* background-color: #0070f3; */
 }
 .button {
