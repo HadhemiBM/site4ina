@@ -1,6 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  reactStrictMode: false,
+  env: {
+    NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: "ddngbriyu" ,
+    NEXT_PUBLIC_CLOUDINARY_PRESET_NAME:"ml_default"
+  },
   images: {
 
     remotePatterns: [

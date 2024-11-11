@@ -35,6 +35,7 @@ export default function RootLayout({
 
                 <link rel="icon" href="/logo4ina.png" />
        
+                <script src="https://upload-widget.cloudinary.com/global/all.js"></script>
 
         <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
         <link href="css/bootstrap.min.css" rel="stylesheet" />
@@ -46,6 +47,8 @@ export default function RootLayout({
         <link href="css/style.css" rel="stylesheet" />
       </head>
       <body className={kufam.className}>
+      <script src="https://upload-widget.cloudinary.com/global/all.js"></script>
+
         <div className="page-container">
           <Navbar  />
           

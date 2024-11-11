@@ -1,10 +1,10 @@
-
 "use client";
-
 import React, { useState } from "react";
+import DOMPurify from "dompurify";
 import styles from "./index.module.css";
 import TextInputComponent from "./text";
 import TextEditor from "./TextEditor";
+import { CldUploadButton } from "next-cloudinary";
 
 interface Blog {
   title: string;
@@ -17,19 +17,7 @@ const BlogPage: React.FC = () => {
   const [description, setDescription] = useState("");
   const [images, setImages] = useState<string[]>([]);
   const [blogs, setBlogs] = useState<Blog[]>([]);
-
-  const handleImagesChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (event.target.files) {
-      const newFilesArray = Array.from(event.target.files).map((file) =>
-        URL.createObjectURL(file)
-      );
-      setImages((prev) => [...prev, ...newFilesArray]);
-    }
-  };
-
-  const removeImage = (index: number) => {
-    setImages((prev) => prev.filter((_, i) => i !== index));
-  };
+  const [imageURL, setImageURL] = useState<string>("");
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
@@ -46,14 +34,31 @@ const BlogPage: React.FC = () => {
     }
   };
 
-
   const formatDescription = (description: string) => {
-    return description.split("\n").map((line, index) => (
-      <React.Fragment key={index}>
-        {line}
-        <br />
-      </React.Fragment>
-    ));
+    const sanitizedDescription = DOMPurify.sanitize(description);
+    console.log("Sanitized Description:", sanitizedDescription);
+
+    return <div dangerouslySetInnerHTML={{ __html: sanitizedDescription }} />;
+  };
+
+  const handleImageUpload = (result: any) => {
+    console.log("Cloudinary Upload Response:", result);
+
+    if (result && result.info && result.info.secure_url) {
+      const imageUrl = result.info.secure_url;
+
+      console.log("Image URL:", imageUrl);
+
+      const imageTag = `<img src="${imageUrl}" alt="Uploaded Image" style="max-width: 100%; height: auto;" />`;
+
+      setDescription((prevDescription) => prevDescription + imageTag);
+
+      setImages((prevImages) => [...prevImages, imageUrl]);
+
+      setImageURL(imageUrl);
+    } else {
+      console.error("Cloudinary upload failed", result);
+    }
   };
 
   return (
@@ -74,67 +79,69 @@ const BlogPage: React.FC = () => {
               onChange={(newValue: string) => setDescription(newValue)}
             />
             <TextEditor
-             className={styles.textEditor}
-               value={description}
-               onChange={(newValue: string) => setDescription(newValue)}
-             /> 
-            <input
-              type="file"
-              accept="image/*"
-              multiple
-              onChange={handleImagesChange}
+              className={styles.textEditor}
+              value={description}
+              onChange={(newValue: string) => setDescription(newValue)}
             />
-            {images.length > 0 && (
-              <div className={styles.previewContainer}>
-                <h4>Image Preview:</h4>
-                <div className={styles.imagePreview}>
-                  {images.map((image, index) => (
-                    <div key={index} className={styles.imageWrapper}>
-                      <button
-                        type="button"
-                        className={styles.removeButton}
-                        onClick={() => removeImage(index)}
-                      >
-                        <i className="fa-solid fa-trash"></i>
-                      </button>
-                      <img src={image} alt={`Preview ${index + 1}`} />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
             <button type="submit">Add Blog</button>
           </form>
         </div>
         <div className={styles.Right}>
+          <div>
+            <CldUploadButton
+              options={{ multiple: true }}
+              uploadPreset={process.env.NEXT_PUBLIC_CLOUDINARY_PRESET_NAME}
+              onUpload={handleImageUpload}
+            >
+              <span>Upload Images</span>
+            </CldUploadButton>
+          </div>
           <h2>Live Preview</h2>
-          <div className={styles.livePreview}>
+          {/* <div className={styles.livePreview}>
             <h3>{title || "Title"}</h3>
-    
             <div>{formatDescription(description || "Description")}</div>
-            {images.length > 0 && (
-              <div className={styles.imageContainer}>
-                {images.map((image, i) => (
-                  <img key={i} src={image} alt={`Live Preview ${i + 1}`} />
-                ))}
+
+            {imageURL && (
+              <div className={styles.imageURLContainer}>
+                <p>
+                  Image URL:{" "}
+                  <a href={imageURL} target="_blank" rel="noopener noreferrer">
+                    {imageURL}
+                  </a>
+                </p>
               </div>
             )}
-          </div>
+
+            <div className={styles.imagePreview}>
+              {images.map((image, index) => (
+                <div key={index} className={styles.imageWrapper}>
+                  <button
+                    type="button"
+                    className={styles.removeButton}
+                    onClick={() =>
+                      setImages(images.filter((_, i) => i !== index))
+                    }
+                  >
+                    <i className="fa-solid fa-trash"></i>
+                  </button>
+                  <img src={image} alt={`Preview ${index + 1}`} />
+                </div>
+              ))}
+            </div>
+          </div> */}
         </div>
       </div>
+
       <h2>Blogs</h2>
       <div className={styles.blogList}>
         {blogs.map((blog, index) => (
           <div key={index} className={styles.blogItem}>
             <h3>{blog.title}</h3>
             <div>{formatDescription(blog.description)}</div>
+
             <div className={styles.imageContainer}>
               {blog.images.map((image, i) => (
-                <img
-                  key={i}
-                  src={image}
-                  alt={`Blog ${index + 1} - Image ${i + 1}`}
-                />
+                <img key={i} src={image} alt={`Blog Image ${i + 1}`} />
               ))}
             </div>
           </div>
