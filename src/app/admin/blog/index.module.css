@@ -1,170 +1,3 @@
-/* .container {
-  width: 100%;
-  height: auto;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-.row{
-  display: flex;
-  flex-direction: row;
-  gap: 0.5rem;
-  width: 100%;
-  justify-content: space-between;
-  align-self: center;
-  align-content: center;
-}
-.Left {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-}
-.Right {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-
-  border-left: 1px solid black ;
-}
-.input[type='text'],
-.textarea {
-  width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  min-height: 100px;
-}
-
-.textEditor{
-  min-height: 400px;
-  width: 100%;
-
-}
-.button {
-  padding: 0.5rem 1rem;
-  background-color: #0070f3;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.button:hover {
-  background-color: #005bb5;
-}
-
-.previewContainer {
-  margin-top: 1rem;
-}
-
-.imagePreview {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-
-.imagePreview img {
-  width: 100px;
-  height: auto;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-}
-.Left h2  , .Right h2 {
-  text-align: center;
-}
-
-.blogList {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-.imagePreview,
-.imageContainer {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-.imagePreview img,
-.imageContainer img {
-  width: 100px;
-  height: auto;
-  border-radius: 5px;
-}
-.livePreview {
-  
-  padding: 1rem;
-  max-width: 90%;
-  border-radius: 5px;
-  word-wrap: break-word; 
-}
-
-.livePreview p {
-  white-space: pre-wrap; 
-}
-
-.blogItem {
-  border: 1px solid #ddd;
-  padding: 1rem;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-}
-.imageContainer {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-.imageContainer img {
-  width: 150px;
-  height: auto;
-  border-radius: 5px;
-}
-.imageWrapper{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-}
-.removeButton {
-  color: rgb(224, 11, 11);
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  padding: 2px 6px;
-  font-size: 16px;
-align-self: end;
-background-color: #ffffff;
-position: relative;
-  top: 20px;
-}
-.textEditorControls {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-.textEditorControls button {
-  padding: 5px 10px;
-  font-size: 16px;
-  cursor: pointer;
-  border: 1px solid #ddd;
-  background-color: #f0f0f0;
-}
-
-.textEditorControls button:hover {
-  background-color: #e0e0e0;
-} */
-
-/* index.module.css */
-
 .container {
   width: 100%;
   height: auto;
@@ -175,15 +8,24 @@ position: relative;
   gap: 30px;
 }
 
-.previewImage {
-  max-width: 90%; /* Ensures the image doesn't exceed the container width */
-  max-height: 400px;
-  border-radius: 20px;
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 80%;
+}
+
+.input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.thumbnailPreview {
   margin-top: 10px;
-  margin-bottom: 10px;
-  display: block; /* Makes the image a block element to center it */
-  margin-left: auto; /* Centers image horizontally */
-  margin-right: auto; /* Centers image horizontally */
+  max-width: 200px;
+  border-radius: 10px;
 }
 
 .previewContainer {
@@ -205,4 +47,44 @@ position: relative;
   width: 100%;
   align-items: center;
   justify-content: center;
+}
+
+.submitButton {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  background-color: #45a049;
+}
+.thumbnailPreviewWrapper {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.thumbnailPreview {
+  max-width: 200px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+.thumbnailPreview2 {
+  max-width: 80%;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
 }

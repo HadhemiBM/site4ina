@@ -74,24 +74,23 @@ const handleTextFormatting = (command: string) => {
         <button onClick={() => handleTextFormatting("insertH1")}>H1</button>
         <button onClick={() => handleTextFormatting("insertH2")}>H2</button>
         <button onClick={() => handleTextFormatting("insertH3")}>H3</button>
-        <button onClick={() => handleTextFormatting("link")}>Link</button>
-        {/* <select value={fontSize} onChange={handleFontSizeChange}>
-          <option value="2">12px</option>
-          <option value="3">14px</option>
-          <option value="4">16px</option>
-          <option value="5">18px</option>
-          <option value="6">20px</option>
-          <option value="7">24px</option>
-        </select> */}
+        <button onClick={() => handleTextFormatting("link")}>
+            
+        <i className="fa-solid fa-link"></i>
+        </button>
+      
         <input
           type="color"
           value={textColor}
           onChange={handleColorChange}
           title="Choose Text Color"
+          className={styles.colorPalette}
         />
+   
         <input
           type="file"
           accept="image/*"
+           title="Import Image"
           onChange={handleImageInsert}
         />
       </div>
