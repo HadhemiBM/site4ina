@@ -11,44 +11,42 @@ const RichTextEditor: React.FC<RichTextEditorProps> = ({ value, onChange }) => {
   const [fontSize, setFontSize] = useState<string>('16px');
   const [textColor, setTextColor] = useState<string>('#000000');
 
-  // Handle formatting actions like bold, italic, etc.
-  const handleTextFormatting = (command: string) => {
-    document.execCommand(command, false, null);
 
-    // Ensure LTR direction and left-align after formatting.
+  const handleTextFormatting = (command: string) => {
+    document.execCommand(command, false);
+
+
     if (editorRef.current) {
       editorRef.current.style.direction = 'ltr';
       editorRef.current.style.textAlign = 'left';
     }
 
-    // Update content without repeating old content
     if (onChange && editorRef.current) {
       const newContent = editorRef.current.innerHTML || ''; 
-      onChange(newContent);  // Only send new content
+      onChange(newContent);  
     }
   };
 
-  // Handle font size change
   const handleFontSizeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setFontSize(e.target.value);
     document.execCommand('fontSize', false, e.target.value);
     if (onChange && editorRef.current) {
       const newContent = editorRef.current.innerHTML || ''; 
-      onChange(newContent);  // Only send new content
+      onChange(newContent); 
     }
   };
 
-  // Handle color change
+
   const handleColorChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTextColor(e.target.value);
     document.execCommand('foreColor', false, e.target.value);
     if (onChange && editorRef.current) {
       const newContent = editorRef.current.innerHTML || ''; 
-      onChange(newContent);  // Only send new content
+      onChange(newContent);  
     }
   };
 
-  // Insert image into editor
+
   const handleImageInsert = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
@@ -58,7 +56,7 @@ const RichTextEditor: React.FC<RichTextEditorProps> = ({ value, onChange }) => {
         document.execCommand('insertHTML', false, img);
         if (onChange && editorRef.current) {
           const newContent = editorRef.current.innerHTML || ''; 
-          onChange(newContent);  // Only send new content
+          onChange(newContent);  
         }
       };
       reader.readAsDataURL(file);
