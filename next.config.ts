@@ -3,8 +3,8 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   reactStrictMode: false,
   env: {
-    NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: "ddngbriyu" ,
-    NEXT_PUBLIC_CLOUDINARY_PRESET_NAME:"ml_default"
+    NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: "ddngbriyu",
+    NEXT_PUBLIC_CLOUDINARY_PRESET_NAME:"ml_default",
   },
   images: {
 
@@ -26,7 +26,7 @@ const nextConfig: NextConfig = {
       {
         source: "/",
         destination: "/home",
-        permanent: true, // or false if you want a temporary redirect
+        permanent: true, 
       },
     ];
   },
