@@ -1,7 +1,8 @@
-"use client";
-import React, { useState } from "react";
 
+"use client";
+import React, { useState, useEffect, useRef } from "react";
 import RichTextEditor from "./RichTextEditor";
+import styles from "./index.module.css";
 
 interface Blog {
   title: string;
@@ -10,29 +11,33 @@ interface Blog {
 }
 
 const BlogPage: React.FC = () => {
-
-  const [message, setMessage] = useState<string>('');
-
+  const [message, setMessage] = useState<string>("");
+  const previewRef = useRef<HTMLDivElement | null>(null);
 
   const handleMessageChange = (newValue: string) => {
     setMessage(newValue);
   };
+
+  useEffect(() => {
+    if (previewRef.current) {
+      const images = previewRef.current.querySelectorAll("img");
+      images.forEach((img) => {
+        img.classList.add(styles.previewImage);
+      });
+    }
+  }, [message]);
+
   return (
-  
-    <div>
+    <div className={styles.container}>
       <h2>Compose your message</h2>
       <RichTextEditor value={message} onChange={handleMessageChange} />
-      
-      <div style={{ marginTop: '20px' }}>
+
+      <div className={styles.container2} style={{ marginTop: "20px" }}>
         <h3>Preview:</h3>
         <div
+          ref={previewRef}
           dangerouslySetInnerHTML={{ __html: message }}
-          style={{
-            padding: '10px',
-            border: '1px solid #ddd',
-            borderRadius: '8px',
-            backgroundColor: '#f9f9f9',
-          }}
+          className={styles.previewContainer}
         />
       </div>
     </div>
