@@ -103,7 +103,7 @@ const RichTextEditor: React.FC<RichTextEditorProps> = ({ value, onChange }) => {
         className={styles.editor}
         contentEditable
         style={{ direction: 'ltr', textAlign: 'left' }}  
-        dangerouslySetInnerHTML={{ __html: value }}
+        // dangerouslySetInnerHTML={{ __html: value }}
         onInput={() => {
           if (onChange && editorRef.current) {
             const newContent = editorRef.current.innerHTML || ''; 
@@ -111,6 +111,7 @@ const RichTextEditor: React.FC<RichTextEditorProps> = ({ value, onChange }) => {
           }
         }}
       ></div>
+      
       {/* <div
         ref={editorRef}
         className={styles.editor}
