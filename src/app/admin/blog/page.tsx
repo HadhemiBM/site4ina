@@ -137,7 +137,7 @@ const BlogPage: React.FC = () => {
   const [title, setTitle] = useState<string>("");
   const [message, setMessage] = useState<string>("");
   const [thumbnail, setThumbnail] = useState<string>("");
-  const [isSubmitted, setIsSubmitted] = useState<boolean>(false); 
+  const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
   const previewRef = useRef<HTMLDivElement | null>(null);
 
@@ -165,7 +165,7 @@ const BlogPage: React.FC = () => {
       title: title,
       description: message,
       thumbnail: thumbnail,
-      images: [], 
+      images: [],
     };
     console.log("Submitting blog:", newBlog);
 
@@ -183,9 +183,8 @@ const BlogPage: React.FC = () => {
 
   return (
     <div className={styles.container}>
-      <h2>Compose your message</h2>
+      <h2>Add Your Blog</h2>
 
- 
       <div className={styles.inputContainer}>
         <label htmlFor="title">Title:</label>
         <input
@@ -218,7 +217,11 @@ const BlogPage: React.FC = () => {
         />
 
         {thumbnail && (
-          <img src={thumbnail} alt="Thumbnail Preview" className={styles.thumbnailPreview} />
+          <img
+            src={thumbnail}
+            alt="Thumbnail Preview"
+            className={styles.thumbnailPreview}
+          />
         )}
       </div>
 
@@ -231,12 +234,16 @@ const BlogPage: React.FC = () => {
       </div>
 
       {isSubmitted && (
-        
         <div className={styles.container2} style={{ marginTop: "20px" }}>
-           {thumbnail && (
+            <h4>{title}</h4>
+          {thumbnail && (
             <div className={styles.thumbnailPreviewWrapper}>
               {/* <h4>Thumbnail:</h4> */}
-              <img src={thumbnail} alt="Thumbnail" className={styles.thumbnailPreview2} />
+              <img
+                src={thumbnail}
+                alt="Thumbnail"
+                className={styles.thumbnailPreview2}
+              />
             </div>
           )}
           {/* <h3>Preview:</h3> */}
@@ -245,7 +252,6 @@ const BlogPage: React.FC = () => {
             dangerouslySetInnerHTML={{ __html: message }}
             className={styles.previewContainer}
           />
-         
         </div>
       )}
     </div>
