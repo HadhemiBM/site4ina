@@ -28,6 +28,10 @@
   gap: 20px;
   border-radius: 20px;
 }
+.textNo{
+  text-decoration: none;
+
+}
 .row {
   width: 100%;
   gap: 10px;

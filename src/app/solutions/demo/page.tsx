@@ -2,6 +2,7 @@
 import styles from "./index.module.css";
 import React, { useState } from "react";
 import PageTransition from "../../components/PageTransition";
+import Link from "next/link";
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -94,24 +95,41 @@ const Contact: React.FC = () => {
             would respond your inquiry shortly.
           </p>
           <div className={styles.rowContact}>
+          <Link href="mailto:contact@4inatechnologie.com" className={styles.textNo}>
           <i className="fa-solid fa-paper-plane" ></i>
+
+              </Link>
             <div className={styles.columnContact}>
               <p>Send an email</p>
+              <Link href="mailto:contact@4inatechnologie.com" className={styles.textNo}>
               <p className={styles.columnContact_p}>contact@4inatechnologie.com</p>
+              </Link>
             </div>
           </div>
           <div className={styles.rowContact}>
           <i className="fa-solid fa-phone"></i>
             <div className={styles.columnContact}>
               <p>Give us a call</p>
+              <Link href="tel:+21623507648" className={styles.Link}>
               <p className={styles.columnContact_p}>+216 23 507 648</p>
+
+
+              </Link>
             </div>
           </div>
           <div className={styles.rowContact}>
           <i className="fa-solid fa-location-dot"></i>
             <div className={styles.columnContact}>
               <p>Office address</p>
-              <p className={styles.columnContact_p}>Technopark manouba, Manouba Tunisia</p>
+              <Link
+                href="https://maps.app.goo.gl/qMi4e4pi4yWP7PK46"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.Link}
+              >
+                            <p className={styles.columnContact_p}>Technopark manouba, Manouba Tunisia</p>
+
+              </Link>
             </div>
           </div>
           <div className={styles.rowContact}>

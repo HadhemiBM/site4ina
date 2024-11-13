@@ -15,23 +15,6 @@ const About: React.FC = () => {
   };
   const team = [
     {
-      name: "Nouressafa Chaabani",
-      linkedin: "https://www.linkedin.com/in/nouressafa-c-753456216/",
-      facebook: "https://www.facebook.com/nour.essafa.73",
-      img: "https://res.cloudinary.com/ddngbriyu/image/upload/v1730885407/nour_tyujtfcgyj_coewza.jpg",
-
-      post: "Data Science Engineer",
-    },
-    {
-      name: "Hadhemi Ben Mansour",
-      linkedin:
-        "https://www.linkedin.com/in/hadhemi-ben-mansour-0241701a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-      facebook: "https://www.facebook.com/share/1gHaTjDcGmz2JKWJ/",
-      img: "https://res.cloudinary.com/ddngbriyu/image/upload/v1730884967/hadhemi_72011_vz4iry.jpg",
-
-      post: "FullStack Engineer",
-    },
-    {
       name: "Oumaima Ben Aziza",
       linkedin:
         "https://www.linkedin.com/in/oumaimabenaziza?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
@@ -42,6 +25,16 @@ const About: React.FC = () => {
       post: "Marketing & Communication Assistant",
     },
     {
+      name: "Nouressafa Chaabani",
+      linkedin: "https://www.linkedin.com/in/nouressafa-c-753456216/",
+      facebook: "https://www.facebook.com/nour.essafa.73",
+      img: "https://res.cloudinary.com/ddngbriyu/image/upload/v1730885407/nour_tyujtfcgyj_coewza.jpg",
+
+      post: "Data Science Engineer",
+    },
+   
+    
+    {
       name: "Meriam Zouaoui",
       linkedin:
         "https://www.linkedin.com/in/meriam-zouaoui-b08a51234?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
@@ -49,6 +42,15 @@ const About: React.FC = () => {
       img: "https://res.cloudinary.com/ddngbriyu/image/upload/v1730884958/mariem_4801_p9vo8o.png",
 
       post: "Embedded System Engineer",
+    },
+    {
+      name: "Hadhemi Ben Mansour",
+      linkedin:
+        "https://www.linkedin.com/in/hadhemi-ben-mansour-0241701a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      facebook: "https://www.facebook.com/share/1gHaTjDcGmz2JKWJ/",
+      img: "https://res.cloudinary.com/ddngbriyu/image/upload/v1730884967/hadhemi_72011_vz4iry.jpg",
+
+      post: "FullStack Engineer",
     },
   ];
   const founder = [
@@ -170,8 +172,7 @@ const About: React.FC = () => {
             <h1 className={styles.SolutionTitle2}>Team</h1>
           </div>
           <p className={styles.SolutionsDesc}>
-            Meet our team of experts who have been working together for over 20
-            years.
+          Driven by a shared commitment to excellence, our team combines diverse talents and perspectives to tackle challenges, foster innovation, and achieve outstanding results together
           </p>
           <div className={styles.AllTeam}>
             {founder.map((item, index) => (

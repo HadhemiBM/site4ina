@@ -140,35 +140,45 @@ const Homee: React.FC = () => {
   const items = [
     {
       img: "https://res.cloudinary.com/dyrh4zwb1/image/upload/v1729242530/AFD_wfgxdi.png",
-      alt: "Tekup Logo",
+      alt: "AFD - Agence Française de Développement",
     },
     {
       img: "https://res.cloudinary.com/dyrh4zwb1/image/upload/v1729242581/EU_nzen12.png",
-      alt: "Other Logo",
+      alt: "European Union",
     },
     {
       img: "https://res.cloudinary.com/dyrh4zwb1/image/upload/v1729242600/ceed_hs3zi9.jpg",
-      alt: "Another Logo",
+      alt: "CEED Tunisie",
     },
     {
       img: "https://res.cloudinary.com/dyrh4zwb1/image/upload/v1729242628/smartcapital-logo_auevso.png",
-      alt: "Tekup Logo",
+      alt: "Smart Capital",
+    },
+
+    {
+      img: "https://res.cloudinary.com/dy5gov7fj/image/upload/v1731506807/img_2_rseenw.png",
+      alt: "La GIZ en Tunisie",
     },
     {
       img: "https://res.cloudinary.com/dyrh4zwb1/image/upload/v1729242530/AFD_wfgxdi.png",
-      alt: "Tekup Logo",
+      alt: "AFD - Agence Française de Développement",
     },
     {
       img: "https://res.cloudinary.com/dyrh4zwb1/image/upload/v1729242581/EU_nzen12.png",
-      alt: "Other Logo",
+      alt: "European Union",
     },
     {
       img: "https://res.cloudinary.com/dyrh4zwb1/image/upload/v1729242600/ceed_hs3zi9.jpg",
-      alt: "Another Logo",
+      alt: "CEED Tunisie",
     },
     {
       img: "https://res.cloudinary.com/dyrh4zwb1/image/upload/v1729242628/smartcapital-logo_auevso.png",
-      alt: "Tekup Logo",
+      alt: "Smart Capital",
+    },
+
+    {
+      img: "https://res.cloudinary.com/dy5gov7fj/image/upload/v1731506807/img_2_rseenw.png",
+      alt: "La GIZ en Tunisie",
     },
   ];
 
@@ -266,8 +276,11 @@ const Homee: React.FC = () => {
           </div>
         </div>
         <div className={styles.DemoSection}>
+          <h1 className={styles.SolutionTitle1}>
+            Experience 4InA Technologie’s EMS in Action 
+          </h1>
           <h1 className={styles.SolutionTitle2}>
-            Experience 4InA Technologie’s EMS in Action Book a Demo Today!
+           Book a Demo Today!
           </h1>
           <p className={styles.SolutionsDesc}>
             Schedule a personalized demo with our experts to explore how we can
@@ -309,7 +322,7 @@ const Homee: React.FC = () => {
                         <p>View more</p>
                       </div>
                     </div>
-                    <h3 className={styles.item_title}>{game.title}</h3>
+                    <h3  onClick={() => handleViewMoreClick(game.id)} className={styles.item_title}>{game.title}</h3>
                   </div>
                 ))}
               </div>
@@ -335,8 +348,8 @@ const Homee: React.FC = () => {
             {items.map((item, index) => (
               <div key={index} className={styles.scrollItem}>
                 <Image
-                  width={100}
-                  height={100}
+                  width={130}
+                  height={200}
                   src={item.img}
                   alt={item.alt}
                   className={styles.imge}
@@ -505,9 +518,16 @@ const Homee: React.FC = () => {
                 <p className={styles.BlogDesc}>{blog.description}</p>
                 <div className={styles.Blogfooter}>
                   <p className={styles.BlogDateText}>{blog.date}</p>
-                  <Link className={styles.BlogButton} href={`/blog/${blog.id}`}>
+                 
+                  <p 
+                  className={styles.BlogDateText1}
+                     onClick={() => handleGo(blog.id)}
+                  
+                  >
+
                     Read More
-                  </Link>
+                  </p>
+                 
                 </div>
               </div>
             </div>

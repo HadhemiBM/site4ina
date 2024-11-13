@@ -9,7 +9,7 @@ width: 100%;
   border-top: 1px solid var(--ocean1);
   box-shadow: 4px 8px 8px #888;
 margin-top: 30px;
- 
+background: linear-gradient(#ffffff , #1f499738  );
 }
 
 .container {
@@ -138,3 +138,16 @@ align-content: center;justify-content: center;
   text-decoration: none;
   color: #000;
 }
+.Link{
+  text-decoration: none;
+  color: #000;
+
+}
+.Link :hover{
+color: var(--blue);
+  
+}
+.textNo :hover{
+  color: var(--blue);
+    
+  }
