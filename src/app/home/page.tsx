@@ -115,6 +115,7 @@ const Homee: React.FC = () => {
   };
 
   const scrollRef = useRef<HTMLDivElement>(null);
+  const scrollRef1 = useRef<HTMLDivElement>(null);
 
   const scrollLeft = () => {
     if (scrollRef.current) {
@@ -136,7 +137,22 @@ const Homee: React.FC = () => {
       });
     }
   };
-
+  const scrollLeft1 = () => {
+    if (scrollRef1.current) {
+      scrollRef1.current.scrollBy({
+        left: -200,
+        behavior: "smooth",
+      });
+    }
+  };
+  const scrollRight1 = () => {
+    if (scrollRef1.current) {
+      scrollRef1.current.scrollBy({
+        left: 200,
+        behavior: "smooth",
+      });
+    }
+  };
   const items = [
     {
       img: "https://res.cloudinary.com/dyrh4zwb1/image/upload/v1729242530/AFD_wfgxdi.png",
@@ -301,7 +317,10 @@ const Homee: React.FC = () => {
           </p>
           <div className={styles.AllServices}>
             <div className={styles.game_section}>
-              <div className={styles.owl_carousel_custom_carousel_owl_theme}>
+            <button className={styles.scrollButton1} onClick={scrollLeft1}>
+            <Image src={arrowLeft} alt="left" width={11} height={20} />
+          </button>
+              <div className={styles.owl_carousel_custom_carousel_owl_theme} ref={scrollRef1}>
                 {games.map((game, index) => (
                   <div className={styles.row10} key={index}>
                     <div
@@ -326,6 +345,9 @@ const Homee: React.FC = () => {
                   </div>
                 ))}
               </div>
+              <button className={styles.scrollButton1} onClick={scrollRight1}>
+            <Image src={arrowRight} alt="left" width={11} height={20} />
+          </button>
             </div>
           </div>
         </div>

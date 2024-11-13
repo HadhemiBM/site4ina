@@ -479,10 +479,42 @@ padding-right: 10px;
 
   padding: 0px 20px;
 }
+.scrollButton {
+  width: 50px;
+  height: 50px;
+  background-color: var(--blue);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  margin: 10px;
+  z-index: 99999;
+}
 .scrollButton:first-of-type {
   left: 10px;
 }
 .scrollButton:last-of-type {
+  right: 0px;
+}
+.scrollButton1 {
+  width: 50px;
+  height: 150px;
+  background-color: #3c455794;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  /* margin: 10px; */
+  z-index: 99999;
+}
+.scrollButton1:first-of-type {
+  left: 10px;
+}
+.scrollButton1:last-of-type {
   right: 0px;
 }
 .scrollContainer {
@@ -516,19 +548,7 @@ padding-right: 10px;
   filter: grayscale(0%);
   transition: filter 0.3s ease;
 }
-.scrollButton {
-  width: 50px;
-  height: 50px;
-  background-color: var(--blue);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  position: absolute;
-  margin: 10px;
-  z-index: 99999;
-}
+
 /* Price Section */
 .AllPrices {
   display: flex;
@@ -1085,6 +1105,10 @@ padding-right: 10px;
   gap: 20px;
   flex-direction: row;
   margin-bottom: 50px;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+
 }
 
 .owl_carousel_custom_carousel_owl_theme {
@@ -1093,6 +1117,13 @@ padding-right: 10px;
   width: 100%;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  align-items: center;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+
 }
 
 .item {
