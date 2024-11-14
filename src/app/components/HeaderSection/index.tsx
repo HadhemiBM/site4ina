@@ -241,7 +241,7 @@ const Header = () => {
             </p>
             <Link href="/solutions/demo" passHref>
               <button className={styles.buttonDemo}>Book a Demo</button>
-            </Link>{" "}
+            </Link>
           </div>
           <div className={styles.Imagecontainer}>
             <Image className={styles.HeadImage} src={dme} alt="IA" />

@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
           <Image
             className={styles.navbarLogoText}
             src={logo}
-            alt="Logo 4ina"
+            alt="Logo 4ina Technologie"
             width={90}
             height={70}
           />
@@ -102,13 +102,13 @@ const Navbar: React.FC = () => {
             </div>
           ))}
         </div>
-        <div className={styles.navbarLogin}>
+        {/* <div className={styles.navbarLogin}>
           <h3 className={styles.LoginContainer}>
             <Link className={styles.LoginText} href="/login">
               Login
             </Link>
           </h3>
-        </div>
+        </div> */}
       </div>
     </nav>
   );

@@ -292,7 +292,7 @@ const Homee: React.FC = () => {
           </div>
         </div>
         <div className={styles.DemoSection}>
-          <h1 className={styles.SolutionTitle1}>
+          <h1 className={styles.SolutionTitle3}>
             Experience 4InA Technologie’s EMS in Action 
           </h1>
           <h1 className={styles.SolutionTitle2}>
