@@ -196,7 +196,7 @@
     height: 65px;
   }
 }
-@media (max-width: 440px) {
+@media (max-width: 640px) {
   .navbarLink {
     font-size: 8px;
   }
@@ -209,7 +209,9 @@
   .navbarLinksContainer {
     display: flex;
     gap: 0px;
+    background-color: antiquewhite;
     text-decoration: none;
+    z-index: 99;
   }
 
   .navbarLink a {
@@ -217,6 +219,8 @@
   }
   .navbarContainer {
       height: 100%;
+      width:100%;
+      background-color: aqua;
     }
     .navbarLinkContainer {
       position: relative;
@@ -225,12 +229,12 @@
       width: 100%;
       height: 55px;
       margin-top: 10px;
-
     }
 
-  
+ 
+   
 }
-@media (max-width: 360px) {
+@media only screen and  (max-width: 360px) {
   .navbarLink {
     font-size: 8px;
   }
