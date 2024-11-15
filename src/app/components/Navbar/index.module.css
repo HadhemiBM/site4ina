@@ -16,7 +16,7 @@
   align-items: center;
   align-content: center;
   align-self: center;
-  justify-content: space-between;
+  /* justify-content: center; */
 }
 .navbar.scrolled {
   top: 0px;
@@ -29,7 +29,7 @@
 
 .navbarContainer {
   width: 100%;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   padding: 0 16px;
   display: flex;
   align-items: center;
@@ -237,7 +237,7 @@
   .navbarLogoText {
     width: 40px;
     height: 35px;
-    /* z-index: 99; */
+  
     margin-left: 0px;
   }
   .navbarLinksContainer {
@@ -251,6 +251,8 @@
   }
   .navbarContainer {
       height: 100%;
+      width:75%;
+      background-color: aqua;
     }
     .navbarLinkContainer {
       position: relative;
