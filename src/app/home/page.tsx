@@ -175,27 +175,27 @@ const Homee: React.FC = () => {
       img: "https://res.cloudinary.com/dy5gov7fj/image/upload/v1731506807/img_2_rseenw.png",
       alt: "La GIZ en Tunisie",
     },
-    {
-      img: "https://res.cloudinary.com/dyrh4zwb1/image/upload/v1729242530/AFD_wfgxdi.png",
-      alt: "AFD - Agence Française de Développement",
-    },
-    {
-      img: "https://res.cloudinary.com/dyrh4zwb1/image/upload/v1729242581/EU_nzen12.png",
-      alt: "European Union",
-    },
-    {
-      img: "https://res.cloudinary.com/dyrh4zwb1/image/upload/v1729242600/ceed_hs3zi9.jpg",
-      alt: "CEED Tunisie",
-    },
-    {
-      img: "https://res.cloudinary.com/dyrh4zwb1/image/upload/v1729242628/smartcapital-logo_auevso.png",
-      alt: "Smart Capital",
-    },
+    // {
+    //   img: "https://res.cloudinary.com/dyrh4zwb1/image/upload/v1729242530/AFD_wfgxdi.png",
+    //   alt: "AFD - Agence Française de Développement",
+    // },
+    // {
+    //   img: "https://res.cloudinary.com/dyrh4zwb1/image/upload/v1729242581/EU_nzen12.png",
+    //   alt: "European Union",
+    // },
+    // {
+    //   img: "https://res.cloudinary.com/dyrh4zwb1/image/upload/v1729242600/ceed_hs3zi9.jpg",
+    //   alt: "CEED Tunisie",
+    // },
+    // {
+    //   img: "https://res.cloudinary.com/dyrh4zwb1/image/upload/v1729242628/smartcapital-logo_auevso.png",
+    //   alt: "Smart Capital",
+    // },
 
-    {
-      img: "https://res.cloudinary.com/dy5gov7fj/image/upload/v1731506807/img_2_rseenw.png",
-      alt: "La GIZ en Tunisie",
-    },
+    // {
+    //   img: "https://res.cloudinary.com/dy5gov7fj/image/upload/v1731506807/img_2_rseenw.png",
+    //   alt: "La GIZ en Tunisie",
+    // },
   ];
 
   const cibles = [
@@ -249,6 +249,7 @@ const Homee: React.FC = () => {
                   </div>
                 )
             )}
+            
           </div>
         </div>
         <div className={styles.SolutionSection}>
@@ -272,7 +273,7 @@ const Homee: React.FC = () => {
                 </p>
               </div>
               <div className={styles.disc}></div>
-              <div className={styles.back_case}></div>
+              {/* <div className={styles.back_case}></div> */}
             </div>
             <div className={styles.music_case}>
               <div className={styles.front_case2}>
@@ -287,7 +288,7 @@ const Homee: React.FC = () => {
               <div className={styles.disc2}>
                 {/* <div className={styles.hole}></div> */}
               </div>
-              <div className={styles.back_case2}></div>
+              {/* <div className={styles.back_case2}></div> */}
             </div>
           </div>
         </div>
@@ -318,7 +319,7 @@ const Homee: React.FC = () => {
           <div className={styles.AllServices}>
             <div className={styles.game_section}>
             <button className={styles.scrollButton1} onClick={scrollLeft1}>
-            <Image src={arrowLeft} alt="left" width={11} height={20} />
+            <Image src={arrowLeft} alt="left" width={11} height={20}  />
           </button>
               <div className={styles.owl_carousel_custom_carousel_owl_theme} ref={scrollRef1}>
                 {games.map((game, index) => (
@@ -363,9 +364,9 @@ const Homee: React.FC = () => {
           success across various sectors.
         </p>
         <div className={styles.wrapper}>
-          <button className={styles.scrollButton} onClick={scrollLeft}>
+          {/* <button className={styles.scrollButton} onClick={scrollLeft}>
             <Image src={arrowLeft} alt="left" width={11} height={20} />
-          </button>
+          </button> */}
           <div className={styles.scrollContainer} ref={scrollRef}>
             {items.map((item, index) => (
               <div key={index} className={styles.scrollItem}>
@@ -379,9 +380,9 @@ const Homee: React.FC = () => {
               </div>
             ))}
           </div>
-          <button className={styles.scrollButton} onClick={scrollRight}>
+          {/* <button className={styles.scrollButton} onClick={scrollRight}>
             <Image src={arrowRight} alt="left" width={11} height={20} />
-          </button>
+          </button> */}
         </div>
       </div>
       <div className={styles.PricingSection}>
