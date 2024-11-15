@@ -565,7 +565,7 @@
 }
 .PriceTitle1 {
   font-size: 28px;
-  color: #d38c07dc;
+  color: #000000dc;
   font-family: "kufam";
   margin: 0px 0px 0px 0px;
 }
@@ -843,7 +843,7 @@
   display: block;
   width: 1.5vw;
   height: 1.5vw;
-  border-bottom: 5px solid rgb(50, 49, 117);
+  border-bottom: 5px solid rgb(0, 0, 0);
   border-right: 5px solid rgb(90, 83, 83);
   transform: rotate(45deg);
   margin: -10px;
@@ -874,8 +874,10 @@
 .arrow2 span {
   width: 35px;
   height: 35px;
-  left: 5px;
-  top: 180px;
+  color: #000;
+
+  left: 10px;
+  top: 100px;
   transform: rotate(0deg);
 }
 .arrow1 span:nth-child(2) {
@@ -947,7 +949,7 @@
   width: 30px;
   height: 30px;
   display: flex;
-  color: #d38c07dc;
+  color: #000000dc;
   /* color: #3a8efc69; */
   --c: #0000 calc(100% - 20px), currentColor calc(100% - 19px) 98%, #0000;
   background: radial-gradient(farthest-side at left, var(--c)) right / 50% 100%,
@@ -1649,6 +1651,19 @@ width: 90%;
       padding-bottom: 20px;
       border-bottom: var(--blue) 1px solid;
     }
+    /* Price */
+    .rowloa {
+      gap: 10px;
+    }
+    .loader {
+      width: 20px;
+      height: 20px;
+    }
+    .PriceTitle1 {
+      font-size: 20px;
+
+    }
+ 
 }
 
 @media (max-width: 800px) {
