@@ -247,7 +247,7 @@
 .AllSolutions {
   display: flex;
   flex-direction: row;
-  width: 80%;
+  width: 90%;
   height: auto;
   align-items: center;
   align-content: center;
@@ -318,7 +318,7 @@
   font-family: "kufam";
 }
 .SolutionDesc1 {
-  font-size: 20px;
+  font-size: 18px;
   color: black;
   border-left: 3px solid var(--blue);
   padding-left: 10px;
@@ -328,7 +328,7 @@
   text-align: center;
 }
 .SolutionDesc12 {
-  font-size: 20px;
+  font-size: 18px;
   color: black;
   border-right: 3px solid var(--blue);
   padding-right: 10px;
@@ -1232,7 +1232,7 @@
   cursor: pointer;
 }
 .music_case {
-  width: 500px;
+  width: 100%;
   height: auto;
   position: relative;
   background-color: #ffffff;
@@ -1240,6 +1240,7 @@
   cursor: pointer;
   display: flex;
   align-self: center;
+  /* overflow: hidden; */
   align-items: center;
   align-content: center;
   justify-content: center;
@@ -2710,7 +2711,7 @@ width: 90%;
     width: 90%;
     display: flex;
     flex-direction: column;
-    gap: 0px;
+    gap: 30px;
   }
   .music_case {
     margin-bottom: 40px;
@@ -2734,13 +2735,13 @@ width: 90%;
       transform: translateX(00px);
     }
     .disc {
-      transform: translateY(140px) translateX(180px);
+      transform: translateY(160px) translateX(120px);
       border-bottom: 0px solid var(--blue);
     }
     .disc2 {
       border-bottom: 0px solid var(--blue);
 
-      transform: translateY(160px) translateX(140px);
+      transform: translateY(180px) translateX(80px);
     }
   }
   .front_case {
