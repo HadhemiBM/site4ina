@@ -537,6 +537,11 @@
   margin-bottom: 20px;
   overflow: hidden;
 }
+.imge{
+  width: 40%;
+  height: auto;
+  object-fit: cover;
+}
 .scrollItem:hover {
   filter: grayscale(0%);
   transition: filter 0.3s ease;
@@ -626,7 +631,7 @@
 }
 .Blog1 {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   align-content: center;
   align-items: center;
@@ -689,6 +694,9 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.BlogIcon{
+  width: 100%;
+}
 .BlogImage {
   width: 100%;
   height: auto;
@@ -701,6 +709,11 @@
   font-size: 18px;
   font-family: "kufam";
   margin: 10px 0px 10px 0px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .BlogButton {
   color: black;
@@ -830,8 +843,8 @@
 }
 .arrow {
   position: fixed;
-  top: 90%;
-  left: 90%;
+  top: 100%;
+  left: 95%;
   transform: translate(-50%, -50%) rotate(270deg);
   cursor: pointer;
 
@@ -843,8 +856,8 @@
   display: block;
   width: 1.5vw;
   height: 1.5vw;
-  border-bottom: 5px solid rgb(0, 0, 0);
-  border-right: 5px solid rgb(90, 83, 83);
+  border-bottom: 4px solid rgb(5, 34, 255);
+  border-right: 4px solid rgb(5, 34, 255);
   transform: rotate(45deg);
   margin: -10px;
   animation: animate 2s infinite;
@@ -1249,7 +1262,7 @@
 .front_case2,
 .back_case2 {
   width: 500px;
-  height: auto;
+  height: 320px;
   border-radius: 10px;
   /* background-color : rgba(white, .1); */
   position: relative;
@@ -1364,7 +1377,7 @@
   justify-content: center;
   left: 20px;
   transition: transform 0.5s ease-out;
-  z-index: -9999;
+  z-index: -99999;
   overflow: hidden;
 
   will-change: transform;
@@ -1489,7 +1502,82 @@
     border-bottom: var(--blue) 1px solid;
   }
 }
+@media (min-width: 900px) and (max-width: 1400px) {
+  .AllSolutions {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  /* Blogs */
+ .AllBlog {
+  width: 90%;
+flex-direction: row;
 
+  gap: 20px;
+}
+
+.BlogDesc {
+  font-size: 16px;
+
+  width: 100%;
+  margin: 10px 0px 0px 0px;
+gap: 10px;
+
+}
+.Blog1 {
+  display: flex;
+  flex-direction: row;
+margin-bottom: 40px;
+ 
+border-bottom: var(--darkGrey) 1px solid;
+
+
+  width: 70%;
+  max-height: 360px;
+  min-height: 360px;
+}
+.BlogTitle {
+  font-size: 16px;
+ 
+  margin: 0px 0px 0px 0px;
+}
+.BlogDateText {
+  font-size: 14px;
+  
+}
+.BlogDateText1 {
+  font-size: 14px;
+  
+}
+.BlogContent {   
+  padding-left: 0.3rem;
+  max-height: 230px;
+  min-height: 230px;
+}
+.arrow {
+
+  top: 100%;
+
+
+}
+.arrow span {
+ 
+  width: 2vw;
+  height: 2vw;
+
+}
+.BlogIcon{
+  width: 100%;
+}
+.BlogImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+}
 @media (max-width: 900px) {
   .CibleSection {
     font-size: 30px;
@@ -1663,7 +1751,75 @@ width: 90%;
       font-size: 20px;
 
     }
+ /* Blogs */
+ .AllBlog {
+  width: 90%;
+flex-direction: column;
+
+  gap: 30px;
+}
+
+.BlogDesc {
+  font-size: 16px;
+
+  width: 100%;
+  margin: 10px 0px 0px 0px;
+gap: 10px;
+
+}
+.Blog1 {
+  display: flex;
+  flex-direction: row;
+margin-bottom: 40px;
  
+border-bottom: var(--darkGrey) 1px solid;
+
+
+  width: 80%;
+  max-height: 580px;
+  min-height: 580px;
+}
+.BlogTitle {
+  font-size: 16px;
+
+  margin: 0px 0px 10px 0px;
+}
+.BlogDateText {
+  font-size: 14px;
+  
+}
+.BlogDateText1 {
+  font-size: 14px;
+  
+}
+.BlogContent {   
+  padding-left: 0.3rem;
+  max-height: 230px;
+  min-height: 230px;
+}
+.arrow {
+
+  top: 100%;
+
+
+}
+.arrow span {
+ 
+  width: 4vw;
+  height: 3.5vw;
+
+}
+.BlogIcon{
+  width: 100%;
+}
+.BlogImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
 }
 
 @media (max-width: 800px) {
@@ -1839,6 +1995,21 @@ width: 90%;
     width: 30px;
     height: 60px;
   }
+
+.arrow {
+
+  top: 100%;
+  left: 90%;
+
+
+}
+.arrow span {
+ 
+  width: 3vw;
+  height: 3vw;
+
+}
+
 }
 @media (max-width: 650px) {
   .CibleSection {
@@ -2045,9 +2216,44 @@ width: 93%;
       max-width: 15%;
       height:90px;
     }
- 
-}
+    /* price */
+   
+    .AllPrices {
+      width: 100%;
+      height: 200px;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      /* margin-top: 30px; */
+      gap: 20px;
+    }
+    .loader {
+      width: 13px;
+      height: 13px;
+      
+    }
 
+     /* Blogs */
+ 
+.Blog1 {
+  display: flex;
+  flex-direction: row;
+margin-bottom: 40px;
+ 
+border-bottom: var(--darkGrey) 1px solid;
+
+
+  width: 80%;
+  max-height: 450px;
+  min-height: 450px;
+}
+}
+@media (max-width: 668px) {
+  .PriceTitle1 {
+    font-size: 18px;
+    
+  }
+}
 @media (max-width: 623px) {
   .CibleSection {
     width: 100%;
@@ -2230,6 +2436,26 @@ width: 90%;
       width: 30px;
       height: 50px;
     }
+
+    /* Price */
+    .PriceTitle1 {
+      font-size: 14px;
+      
+    }
+    .AllPrices {
+      width: 100%;
+      height: 200px;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      /* margin-top: 30px; */
+      gap: 20px;
+    }
+    .loader {
+      width: 13px;
+      height: 13px;
+      
+    }
 }
 
 @media (max-width: 508px) {
@@ -2260,7 +2486,8 @@ width: 90%;
     font-size: 18px;
   }
   .SolutionDesc12 {
-    font-size: 18px;
+    font-size: 14px;
+    margin-left: 14px;
   }
   .music_case {
     margin-bottom: 30px;
@@ -2301,7 +2528,7 @@ width: 90%;
   }
   .SolutionTitle3  {
     
-    font-size: 20px;
+    font-size: 18px;
 
   }
   .SolutionTitle1,
@@ -2354,6 +2581,102 @@ width: 90%;
       width: 30px;
       height: 50px;
     }
+    /* Price */
+    .PriceTitle1 {
+      font-size: 12px;
+      
+    }
+
+    /* blogs */
+    .Blog1 {
+      display: flex;
+      flex-direction: row;
+    margin-bottom:0px;
+     
+    border-bottom: var(--darkGrey) 1px solid;
+
+    
+      width: 80%;
+      max-height: 370px;
+      min-height: 370px;
+    }
+    .BlogDesc {
+      font-size: 12px;
+    
+  
+    
+    }
+    .BlogTitle {
+      font-size: 12px;
+    
+      margin: 0px 0px 4px 0px;
+    }
+    .BlogDateText {
+      font-size: 12px;
+      
+    }
+    .BlogDateText1 {
+      font-size: 12px;
+      
+    }
+    .BlogContent {   
+      padding-left: 0.3rem;
+      max-height: 170px;
+      min-height: 170px;
+    }
+}
+@media (max-width: 475px) {
+  /* Price */
+  .PriceTitle1 {
+    font-size: 14px;
+    text-align: center;
+    
+  }
+  .AllPrices {
+    width: 100%;
+    height: 200px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    /* margin-top: 30px; */
+    gap: 20px;
+  }
+  .loader {
+    width: 13px;
+    height: 13px;
+    align-self: center;
+    text-align: center;
+    
+  }
+  .rowloa {
+  
+    flex-direction: column;
+   
+  }
+  .arrow1 span {
+    display: none;
+    width: 20px;
+    height: 20px;
+    
+  }
+  .PricingSection {
+    height: 300px;
+
+    padding: 20px;
+  }
+  /* blogs */
+  .Blog1 {
+    display: flex;
+    flex-direction: row;
+  margin-bottom:0px;
+   
+  border-bottom: var(--darkGrey) 1px solid;
+
+  
+    width: 80%;
+    max-height: 350px;
+    min-height: 350px;
+  }    
 }
 @media (max-width: 423px) {
   .SpinnerDescu,
@@ -2497,4 +2820,73 @@ width: 90%;
         width: 30px;
         height: 50px;
       }
+      /* Price */
+      .PriceTitle1 {
+        font-size: 12px;
+        text-align: center;
+        
+      }
+      /* Blogs */
+      .AllBlog {
+        width: 90%;
+  flex-direction: column;
+
+        gap: 10px;
+      }
+      
+      .BlogDesc {
+        font-size: 10px;
+        color: black;
+        font-family: "kufam";
+        width: 100%;
+        margin: 10px 0px 0px 0px;
+  gap: 10px;
+     
+      }
+      .Blog1 {
+        display: flex;
+        flex-direction: row;
+margin-bottom: 40px;
+       
+border-bottom: var(--darkGrey) 1px solid;
+
+     
+        width: 90%;
+        max-height: 360px;
+        min-height: 360px;
+      }
+      .BlogTitle {
+        font-size: 12px;
+
+        margin: 0px 0px 10px 0px;
+      }
+      .BlogDateText {
+        font-size: 10px;
+        
+      }
+      .BlogDateText1 {
+        font-size: 10px;
+        
+      }
+      .BlogContent {   
+        padding-left: 0.3rem;
+        max-height: 200px;
+        min-height: 200px;
+      }
+      .arrow {
+    
+        top: 100%;
+ 
+      
+      }
+      .arrow span {
+       
+        width: 4vw;
+        height: 3.5vw;
+        border-bottom: 3px solid rgb(5, 34, 255);
+  border-right:3px solid rgb(5, 34, 255);
+      }
+      
 }
+
+

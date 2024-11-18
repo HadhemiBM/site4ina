@@ -7,9 +7,9 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.container}>
         
-        {/* <div className={styles.middle}> */}
-          <div className={styles.navigation}>
-            {/* <h6>Navigation</h6> */}
+
+          {/* <div className={styles.navigation}>
+          
             <Link href={"/home"}>
               <p>Home</p>
             </Link>
@@ -22,19 +22,15 @@ const Footer = () => {
             <Link href={"/solutions/demo"}>
               <p>Solutions</p>
             </Link>
-            {/* <Link href={"/posts/events"}>
-              <p>Posts</p>
-            </Link>
-            <Link href={"/contact"}>
-              <p>Contact US</p>
-            </Link> */}
-          </div>
+           
+          </div> */}
          
           
         {/* </div> */}
-        <div className={styles.Right}>
+        <div className={styles.Logo}>
           <Image className={styles.RightLogo} src={logo} alt="Log4ina" />
-          <p>Connect with 4ina Technologie Innovate, Collaborate, Succeed </p>
+          {/* <p>Connect with 4ina Technologie</p> */}
+          <p>Innovate, Collaborate, Succeed </p>
         </div>
         <div className={styles.contact}>
             {/* <h6>Contact Us</h6> */}
@@ -59,11 +55,14 @@ const Footer = () => {
             {/* <i className="fa-brands fa-facebook fa-shake-facebook"></i> */}
           </div>
             <div className={styles.row}>
-            <Link href="mailto:contact@4inatechnologie.com" className={styles.textNo}>
-            <i className="fa-solid fa-envelope" ></i>
-              </Link>
-             
-              <Link href="mailto:contact@4inatechnologie.com">
+            <Link  href="mailto:benmansourhadhemi99@gmail.com" 
+            className={styles.textNo}
+            >
+  <i className="fa-solid fa-envelope"></i>
+</Link>
+
+              <Link href="mailto:benmansourhadhemi99@gmail.com" className={styles.textNo}>
+              
                 <p className={styles.textNo}>contact@4inatechnologie.com</p>
               </Link>
             </div>
@@ -71,7 +70,7 @@ const Footer = () => {
             <div className={styles.roww}>
             <div className={styles.row}>
             <Link href="tel:+21623507648" className={styles.Link}>
-            <i className="fa-solid fa-phone "></i>
+            <i className="fa-solid fa-phone " ></i>
 
               </Link>
               <Link href="tel:+21623507648" className={styles.Link}>

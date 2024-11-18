@@ -525,7 +525,7 @@ const Homee: React.FC = () => {
               <div className={styles.BlogIcon}>
                 <Image
                   width={419}
-                  height={100}
+                  height={400}
                   className={styles.BlogImage}
                   src={blog.imageUrl}
                   alt="blog"
