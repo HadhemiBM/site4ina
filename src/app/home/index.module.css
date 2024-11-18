@@ -844,7 +844,7 @@
 }
 .arrow {
   position: fixed;
-  top: 100%;
+  top: 99%;
   left: 95%;
   transform: translate(-50%, -50%) rotate(270deg);
   cursor: pointer;
@@ -1632,8 +1632,8 @@ border-bottom: var(--darkGrey) 1px solid;
 }
 .arrow {
 
-  top: 100%;
-
+  top: 99%;
+z-index: 999;
 
 }
 .arrow span {
@@ -1887,14 +1887,14 @@ border-bottom: var(--darkGrey) 1px solid;
 }
 .arrow {
 
-  top: 100%;
+  top: 99%;
 
 
 }
 .arrow span {
  
-  width: 4vw;
-  height: 3.5vw;
+  width: 2vw;
+  height: 2vw;
 
 }
 .BlogIcon{
@@ -2085,8 +2085,8 @@ width: 90%;
 
 .arrow {
 
-  top: 100%;
-  left: 50%;
+  top: 99%;
+  left: 90%;
 
 
 }
@@ -2566,6 +2566,19 @@ width: 90%;
      .SpinnerDescu1 {
        font-size: 12px;
      }
+     .arrow {
+
+      top: 99%;
+      left: 90%;
+    
+    
+    }
+    .arrow span {
+     
+      width: 3vw;
+      height: 3vw;
+    
+    }
 }
 
 @media (max-width: 508px) {
@@ -2788,6 +2801,19 @@ width: 90%;
     max-height: 350px;
     min-height: 350px;
   }    
+  .arrow {
+
+    top: 99%;
+    left: 90%;
+  
+  
+  }
+  .arrow span {
+   
+    width: 3vw;
+    height: 3vw;
+  
+  }
 }
 @media (max-width: 423px) {
   .SpinnerDescu,
@@ -2986,8 +3012,8 @@ border-bottom: var(--darkGrey) 1px solid;
       }
       .arrow {
     
-        top: 100%;
- 
+        top: 99.5%;
+ left: 90%;
       
       }
       .arrow span {
@@ -3096,5 +3122,11 @@ border-bottom: var(--darkGrey) 1px solid;
   .disc2 {
     width: 180px;
     height: 180px;
+  }
+  .arrow {
+    
+    top: 99.5%;
+left: 90%;
+  
   }
 }
