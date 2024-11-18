@@ -110,6 +110,9 @@ justify-content: center;
 
   display: flex;
   flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
   gap: 10px;
 }
 .row{
@@ -317,3 +320,45 @@ color: var(--blue);
                 gap:10px;
                }
               }
+
+              @media (max-width: 423px)  {
+                .container {
+                  display: flex;
+                  flex-direction: column;
+                
+                 }
+                .textNo{
+                  text-decoration: none;
+                  color: #000;
+                  margin: 0px 0px 0px 0px;
+                  font-size: 8px;
+                
+                }
+                .Link i {
+                  font-size: 8px;
+  
+                }
+                .Logo{
+                 
+                  width: 25%; 
+                 
+                }
+                .RightLogo{
+                  width: 50%;
+                  height: auto;
+                }
+                .Logo p {
+                  display: none;
+                }
+                .contact {
+                  display: flex;
+                  flex-direction: column;
+                  flex-wrap: wrap;
+                 width: 100%;
+                 margin-top: -30px;
+                 gap: 0px;
+                 }
+                 .roww{
+                  gap:20px;
+                 }
+                }
