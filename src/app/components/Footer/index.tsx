@@ -94,7 +94,7 @@ const Footer = () => {
                 className={styles.textNo}
               >
                 <p className={styles.textNo}>
-                  Technopark mannouba, Mannouba, Tunisia
+                  Technopark mannouba, Mannouba
                 </p>
               </Link>
             </div>
