@@ -188,13 +188,23 @@
   }
 }
 @media (max-width: 800px) {
+  .navbarContainer{
+    padding: 0px;
+  }
   .navbarLink {
     font-size: 11px;
   }
   .navbarLogoText {
-    width: 75px;
-    height: 65px;
+    width: 65px;
+    height: auto;
   }
+  .navbarLinksContainer {
+    display: flex;
+    gap: 0px;
+    text-decoration: none;
+    z-index: 99;
+  }
+
 }
 @media (max-width: 640px) {
   .navbar {
