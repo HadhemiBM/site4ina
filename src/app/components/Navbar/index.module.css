@@ -530,6 +530,13 @@
  
    
 }
+@media (max-width: 900px) {
+  .navbar.scrolled {
+   
+    height: 65px;
+   
+  }
+}
 @media only screen and  (max-width: 360px) {
   .navbarLink {
     font-size: 8px;
