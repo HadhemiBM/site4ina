@@ -54,10 +54,11 @@ body {
    flex-direction: column;
    align-self: center;
   flex: 1;
-  background-color: #0003da;
+  /* background-color: #0003da; */
   width: 100%;
   margin-top: 75px;
   flex-direction: column;
+  overflow: hidden;
   position: relative;
 } 
 @media (max-width: 640px) {
