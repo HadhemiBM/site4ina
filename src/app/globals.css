@@ -54,8 +54,16 @@ body {
    flex-direction: column;
    align-self: center;
   flex: 1;
+  background-color: #0003da;
   width: 100%;
   margin-top: 75px;
   flex-direction: column;
   position: relative;
 } 
+@media (max-width: 640px) {
+  .content-wrapper {
+
+   margin-top: 45px;
+ 
+ } 
+}

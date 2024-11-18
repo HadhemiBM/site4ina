@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
   height: 76px;
   background-color: rgb(255, 255, 255);
   position: fixed;
@@ -188,28 +189,24 @@
   }
 }
 @media (max-width: 800px) {
-  .navbarContainer{
-    padding: 0px;
-  }
   .navbarLink {
     font-size: 11px;
   }
   .navbarLogoText {
-    width: 65px;
-    height: auto;
+    width: 75px;
+    height: 65px;
   }
   .navbarLinksContainer {
-    display: flex;
-    gap: 0px;
-    text-decoration: none;
-    z-index: 99;
-  }
 
+    gap: 5px;
+ 
+  }
 }
 @media (max-width: 640px) {
   .navbar {
-    width: 100%;
-    height: 55px;
+    max-width: 100%;
+  min-width: 100%;
+    height: 45px;
    
   }
   .navbarLink {
@@ -271,11 +268,11 @@
       position: relative;
     }
     .navbar {
-      width: 100%;
+      max-width: 100%;
+      min-width: 100%;
       height: 40px;
 
     }
 
   
 }
-
