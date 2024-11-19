@@ -7,7 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const About: React.FC = () => {
-  const scrollRef = useRef<HTMLDivElement>(null);
+
   const router = useRouter();
 
   const navigateToService = () => {
@@ -174,7 +174,7 @@ const About: React.FC = () => {
           <p className={styles.SolutionsDesc}>
           Driven by a shared commitment to excellence, our team combines diverse talents and perspectives to tackle challenges, foster innovation, and achieve outstanding results together
           </p>
-          <div className={styles.AllTeam}>
+          <div className={styles.AllTeam1}>
             {founder.map((item, index) => (
               <div key={index} className={styles.Team1}>
                 <div className={styles.TeamIcon}>
@@ -202,10 +202,10 @@ const About: React.FC = () => {
               </div>
             ))}
           </div>
-          <div className={styles.AllTeam}>
+          <div className={styles.AllTeam2}>
             {team.map((item, index) => (
               <div key={index} className={styles.Team2}>
-                <div className={styles.TeamIcon}>
+                <div className={styles.TeamIcon2}>
                   <div className={styles.TeamImageWrapper}>
                     <Image
                       className={styles.TeamImage}
@@ -216,8 +216,8 @@ const About: React.FC = () => {
                     />
                   </div>
                 </div>
-                <div className={styles.column}>
-                  <div className={styles.TeamContent}>
+                <div className={styles.columnn}>
+                  <div className={styles.TeamContent2}>
                     <h6 className={styles.TeamName}>{item.name}</h6>
                     <p className={styles.TeamDesc}>{item.post}</p>
                   </div>
