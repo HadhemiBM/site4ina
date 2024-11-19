@@ -13,7 +13,7 @@
 }
 .Header {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
   height: auto;
@@ -22,33 +22,26 @@
   justify-content: space-between;
 }
 .Left {
-  flex: 0.6;
+  
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
 .Right {
-  flex: 0.3;
 
   display: flex;
-  flex-direction: column;
-  background-image: url("./../Assests/svg/ServiceCircle.svg");
-  background-repeat: no-repeat;
-
-  background-position: center right;
-  height: 600px;
+  width:70%;
+  align-self: center;
+  flex-wrap: wrap;  
+  justify-content: space-between;  
   align-items: center;
   align-content: center;
-  justify-content: center;
+
   text-align: start;
+  margin-top: 70px;
+  gap: 40px;
 }
-.content {
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-  align-self: end;
-  gap: 10px;
-}
+
 .title {
   color: var(--blue);
   font-size: 46px;
@@ -75,31 +68,55 @@
 
   display: flex;
   font-family: "kufam";
-
+width: 90%;
+align-self: center;
+text-align: center;
   align-items: center;
   align-content: center;
   /* justify-content: flex-start; */
-  margin-left: 50px;
+  /* margin-left: 50px; */
 }
 .RightDesc {
+
   display: flex;
   flex-direction: row;
 
-  gap: 20px;
+  gap:20px;
+  width: 30%; 
+  padding: 10px;
+  justify-content: flex-start;
+  /* border-left: 1px solid var(--blue); */
+  /* border-bottom: 1px solid var(--blue); */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+  border-radius: 50px;
+  margin-bottom: 10px;
 }
-.RightDesc p:hover {
+.RightDesc:hover {
   cursor: pointer;
   color: #000;
-  font-size: 20px;
+  font-size: 18px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid var(--blue);
+
+}
+.RightDesc p {
+
+align-self: center;
+margin: 0px 0px 0px 0px;
+color: #000;
+
 }
 
+
 .loader {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   display: flex;
-  color: #d38c07dc;
-  /* color: #3a8efc69; */
-  --c: #0000 calc(100% - 20px), currentColor calc(100% - 19px) 98%, #0000;
+  justify-content: center;
+  /* color: var(--blue); */
+  color: #032fcce0;
+  --c: #0000 calc(100% - 20px), currentColor calc(100% - 19px) 98%, #625d5d00;
   background: radial-gradient(farthest-side at left, var(--c)) right / 50% 100%,
     radial-gradient(farthest-side at top, var(--c)) bottom/100% 50%;
   background-repeat: no-repeat;
@@ -149,36 +166,43 @@
 .AllService {
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 100%;
   height: auto;
+
   gap: 100px;
+
 }
 .service {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 95%;
   align-items: center;
   align-content: center;
+  align-self: center;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 .serviceRight {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 95%;
   align-items: center;
-  align-content: flex-end;
-  justify-content: flex-end;
+  align-self: center;
+
+  align-content: center;
+  justify-content: center;
   flex-wrap: wrap;
 
   align-self: flex-end;
 }
 .serviceIconLeft {
+  align-self: center;
+
   width: 40%;
 }
 .serviceIcon {
   width: 40%;
-  align-self: flex-end;
+  align-self: center;
 }
 .serviceContentLeft {
   width: 60%;
@@ -236,4 +260,233 @@
   width: 90%;
   height: auto;
   border-radius: 35px;
+}
+@media (max-width: 1668px) {
+  .Right {
+    width:80%;
+  }
+}
+@media (max-width: 1462px) {
+  .Right {
+    width:90%;
+
+  }
+
+}
+@media (max-width: 1302px) {
+  .Right {
+    width:95%;
+  }
+
+}
+@media (max-width: 1240px) {
+  .RightDesc p {
+font-size: 15px;
+
+    }
+    .loader {
+      width: 25px;
+      height: 25px;
+      
+    }
+
+}
+@media (max-width: 1180px) {
+  .RightDesc p {
+font-size: 14px;
+
+    }
+    .loader {
+      width: 20px;
+      height: 20px;
+      
+    }
+    .serviceContent_desc {
+      
+      font-size: 16px;
+     
+    }
+    .desc {
+    
+      font-size: 20px;
+    
+     
+    }
+    .serviceContent_descc{
+      color: var(--darkBlue);
+      font-size: 16px;
+      font-family: "kufam";
+      align-self: center;
+    }
+    .row h6 {
+      
+      font-size: 20px;
+
+    }
+}
+@media (max-width: 1112px) {
+  .RightDesc p {
+font-size: 12px;
+
+    }
+    .AllService {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+    
+      gap: 70px;
+    
+    }
+          .loader {
+            width: 18px;
+            height: 18px;
+            
+          }
+          .serviceContent_desc {
+            
+            font-size: 16px;
+           
+          }
+          .desc {
+          
+            font-size: 20px;
+          
+           
+          }
+          .serviceContent_descc{
+
+            font-size: 16px;
+    
+          }
+          .row h6 {
+            
+            font-size: 20px;
+      
+          }
+
+}
+@media (max-width: 950px) {
+  .row h6 {
+            
+    font-size: 16px;
+
+  }
+  .serviceContent_descc{
+
+    font-size: 14px;
+
+  }
+  .desc {
+          
+    font-size: 18px;
+  
+   
+  }
+  .serviceContent_desc {
+            
+    font-size: 14px;
+   
+  }
+  .RightDesc p {
+    font-size: 14px;
+    
+        }
+        .loader {
+          width: 25px;
+          height: 25px;
+          
+        }
+        .RightDesc {
+
+      
+          width: 40%; 
+         
+        }
+}
+
+@media (max-width: 825px) {
+  .Right {
+    width:90%;  
+    gap: 30px;
+  }
+  .RightDesc p {
+    font-size: 14px;
+        }
+        .loader {
+          width: 25px;
+          height: 25px; 
+        }
+        .RightDesc {
+          width: 45%; 
+        }
+}
+
+@media (max-width: 770px) {
+  .Right {
+    width:95%;  
+    gap: 30px;
+  }
+  
+}
+@media (max-width: 740px) {
+  .RightDesc p {
+    font-size: 12px;
+        }
+  
+}
+@media (max-width: 660px) {
+  .Right {
+    width:60%;  
+  margin-top: 10px;
+    
+    gap: 10px;
+    align-self: center;
+
+  }
+  .RightDesc {
+
+      display: flex;
+    width:100%; 
+    align-self: center;
+align-self: center;
+
+   
+  }
+  .RightDesc p {
+    font-size: 16px;
+        }
+        .service {
+          display: flex;
+          flex-direction: column;
+         
+        }
+        .serviceContentLeft , .serviceContentRight {
+          width:95%;
+        
+         
+        }
+        .serviceContent_desc {
+          width: 100%;
+         
+        }
+        .techImage{
+          width: 90%;
+          
+        }
+        .serviceIconLeft {
+          align-self: center;
+        
+          width: 70%;
+        }
+        .serviceIconLeft {
+          width: 70%;
+          margin-bottom: 20px;
+          align-self: center;
+        }
+        .AllService {
+     
+          gap: 40px;
+        
+        }
 }
