@@ -164,11 +164,11 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 3.125rem;
-  /* border-bottom: var(--darkGrey) 0.0625rem solid; */
+  border-bottom: rgba(32, 84, 84, 0.928) 0.0625rem solid;
   /* box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2); */
 
 
-  background-color: rgba(212, 214, 214, 0.416);
+  background-color: rgba(208, 215, 215, 0.463);
   align-self: center;
   box-sizing: border-box;
 }

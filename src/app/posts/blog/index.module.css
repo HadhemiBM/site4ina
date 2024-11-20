@@ -69,7 +69,6 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: var(--darkGrey) 0.0625rem solid;
-  border-left: #d7d4d4 0.0625rem solid;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
   border-radius: 0.5rem;
   width: 100%;
