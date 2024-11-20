@@ -81,6 +81,9 @@
   transition: color 0.2s ease-in-out;
   text-decoration: none;
 }
+.navbarLink a:hover{
+  color: var(--blue);
+}
 .navbarLinkContainer{
   display: flex;
   flex-direction: row;
