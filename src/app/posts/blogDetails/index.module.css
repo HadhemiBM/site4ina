@@ -1,4 +1,4 @@
-/* index.module.css */
+
 
 .BlogDetails {
   max-width: 70%;
@@ -47,4 +47,35 @@
   font-family: "kufam";
 
   color: #444;
+}
+@media (max-width: 900px) {
+  .BlogDetails {
+    max-width: 90%;
+    
+  }
+}
+@media (max-width: 800px) {
+  .Title {
+    font-size: 1.5rem;
+    
+  }
+  .Content {
+    font-size: 1rem;
+    line-height: 1.6;
+    font-family: "kufam";
+  
+    color: #444;
+  }
+}
+@media (max-width: 640px) {
+  .Title {
+    font-size: 1.2rem;
+    
+  }
+}
+@media (max-width: 450px) {
+  .Title {
+    font-size: 1rem;
+    
+  }
 }
