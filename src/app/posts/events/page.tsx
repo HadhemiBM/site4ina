@@ -74,7 +74,7 @@ const Events: React.FC = () => {
 This experience has not only enriched our journey but also strengthened our dedication to excellence and innovation in the energy sector. Being part of this esteemed program is both a milestone and a motivation to continue driving impactful solutions for a sustainable energy future in Africa.
               </p>
             </div>
-       <Image src={parti}  height="300" width="700" alt="Participation" />
+       <Image src={parti}  height="300" width="500" alt="Participation" />
           </div>
         </div>
       </div>
