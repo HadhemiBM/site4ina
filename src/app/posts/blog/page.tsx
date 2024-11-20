@@ -44,6 +44,7 @@ const Blogg: React.FC = () => {
                 >
                   {blog.title}
                 </h6>
+                <p className={styles.BlogDesc}>{blog.description}</p>
                 <div className={styles.Blogfooter}>
                   <p className={styles.BlogDateText}>{blog.date}</p>
 

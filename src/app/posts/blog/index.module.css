@@ -1,4 +1,4 @@
-.container {
+/* .container {
   width: 100%;
   height: auto;
   min-height: 100vh;
@@ -53,7 +53,7 @@
   justify-content: center;
   align-self: center;
   margin-top: 30px;
-  /* gap:10px; */
+
   grid-template-columns: repeat(3, 1fr);
 }
 .Blog1 {
@@ -76,7 +76,7 @@
   color: black;
   font-family: "kufam";
   padding-left: 1.5rem;
-  /* margin-left: 1.5rem; */
+
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -123,7 +123,7 @@
 .BlogImage {
   width: 100%;
   height: auto;
-  /* object-fit: cover; */
+
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
@@ -227,4 +227,223 @@
   align-items: center;
   align-self: center;
   justify-content: center;
+} */
+/* :root {
+  --blue: #0000ff;
+  --darkGrey: #333333;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Kufam', sans-serif;
+} */
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-family: 'Kufam', sans-serif;
+
+}
+
+.Header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 3rem;
+  gap: 1.25rem;
+  /* align-items: center; */
+}
+
+.title {
+  color: var(--blue);
+  font-size:1rem;
+  background-color: white;
+  padding: 0.625rem;
+  border-bottom: 0.125rem var(--blue) solid;
+  border-right: 0.125rem var(--blue) solid;
+  border-radius: 3.125rem;
+  width: 180rem;
+  max-width: 42.5625rem;
+  height: 6.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.desc {
+  color: black;
+  font-size: 1.5rem;
+  padding: 0.625rem;
+  width:100%;
+  align-self: center;
+  text-align: center;
+}
+
+.BlogSection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  background-color: transparent;
+  margin-top: 3.125rem;
+}
+
+.AllBlog {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  gap: 1rem;
+}
+
+.Blog1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: var(--darkGrey) 0.0625rem solid;
+  border-left: #d7d4d4 0.0625rem solid;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 26.1875rem;
+  min-height: 30.625rem;
+}
+
+.BlogContent {
+  font-size: 1.25rem;
+  color: black;
+  padding: 0 1.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.BlogDesc,
+.BlogDateText {
+  font-size: 0.875rem;
+  color: black;
+  width: 100%;
+  margin: 0.625rem 0 0 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.BlogDateText {
+  width: 75%;
+}
+
+.BlogTitle {
+  font-size: 1.125rem;
+  margin: 0.625rem 0;
+  display: -webkit-box;
+  -webkit-line-clamp:3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.BlogButton {
+  color: black;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.Blogfooter {
+  display: flex;
+  width: 100%;
+  margin: 1.25rem 0 0.625rem 0;
+  border-top: var(--darkGrey) 0.0625rem solid;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.625rem;
+}
+
+.BlogIcon {
+  width: 100%;
+}
+
+.BlogImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .title {
+    font-size: 2.5rem;
+  }
+  .BlogButton , .BlogDateText {
+
+    font-size: 0.7rem;
+/* color: #8e2222; */
+  }
+  .desc {
+    font-size: 1.5rem;
+  }
+
+  .AllBlog {
+    flex-direction: row;
+    flex-wrap: wrap;
+  gap: 1.25rem;
+
+ 
+  }
+
+  .Blog1 {
+    width: calc(50% - 1.25rem);
+  min-height: 20rem;
+
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  .title {
+    font-size: 3rem;
+  }
+
+  .desc {
+    font-size: 1.5rem;
+    width: 80%;
+  }
+
+  .AllBlog {
+    /* justify-content: space-between; */
+  }
+
+  .Blog1 {
+    width: calc(33.33% - 1.25rem);
+  }
+}
+
+@media screen and (min-width: 80rem) {
+  /* html {
+    font-size: 18px;
+  } */
+
+  .title {
+    font-size: 3.5rem;
+  }
+
+  .desc {
+    width: 70%;
+  }
 }
