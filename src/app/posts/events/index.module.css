@@ -119,20 +119,21 @@
 }
 .title {
   color: var(--blue);
-  font-size:2.5rem;
-  background-color: white;
+  font-size:2.1rem;
+  background-color: rgb(255, 255, 255);
   padding: 0.625rem;
   border-bottom: 0.125rem var(--blue) solid;
   border-right: 0.125rem var(--blue) solid;
   border-radius: 3.125rem;
-  width: 180rem;
+  width: 50%;
   max-width: 42.5625rem;
-  height: 6.25rem;
+  height: 10%;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
+
 .desc {
   color: black;
   font-size: 1.2rem;
@@ -196,7 +197,7 @@
 @media screen and (min-width: 48rem) {
 
   .title {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
 
   }
   .desc {
@@ -217,8 +218,8 @@ align-self: center;
 
 @media screen and (min-width: 70rem) {
   .title {
-    font-size: 2.5rem;
-    max-width: 30rem;
+    font-size: 3rem;
+
   }
 
   .desc {
@@ -289,7 +290,6 @@ width: 90%;
     box-sizing: border-box;
   } */
   .title {
-    padding-right: 5rem;
-    justify-content: flex-end;
+    font-size: 3rem;
   }
 }
