@@ -273,22 +273,7 @@ width: 90%;
     flex-direction: row;
   
   }
-  /* .events1 {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 1.25rem;
-    padding: 1.25rem;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 3.125rem;
-    border-bottom: var(--darkGrey) 0.0625rem solid;
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
-  
-  
-    align-self: center;
-    box-sizing: border-box;
-  } */
+
   .title {
     font-size: 3rem;
   }

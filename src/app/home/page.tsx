@@ -15,6 +15,7 @@ import { blogs } from "../data/BlogData";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
+import Tableau from "../priceDetails/page";
 
 const Homee: React.FC = () => {
   const games = [
@@ -175,27 +176,7 @@ const Homee: React.FC = () => {
       img: "https://res.cloudinary.com/dy5gov7fj/image/upload/v1731506807/img_2_rseenw.png",
       alt: "La GIZ en Tunisie",
     },
-    // {
-    //   img: "https://res.cloudinary.com/dyrh4zwb1/image/upload/v1729242530/AFD_wfgxdi.png",
-    //   alt: "AFD - Agence Française de Développement",
-    // },
-    // {
-    //   img: "https://res.cloudinary.com/dyrh4zwb1/image/upload/v1729242581/EU_nzen12.png",
-    //   alt: "European Union",
-    // },
-    // {
-    //   img: "https://res.cloudinary.com/dyrh4zwb1/image/upload/v1729242600/ceed_hs3zi9.jpg",
-    //   alt: "CEED Tunisie",
-    // },
-    // {
-    //   img: "https://res.cloudinary.com/dyrh4zwb1/image/upload/v1729242628/smartcapital-logo_auevso.png",
-    //   alt: "Smart Capital",
-    // },
 
-    // {
-    //   img: "https://res.cloudinary.com/dy5gov7fj/image/upload/v1731506807/img_2_rseenw.png",
-    //   alt: "La GIZ en Tunisie",
-    // },
   ];
 
   const cibles = [
@@ -399,76 +380,14 @@ const Homee: React.FC = () => {
               <div className={styles.loader}></div>
               <h3 className={styles.PriceTitle1}>Basic Solution</h3>
             </div>
-
-            <Link
-              href=""
-              className={styles.SeeAllTextPrice}
-              onClick={(e) => {
-                e.preventDefault();
-                toggleDetails();
-              }}
-            >
-              <div>
-                {showDetails ? (
-                  <div className={styles.arrow2}>
-                    <span className={styles.close}></span>
-                    <span className={styles.close}></span>
-                  </div>
-                ) : (
-                  <div className={styles.arrow1}>
-                    <span className={styles.arrowLine}></span>
-                    <span className={styles.arrowLine}></span>
-                  </div>
-                )}
-              </div>
-            </Link>
-
-            {showDetails && (
-              <div className={styles.details}>
-                <ul>
-                  <li>• Device + Platform</li>
-                  <li>• Maintenance contract with AI model updates</li>
-                </ul>
-              </div>
-            )}
+          
           </div>
           <div className={styles.price1}>
             <div className={styles.rowloa}>
               <div className={styles.loader}></div>
               <h3 className={styles.PriceTitle1}>Silver Solution</h3>
             </div>
-            <Link
-              href=""
-              className={styles.SeeAllTextPrice}
-              onClick={(e) => {
-                e.preventDefault();
-                toggleDetails2();
-              }}
-            >
-              <div>
-                {showDetails2 ? (
-                  <div className={styles.arrow2}>
-                    <span className={styles.close}></span>
-                    <span className={styles.close}></span>
-                  </div>
-                ) : (
-                  <div className={styles.arrow1}>
-                    <span className={styles.arrowLine}></span>
-                    <span className={styles.arrowLine}></span>
-                  </div>
-                )}
-              </div>
-            </Link>
-
-            {showDetails2 && (
-              <div className={styles.details}>
-                <ul>
-                  <li>• Device + Platform</li>
-                  <li>• Web Application</li>
-                  <li>• Maintenance contract with AI model updates</li>
-                </ul>
-              </div>
-            )}
+           
           </div>
           <div className={styles.price1}>
             <div className={styles.rowloa}>
@@ -476,39 +395,13 @@ const Homee: React.FC = () => {
               <h3 className={styles.PriceTitle1}>Gold Solution</h3>
             </div>
 
-            <div
-              className={styles.SeeAllTextPrice}
-              onClick={(e) => {
-                e.preventDefault();
-                toggleDetails3();
-              }}
-            >
-              {showDetails3 ? (
-                <div className={styles.arrow2}>
-                  <span className={styles.close}></span>
-                  <span className={styles.close}></span>
-                </div>
-              ) : (
-                <div className={styles.arrow1}>
-                  <span className={styles.arrowLine}></span>
-                  <span className={styles.arrowLine}></span>
-                </div>
-              )}
-            </div>
 
-            {showDetails3 && (
-              <div className={styles.details}>
-                <ul>
-                  <li> • Device + Platform</li>
-                  <li> • Web Application</li>
-                  <li>• Mobile Application</li>
-
-                  <li>• Maintenance contract with AI model updates</li>
-                </ul>
-              </div>
-            )}
           </div>
+
         </div>
+        <Link href="/priceDetails" className={styles.viewDetails}>
+            View Details
+          </Link>
       </div>
       <div className={styles.BlogSection}>
         <div className={styles.SolutionTitle}>
