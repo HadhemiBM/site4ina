@@ -1,50 +1,80 @@
-/* index.module.css */
-
-.BlogDetails {
-  max-width: 70%;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: "kufam";
+.container {
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #3358ea, #041261, #000000);
+  animation: gradientAnimation 15s ease infinite;
 }
 
-.BackLink {
+.content {
+  text-align: center;
+}
+
+.heading {
+  font-size: 4rem;
+  font-weight: 800;
+  color: white;
+  letter-spacing: -0.025em;
+  margin-bottom: 2rem;
+}
+
+.subheading {
+  font-size: 1.25rem;
+  color: white;
+  font-weight: 300;
+  max-width: 28rem;
+  margin: 0 auto;
+}
+
+.dots {
+  margin-top: 2rem;
+}
+
+.dot {
   display: inline-block;
-  margin-bottom: 20px;
-  font-size: 16px;
-  color: #0070f3;
-  text-decoration: none;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 50%;
+  background-color: white;
+  animation: bounce 1s infinite;
 }
 
-.BackLink:hover {
-  text-decoration: underline;
+.dot:nth-child(2) {
+  margin: 0 1rem;
+  animation-delay: 0.2s;
 }
 
-.Title {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  font-family: "kufam";
-
-  color: #333;
+.dot:nth-child(3) {
+  animation-delay: 0.4s;
 }
 
-.Date {
-  font-size: 1rem;
-  color: #666;
-  margin-bottom: 20px;
+@keyframes gradientAnimation {
+  0%, 100% {
+    background-size: 200% 200%;
+    background-position: left center;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: right center;
+  }
 }
 
-.Image {
-  border-radius: 8px;
-  margin-bottom: 20px;
-  align-self: center;
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.25rem);
+  }
 }
 
-.Content {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  font-family: "kufam";
+@media (min-width: 768px) {
+  .heading {
+    font-size: 6rem;
+  }
 
-  color: #444;
+  .subheading {
+    font-size: 1.5rem;
+  }
 }

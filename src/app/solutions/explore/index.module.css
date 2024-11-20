@@ -1,3 +1,80 @@
-.events1{
-  width: 100%;
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #3358ea, #041261, #000000);
+  animation: gradientAnimation 15s ease infinite;
+}
+
+.content {
+  text-align: center;
+}
+
+.heading {
+  font-size: 4rem;
+  font-weight: 800;
+  color: white;
+  letter-spacing: -0.025em;
+  margin-bottom: 2rem;
+}
+
+.subheading {
+  font-size: 1.25rem;
+  color: white;
+  font-weight: 300;
+  max-width: 28rem;
+  margin: 0 auto;
+}
+
+.dots {
+  margin-top: 2rem;
+}
+
+.dot {
+  display: inline-block;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 50%;
+  background-color: white;
+  animation: bounce 1s infinite;
+}
+
+.dot:nth-child(2) {
+  margin: 0 1rem;
+  animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes gradientAnimation {
+  0%, 100% {
+    background-size: 200% 200%;
+    background-position: left center;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: right center;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.25rem);
+  }
+}
+
+@media (min-width: 768px) {
+  .heading {
+    font-size: 6rem;
+  }
+
+  .subheading {
+    font-size: 1.5rem;
+  }
 }
