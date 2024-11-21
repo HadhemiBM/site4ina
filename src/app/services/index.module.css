@@ -564,7 +564,6 @@ align-self: center;
     .desc {
       font-size: 1.2rem;
       width: 90%;
-      /* background-color: rgb(63, 75, 75); */
 
     }
   }  
@@ -578,7 +577,7 @@ align-self: center;
     .desc {
       width: 90%;
       font-size: 1.6rem;
-      /* background-color: aqua; */
+
 
     }
   }

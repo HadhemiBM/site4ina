@@ -116,7 +116,7 @@ const BlogPage: React.FC = () => {
             <h4>{title}</h4>
           {thumbnail && (
             <div className={styles.thumbnailPreviewWrapper}>
-              {/* <h4>Thumbnail:</h4> */}
+ 
               <img
                 src={thumbnail}
                 alt="Thumbnail Blog"
@@ -124,7 +124,7 @@ const BlogPage: React.FC = () => {
               />
             </div>
           )}
-          {/* <h3>Preview:</h3> */}
+  
           <div
             ref={previewRef}
             dangerouslySetInnerHTML={{ __html: message }}

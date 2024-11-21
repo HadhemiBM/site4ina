@@ -37,24 +37,15 @@ body {
 
 }
 .page{
-  /* margin-top: 75px; */
-  /* padding: 4px; */
   width: 100%;
   min-height: 100vh - 75px;
 
 }
-/* .page-container{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-} */
  .content-wrapper {
    display: flex;
    flex-direction: column;
    align-self: center;
   flex: 1;
-  /* background-color: #0003da; */
   width: 100%;
   margin-top: 75px;
   flex-direction: column;

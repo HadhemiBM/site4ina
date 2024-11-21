@@ -8,32 +8,13 @@ const Footer = () => {
       <div className={styles.container}>
         
 
-          {/* <div className={styles.navigation}>
-          
-            <Link href={"/home"}>
-              <p>Home</p>
-            </Link>
-            <Link href={"/about"}>
-              <p>About US</p>
-            </Link>
-            <Link href={"/services"}>
-              <p>Services</p>
-            </Link>
-            <Link href={"/solutions/demo"}>
-              <p>Solutions</p>
-            </Link>
-           
-          </div> */}
-         
-          
-        {/* </div> */}
         <div className={styles.Logo}>
           <Image className={styles.RightLogo} src={logo} alt="Log4ina" />
-          {/* <p>Connect with 4ina Technologie</p> */}
+
           <p>Innovate, Collaborate, Succeed </p>
         </div>
         <div className={styles.contact}>
-            {/* <h6>Contact Us</h6> */}
+     
             <div className={styles.roww}>
             <div className={styles.row}>
             <Link
@@ -52,7 +33,6 @@ const Footer = () => {
                          <p className={styles.textNo}>4InA technologie</p>
 
             </Link>
-            {/* <i className="fa-brands fa-facebook fa-shake-facebook"></i> */}
           </div>
             <div className={styles.row}>
             <Link  href="mailto:benmansourhadhemi99@gmail.com" 

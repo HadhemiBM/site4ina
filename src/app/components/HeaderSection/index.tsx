@@ -19,7 +19,7 @@ const Header = () => {
     infiniteLoop: true,
     showThumbs: false,
     showStatus: false,
-    // autoPlay: true,
+    autoPlay: true,
     interval: 4000,
 
 
@@ -76,7 +76,7 @@ const Header = () => {
             </Link>
           </div>
           <div className={styles.Imagecontainer}>
-          {/* <a href="https://www.bloggif.com/" title="Montage photo"><img src="https://data.bloggif.com/distant/user/store/9/2/b/d/8f3fd8a2d9a933beb024b71c3fb4db29.gif" alt="Montage créé avec bloggif" width="1000" height="600" /></a> */}
+        
             <Image  className={styles.HeadImage} width={1000} height={400} src={dme} alt="IA" />
           </div>
         </div>

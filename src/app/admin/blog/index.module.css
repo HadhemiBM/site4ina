@@ -45,7 +45,7 @@
   justify-content: center;
   text-align: start;
 border-radius: 20px;
-  background-color: aqua;
+
   margin : 10px;
 }
 
@@ -66,7 +66,6 @@ border-radius: 20px;
   cursor: pointer;
 }
 .submitButton:hover {
-  /* background-color: #45a049; */
 }
 .thumbnailPreviewWrapper {
   margin-top: 20px;

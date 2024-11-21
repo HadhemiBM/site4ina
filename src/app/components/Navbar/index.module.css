@@ -25,7 +25,7 @@
 .navbar.scrolled {
   top: 0px;
   padding-top: 0px;
-  height: 55px;
+  height: 70px;
 
   box-shadow: 0 4px 8px #888;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -324,7 +324,6 @@
 
      }
 }
-/* ... (keep all the existing styles) ... */
 
 .mobileMenuButton {
   display: none;
@@ -349,10 +348,8 @@
     display: none;
     position: absolute;
     top: 100%;
-    /* left: 0; */
-    right: 0;
+  right: 0;
     width: 60%;
-    /* background-color: rgb(196, 91, 91); */
     flex-direction: column;
     align-items: flex-start;
     padding: 10px;
@@ -366,7 +363,7 @@
   .navbarLinkContainer {
     width: 100%;
     margin-bottom: 10px;
-    /* background-color: antiquewhite; */
+
 display: flex;
 flex-direction: column;
   }
@@ -376,14 +373,12 @@ flex-direction: column;
     position: static;
     box-shadow: none;
     margin-top: 10px;
-    /* margin-left: 20px; */
     width: 100%;
   }
 
   .navbarLinkContainer:hover .dropdownMenu,
   .navbarLinkContainer:focus-within .dropdownMenu {
-    display: block;
-    /* background-color: aquamarine; */
+    display: block; 
   }
 
   .navbarLink {
@@ -410,4 +405,3 @@ flex-direction: column;
   }
 }
 
-/* ... (keep the rest of the media queries) ... */

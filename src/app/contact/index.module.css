@@ -102,6 +102,7 @@ align-self: flex-start;
 
 .inputMessage {
   min-height: 6.25rem;
+  max-height: 20rem;
   resize: vertical;
 }
 

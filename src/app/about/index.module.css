@@ -12,36 +12,29 @@
   margin-left: 20px;
   font-size: 32px;
   align-self: center;
-  /* text-align: center; */
 }
 .InnovationTitle {
   font-family: "kufam";
   color: var(--blue);
-
   margin-left: 20px;
   font-size: 32px;
   margin-right: 50px;
   margin-bottom: 50px;
   margin-top: 50px;
   align-self: flex-start;
-
 }
 .InnovationTit h1 {
-  /* background: linear-gradient(#212d323b, rgba(46, 57, 75, 0.089)); */
   color: #000000;
   border-radius: 8px;
   width: max-content;
   padding: 5px 10px;
   font-size: 24px;
   font-family: "kufam";
-  box-shadow:  
-  0 2px 4px rgba(46, 57, 75, 0.253);
-  ;
+  box-shadow: 0 2px 4px rgba(46, 57, 75, 0.253);
 }
 .CibleDesc {
   font-size: 28px;
   font-family: "kufam";
-
   width: 80%;
   margin-top: 40px;
   margin-left: 0px;
@@ -57,13 +50,13 @@
   width: 100%;
   height: 700px;
   flex-wrap: wrap;
-
   background-repeat: no-repeat;
   align-items: center;
   align-content: center;
   justify-content: center;
 }
-.InnovationSection , .AvantagesSection {
+.InnovationSection,
+.AvantagesSection {
   display: flex;
   flex-direction: column;
   width: 80%;
@@ -83,14 +76,13 @@
   margin-top: 50px;
   margin-bottom: 80px;
 }
-.TeamContent2 h6 , .TeamContent h6{
-
+.TeamContent2 h6,
+.TeamContent h6 {
   text-align: center;
 }
-.TeamContent2 p, .TeamContent p{
- 
+.TeamContent2 p,
+.TeamContent p {
   text-align: center;
-
 }
 .AllTeam1 {
   display: flex;
@@ -103,8 +95,7 @@
   align-self: center;
   margin-top: 30px;
   align-self: center;
-  gap:40px;
-
+  gap: 40px;
 }
 .AllTeam2 {
   display: flex;
@@ -118,9 +109,8 @@
   margin-top: 30px;
   align-self: center;
   gap: 15px;
-  /* background-color: antiquewhite; */
 }
-.contTeam{
+.contTeam {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -135,7 +125,6 @@
   margin: 30px 0px 0px 0px;
   border-bottom: 2mm double rgba(230, 241, 245, 0.6);
   min-width: 24%;
-  /* background-color: aqua; */
   height: 16rem;
   gap: 15px;
 }
@@ -151,9 +140,8 @@
   height: 9rem;
   gap: 10px;
   margin-bottom: 30px;
-
 }
-.TeamContent .TeamContent2{
+.TeamContent .TeamContent2 {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -161,8 +149,8 @@
   align-items: center;
   justify-content: center;
 }
-
-.TeamIcon , .TeamIcon2  {
+.TeamIcon,
+.TeamIcon2 {
   width: 130px;
   height: 130px;
   border-radius: 50%;
@@ -171,13 +159,11 @@
   justify-content: center;
   position: relative;
 }
-
 .TeamImageWrapper {
   position: relative;
   width: 100%;
   height: 100%;
 }
-
 .TeamImage {
   border-radius: 50%;
   object-fit: cover;
@@ -192,7 +178,6 @@
 .TeamSocial {
   display: flex;
   flex-direction: row;
-  /* margin-top: auto;  flex-wrap: wrap; */
   align-content: center;
   align-items: center;
   justify-content: center;
@@ -201,17 +186,13 @@
   z-index: 99999;
   width: 100%;
   bottom: 0px;
-  /* background-color: antiquewhite; */
 }
 .TeamSocial i {
-  /* background-color: var(--blue); */
   color: var(--darkGrey);
-  /* width:100%;
-  height: auto; */
   border-radius: 50px;
   display: flex;
   align-items: center;
-  font-size: 24px;
+  font-size: 20px;
   align-content: center;
   justify-content: center;
 }
@@ -221,7 +202,6 @@
   text-align: center;
   align-items: center;
   justify-content: center;
-
   gap: 10px;
   margin-bottom: 30px;
 }
@@ -239,7 +219,6 @@
   width: 70%;
   text-align: center;
   color: #000;
-
   font-family: "kufam";
 }
 .row {
@@ -251,17 +230,14 @@
   gap: 5px;
 }
 .circle {
-  /* left: 50%; */
   transform: translate(-0%, -50%);
   width: 25px;
   height: 25px;
   align-self: center;
-  /* z-index: 1000; */
 }
 .loader {
   width: calc(100% - 0px);
   height: calc(100% - 0px);
-
   border-top: 8px solid white;
   border-radius: 50%;
   animation: rotate 20s linear infinite;
@@ -278,10 +254,9 @@
   flex-direction: column;
   align-items: center;
   align-content: center;
-  justify-content: flex-start; 
+  justify-content: flex-start;
   gap: 10px;
   bottom: 0px;
-  /* background-color: rgb(59, 80, 73); */
 }
 .column {
   display: flex;
@@ -291,7 +266,6 @@
   justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
-  
 }
 .loader_line {
   width: 200px;
@@ -304,7 +278,6 @@
   -moz-border-radius: 20px;
   border-radius: 20px;
 }
-
 .loader_line:before {
   content: "";
   position: absolute;
@@ -337,12 +310,9 @@
   font-size: 24px;
   color: #000;
   font-family: "kufam";
-
   width: 100%;
   margin: auto;
 }
-
-
 /* Avantages */
 
 .item {
@@ -354,18 +324,16 @@
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.Allavant{
+.Allavant {
   display: flex;
   flex-direction: column;
   gap: 10px;
-
   width: 80%;
 }
-.AllASPECT{
+.AllASPECT {
   display: flex;
   flex-direction: column;
   gap: 10px;
-
   width: 90%;
 }
 .number {
@@ -374,13 +342,12 @@
   padding: 0 15px;
   text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
 }
-
 .item1 .number {
   color: var(--orange);
 }
 
 .item2 .number {
-  color:var(--blue);
+  color: var(--blue);
 }
 
 .item3 .number {
@@ -388,26 +355,24 @@
 }
 
 .item4 .number {
-  color:var(--blue);
+  color: var(--blue);
 }
-.item4 , .item2 {
+.item4,
+.item2 {
   border-left: 4px solid var(--orange);
 }
-.item1 , .item3 {
+.item1,
+.item3 {
   border-left: 4px solid var(--blue);
 }
-
-
 .content h3 {
   font-size: 20px;
   margin-bottom: 5px;
 }
-
 .contentP {
   font-size: 24px;
   color: #000;
   font-family: "kufam";
-
   width: 100%;
   margin: auto;
 }
@@ -420,9 +385,7 @@
   height: 350px;
   align-items: center;
   justify-content: center;
-  background:  #1f499721;
-
-  /* background: linear-gradient(#ffffff, #1f499721,#ffffff); */
+  background: #1f499721;
   background-repeat: no-repeat;
   gap: 30px;
 }
@@ -438,12 +401,10 @@
   font-family: "kufam";
   font-weight: 500;
   display: flex;
-
   transition: background-color 0.3s ease;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   margin-top: 20px;
   margin-left: 20px;
-
   align-items: center;
   align-content: center;
   justify-content: center;
@@ -456,250 +417,204 @@
   border-color: var(--blue) 2px solid;
 }
 @media (max-width: 1440px) {
-  .circle { 
-    width:20px;
+  .circle {
+    width: 20px;
     height: 20px;
   }
   .CibleDesc {
     font-size: 24px;
-    width: 90%; 
+    width: 90%;
   }
   .CibleSection {
     height: 520px;
     background-size: 100% 520px;
-
   }
 }
 
-@media (min-width: 901px) and   (max-width: 1230px) {
-
- 
+@media (min-width: 901px) and (max-width: 1230px) {
   .SolutionTitle1,
   .SolutionTitle2 {
     font-size: 32px;
   }
   .SolutionsDesc {
     font-size: 22px;
- 
   }
   .DemoSection {
-   
     margin-top: 30px;
     height: 270px;
     gap: 10px;
-
   }
   .buttonDemo {
-  
     padding: 10px 20px;
-   
     width: 180px;
     height: 40px;
-  margin-top: 0px;
-   
-  
-    
-  
+    margin-top: 0px;
   }
-    .Team1 {
- 
-      margin: 0px 0px 10px 0px;
-      min-width: 24%;
-      min-height: 7rem;
-      max-height: 7rem;
-      margin-bottom: 20px;
+  .Team1 {
+    margin: 0px 0px 10px 0px;
+    min-width: 24%;
+    min-height: 7rem;
+    max-height: 7rem;
+    margin-bottom: 20px;
+  }
 
-    }
-   
-    .TeamIcon {
-      max-width:80px;
-      min-width:80px;
-      height:80px;
-     
-    }
-    .TeamIcon2 {
-      max-width:80px;
-      min-width:80px;
-    
-      height: 80px;
-     
-    }
-    .TeamContent2 p, .TeamContent p{
-      font-size: 12px;
-      text-align: center;
-    
-    }
-    .Team2 {
-      margin: 0px 0px 10px 0px;
-      min-width: 24%;
-      min-height: 13rem;
-      max-height: 13rem;
-      gap: 5px;
-      margin-bottom: 10px;
-
-    }
-    .TeamContent2 h6 , .TeamContent h6{
-      font-size: 12px;
-      text-align: center;
-    }
-    .TeamContent2{
-height: 50px;
-    }
-    
+  .TeamIcon {
+    max-width: 80px;
+    min-width: 80px;
+    height: 80px;
+  }
+  .TeamIcon2 {
+    max-width: 80px;
+    min-width: 80px;
+    height: 80px;
+  }
+  .TeamContent2 p,
+  .TeamContent p {
+    font-size: 12px;
+    text-align: center;
+  }
+  .Team2 {
+    margin: 0px 0px 10px 0px;
+    min-width: 24%;
+    min-height: 13rem;
+    max-height: 13rem;
+    gap: 5px;
+    margin-bottom: 10px;
+  }
+  .TeamContent2 h6,
+  .TeamContent h6 {
+    font-size: 12px;
+    text-align: center;
+  }
+  .TeamContent2 {
+    height: 50px;
+  }
 }
-@media (min-width: 805px) and  (max-width: 900px) {
+@media (min-width: 805px) and (max-width: 900px) {
   .InnovationTitle {
-   
     font-size: 28px;
-   
+
     margin-bottom: 30px;
-  
   }
   .InnovationDes {
     font-size: 20px;
-   
   }
   .SolutionsDesc {
     font-size: 24px;
   }
   .DemoSection {
-   
     margin-top: 30px;
     height: 280px;
     gap: 10px;
   }
   .SolutionTitle1,
-.SolutionTitle2 {
-  font-size: 36px;
-}
-.SolutionsDesc {
-  font-size: 22px;
-  width: 80%;
-  
-}
-.Team1 {
-  margin: 0px 0px 10px 0px;
-  min-width: 24%;
-  min-height: 10rem;
-  max-height: 10rem;
-  gap: 10px;
-  margin-bottom: 30px;
-}
-
-.TeamIcon {
-  max-width:90px;
-  min-width:90px;
-  height: 90px;
- 
-}
-.TeamIcon2 {
-  max-width:90px;
-  min-width:90px;
-
-  height: 90px;
- 
-}
- .TeamContent2 p, .TeamContent p{
-  font-size: 12px;
-  text-align: center;
-
-}
-.TeamContent2 h6 , .TeamContent h6{
-  font-size: 12px;
-  text-align: center;
-}
-.AllTeam2  {
-  padding-left: 10px;
-}
-.Team2 {
- 
-  margin: 0px 0px 10px 0px;
-  min-width: 22%;
-  min-height: 13rem;
-  max-height: 13rem;
-  gap: 10px;
-  margin-bottom: 30px;
-
-/* background-color: aqua; */
-}
-}
-@media  (max-width: 803px) {
-  .CibleTitle {
-    
-    font-size: 24px;
-   
+  .SolutionTitle2 {
+    font-size: 36px;
   }
-  .circle {
- align-self: center;
-  
-    width: 15px;
-    height: 15px;
-  
+  .SolutionsDesc {
+    font-size: 22px;
+    width: 80%;
   }
-  .loader {
- align-self: center;
-    border-top: 5px solid white;
-   
+  .Team1 {
+    margin: 0px 0px 10px 0px;
+    min-width: 24%;
+    min-height: 10rem;
+    max-height: 10rem;
+    gap: 10px;
+    margin-bottom: 30px;
   }
+
   .TeamIcon {
-    max-width:90px;
-    min-width:90px;
-    height:90px;
-   
+    max-width: 90px;
+    min-width: 90px;
+    height: 90px;
   }
   .TeamIcon2 {
-    max-width:90px;
-    min-width:90px;
-  
+    max-width: 90px;
+    min-width: 90px;
+
     height: 90px;
-   
+  }
+  .TeamContent2 p,
+  .TeamContent p {
+    font-size: 12px;
+    text-align: center;
+  }
+  .TeamContent2 h6,
+  .TeamContent h6 {
+    font-size: 12px;
+    text-align: center;
+  }
+  .AllTeam2 {
+    padding-left: 10px;
+  }
+  .Team2 {
+    margin: 0px 0px 10px 0px;
+    min-width: 22%;
+    min-height: 13rem;
+    max-height: 13rem;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 803px) {
+  .CibleTitle {
+    font-size: 24px;
+  }
+  .circle {
+    align-self: center;
+
+    width: 15px;
+    height: 15px;
+  }
+  .loader {
+    align-self: center;
+    border-top: 5px solid white;
+  }
+  .TeamIcon {
+    max-width: 90px;
+    min-width: 90px;
+    height: 90px;
+  }
+  .TeamIcon2 {
+    max-width: 90px;
+    min-width: 90px;
+
+    height: 90px;
   }
   .CibleDesc {
     font-size: 18px;
-    width: 90%; 
+    width: 90%;
   }
   .CibleSection {
-
     width: 100%;
     height: 400px;
-   
-  
     background-size: 100% 500px;
-  
   }
   .InnovationTitle {
-   
     font-size: 24px;
   }
   .InnovationDes {
     font-size: 18px;
     width: 100%;
-   
   }
   .SolutionsDesc {
     font-size: 18px;
     width: 90%;
   }
   .DemoSection {
-   
     margin-top: 30px;
     height: 230px;
     gap: 10px;
   }
   .buttonDemo {
-  
     padding: 10px 20px;
-   
     width: 160px;
     height: 40px;
-  margin-top: 0px;
-   
+    margin-top: 0px;
     font-size: 16px;
-    
-  
   }
   .TeamSection {
-  
     margin-top: 20px;
     margin-bottom: 40px;
   }
@@ -708,87 +623,70 @@ height: 50px;
     font-size: 28px;
   }
   .Team2 {
- 
- 
     min-width: 20%;
- 
+
     gap: 5px;
-   
   }
-  .TeamContent2 p, .TeamContent p{
+  .TeamContent2 p,
+  .TeamContent p {
     font-size: 12px;
     text-align: center;
-  
   }
-  .TeamContent2 h6 , .TeamContent h6{
+  .TeamContent2 h6,
+  .TeamContent h6 {
     font-size: 12px;
     text-align: center;
   }
 }
 @media (max-width: 650px) {
   .CibleTitle {
-    
     font-size: 24px;
-   
   }
   .circle {
- align-self: center;
-  
+    align-self: center;
     width: 15px;
     height: 15px;
-  
   }
   .loader {
- align-self: center;
+    align-self: center;
     border-top: 5px solid white;
-   
   }
   .CibleDesc {
     font-size: 18px;
-    width: 90%; 
+    width: 90%;
   }
   .CibleSection {
-
     width: 100%;
     height: 400px;
-   
-  
+
     background-size: 100% 500px;
-  
   }
   .InnovationTitle {
-   
     font-size: 24px;
   }
   .InnovationDes {
     font-size: 18px;
     width: 100%;
-   
   }
   .SolutionsDesc {
     font-size: 18px;
     width: 90%;
   }
   .DemoSection {
-   
     margin-top: 30px;
     height: 230px;
     gap: 10px;
   }
   .buttonDemo {
-  
     padding: 10px 20px;
-   
+
     width: 160px;
     height: 40px;
-  margin-top: 0px;
-   
+    margin-top: 0px;
+
     font-size: 16px;
-    
-  
   }
   .TeamSection {
-  
     margin-top: 20px;
     margin-bottom: 40px;
   }
@@ -797,37 +695,32 @@ height: 50px;
     font-size: 28px;
   }
 
-  .TeamContent2 p, .TeamContent p{
+  .TeamContent2 p,
+  .TeamContent p {
     font-size: 10px;
     text-align: center;
-  
   }
-  .TeamContent2 h6 , .TeamContent h6{
+  .TeamContent2 h6,
+  .TeamContent h6 {
     font-size: 10px;
     text-align: center;
   }
   .TeamIcon {
-    max-width:70px;
-    min-width:70px;
-    height:70px;
-   
+    max-width: 70px;
+    min-width: 70px;
+    height: 70px;
   }
   .TeamIcon2 {
-    max-width:70px;
-    min-width:70px;
-  
+    max-width: 70px;
+    min-width: 70px;
+
     height: 70px;
-   
   }
   .Team2 {
- 
-  
     min-height: 11rem;
     max-height: 12rem;
     gap: 10px;
     margin-bottom: 30px;
-  
-  /* background-color: aqua; */
   }
 }
 
@@ -837,124 +730,99 @@ height: 50px;
   }
   .CibleDesc {
     font-size: 12px;
-    width: 90%; 
+    width: 90%;
   }
   .circle {
-   
-     
-       width: 10px;
-       height: 10px;
-     
-     }
-     .loader {
+    width: 10px;
+    height: 10px;
+  }
+  .loader {
     align-self: center;
-       border-top: 2px solid white;
-      
-     }
-     .CibleSection {
+    border-top: 2px solid white;
+  }
+  .CibleSection {
+    width: 100%;
+    height: 300px;
 
-      width: 100%;
-      height: 300px;
-     
-    
-      background-size: 100% 300px;
-    
-    }
-    .loader_line {
-      width: 150px;
-      height: 2px;
-     
-    }
-    .InnovationSection  {
-      width: 90%;
-      text-align: center;
-    }
-    .InnovationTitle {
-   
-      font-size: 16px;
-  margin-right: 0px;
-     
-      margin-bottom: 20px;
-      text-align: center;
+    background-size: 100% 300px;
+  }
+  .loader_line {
+    width: 150px;
+    height: 2px;
+  }
+  .InnovationSection {
+    width: 90%;
+    text-align: center;
+  }
+  .InnovationTitle {
+    font-size: 16px;
+    margin-right: 0px;
+
+    margin-bottom: 20px;
+    text-align: center;
 
     align-self: center;
-    }
-    .InnovationDes {
-      font-size: 14px;
-     
-    }
-    .SolutionsDesc {
-      font-size: 14px;
-   
-    }
-    .buttonDemo {
-  
-
-     
-      width: 130px;
-      height: 30px;
+  }
+  .InnovationDes {
+    font-size: 14px;
+  }
+  .SolutionsDesc {
+    font-size: 14px;
+  }
+  .buttonDemo {
+    width: 130px;
+    height: 30px;
     margin-top: 0px;
 
+    font-size: 14px;
+  }
+  .DemoSection {
+    margin-top: 10px;
+    height: 200px;
+    gap: 8px;
+  }
+  .SolutionTitle1,
+  .SolutionTitle2 {
+    font-size: 20px;
+  }
+  .Team1 {
+    margin: 0px 0px 10px 0px;
+    min-width: 24%;
+    min-height: 7rem;
+    max-height: 7rem;
+    margin-bottom: 20px;
+  }
 
-      font-size: 14px;
-      
-    
-    }
-    .DemoSection {
-   
-      margin-top: 10px;
-      height: 200px;
-      gap: 8px;
-    }
-    .SolutionTitle1,
-    .SolutionTitle2 {
-      font-size: 20px;
-    }
-    .Team1 {
- 
-      margin: 0px 0px 10px 0px;
-      min-width: 24%;
-      min-height: 7rem;
-      max-height: 7rem;
-      margin-bottom: 20px;
+  .TeamIcon {
+    max-width: 60px;
+    min-width: 60px;
+    height: 60px;
+  }
+  .TeamIcon2 {
+    max-width: 60px;
+    min-width: 60px;
 
-    }
-    
-    .TeamIcon {
-      max-width:60px;
-      min-width:60px;
-      height:60px;
-     
-    }
-    .TeamIcon2 {
-      max-width:60px;
-      min-width:60px;
-    
-      height: 60px;
-     
-    }
-    .TeamContent2 p, .TeamContent p{
-      font-size: 10px;
-      text-align: center;
-    
-    }
-    .Team2 {
- 
-      margin: 0px 0px 10px 0px;
-      min-width: 22%;
-      min-height: 13rem;
-      max-height: 13rem;
-      gap: 10px;
-      margin-bottom: 10px;
-
-    }
-    .TeamContent2 h6 , .TeamContent h6{
-      font-size: 10px;
-      text-align: center;
-    }
-    .TeamContent2{
-height: 80px;
-    }
-    
+    height: 60px;
+  }
+  .TeamContent2 p,
+  .TeamContent p {
+    font-size: 10px;
+    text-align: center;
+  }
+  .Team2 {
+    margin: 0px 0px 10px 0px;
+    min-width: 22%;
+    min-height: 13rem;
+    max-height: 13rem;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .TeamContent2 h6,
+  .TeamContent h6 {
+    font-size: 10px;
+    text-align: center;
+  }
+  .TeamContent2 {
+    height: 80px;
+  }
 }
-

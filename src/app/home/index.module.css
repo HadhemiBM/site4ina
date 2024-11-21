@@ -165,7 +165,7 @@
   justify-content: flex-start;
   margin-top: 30px;
   border-radius: 20px;
-  /* border-left: var(--blue) 1px solid; */
+
   opacity: 0;
   transform: translateX(100%);
   padding: 15px;
@@ -204,7 +204,7 @@
   border-radius: 50px;
 }
 
-/* Solution Section */
+
 .SolutionSection {
   display: flex;
   flex-direction: column;
@@ -347,8 +347,7 @@
   height: 530px;
   align-items: center;
   justify-content: center;
-  /* background: linear-gradient(#ffffff 0%, #1f499738 40% ,#1f499738 60%,#ffffff 90%); */
-  background-repeat: no-repeat;
+    background-repeat: no-repeat;
   gap: 20px;
   margin-bottom: 4rem;
 }
@@ -582,9 +581,7 @@
   align-content: center;
   align-items: center;
   justify-content: center;
-  /* Gold Bg */
-  /* background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
-  radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%); */
+ 
 }
 .Desc1 {
   font-size: 20px;
@@ -1240,7 +1237,7 @@
   cursor: pointer;
   display: flex;
   align-self: center;
-  /* overflow: hidden; */
+
   align-items: center;
   align-content: center;
   justify-content: center;
@@ -1254,20 +1251,19 @@
 
   border-radius: 10px;
   gap: 40px;
-  /* background-color : rgba(white, .1); */
+
   position: relative;
   z-index: 2;
   transition: transform 0.3s ease;
   will-change: transform;
-  /* box-shadow : 0 20px 30px -5px rgba(29, 10, 201, 0.3); */
-}
+ }
 .front_case2,
 .back_case2 {
   width:550px;
   min-height: 320px;
   max-height: 320px;
   border-radius: 10px;
-  /* background-color : rgba(white, .1); */
+ 
   position: relative;
   z-index: 2;
   gap: 40px;
@@ -1288,7 +1284,7 @@
 .viewDetails {
   margin-top: 1rem;
   text-align: end;
-  /* background-color: #495469; */
+
   color: var(--blue);
   align-self: end;
   text-decoration: none;
@@ -1324,8 +1320,7 @@
   top: 0;
 }
 .music_case:hover {
-  /* box-shadow: 0 10px 30px -5px rgba(77, 76, 76, 0.468); */
-
+ 
   .front_case,
   .back_case {
     transform: translateX(-27%);
@@ -1352,17 +1347,15 @@
   .disc2 {
   z-index: 9999;
 
-    transform: translateX(-27%) /* rotate(360deg) */;
+    transform: translateX(-27%);
   }
 }
 
 .disc {
   width: 220px;
   height: 220px;
-  /* border-radius    : 50%; */
   background-color: #ffffff;
   position: absolute;
-  /* top              : 20px; */
   display: flex;
   align-self: center;
   align-items: center;
@@ -1440,8 +1433,7 @@
   }
 
   .music_case:hover {
-    /* box-shadow : 0 20px 30px -5px rgba(77, 76, 76, 0.404); */
-
+   
     .front_case {
       transform: translateX(-200px);
 
