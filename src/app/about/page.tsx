@@ -56,7 +56,7 @@ const About: React.FC = () => {
   const founder = [
     {
       name: "Hinda Zribi",
-      linkedin: "https://www.linkedin.com/in/nouressafa-c-753456216/",
+      linkedin: "https://www.linkedin.com/in/hinda-zribi-258555140/",
       facebook: "https://www.facebook.com/nour.essafa.73",
       img: "https://res.cloudinary.com/ddngbriyu/image/upload/v1730448418/henda_fmfzae.webp",
 
@@ -64,7 +64,7 @@ const About: React.FC = () => {
     },
     {
       name: "Sabri Mhimdi",
-      linkedin: "https://www.linkedin.com/in/nouressafa-c-753456216/",
+      linkedin: "https://www.linkedin.com/in/sabri-mhimdi-aa636260/",
       facebook: "https://www.facebook.com/nour.essafa.73",
       img: "https://res.cloudinary.com/ddngbriyu/image/upload/v1730885413/Capture_d_%C3%A9cran_2024-11-06_102522_efj596.png",
 
