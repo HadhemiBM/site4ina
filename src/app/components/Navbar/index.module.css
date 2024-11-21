@@ -121,6 +121,16 @@
   text-decoration: none;
   transition: background-color 0.2s ease-in-out;
 }
+.activeLink a:hover {
+  /* background-color: var(--darkBlue); */
+  background-color: var(--blue);
+  color: white;
+  z-index: 1;
+  padding: 7px;
+
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+}
 .navbar.scrolled .activeLink a {
   color: white;
   text-decoration: none;
