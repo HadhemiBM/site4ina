@@ -324,6 +324,7 @@
 
      }
 }
+/* ... (keep all the existing styles) ... */
 
 .mobileMenuButton {
   display: none;
@@ -367,6 +368,7 @@
   }
 
   .dropdownMenu {
+    display: none;
     position: static;
     box-shadow: none;
     margin-top: 10px;
@@ -374,15 +376,22 @@
     width: 100%;
   }
 
+  .navbarLinkContainer:hover .dropdownMenu,
+  .navbarLinkContainer:focus-within .dropdownMenu {
+    display: block;
+  }
+
   .navbarLink {
     font-size: 16px;
     width: 100%;
   }
 
-  .navbarLink a {
+  .navbarLink a,
+  .navbarLink span {
     display: block;
     width: 100%;
     padding: 10px;
+    cursor: pointer;
   }
 
   .dropdownItem {
@@ -392,4 +401,3 @@
 }
 
 /* ... (keep the rest of the media queries) ... */
-
