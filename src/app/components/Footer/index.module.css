@@ -283,7 +283,7 @@ color: var(--blue);
              }
             }
 
-            @media (max-width: 508px)  {
+            /* @media (max-width: 508px)  {
               .textNo{
                 text-decoration: none;
                 color: #000;
@@ -317,9 +317,9 @@ color: var(--blue);
                .roww{
                 gap:10px;
                }
-              }
+              } */
 
-              @media (max-width: 423px)  {
+              @media (max-width: 580px)  {
                 .container {
                   display: flex;
                   flex-direction: column;
