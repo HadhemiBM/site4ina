@@ -349,9 +349,10 @@
     display: none;
     position: absolute;
     top: 100%;
-    left: 0;
+    /* left: 0; */
     right: 0;
-    background-color: white;
+    width: 60%;
+    /* background-color: rgb(196, 91, 91); */
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
@@ -365,6 +366,9 @@
   .navbarLinkContainer {
     width: 100%;
     margin-bottom: 10px;
+    /* background-color: antiquewhite; */
+display: flex;
+flex-direction: column;
   }
 
   .dropdownMenu {
@@ -379,6 +383,8 @@
   .navbarLinkContainer:hover .dropdownMenu,
   .navbarLinkContainer:focus-within .dropdownMenu {
     display: block;
+    /* background-color: aquamarine; */
+    width: 90%;
   }
 
   .navbarLink {
