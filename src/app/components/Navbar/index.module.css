@@ -355,7 +355,7 @@
     /* background-color: rgb(196, 91, 91); */
     flex-direction: column;
     align-items: flex-start;
-    padding: 20px;
+    padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
@@ -376,7 +376,7 @@ flex-direction: column;
     position: static;
     box-shadow: none;
     margin-top: 10px;
-    margin-left: 20px;
+    /* margin-left: 20px; */
     width: 100%;
   }
 
@@ -384,7 +384,6 @@ flex-direction: column;
   .navbarLinkContainer:focus-within .dropdownMenu {
     display: block;
     /* background-color: aquamarine; */
-    width: 90%;
   }
 
   .navbarLink {
