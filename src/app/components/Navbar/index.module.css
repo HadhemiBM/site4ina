@@ -173,7 +173,7 @@
 }
 
 .dropdownItem:hover {
-  background-color: #f0f0f0;
+  background-color: #ffffff;
 }
 .navbarLogin {
   display: flex;
@@ -402,6 +402,11 @@ flex-direction: column;
   .dropdownItem {
     font-size: 14px;
     padding: 10px;
+    color: #000;
+  }
+  .dropdownItem:hover {
+ 
+    color: var(--blue);
   }
 }
 
