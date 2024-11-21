@@ -43,7 +43,6 @@ const Events: React.FC = () => {
             <Video />
           </div>
           <div className={styles.events1}>
-            <Video2 />
             <div className={styles.eventHeader2}>
               <h2 className={styles.eventTitle}>
                 4INA TECHNOLOGIE’s Participation in the Agritech Program
@@ -62,6 +61,8 @@ const Events: React.FC = () => {
                 transformation of agriculture!
               </p>
             </div>
+            <Video2 />
+
           </div>
           <div className={styles.events1}>
             <div className={styles.eventHeader}>

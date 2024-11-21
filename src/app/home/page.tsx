@@ -226,6 +226,8 @@ const Homee: React.FC = () => {
                       styles[`CibleCont${index + 1}`]
                     } ${visibleItems.includes(index) ? styles.show : ""}`}
                   >
+                {/* <div className={styles.loader}></div> */}
+
                     <p className={styles.SpinnerDescu}>{item}</p>
                   </div>
                 )

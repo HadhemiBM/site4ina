@@ -186,6 +186,9 @@
 .TeamContent p {
   margin: 0px 0px 0px 0px;
 }
+.TeamContent2 p {
+  margin: 0px 0px 0px 0px;
+}
 .TeamSocial {
   display: flex;
   flex-direction: row;
@@ -201,13 +204,14 @@
   /* background-color: antiquewhite; */
 }
 .TeamSocial i {
-  background-color: var(--blue);
-  color: white;
-  width: 24px;
-  height: 24px;
-  border-radius: 8px;
+  /* background-color: var(--blue); */
+  color: var(--darkGrey);
+  /* width:100%;
+  height: auto; */
+  border-radius: 50px;
   display: flex;
   align-items: center;
+  font-size: 24px;
   align-content: center;
   justify-content: center;
 }

@@ -182,7 +182,7 @@ const About: React.FC = () => {
                     <Image
                       className={styles.TeamImage}
                       src={item.img}
-                      alt="team"
+                      alt="team-founder"
                       fill
                       style={{ objectFit: "cover" }}
                     />
@@ -210,7 +210,7 @@ const About: React.FC = () => {
                     <Image
                       className={styles.TeamImage}
                       src={item.img}
-                      alt="team"
+                      alt="team_Workers"
                       fill
                       style={{ objectFit: "cover" }}
                     />

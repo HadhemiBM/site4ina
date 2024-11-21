@@ -165,11 +165,12 @@
   justify-content: flex-start;
   margin-top: 30px;
   border-radius: 20px;
-  border-left: var(--blue) 1px solid;
+  /* border-left: var(--blue) 1px solid; */
   opacity: 0;
   transform: translateX(100%);
   padding: 15px;
   width: 450px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 
   transition: opacity 0.1s ease, transform 0.1s ease;
 }
@@ -498,10 +499,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-
-
   position: absolute;
-  /* margin: 10px; */
   z-index: 99999;
 }
 .scrollButton1:first-of-type {
@@ -517,17 +515,18 @@
   scroll-behavior: smooth;
   gap: 0px;
   width: 100%;
+
   height: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  padding-bottom: 20px;
+  padding-bottom: 0px;
   border-bottom: var(--blue) 1px solid;
 }
 .scrollItem {
   min-width: 20%;
   max-width: 20%;
-  height: 100px;
+  height: 90%;
   background-color: #ffffff;
   display: flex;
   justify-content: center;
@@ -539,7 +538,7 @@
   overflow: hidden;
 }
 .imge{
-  width: 40%;
+  width: 70%;
   height: auto;
   object-fit: cover;
 }
@@ -1374,22 +1373,18 @@
   z-index: -9999;
 
   overflow: hidden;
-  /* box-shadow       : 0 5px 10px rgba(0,0,0,.3); */
-  /* background-image : repeating-radial-gradient(circle 10em at center,rgb(10, 17, 19) 0%,rgb(2, 41, 50) 2.2%,rgb(19, 31, 33) 3.6%,rgb(11, 29, 33) 4.8%,rgb(11, 29, 33) 4.8%,rgb(16, 43, 49) 6.7%); */
+  
   will-change: transform;
   background-image: url("https://res.cloudinary.com/ddngbriyu/image/upload/v1730810045/image_2024-11-05_123457957_flnpmw.png");
   background-size: cover;
   background-repeat: no-repeat;
-  /* Dish Shine Effect */
+
 }
 
 .disc2 {
   width: 330px;
   height: 330px;
-  /* border-radius    : 50%; */
-
   position: absolute;
-  /* top              : 20px; */
   display: flex;
   align-self: center;
   align-items: center;
@@ -1399,7 +1394,6 @@
   transition: transform 0.5s ease-out;
   z-index: -99999;
   overflow: hidden;
-
   will-change: transform;
   background-image: url("https://res.cloudinary.com/ddngbriyu/image/upload/v1730807453/Brown_Simple_Email_Newsletter_Digital_Product_Mockup_Instagram_Post_xxhnvi.png");
   background-size: cover;
@@ -1518,7 +1512,7 @@
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
     border-bottom: var(--blue) 1px solid;
   }
 }
@@ -1840,7 +1834,7 @@ width: 90%;
       -webkit-overflow-scrolling: touch;
       scrollbar-width: none;
       -ms-overflow-style: none;
-      padding-bottom: 20px;
+      padding-bottom: 0px;
       border-bottom: var(--blue) 1px solid;
     }
     /* Price */
@@ -2045,7 +2039,7 @@ border-bottom: var(--darkGrey) 1px solid;
   }
   .DemoSection {
   
-    margin-top: -70px;
+    margin-top: -60px;
     
   }
   .SolutionTitle3  {
@@ -2251,7 +2245,7 @@ width: 90%;
   }
   .DemoSection {
   
-    margin-top: -100px;
+    margin-top: -90px;
     
   }
   .SolutionTitle3  {
@@ -2420,6 +2414,8 @@ border-bottom: var(--darkGrey) 1px solid;
     height: 40px;
     font-size: 18px;
     margin-top: 10px;
+  margin-left: 0px;
+
     align-self: center;
   }
 
@@ -2487,7 +2483,7 @@ border-bottom: var(--darkGrey) 1px solid;
   }
   .DemoSection {
   
-    margin-top: -250px;
+    margin-top: -240px;
     
   }
   .SolutionTitle3  {
@@ -2662,7 +2658,7 @@ width: 90%;
   }
   .DemoSection {
   
-    margin-top: -150px;
+    margin-top: -140px;
     
   }
   .SolutionTitle3  {
@@ -2844,6 +2840,8 @@ width: 90%;
     margin-top: 10px;
     text-align: center;
     display: flex;
+  margin-left: 0px;
+
     justify-content: center;
     align-content: center;
     align-items: center;
@@ -2915,7 +2913,7 @@ width: 90%;
   }
   .DemoSection {
   
-    margin-top: -150px;
+    margin-top: -140px;
   gap: 10px;
     
   }
@@ -3065,7 +3063,7 @@ border-bottom: var(--darkGrey) 1px solid;
  
   }
   .DemoSection {
-    margin-top: -250px;
+    margin-top: -240px;
  
   }
   .CibleRight {
@@ -3077,7 +3075,6 @@ border-bottom: var(--darkGrey) 1px solid;
   .CibleCont3,
   .CibleCont4 {
     align-self: flex-start;
-    /* background-color: #495469; */
     width:165px;
     height: 30px;
   }

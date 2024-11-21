@@ -136,7 +136,7 @@ const Contact: React.FC = () => {
           <i className="fa-solid fa-clock"></i>
             <div className={styles.columnContact}>
               <p>Working hours</p>
-              <p className={styles.columnContact_p}>Mon - Fri: 10am - 5pm</p>
+              <p className={styles.columnContact_p}>Mon - Fri: 08am - 5pm</p>
             </div>
           </div>
         </div>

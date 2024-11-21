@@ -41,41 +41,32 @@
   margin-top: 70px;
   gap: 40px;
 }
-
 .title {
   color: var(--blue);
-  font-size: 46px;
-  background-color: white;
-  padding: 10px;
-  border-bottom: 2px var(--blue) solid;
-  border-right: 2px var(--blue) solid;
-  border-radius: 50px;
-  width: 681px;
+  font-size:2.1rem;
+  background-color: rgb(255, 255, 255);
+  padding: 0.625rem;
+  border-bottom: 0.125rem var(--blue) solid;
+  border-right: 0.125rem var(--blue) solid;
+  border-radius: 3.125rem;
+  width: 50%;
+  max-width: 42.5625rem;
+  height: 10%;
   display: flex;
-  height: 100px;
   align-items: center;
-  font-family: "kufam";
-
-  align-content: center;
-  justify-content: flex-end;
-  padding-right: 80px;
+  justify-content: center;
+  text-align: center;
 }
+
 .desc {
   color: black;
-  font-size: 24px;
-
-  padding: 10px;
-
-  display: flex;
-  font-family: "kufam";
-width: 90%;
-align-self: center;
-text-align: center;
-  align-items: center;
-  align-content: center;
-  /* justify-content: flex-start; */
-  /* margin-left: 50px; */
+  font-size: 1.2rem;
+  padding: 0.625rem;
+  width:100%;
+  align-self: center;
+  text-align: center;
 }
+
 .RightDesc {
 
   display: flex;
@@ -310,12 +301,12 @@ font-size: 14px;
       font-size: 16px;
      
     }
-    .desc {
+    /* .desc {
     
       font-size: 20px;
     
      
-    }
+    } */
     .serviceContent_descc{
       color: var(--darkBlue);
       font-size: 16px;
@@ -352,12 +343,12 @@ font-size: 12px;
             font-size: 16px;
            
           }
-          .desc {
+          /* .desc {
           
             font-size: 20px;
           
            
-          }
+          } */
           .serviceContent_descc{
 
             font-size: 16px;
@@ -381,12 +372,12 @@ font-size: 12px;
     font-size: 14px;
 
   }
-  .desc {
+  /* .desc {
           
     font-size: 18px;
   
    
-  }
+  } */
   .serviceContent_desc {
             
     font-size: 14px;
@@ -407,7 +398,7 @@ font-size: 12px;
           width: 40%; 
          
         }
-        .title {
+        /* .title {
  
           font-size: 32px;
      
@@ -415,7 +406,7 @@ font-size: 12px;
       
           height: 50px;
     
-        }
+        } */
 }
 
 @media (max-width: 825px) {
@@ -551,3 +542,44 @@ align-self: center;
   }
  
 }
+@media screen and (max-width: 48rem) {
+  .title {
+    font-size: 2rem;
+
+  }
+
+  .desc {
+    font-size: 1rem;
+    /* background-color: rgb(0, 38, 255); */
+    width: 90%;
+
+
+  }}
+  @media screen and (max-width: 64rem) {
+    .title {
+      font-size: 2.3rem;
+  
+    }
+  
+    .desc {
+      font-size: 1.2rem;
+      width: 90%;
+      /* background-color: rgb(63, 75, 75); */
+
+    }
+  }  
+  @media screen and (min-width: 80rem) {
+
+
+    .title {
+      font-size: 3rem;
+    }
+  
+    .desc {
+      width: 90%;
+      font-size: 1.6rem;
+      /* background-color: aqua; */
+
+    }
+  }
+  
