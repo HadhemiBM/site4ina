@@ -1665,7 +1665,7 @@ z-index: 999;
     font-size: 30px;
     width: 100%;
     margin-bottom: 20px;
-    margin-top: 30px;
+    margin-top: 0px;
   }
   .CibleLeft {
     padding: 10px;
@@ -1917,7 +1917,7 @@ border-bottom: var(--darkGrey) 1px solid;
     /* background-color: #b91a1a; */
     width: 100%;
     margin-bottom: 20px;
-    margin-top: 30px;
+    margin-top: 0px;
 
   }
   .CibleLeft {
@@ -2586,6 +2586,9 @@ width: 90%;
 }
 
 @media (max-width: 508px) {
+  .CibleSection{
+    margin-top: -20px;
+  }
   .SpinnerDescu,
   .SpinnerDescu1 {
     font-size: 12px;
@@ -2754,6 +2757,11 @@ width: 90%;
  
 }
 @media (max-width: 475px) {
+  .CibleSection {
+    width: 100%;
+    margin-bottom: 0px;
+    flex-direction: column;
+  }
   /* Price */
   .PriceTitle1 , .viewDetails {
     font-size: 14px;
@@ -2818,6 +2826,10 @@ width: 90%;
     height: 3vw;
   
   }
+  .ServicesSection{
+    margin-top: -250px;
+  }
+ 
 }
 @media (max-width: 423px) {
   .SpinnerDescu,
@@ -3041,6 +3053,9 @@ border-bottom: var(--darkGrey) 1px solid;
          /* background-color: #495469; */
          width:170px;
          height: 30px;
+       }
+       .ServicesSection{
+         margin-top: -250px;
        }
       
 }

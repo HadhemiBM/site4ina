@@ -15,7 +15,6 @@ import { blogs } from "../data/BlogData";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import Tableau from "../priceDetails/page";
 
 const Homee: React.FC = () => {
   const games = [
@@ -78,12 +77,8 @@ const Homee: React.FC = () => {
     setActiveIndex(index === activeIndex ? null : index);
   };
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
-  const [showDetails, setShowDetails] = useState(false);
-  const [showDetails2, setShowDetails2] = useState(false);
-  const [showDetails3, setShowDetails3] = useState(false);
-  const toggleDetails = () => {
-    setShowDetails((prev) => !prev);
-  };
+
+
 
   useEffect(() => {
     const timers: NodeJS.Timeout[] = [];
@@ -108,36 +103,16 @@ const Homee: React.FC = () => {
     router.push(`/services?section={sectionId}`);
   };
 
-  const toggleDetails2 = () => {
-    setShowDetails2((prev) => !prev);
-  };
-  const toggleDetails3 = () => {
-    setShowDetails3((prev) => !prev);
-  };
 
   const scrollRef = useRef<HTMLDivElement>(null);
   const scrollRef1 = useRef<HTMLDivElement>(null);
 
-  const scrollLeft = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({
-        left: -200,
-        behavior: "smooth",
-      });
-    }
-  };
+
   const router = useRouter();
   const navigateToService = () => {
     router.push("./services");
   };
-  const scrollRight = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({
-        left: 200,
-        behavior: "smooth",
-      });
-    }
-  };
+
   const scrollLeft1 = () => {
     if (scrollRef1.current) {
       scrollRef1.current.scrollBy({
