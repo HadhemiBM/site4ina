@@ -589,7 +589,9 @@ padding: 0px 20px 0px 20px;
     display: flex;
   align-self:flex-end;
     height: 0rem;
-    width: 30%;
+    width: 40%;
+    margin-top: 50px;
+
   
   }
   .HeaderTitle3{
@@ -709,9 +711,10 @@ margin-top:0px;
   }
   .Imagecontainer {
     display: flex;
-  align-self: flex-end;
+  align-self: center;
     height: 0rem;
-    width: 30%;
+    margin-top: 50px;
+    width: 40%;
   
   }
   .HeaderTitle3{
