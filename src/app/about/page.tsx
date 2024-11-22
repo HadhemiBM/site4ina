@@ -8,11 +8,8 @@ import Image from "next/image";
 
 const About: React.FC = () => {
 
-  const router = useRouter();
 
-  const navigateToService = () => {
-    router.push("/service");
-  };
+
   const team = [
     {
       name: "Oumaima Ben Aziza",
