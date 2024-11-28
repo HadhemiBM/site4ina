@@ -1,4 +1,3 @@
-
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import styles from "./index.module.css";
@@ -22,8 +21,6 @@ const Header = () => {
     // autoPlay: true,
     interval: 4000,
 
-
-   
     renderArrowPrev: (
       onClickHandler: () => void,
       hasPrev: boolean,
@@ -56,7 +53,6 @@ const Header = () => {
     ),
   };
 
-
   return (
     <div className={styles.carr}>
       <Carousel {...settings}>
@@ -76,8 +72,13 @@ const Header = () => {
             </Link>
           </div>
           <div className={styles.Imagecontainer}>
-        
-            <Image  className={styles.HeadImage} width={1000} height={400} src={dme} alt="IA" />
+            <Image
+              className={styles.HeadImage}
+              width={1000}
+              height={400}
+              src={dme}
+              alt="IA"
+            />
           </div>
         </div>
         {/* carousel 2 */}
@@ -85,7 +86,6 @@ const Header = () => {
           <div className={styles.HeaderText2}>
             <h1 className={styles.HeaderTitle1}>
               Impact of the System Energy Control on the Industry
-         
             </h1>
             <div className={styles.Headerim}>
               <div className={styles.col}>
