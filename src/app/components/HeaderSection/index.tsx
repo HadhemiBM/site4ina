@@ -8,7 +8,7 @@ import reduction from "../../Assests/svg/reductionEnergy.svg";
 import timeincrease from "../../Assests/svg/timeincrease.svg";
 import moneySave from "../../Assests/svg/moneySave.svg";
 import TimeReduce from "../../Assests/svg/TimeReduce.svg";
-import edge from "../../Assests/ms1.gif";
+import edge from "../../Assests/cont3.gif";
 import Link from "next/link";
 import { ReactNode } from "react";
 import { CarouselProps } from "react-responsive-carousel";
