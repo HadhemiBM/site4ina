@@ -20,28 +20,23 @@
   align-content: center;
   align-self: center;
   box-shadow: 0 4px 8px #888;
-
 }
 .navbar.scrolled {
   top: 0px;
   padding-top: 0px;
   height: 70px;
-
   box-shadow: 0 4px 8px #888;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .navbarContainer {
   width: 100%;
-
   padding: 0 16px;
   display: flex;
   align-items: center;
   align-content: center;
   align-self: center;
   justify-content: space-between;
-
-
   height: 100%;
 }
 .navbarLogo {
@@ -51,7 +46,6 @@
   align-self: center;
   text-decoration: none;
 }
-
 .navbarLogo {
   font-size: 24px;
   font-weight: bold;
@@ -68,7 +62,6 @@
   z-index: 9999;
   justify-content: center;
 }
-
 .navbarLink {
   font-size: 17px;
   font-family: "kufam";

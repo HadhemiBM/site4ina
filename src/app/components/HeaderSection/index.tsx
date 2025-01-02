@@ -60,7 +60,7 @@ const Header = () => {
         <div className={styles.container}>
           <div className={styles.HeaderText}>
             <h1 className={styles.HeaderTitle}>
-              Redefining Energy Management with AI and IoT Excellence
+              Redefining Energy Management with AIiii and IoT Excellence
             </h1>
             <p className={styles.HeaderDesc}>
               Elevating energy management by integrating AI and IoT, enabling
@@ -74,8 +74,8 @@ const Header = () => {
           <div className={styles.Imagecontainer}>
             <Image
               className={styles.HeadImage}
-              width={1000}
-              height={400}
+              width={700}
+              height={300}
               src={dme}
               alt="IA"
             />

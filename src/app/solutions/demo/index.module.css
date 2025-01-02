@@ -17,7 +17,6 @@
   align-items: center;
   padding: 1.25rem;
 }
-
 .formContainer {
   width: 100%;
   max-width: 31.25rem;
@@ -31,25 +30,21 @@
   gap: 1.25rem;
   border-radius: 1.25rem;
 }
-
 .textNo {
   text-decoration: none;
 }
-
 .row {
   width: 100%;
   gap: 0.625rem;
   display: flex;
   flex-direction: column;
 }
-
 .rowContact {
   width: 100%;
   display: flex;
   flex-direction: column;
   color: #000;
   flex-wrap: wrap;
-
   gap: 0.9375rem;
   align-items: flex-start;
   justify-content: flex-start; 

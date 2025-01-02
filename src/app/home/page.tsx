@@ -231,7 +231,7 @@ const Homee: React.FC = () => {
                 </p>
               </div>
               <div className={styles.disc}></div>
-              {/* <div className={styles.back_case}></div> */}
+       
             </div>
             <div className={styles.music_case}>
               <div className={styles.front_case2}>
@@ -244,9 +244,9 @@ const Homee: React.FC = () => {
                 </p>
               </div>
               <div className={styles.disc2}>
-                {/* <div className={styles.hole}></div> */}
+           
               </div>
-              {/* <div className={styles.back_case2}></div> */}
+           
             </div>
           </div>
         </div>
@@ -322,9 +322,7 @@ const Homee: React.FC = () => {
           success across various sectors.
         </p>
         <div className={styles.wrapper}>
-          {/* <button className={styles.scrollButton} onClick={scrollLeft}>
-            <Image src={arrowLeft} alt="left" width={11} height={20} />
-          </button> */}
+      
           <div className={styles.scrollContainer} ref={scrollRef}>
             {items.map((item, index) => (
               <div key={index} className={styles.scrollItem}>
@@ -338,9 +336,7 @@ const Homee: React.FC = () => {
               </div>
             ))}
           </div>
-          {/* <button className={styles.scrollButton} onClick={scrollRight}>
-            <Image src={arrowRight} alt="left" width={11} height={20} />
-          </button> */}
+       
         </div>
       </div>
       <div className={styles.PricingSection}>

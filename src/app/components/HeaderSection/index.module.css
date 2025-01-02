@@ -19,14 +19,16 @@
 }
 
 .container {
-  background: linear-gradient(90deg, #012344, #00121e);
+  /* background: linear-gradient(90deg, #012344, #00121e); */
   width: 100%;
   padding: 20px;
   height: 600px;
   display: flex;
   flex-direction: row;
-  align-items: center;
 
+  justify-content: space-between; 
+
+  align-items: center;
   font-family: "kufam";
   padding-left: 100px;
   gap: 100px;
@@ -56,14 +58,37 @@
 
   gap: 100px;
 }
-.Imagecontainer {
+/* .Imagecontainer {
   display: flex;
   height: 400px;
   width: 40%;
   border: none;
   align-self: center;
   align-items: center;
+  background-image: url("../../Assests/svg/headBG.svg");
+  background-size: top right center;
+  background-repeat: no-repeat;
+} */
+.Imagecontainer {
+  position: relative;
+  flex: 1;
+  height: 400px;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../Assests/svg/headBG.svg");
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  right: 5%;
+  width: 100%;
+  height: 100%;
+  animation: slideInFromTop 2s ease-out;
+  /* top: 100; */
 }
+
+
 .Imagecontainer3 {
   display: flex;
   height: 557px;
@@ -81,12 +106,40 @@
   border: none;
   align-self: center;
 }
-
 .HeadImage {
+  width: 10%;
+  /* height: auto; */
+  /* object-fit: contain; */
+  position: relative;
+  z-index: 1;
+}
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* .HeadImage {
   width: 150%;
   height: 900px;
   object-fit: contain;
-}
+} */
 .HeadImage2 {
   width: 30%;
   margin-right: 40px;
@@ -106,7 +159,7 @@
   width: 110%;
   font-size: 24px;
   font-family: "kufam";
-  color: white;
+  color: rgb(0, 0, 0);
   padding: 30px;
   padding-right: 100px;
   align-self: center;
@@ -115,6 +168,8 @@
   align-content: center;
   text-align: center;
   margin-left: 50px;
+  animation: slideInFromLeft 2s ease-out;
+
   margin-top: 30px;
 }
 
@@ -139,7 +194,7 @@
   justify-content: center;
   display: flex;
   flex-direction: column;
-  color: white;
+  color: rgb(0, 0, 0);
   gap: 30px;
   overflow: visible;
 }
@@ -163,10 +218,12 @@
 }
 .HeaderTitle {
   font-family: "kufam";
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 32px;
   align-self: center;
   text-align: center;
+  animation: slideInFromLeft 2s ease-out;
+
 }
 .HeaderTitlee {
   font-family: "kufam";
@@ -285,21 +342,23 @@
   }
 }
 .buttonDemo {
-  background-color: white;
-  color: #012344;
+  background-color: rgb(255, 255, 255);
+  color: #000000;
   border-radius: 8px;
   width: 251px;
   height: 52px;
   cursor: pointer;
   font-size: 20px;
   font-family: "kufam";
-
+border: 1px solid var(--blue);
   font-weight: 500;
-  transition: background-color 0.3s ease;
+  /* transition: background-color 0.3s ease; */
+  animation: slideInFromLeft 2s ease-out;
+
 }
 .buttonDemo:hover {
-  box-shadow: 0 2px 4px rgb(255, 250, 250);
-  color: #012344;
+  box-shadow: 0 2px 4px var(--blue);
+  color: #000000;
   border: 2px;
   border-color: var(--blue) 2px solid;
 }
