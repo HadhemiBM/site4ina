@@ -13,6 +13,7 @@ import { ReactNode } from "react";
 import { CarouselProps } from "react-responsive-carousel";
 
 const Header = () => {
+  
   const settings = {
     showArrows: true,
     infiniteLoop: true,
@@ -60,7 +61,7 @@ const Header = () => {
         <div className={styles.container}>
           <div className={styles.HeaderText}>
             <h1 className={styles.HeaderTitle}>
-              Redefining Energy Management with AIiii and IoT Excellence
+              Redefining Energy Management with AI and IoT Excellence
             </h1>
             <p className={styles.HeaderDesc}>
               Elevating energy management by integrating AI and IoT, enabling
@@ -132,7 +133,7 @@ const Header = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> 
         {/* carousel 3 */}
         <div className={styles.container3}>
           <div className={styles.HeaderText}>

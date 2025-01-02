@@ -10,13 +10,6 @@
   align-content: center;
   justify-content: center;
 }
-.Card {
-  width: 100%;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  background-color: #fff;
-}
 
 .container {
   /* background: linear-gradient(90deg, #012344, #00121e); */
@@ -34,7 +27,7 @@
   gap: 100px;
 }
 .container2 {
-  background: linear-gradient(90deg, #012344, #00121e);
+  /* background: linear-gradient(90deg, #012344, #00121e); */
   width: 100%;
   height: 600px;
   display: flex;
@@ -46,7 +39,7 @@
   gap: 100px;
 }
 .container3 {
-  background: linear-gradient(90deg, #012344, #00121e);
+  /* background: linear-gradient(90deg, #012344, #00121e); */
   width: 100%;
   height: 600px;
   display: flex;
@@ -77,6 +70,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  align-content: center;
   background-image: url("../../Assests/svg/headBG.svg");
   background-size: cover;
   background-position: center right;
@@ -112,6 +106,7 @@
   /* object-fit: contain; */
   position: relative;
   z-index: 1;
+  
 }
 @keyframes slideInFromLeft {
   0% {
@@ -182,6 +177,12 @@
   flex-direction: column;
   align-items: center;
   align-content: center;
+  border-bottom: 1px solid var(--blue);
+  border-left: 1px solid var(--blue);
+  border-right: 1px solid var(--blue);
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.315);
+
   justify-content: center;
 }
 .Headerim {
@@ -193,7 +194,9 @@
   width: 60%;
   justify-content: center;
   display: flex;
+  /* margin-left: 80px; */
   flex-direction: column;
+  /* background-color: antiquewhite; */
   color: rgb(0, 0, 0);
   gap: 30px;
   overflow: visible;
@@ -214,7 +217,7 @@
   align-content: center;
   display: flex;
   flex-direction: column;
-  gap: 70px;
+  gap: 50px;
 }
 .HeaderTitle {
   font-family: "kufam";
@@ -227,14 +230,14 @@
 }
 .HeaderTitlee {
   font-family: "kufam";
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 32px;
   align-self: center;
   text-align: center;
 }
 .HeaderTitle1 {
   font-family: "kufam";
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 32px;
   align-self: center;
   text-align: center;
@@ -242,45 +245,21 @@
 }
 .HeaderTitle4 {
   font-family: "kufam";
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 24px;
   align-self: center;
   text-align: center;
 }
 
-.Card {
-  width: 100%;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  background-color: #fff;
-}
-.HeaderTitle3,
-.HeaderTitle31,
-.HeaderTitle32,
-.HeaderTitle33,
-.HeaderTitle34 {
+.HeaderTitle3 {
   font-size: 18px;
-  color: white;
+  color: rgb(0, 0, 0);
   font-family: "kufam";
   width: 500px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(233, 230, 230, 0.1);
+  /* box-shadow: 0 4px 8px rgba(233, 230, 230, 0.1); */
   padding: 10px;
 }
-.HeaderTitle31 {
-  margin-left: 80px;
-}
-.HeaderTitle32 {
-  margin-left: 160px;
-}
-.HeaderTitle33 {
-  margin-left: 240px;
-}
-.HeaderTitle34 {
-  margin-left: 320px;
-}
-
 .rowloa {
   display: flex;
   flex-direction: row;
@@ -292,7 +271,7 @@
   width: 30px;
   height: 30px;
   display: flex;
-  color: var(--ocean);
+  color: var(--blue);
 
   --c: #0000 calc(100% - 20px), currentColor calc(100% - 19px) 98%, #0000;
   background: radial-gradient(farthest-side at left, var(--c)) right / 50% 100%,
@@ -356,6 +335,22 @@ border: 1px solid var(--blue);
   animation: slideInFromLeft 2s ease-out;
 
 }
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
 .buttonDemo:hover {
   box-shadow: 0 2px 4px var(--blue);
   color: #000000;
@@ -364,16 +359,16 @@ border: 1px solid var(--blue);
 }
 
 .arrow {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(74, 91, 138, 0.336);
   color: white;
   border: none;
-  padding: 10px 20px;
-  font-size: 18px;
+  padding: 10px 10px;
+  font-size: 30px;
   cursor: pointer;
   position: absolute;
   top: 50%;
-  width: 90px;
-  height: 20%;
+  width: 50px;
+  height: 10%;
   transform: translateY(-50%);
   z-index: 10;
 }
@@ -387,7 +382,7 @@ border: 1px solid var(--blue);
 }
 
 .arrow:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 48, 119, 0.836);
 }
 
 .carousel .control-dots {
@@ -449,7 +444,17 @@ border: 1px solid var(--blue);
   }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1439px) {
+  .Imagecontainer {
+    display: flex;
+ 
+    background-image: url("../../Assests/svg/headBG.svg");
+    background-size: 100% 100%;
+
+  }
+}
+
+  @media (max-width: 1300px) {
   .carr {
     width: 100%;
 
@@ -459,7 +464,7 @@ border: 1px solid var(--blue);
     padding: 0px;
     height: 400px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     align-content: center;
     justify-content: center;
@@ -474,7 +479,7 @@ border: 1px solid var(--blue);
     gap: 40px;
   }
   .HeaderText {
-    width: 100%;
+    width: 60%;
     justify-content: center;
     align-self: center;
     display: flex;
@@ -503,10 +508,33 @@ border: 1px solid var(--blue);
   }
   .Imagecontainer {
     display: flex;
-    align-self: flex-end;
-    height: 0rem;
+ 
+    background-image: url("../../Assests/svg/headBG.svg");
+
     width: 30%;
+    height: 100%;
+    background-size: 100% 100%;
+
   }
+
+  /* .Imagecontainer {
+    position: relative;
+    flex: 1;
+    height: 400px;
+    max-width: 500px;
+    
+    align-items: center;
+    justify-content: center;
+    background-image: url("../../Assests/svg/headBG.svg");
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+    right: 5%;
+    width: 100%;
+    height: 100%;
+    animation: slideInFromTop 2s ease-out;
+  
+  } */
   .HeaderTitle3 {
     font-size: 13px;
     color: white;
@@ -519,6 +547,13 @@ border: 1px solid var(--blue);
   .HeadImagered {
     width: 5rem;
     height: 5rem;
+  }
+  .arrow {
+    padding: 10px 0px;
+    font-size: 20px;
+
+    width: 50px;
+    height: 10%;
   }
   .container3 {
     height: 400px;
@@ -544,7 +579,30 @@ border: 1px solid var(--blue);
     font-size: 16px;
   }
 }
+@media (max-width: 1060px) {
+  .Imagecontainer {
+    display: flex;
+ 
+ 
+  
 
+    height: 100%;
+    background-size: 0% 0%;
+
+  }
+  .HeadImage {
+  
+    height:60%;
+
+    /* position: relative; */
+    z-index: 1;
+    margin-left: 50px;
+    background-color: rgb(5, 3, 20);
+    border-radius: 50%;
+    margin-left: 0px;
+
+  }
+}
 @media (max-width: 800px) {
   .arrow {
     padding: 0px 0px;
@@ -606,10 +664,12 @@ border: 1px solid var(--blue);
   }
   .Imagecontainer {
     display: flex;
-    align-self: flex-end;
-    height: 0rem;
-    width: 40%;
+    align-self:flex-end;
+    height:30%;
+    width: 20%;
+    margin-right: 0px;
     margin-top: -20px;
+    margin-left: 0px;
   }
   .HeaderTitle3 {
     font-size: 13px;
@@ -714,8 +774,8 @@ border: 1px solid var(--blue);
     display: flex;
     align-self: center;
     height: 0rem;
-    margin-top: 50px;
-    width: 40%;
+    margin-top: 20px;
+    width: 30%;
   }
   .HeaderTitle3 {
     font-size: 10px;
@@ -823,6 +883,8 @@ border: 1px solid var(--blue);
   }
   .HeaderTitle {
     font-size: 12px;
+    margin-top: 25px;
+
   }
   .HeaderDesc {
     width: 100%;
@@ -834,7 +896,7 @@ border: 1px solid var(--blue);
     display: flex;
     align-self: flex-end;
     height: 0rem;
-    width: 40%;
+    width: 20%;
     margin-top: -20px;
   }
   .HeaderTitle3 {
