@@ -19,7 +19,7 @@ const Header = () => {
     infiniteLoop: true,
     showThumbs: false,
     showStatus: false,
-    // autoPlay: true,
+    autoPlay: true,
     interval: 4000,
 
     renderArrowPrev: (
