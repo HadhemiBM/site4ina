@@ -25,7 +25,8 @@ const Navbar: React.FC = () => {
     { id: 6, link: "/contact", name: "Contact" },
   ];
   const solutionsLinks = [
-    { id: 1, link: "/solutions/explore", name: "Explore" },
+    { id: 1, link: "http://localhost:57325", name: "Explore" },
+    // { id: 1, link: "/solutions/explore", name: "Explore" },
     { id: 2, link: "/solutions/demo", name: "Demo" },
   ];
   const postsLinks = [
@@ -45,7 +46,10 @@ const Navbar: React.FC = () => {
     };
 
     const handleClickOutside = (event: MouseEvent) => {
-      if (navbarRef.current && !navbarRef.current.contains(event.target as Node)) {
+      if (
+        navbarRef.current &&
+        !navbarRef.current.contains(event.target as Node)
+      ) {
         closeMobileMenu();
       }
     };
@@ -100,7 +104,10 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`} ref={navbarRef}>
+    <nav
+      className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}
+      ref={navbarRef}
+    >
       <div className={styles.navbarContainer}>
         <Link href="/">
           <Image
@@ -112,8 +119,8 @@ const Navbar: React.FC = () => {
           />
         </Link>
 
-        <button 
-          className={styles.mobileMenuButton} 
+        <button
+          className={styles.mobileMenuButton}
           onClick={toggleMobileMenu}
           aria-expanded={mobileMenuOpen}
           aria-label="Toggle navigation menu"
@@ -121,7 +128,11 @@ const Navbar: React.FC = () => {
           ☰
         </button>
 
-        <div className={`${styles.navbarLinksContainer} ${mobileMenuOpen ? styles.mobileMenuOpen : ''}`}>
+        <div
+          className={`${styles.navbarLinksContainer} ${
+            mobileMenuOpen ? styles.mobileMenuOpen : ""
+          }`}
+        >
           {links.map(({ id, link, name }) => (
             <div
               key={id}
@@ -135,12 +146,14 @@ const Navbar: React.FC = () => {
                 }`}
               >
                 {link ? (
-                  <Link href={link} onClick={closeMobileMenu}>{name}</Link>
+                  <Link href={link} onClick={closeMobileMenu}>
+                    {name}
+                  </Link>
                 ) : (
                   <span onClick={() => handleDropdownToggle(name)}>{name}</span>
                 )}
               </h3>
-              {name === "technical platform" && solutionsDrop && (
+              {/* {name === "technical platform" && solutionsDrop && (
                 <div className={styles.dropdownMenu}>
                   {solutionsLinks.map(({ id, link, name }) => (
                     <Link key={id} href={link} className={styles.dropdownItem} onClick={closeMobileMenu}>
@@ -148,11 +161,44 @@ const Navbar: React.FC = () => {
                     </Link>
                   ))}
                 </div>
+              )} */}
+              {name === "technical platform" && solutionsDrop && (
+                <div className={styles.dropdownMenu}>
+                  {solutionsLinks.map(({ id, link, name }) =>
+                    link.startsWith("http") ? (
+                      <a
+                        key={id}
+                        href={link}
+                        className={styles.dropdownItem}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={closeMobileMenu}
+                      >
+                        {name}
+                      </a>
+                    ) : (
+                      <Link
+                        key={id}
+                        href={link}
+                        className={styles.dropdownItem}
+                        onClick={closeMobileMenu}
+                      >
+                        {name}
+                      </Link>
+                    )
+                  )}
+                </div>
               )}
+
               {name === "Posts" && postDrop && (
                 <div className={styles.dropdownMenu}>
                   {postsLinks.map(({ id, link, name }) => (
-                    <Link key={id} href={link} className={styles.dropdownItem} onClick={closeMobileMenu}>
+                    <Link
+                      key={id}
+                      href={link}
+                      className={styles.dropdownItem}
+                      onClick={closeMobileMenu}
+                    >
                       {name}
                     </Link>
                   ))}
@@ -167,4 +213,3 @@ const Navbar: React.FC = () => {
 };
 
 export default Navbar;
-
