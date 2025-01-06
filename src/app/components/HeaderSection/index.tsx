@@ -13,13 +13,12 @@ import { ReactNode } from "react";
 import { CarouselProps } from "react-responsive-carousel";
 
 const Header = () => {
-  
   const settings = {
     showArrows: true,
     infiniteLoop: true,
     showThumbs: false,
     showStatus: false,
-    autoPlay: true,
+    // autoPlay: true,
     interval: 4000,
 
     renderArrowPrev: (
@@ -133,7 +132,7 @@ const Header = () => {
               </div>
             </div>
           </div>
-        </div> 
+        </div>
         {/* carousel 3 */}
         <div className={styles.container3}>
           <div className={styles.HeaderText}>

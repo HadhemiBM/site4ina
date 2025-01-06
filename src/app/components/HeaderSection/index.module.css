@@ -19,7 +19,7 @@
   display: flex;
   flex-direction: row;
 
-  justify-content: space-between; 
+  justify-content: space-between;
 
   align-items: center;
   font-family: "kufam";
@@ -82,7 +82,6 @@
   /* top: 100; */
 }
 
-
 .Imagecontainer3 {
   display: flex;
   height: 557px;
@@ -106,7 +105,6 @@
   /* object-fit: contain; */
   position: relative;
   z-index: 1;
-  
 }
 @keyframes slideInFromLeft {
   0% {
@@ -143,13 +141,7 @@
   width: 300px;
   height: auto;
 }
-.HeaderTitle {
-  font-family: "kufam";
-  color: white;
-  font-size: 32px;
-  align-self: center;
-  text-align: center;
-}
+
 .HeaderDesc {
   width: 110%;
   font-size: 24px;
@@ -226,8 +218,8 @@
   align-self: center;
   text-align: center;
   animation: slideInFromLeft 2s ease-out;
-
 }
+
 .HeaderTitlee {
   font-family: "kufam";
   color: rgb(0, 0, 0);
@@ -329,11 +321,10 @@
   cursor: pointer;
   font-size: 20px;
   font-family: "kufam";
-border: 1px solid var(--blue);
+  border: 1px solid var(--blue);
   font-weight: 500;
   /* transition: background-color 0.3s ease; */
   animation: slideInFromLeft 2s ease-out;
-
 }
 @keyframes float {
   0% {
@@ -447,14 +438,25 @@ border: 1px solid var(--blue);
 @media (max-width: 1439px) {
   .Imagecontainer {
     display: flex;
- 
+
     background-image: url("../../Assests/svg/headBG.svg");
     background-size: 100% 100%;
-
   }
 }
 
-  @media (max-width: 1300px) {
+@media (max-width: 1300px) {
+  .col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    border-bottom: 0px solid var(--blue);
+    border-left: 0px solid var(--blue);
+    border-right: 0px solid var(--blue);
+    border-radius: 50px;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.315);
+    justify-content: center;
+  }
   .carr {
     width: 100%;
 
@@ -508,13 +510,12 @@ border: 1px solid var(--blue);
   }
   .Imagecontainer {
     display: flex;
- 
+
     background-image: url("../../Assests/svg/headBG.svg");
 
     width: 30%;
     height: 100%;
     background-size: 100% 100%;
-
   }
 
   /* .Imagecontainer {
@@ -522,7 +523,7 @@ border: 1px solid var(--blue);
     flex: 1;
     height: 400px;
     max-width: 500px;
-    
+
     align-items: center;
     justify-content: center;
     background-image: url("../../Assests/svg/headBG.svg");
@@ -533,7 +534,7 @@ border: 1px solid var(--blue);
     width: 100%;
     height: 100%;
     animation: slideInFromTop 2s ease-out;
-  
+
   } */
   .HeaderTitle3 {
     font-size: 13px;
@@ -582,27 +583,35 @@ border: 1px solid var(--blue);
 @media (max-width: 1060px) {
   .Imagecontainer {
     display: flex;
- 
- 
-  
-
-    height: 100%;
-    background-size: 0% 0%;
-
+    background-image: url("../../Assests/svg/headM.svg");
+    margin-left: 100px;
+    /* height: 100%; */
+    background-size: 100% 100%;
   }
   .HeadImage {
-  
-    height:60%;
-
+    height: 40%;
     /* position: relative; */
     z-index: 1;
     margin-left: 50px;
-    background-color: rgb(5, 3, 20);
+    /* background-color: rgb(5, 3, 20); */
     border-radius: 50%;
     margin-left: 0px;
-
+  }
+  .HeaderTitle4 {
+    font-size: 14px;
   }
 }
+@media (max-width: 945px) {
+  .HeaderTitle4 {
+    font-size: 0.1rem;
+  }
+}
+@media (max-width: 900px) {
+  .HeaderText {
+    width: 90%;
+  }
+}
+
 @media (max-width: 800px) {
   .arrow {
     padding: 0px 0px;
@@ -645,6 +654,10 @@ border: 1px solid var(--blue);
 
     margin-top: 80px;
   }
+  .container3 {
+    flex-direction: column;
+    gap: 10px;
+  }
   .HeaderTitle1 {
     font-size: 20px;
 
@@ -655,6 +668,7 @@ border: 1px solid var(--blue);
   }
   .HeaderTitle {
     font-size: 18px;
+    margin-top: 30px;
   }
   .HeaderDesc {
     width: 100%;
@@ -664,12 +678,17 @@ border: 1px solid var(--blue);
   }
   .Imagecontainer {
     display: flex;
-    align-self:flex-end;
-    height:30%;
+    align-self: flex-end;
+    height: 30%;
     width: 20%;
     margin-right: 0px;
     margin-top: -20px;
+    background-image: url("../../Assests/svg/headS.svg");
+
     margin-left: 0px;
+  }
+  .HeadImage {
+    height: 60%;
   }
   .HeaderTitle3 {
     font-size: 13px;
@@ -684,13 +703,13 @@ border: 1px solid var(--blue);
     width: 5rem;
     height: 5rem;
   }
-  .container3 {
+  /* .container3 {
     height: 400px;
 
     padding: 30px;
 
     gap: 100px;
-  }
+  } */
   .HeaderText {
     margin-top: 0px;
   }
@@ -710,12 +729,13 @@ border: 1px solid var(--blue);
   .Imagecontainer3 {
     display: flex;
     height: 400px;
-    width: 30%;
+    width: 50%;
     overflow: hidden;
     border-radius: 40%;
     border: none;
     align-self: center;
     align-items: center;
+    margin-left: 100px;
   }
 }
 @media (max-width: 570px) {
@@ -759,6 +779,11 @@ border: 1px solid var(--blue);
   }
   .Headerim {
     gap: 0px;
+    /* background-color: rosybrown; */
+    width: 90%;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
   }
   .HeaderTitle {
     font-size: 14px;
@@ -774,15 +799,16 @@ border: 1px solid var(--blue);
     display: flex;
     align-self: center;
     height: 0rem;
-    margin-top: 20px;
+    margin-left: 50px;
+    margin-top: -10px;
     width: 30%;
   }
   .HeaderTitle3 {
-    font-size: 10px;
+    font-size: 7px;
     color: black;
     font-family: "kufam";
     width: 200px;
-
+    /* background-color: violet; */
     box-shadow: 0 0px 0px rgba(233, 230, 230, 0.1);
     padding: 0px;
   }
@@ -794,8 +820,7 @@ border: 1px solid var(--blue);
     height: 400px;
 
     padding: 30px;
-
-    gap: 100px;
+flex-direction: column;
   }
   .HeaderText {
     gap: 10px;
@@ -824,7 +849,7 @@ border: 1px solid var(--blue);
     font-size: 12px;
   }
   .Imagecontainer3 {
-    display: none;
+    /* display: none; */
   }
   .HeadImage3 {
     display: none;
@@ -884,7 +909,6 @@ border: 1px solid var(--blue);
   .HeaderTitle {
     font-size: 12px;
     margin-top: 25px;
-
   }
   .HeaderDesc {
     width: 100%;
