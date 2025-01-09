@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
 
-
+  output: "export",
   reactStrictMode: false,
   env: {
     NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: "ddngbriyu",
@@ -21,6 +21,8 @@ const nextConfig: NextConfig = {
         pathname: '**',
       },
     ],
+    unoptimized: true,
+
   },
   async redirects() {
     return [
