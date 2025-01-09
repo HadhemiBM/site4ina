@@ -26,8 +26,8 @@ const Navbar: React.FC = () => {
   ];
   const solutionsLinks = [
     { id: 2, link: "/solutions/demo", name: "Demo" },
-    { id: 1, link: "http://localhost:54789", name: "Explore" },
-    // { id: 1, link: "/solutions/explore", name: "Explore" },
+    // { id: 1, link: "http://localhost:54789", name: "Explore" },
+    { id: 1, link: "/solutions/explore", name: "Explore" },
   ];
   const postsLinks = [
     { id: 1, link: "/posts/events", name: "Events" },

@@ -5,7 +5,7 @@ const { parse } = require('url');
 const next = require('next');
 
 // Set the port (either from the environment or default to 3000)
-const port = parseInt(process.env.PORT || '3000', 10);  // Uses PORT from .env or defaults to 3000
+const port = parseInt(process.env.PORT || '3000');  // Uses PORT from .env or defaults to 3000
 
 // Determine if the app is in development mode
 const dev = process.env.NODE_ENV !== 'production';
