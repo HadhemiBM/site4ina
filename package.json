@@ -3,11 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "export": "next export"
+    "start": "NODE_ENV=production node server.js",
+    "lint": "next lint"
   },
   "dependencies": {
     "@tiptap/pm": "^2.9.1",
@@ -17,7 +16,9 @@
     "@types/draft-js": "^0.11.18",
     "bootstrap": "^5.3.3",
     "cloudinary": "^2.5.1",
+    "cross-env": "^7.0.3",
     "dompurify": "^3.1.7",
+    "dotenv": "^16.4.7",
     "font-awesome": "^4.7.0",
     "framer-motion": "^11.11.10",
     "lucide-react": "^0.460.0",

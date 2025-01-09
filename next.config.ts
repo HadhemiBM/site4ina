@@ -33,6 +33,12 @@ const nextConfig: NextConfig = {
   },
 
   trailingSlash: true,
+  webpack(config, { isServer }) {
+    if (!isServer) {
+      console.log("Client-side build running on port:", process.env.PORT);
+    }
+    return config;
+  },
 };
 
 export default nextConfig;

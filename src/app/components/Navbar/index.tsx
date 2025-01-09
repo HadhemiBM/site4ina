@@ -25,9 +25,9 @@ const Navbar: React.FC = () => {
     { id: 6, link: "/contact", name: "Contact" },
   ];
   const solutionsLinks = [
-    { id: 1, link: "http://localhost:57325", name: "Explore" },
-    // { id: 1, link: "/solutions/explore", name: "Explore" },
     { id: 2, link: "/solutions/demo", name: "Demo" },
+    { id: 1, link: "http://localhost:54789", name: "Explore" },
+    // { id: 1, link: "/solutions/explore", name: "Explore" },
   ];
   const postsLinks = [
     { id: 1, link: "/posts/events", name: "Events" },
@@ -109,7 +109,7 @@ const Navbar: React.FC = () => {
       ref={navbarRef}
     >
       <div className={styles.navbarContainer}>
-        <Link href="/">
+        <Link href="/home">
           <Image
             className={styles.navbarLogoText}
             src={logo}
