@@ -7,9 +7,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 const About: React.FC = () => {
-
-
-
   const team = [
     {
       name: "Oumaima Ben Aziza",

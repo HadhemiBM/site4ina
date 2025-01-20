@@ -44,6 +44,17 @@ export default function RootLayout({
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
         />
         <link href="css/style.css" rel="stylesheet" />
+      
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9QL8MY4WB9"></script>
+<script>
+{`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-9QL8MY4WB9');
+          `}
+</script>
       </head>
       <body className={kufam.className}>
       <script src="https://upload-widget.cloudinary.com/global/all.js"></script>
