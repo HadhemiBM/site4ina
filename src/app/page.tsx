@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="page">
    <Head>
-        <meta name="google-site-verification" content="sPgxrLkLfPnav3k9RrsmyMqH_2op-6rmLLd2jtg5vwU" />
+        <meta name="google-site-verification" content="5qRlOQNaJ771i6hFI2xzZQ15dkBy2MUUDkqrzTzYq6A" />
       </Head>
       <Homee />
     </div>
