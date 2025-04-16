@@ -223,12 +223,36 @@
   gap: 10px;
   margin-bottom: 30px;
 }
-.SolutionTitle1,
-.SolutionTitle2 {
+.SolutionTitle1
+ {
   font-size: 46px;
   color: var(--blue);
   font-family: "kufam";
 }
+.SolutionTitle2 {
+  font-size: 46px;
+  font-weight: bold;
+  font-family: "kufam";
+
+  color: transparent;
+  background-image: url('https://res.cloudinary.com/ddngbriyu/image/upload/v1744810615/fond-marbre-liquide-bleu-abstrait-art-experimental-texture-fluide_53876-104502_hr0bz5.jpg'); 
+  background-size: 200%; /* Enlarged for smooth animation */
+  background-position: 0 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-background 30s infinite alternate linear;
+}
+
+@keyframes animate-background {
+  0% {
+      background-position: 0 50%;
+  }
+  100% {
+      background-position: 100% 50%;
+  }
+}
+
 .SolutionTitle1 {
   color: var(--darkGrey);
 }
@@ -353,27 +377,29 @@
 }
 
 .buttonDemo {
-  background-color: var(--blue);
-  color: white;
-  padding: 10px 20px;
+  background-color: transparent;
+  
+  color: var(--black);
+
+  /* padding: 10px 20px;
   border-radius: 8px;
   width: 251px;
   height: 52px;
-  cursor: pointer;
+  cursor: pointer; */
   font-size: 20px;
   font-family: "kufam";
-  font-weight: 500;
-  transition: background-color 0.3s ease;
+  font-weight: 600;
+  /* transition: background-color 0.3s ease;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   margin-top: 40px;
-  margin-left: 20px;
+  margin-left: 20px; */
 }
-.buttonDemo:hover {
-  background-color: white;
+/* .buttonDemo:hover {
+ 
   color: var(--blue);
   border: 2px;
   border-color: var(--blue) 2px solid;
-}
+} */
 /* Services section */
 .ServicesSection {
   display: flex;
@@ -535,6 +561,12 @@
   
   margin-bottom: 20px;
   overflow: hidden;
+  transform-style: preserve-3d;
+  transition: transform 1s ease;
+  cursor: pointer;
+}
+.scrollItem :hover {
+  animation: rotate3d 8s infinite linear;
 }
 .imge{
   width: 70%;
@@ -641,6 +673,7 @@
   max-height: 580px;
   min-height: 490px;
 }
+
 .BlogContent {
   font-size: 20px;
   color: black;
@@ -691,6 +724,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 .BlogIcon{
   width: 100%;
 }
@@ -749,6 +783,7 @@
   text-decoration: none;
   color: black;
 }
+
 .SeeAllTextPrice {
   text-decoration: none;
   color: black;
@@ -1627,6 +1662,10 @@ border-bottom: var(--darkGrey) 1px solid;
   font-size: 14px;
   
 }
+.BlogDateText1 :hover {
+  font-size: 18px;
+  
+}
 .BlogContent {   
   padding-left: 0.3rem;
   max-height: 230px;
@@ -2313,6 +2352,7 @@ width: 93%;
       min-width: 18%;
       max-width: 15%;
       height:90px;
+   
     }
     /* price */
    
@@ -3151,4 +3191,158 @@ left: 90%;
   }
 }
 
+/* styles.module.css */
+.imagesLeaning {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 2rem;
+  margin: 6rem auto;
+  transform-style: preserve-3d;
+  perspective: 2000px;
+}
 
+.card {
+  width: 180px;
+  height: auto;
+  transform-origin: bottom center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 10px 15px rgba(4, 17, 133, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Individual rotations */
+.card1 {
+  transform: rotateZ(-10deg);
+}
+.card2 {
+  transform: rotateZ(-5deg);
+}
+.card3 {
+  transform: rotateZ(5deg);
+}
+.card4 {
+  transform: rotateZ(10deg);
+}
+
+/* Optional: Add hover effect */
+.card:hover {
+  transform: scale(1.1) rotateZ(0deg);
+  z-index: 10;
+}
+.button {
+  background: transparent;
+
+ 
+  border: none;
+ 
+  backface-visibility: hidden;
+  width: 251px;
+  height: 60px;
+  position: relative;
+
+  font-size: 18px;
+  transition: transform 300ms,
+   color 300ms;
+  cursor: pointer;
+} 
+
+.button:hover,
+.button:focus {
+  transform: scale(1.05);
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+  0 0 200px #03e9f4;
+-webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+  .buttonLineOuter {
+    animation-play-state: paused;
+
+  }
+  .buttonLineInner {
+    animation-play-state: paused;
+    
+  }
+}
+
+.buttonSvg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%; 
+}
+
+@keyframes outer-dashoffset {
+  0% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 300 300;
+  }
+  50% {
+    stroke-dasharray: 200 400;
+  }
+  100% {
+    stroke-dashoffset: 600;
+    stroke-dasharray: 300 300;
+  }
+}
+
+.buttonLineOuter {
+  stroke-dasharray: 300 300;
+  stroke-dashoffset: 0;
+  animation: outer-dashoffset 6s linear infinite;
+}
+
+@keyframes outer-dashoffset {
+  0% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 300 300;
+  }
+  50% {
+    stroke-dasharray: 200 400;
+  }
+  100% {
+    stroke-dashoffset: 600;
+    stroke-dasharray: 300 300;
+  }
+}
+
+.buttonLineInner {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 300 300;
+  animation: inner-dashoffset 5s linear infinite;
+}
+
+@keyframes inner-dashoffset {
+  0% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 300 300;
+  }
+  50% {
+    stroke-dasharray: 200 400;
+  }
+  100% {
+    stroke-dashoffset: -600;
+    stroke-dasharray: 300 300;
+  }
+}
+
+.buttonLineInner {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 300 300;
+  animation: outer-dashoffset infinite linear 12s;
+}
+.buttonContent {
+  width: 100%;
+  height: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}

@@ -1,6 +1,7 @@
 
 import Head from "next/head";
-import "./globals.css";
+
+import AOS from 'aos';
 import Homee from "./home/page";
 export default function Home() {
   return (
