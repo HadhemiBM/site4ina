@@ -16,7 +16,7 @@
   flex-direction: column;
   width: 100%;
   margin-top: 3rem;
-  gap: 1.25rem;
+  gap: 3rem;
 
 }
 .title {
@@ -37,10 +37,9 @@
 }
 
 .desc {
-  color: black;
+  color: var(--black);
   font-size: 1.2rem;
-  padding: 0.625rem;
-  width:100%;
+  padding: 0.7rem;
   align-self: center;
   text-align: center;
 }
@@ -55,6 +54,7 @@
   justify-content: center;
   align-content: center;
   margin-top: 2.5rem;
+  gap: 5rem;
 }
 
 .events1 {
@@ -66,10 +66,13 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 3.125rem;
-  border-bottom: rgba(32, 84, 84, 0.928) 0.0625rem solid;
-  background-color: rgba(208, 215, 215, 0.463);
+  /* border-bottom: rgba(32, 84, 84, 0.928) 0.0625rem solid; */
+  /* background-color: rgba(208, 215, 215, 0.463); */
   align-self: center;
   box-sizing: border-box;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px rgba(4, 17, 133, 0.2);
+
 }
 
 .eventHeader, .eventHeader2 {
@@ -81,7 +84,7 @@
 .eventTitle {
   font-size: 1.5rem;
   color: var(--blue);
-  margin-bottom: 1.25rem;
+  margin-bottom: 2em;
 }
 
 .eventDesc {
@@ -148,7 +151,7 @@ align-self: center;
 
   .desc {
     font-size: 1.5rem;
-    width: 90%;
+    width: 80%;
   }
   .eventDesc {
 width: 90%;
@@ -174,4 +177,23 @@ width: 90%;
   .title {
     font-size: 3rem;
   }
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.95);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+
+.fullscreenImage {
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
 }

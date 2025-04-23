@@ -4,6 +4,8 @@ import "./globals.css";
 import "../app/css/bootstrap.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/style.css";
+import AOSInitializer from "./AOSInitializer";
+
 import { Kufam } from "next/font/google";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -69,6 +71,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </head>
       <body className={kufam.className}>
       
+  <AOSInitializer />
 <noscript>
   {`
   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TM4X5LFM"
@@ -78,8 +81,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 
       <script src="https://upload-widget.cloudinary.com/global/all.js"></script>
 
-        <div className="page-container">
+        <div className="page_container">
           <Navbar  />
+
           
           <main className="content-wrapper">{children}</main>
         </div>

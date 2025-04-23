@@ -34,6 +34,14 @@ const Contact: React.FC = () => {
     <PageTransition>
       <div className={styles.container}>
         <div className={styles.Left}>
+        <h2 className={styles.LeftTitle}>
+        Book Demo – Let's Bring Your 
+        Vision to Life
+          </h2>
+          <p className={styles.RightDesc}>
+            Kindly fill this form with your details about your inquiries and we
+            would respond your inquiry shortly.
+          </p>
           <form className={styles.formContainer}  
                   action="https://formsubmit.co/4inatechnologie@gmail.com"
 
@@ -116,13 +124,13 @@ const Contact: React.FC = () => {
           </form>
         </div>
         <div className={styles.Right}>
-        <h2 className={styles.RightTitle}>
+        {/* <h2 className={styles.RightTitle}>
             Connect with 4ina Technologie Innovate, Collaborate, Succeed
-          </h2>
-          <p className={styles.RightDesc}>
+          </h2> */}
+          {/* <p className={styles.RightDesc}>
             Kindly fill this form with your details about your inquiries and we
             would respond your inquiry shortly.
-          </p>
+          </p> */}
           <div className={styles.rowContact}>
           <Link href="mailto:contact@4inatechnologie.com" className={styles.textNo}>
           <i className="fa-solid fa-paper-plane" ></i>
