@@ -10,10 +10,11 @@ import Image from "next/image";
 import Video from "./video";
 import Video2 from "./video2";
 import Modal from "./Modal";
+import { Lens } from "@/components/ui/lens";
 
 const Events: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const [hovering, setHovering] = useState(false);
   const handleImageClick = () => setIsOpen(true);
   const closeModal = () => setIsOpen(false);
   return (
@@ -45,7 +46,11 @@ const Events: React.FC = () => {
                 miss it!
               </p>
             </div>
+          
+
             <Video />
+     
+
           </div>
           <div data-aos="fade-up" className={styles.events1}>
             <div data-aos="fade-up" data-aos-delay="200"  className={styles.eventHeader2}>
@@ -66,8 +71,8 @@ const Events: React.FC = () => {
                 transformation of agriculture!
               </p>
             </div>
-            <Video2 />
 
+            <Video2 />
           </div>
           {/* <div data-aos="fade-up" className={styles.events1}>
             <div  data-aos="fade-up" data-aos-delay="200" className={styles.eventHeader}>
@@ -93,7 +98,7 @@ This experience has not only enriched our journey but also strengthened our dedi
      This experience has not only enriched our journey but also strengthened our dedication to excellence and innovation in the energy sector. Being part of this esteemed program is both a milestone and a motivation to continue driving impactful solutions for a sustainable energy future in Africa.
         </p>
       </div>
-
+      <Lens hovering={hovering} setHovering={setHovering}>
       <Image
         src={parti}
         height="300"
@@ -102,6 +107,7 @@ This experience has not only enriched our journey but also strengthened our dedi
         onClick={handleImageClick}
         style={{ cursor: 'zoom-in' }}
       />
+      </Lens>
 
 
 {isOpen && (

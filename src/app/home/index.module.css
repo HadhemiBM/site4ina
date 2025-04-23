@@ -3,7 +3,7 @@
   height: auto;
   display: flex;
   flex-direction: column;
-  gap: 150px;
+  gap: 100px;
 }
 
 .CibleTitle {
@@ -524,7 +524,7 @@ justify-content: space-between;
   height: auto;
   align-items: center;
   justify-content: center;
-  margin-top: 90px;
+  /* margin-top: 90px; */
 }
 .wrapper {
   display: flex;
@@ -671,7 +671,7 @@ justify-content: space-between;
 
   background-color: #1f499718;
 
-  margin-top: 50px;
+  /* margin-top: 50px; */
   padding: 40px;
 }
 /* Blog Section */
@@ -681,9 +681,10 @@ justify-content: space-between;
   width: 100%;
   height: auto;
   align-items: center;
+  align-content: center;
   background-color: transparent;
   justify-content: center;
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
 .AllBlog {
   display: flex;

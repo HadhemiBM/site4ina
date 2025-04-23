@@ -12,6 +12,7 @@ import { blogs } from "../data/BlogData";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
+import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 
 
 const Homee: React.FC = () => {
@@ -127,6 +128,37 @@ const Homee: React.FC = () => {
       });
     }
   };
+  const testimonials = [
+    {
+      quote:
+        "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
+      name: "Charles Dickens",
+      title: "A Tale of Two Cities",
+    },
+    {
+      quote:
+        "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
+      name: "William Shakespeare",
+      title: "Hamlet",
+    },
+    {
+      quote: "All that we see or seem is but a dream within a dream.",
+      name: "Edgar Allan Poe",
+      title: "A Dream Within a Dream",
+    },
+    {
+      quote:
+        "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
+      name: "Jane Austen",
+      title: "Pride and Prejudice",
+    },
+    {
+      quote:
+        "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
+      name: "Herman Melville",
+      title: "Moby-Dick",
+    },
+  ];
   const items = [
     {
       img: "https://res.cloudinary.com/dyrh4zwb1/image/upload/v1729242530/AFD_wfgxdi.png",
@@ -171,6 +203,7 @@ const Homee: React.FC = () => {
     },
  
   ];
+  
   const handleGo = (id: number) => {
     router.push(`/posts/blogDetails?id=${id}`);
   };
@@ -364,7 +397,6 @@ const Homee: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
       <div className={styles.PartnerSection}>
         <div className={styles.SolutionTitle}>
           <h1 className={styles.SolutionTitle1}>Our</h1>
@@ -440,7 +472,7 @@ const Homee: React.FC = () => {
           </Link>
       </div>
       <div className={styles.BlogSection}>
-        <div className={styles.SolutionTitle}>
+      <div className={styles.SolutionTitle}>
           <h1 className={styles.SolutionTitle1}>Our</h1>
           <h1 className={styles.SolutionTitle2}>Blogs</h1>
         </div>
@@ -448,7 +480,7 @@ const Homee: React.FC = () => {
           Your resource for the latest insights in Energy Management, AI-powered
           Solutions, and Industry 4.0 trends.
         </p>
-        <div className={styles.AllBlog}>
+        {/* <div className={styles.AllBlog}>
         <div id="custom_cursor" />
           {blogs.map((blog) => (
           
@@ -485,8 +517,16 @@ const Homee: React.FC = () => {
             </div>
           </div>
           ))}
-        </div>
-       
+        </div> */}
+        <div className="h-[40rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+   <InfiniteMovingCards
+  items={blogs}
+  direction="left"
+  speed="slow"
+  pauseOnHover={true}
+/>
+
+    </div>
         <Link className={styles.SeeAllText} href="/posts/blog">
           <div className={styles.arrow}>
             <span></span>
@@ -494,6 +534,8 @@ const Homee: React.FC = () => {
             <span></span>
           </div>
         </Link>
+      </div>
+        
       </div>
     </PageTransition>
   );

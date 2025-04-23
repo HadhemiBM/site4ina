@@ -9,6 +9,16 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+		animation: {
+			scroll: "scroll 40s linear infinite",
+		  },
+		  keyframes: {
+			scroll: {
+			  to: {
+				transform: "translate(calc(-50% - 0.5rem))",
+			  },
+			},
+		  },
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
