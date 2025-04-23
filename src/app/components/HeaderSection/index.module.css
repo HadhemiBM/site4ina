@@ -1,7 +1,7 @@
 .carr {
   width: 100%;
 
-  max-height: 600px;
+  max-height: 700px;
   overflow: hidden;
   display: block;
 
@@ -14,17 +14,18 @@
 .container {
   /* background: linear-gradient(90deg, #012344, #00121e); */
   width: 100%;
-  padding: 20px;
-  height: 600px;
+  /* padding: 20px; */
+  height: 700px;
   display: flex;
   flex-direction: row;
-
   justify-content: space-between;
-
   align-items: center;
+  align-content: flex-start;
   font-family: "kufam";
   padding-left: 100px;
   gap: 100px;
+  overflow: hidden;
+
 }
 .container2 {
   /* background: linear-gradient(90deg, #012344, #00121e); */
@@ -33,7 +34,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   align-content: center;
   font-family: "kufam";
   gap: 100px;
@@ -65,21 +66,23 @@
 .Imagecontainer {
   position: relative;
   flex: 1;
-  height: 400px;
-  max-width: 500px;
+z-index: 0;
+  /* max-width: 500px; */
   display: flex;
   align-items: center;
   justify-content: center;
   align-content: center;
-  background-image: url("../../Assests/svg/headBG.svg");
-  background-size: cover;
-  background-position: center right;
+  /* background-color: antiquewhite; */
+  background-image: url("../../Assests/HeaderRec1.png");
+  background-size: 100% 100%;
+  /* background-position: top center ; */
   background-repeat: no-repeat;
-  right: 5%;
+  right: 0;
   width: 100%;
   height: 100%;
-  animation: slideInFromTop 2s ease-out;
-  /* top: 100; */
+  /* animation: slideInFromTop 2s ease-out; */
+  /* top: -100px; */
+  /* background-position:-100px -100px ; */
 }
 
 .Imagecontainer3 {
@@ -93,18 +96,42 @@
   align-items: center;
 }
 .Imagecontainer2 {
+  position: relative;
+  flex: 1;
+  /* overflow: hidden; */
+
+  /* max-width: 500px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  /* background-color: antiquewhite; */
+  background-image: url("../../Assests/HeaderRec2.png");
+  background-size: 100% 100%;
+  /* background-position: top center ; */
+  background-repeat: no-repeat;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  /* animation: slideInFromTop 2s ease-out; */
+  /* top: -100px; */
+  /* background-position:-100px -100px ; */
+}
+/* .Imagecontainer2 {
   display: flex;
   height: 70%;
   width: 20%;
   border: none;
   align-self: center;
-}
+} */
 .HeadImage {
   width: 10%;
   /* height: auto; */
   /* object-fit: contain; */
-  position: relative;
+  /* position: relative; */
   z-index: 1;
+  margin-left: 155px;
+  rotate: -30deg;
 }
 @keyframes slideInFromLeft {
   0% {
@@ -141,25 +168,24 @@
   width: 300px;
   height: auto;
 }
-
 .HeaderDesc {
-  width: 110%;
-  font-size: 24px;
+  /* background-color: antiquewhite; */
+  width: 100%;
+  font-size: 25px;
   font-family: "kufam";
   color: rgb(0, 0, 0);
-  padding: 30px;
+  /* padding: 30px; */
+  text-align: start; 
   padding-right: 100px;
-  align-self: center;
+  /* align-self: center;
   align-items: center;
   justify-content: center;
   align-content: center;
-  text-align: center;
+  text-align: center; */
   margin-left: 50px;
-  animation: slideInFromLeft 2s ease-out;
-
+  /* animation: slideInFromLeft 2s ease-out; */
   margin-top: 30px;
 }
-
 .HeadImagered {
   width: 9rem;
   height: 9rem;
@@ -184,11 +210,10 @@
 }
 .HeaderText {
   width: 60%;
-  justify-content: center;
   display: flex;
+  justify-content: flex-start;
   /* margin-left: 80px; */
   flex-direction: column;
-  /* background-color: antiquewhite; */
   color: rgb(0, 0, 0);
   gap: 30px;
   overflow: visible;
@@ -203,23 +228,40 @@
   gap: 70px;
 }
 .HeaderText2 {
-  width: 100%;
+  width: 60%;
   justify-content: center;
   align-items: center;
   align-content: center;
   display: flex;
   flex-direction: column;
   gap: 50px;
+  z-index: 0;
+
 }
 .HeaderTitle {
   font-family: "kufam";
-  color: rgb(0, 0, 0);
+  color: var(--blue);
+  background-image: url('https://res.cloudinary.com/ddngbriyu/image/upload/v1744810615/fond-marbre-liquide-bleu-abstrait-art-experimental-texture-fluide_53876-104502_hr0bz5.jpg'); 
+  background-size: 200%; /* Enlarged for smooth animation */
+  background-position: 0 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 32px;
-  align-self: center;
-  text-align: center;
-  animation: slideInFromLeft 2s ease-out;
+  /* align-self: center; */
+  /* text-align: center; */
+  margin: 0px 0px ;
+  /* animation: slideInFromLeft 2s ease-out; */
 }
-
+.HeaderTitle2 {
+  font-family: "kufam";
+  color: var(--orange);
+  font-size: 32px;
+  /* align-self: center; */
+  /* text-align: center; */
+  margin: 0px 0px ;
+  /* animation: slideInFromLeft 2s ease-out; */
+}
 .HeaderTitlee {
   font-family: "kufam";
   color: rgb(0, 0, 0);
@@ -312,11 +354,21 @@
     transform: perspective(150px) rotateY(180deg) rotate(90deg);
   }
 }
+@keyframes animate-background {
+  0% {
+      background-position: 0 50%;
+  }
+  100% {
+      background-position: 100% 50%;
+  }
+}
+
 .buttonDemo {
-  background-color: rgb(255, 255, 255);
-  color: #000000;
+  background-color: var(--blue);
+  color: #ffffff;
   border-radius: 8px;
   width: 251px;
+  align-self: start;
   height: 52px;
   cursor: pointer;
   font-size: 20px;
@@ -324,7 +376,7 @@
   border: 1px solid var(--blue);
   font-weight: 500;
   /* transition: background-color 0.3s ease; */
-  animation: slideInFromLeft 2s ease-out;
+  /* animation: slideInFromLeft 2s ease-out; */
 }
 @keyframes float {
   0% {
@@ -343,10 +395,10 @@
 }
 
 .buttonDemo:hover {
-  box-shadow: 0 2px 4px var(--blue);
-  color: #000000;
+  box-shadow: 0 4px 4px var(--orange);
+  color: var(--orange);
   border: 2px;
-  border-color: var(--blue) 2px solid;
+  border-color: var(--orange) 2px solid;
 }
 
 .arrow {
@@ -438,7 +490,6 @@
 @media (max-width: 1439px) {
   .Imagecontainer {
     display: flex;
-
     background-image: url("../../Assests/svg/headBG.svg");
     background-size: 100% 100%;
   }
@@ -982,4 +1033,118 @@ flex-direction: column;
     width: 30px;
     height: 15%;
   }
+}
+.CibleRight {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  margin-right: 0px;
+  padding: 0;
+  z-index: 99999;
+
+  align-items: center;
+  align-self: center;
+  align-content: center;
+}
+
+.CibleCont1,
+.CibleCont221,
+.CibleCont222,
+.CibleCont223,
+.CibleCont224,
+.CibleCont2,
+.CibleCont3,
+.CibleCont4 {
+  display: flex;
+  height: 62px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin-top: 30px;
+  border-radius: 34.5px;
+  background-color: white;
+
+  /* transform: translateX(100%); */
+  /* padding: 15px; */
+  width: 370px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transform: translateX(200%);
+  visibility: hidden;
+  opacity: 0;
+  /* transition: transform 0.5s ease-out, opacity 0.5s ease-out, visibility 0.5s ease-out; */
+}
+.CibleCont1,
+.CibleCont221
+{
+  margin-right:60%;
+
+}
+.CibleCont222,
+.CibleCont2{
+  margin-right:40%;
+
+}
+.CibleCont223,
+.CibleCont3{
+  margin-right:20%;
+
+}
+.CibleCont224,
+.CibleCont4{
+  margin-right:0%;
+
+}
+.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
+}
+.SpinnerDescu,
+.SpinnerDescu1 {
+  font-size: 16px;
+
+  font-family: "kufam";
+  margin: 0px 0px 0px 0px;
+  color: var(--orange);
+  padding: 3px;
+
+  border-radius: 50px;
+}
+.SpinnerDescu1{
+  color: var(--blue);
+
+}
+@keyframes slideScaleIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+.show {
+  animation: slideScaleIn 1s ease forwards;
+}
+.CibleCont221.show ,
+.CibleCont1.show {
+  animation-delay: 0s;
+}
+.CibleCont222.show ,
+
+.CibleCont2.show {
+  animation-delay: 0.2s;
+}
+.CibleCont223.show ,
+
+.CibleCont3.show {
+  animation-delay: 0.4s;
+}
+.CibleCont224.show ,
+
+.CibleCont4.show {
+  animation-delay: 0.6s;
 }

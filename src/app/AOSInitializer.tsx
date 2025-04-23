@@ -9,6 +9,7 @@ export default function AOSInitializer() {
   useEffect(() => {
     AOS.init({
       duration: 2500,
+
       once: true,
     });
   }, []);

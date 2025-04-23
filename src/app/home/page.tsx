@@ -3,19 +3,16 @@ import styles from "./index.module.css";
 import React, { useEffect, useState } from "react";
 import { useRef } from "react";
 import PageTransition from "../components/PageTransition";
-import Cardd from './Card'
 import Image from "next/image";
 import Header from "../components/HeaderSection";
 import cardIm from '../Assests/card.png'
 import arrowLeft from "../Assests/svg/arrowLeft.svg";
 import arrowRight from "../Assests/svg/arrowRight.svg";
-
 import { blogs } from "../data/BlogData";
-
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import Card from "./Card";
+
 
 const Homee: React.FC = () => {
   const games = [
@@ -111,7 +108,7 @@ const Homee: React.FC = () => {
 
   const router = useRouter();
   const navigateToService = () => {
-    router.push("./services");
+    router.push("/services");
   };
 
   const scrollLeft1 = () => {
@@ -156,10 +153,23 @@ const Homee: React.FC = () => {
   ];
 
   const cibles = [
-    "Manufacturing Industries",
-    "Agriculture and Agri-food",
-    "Healthcare and Hospitality",
-    "Business facilities",
+    {
+      title: "Healthcare and Hospitality",
+      image: "https://res.cloudinary.com/ddngbriyu/image/upload/v1745246764/Healthcare_lkrosu.png",
+    },
+    {
+      title: "Manufacturing Industries",
+      image: "https://res.cloudinary.com/ddngbriyu/image/upload/v1745246764/industry_uufawm.png",
+    },
+    {
+      title: "Agriculture and Agri-food",
+      image: "https://res.cloudinary.com/ddngbriyu/image/upload/v1745246764/agriculture_z2tooe.png",
+    },
+    {
+      title: "Business facilities",
+      image: "https://res.cloudinary.com/ddngbriyu/image/upload/v1745246764/Business_qomkvv.png",
+    },
+ 
   ];
   const handleGo = (id: number) => {
     router.push(`/posts/blogDetails?id=${id}`);
@@ -203,15 +213,18 @@ const Homee: React.FC = () => {
               (item, index) =>
                 visibleItems.includes(index) && (
                   <div
-                 
+                
                     key={index}
                     className={`${styles.CibleCont} ${
                       styles[`CibleCont${index + 1}`]
                     } ${visibleItems.includes(index) ? styles.show : ""}`}
                   >
                 {/* <div className={styles.loader}></div> */}
+                <Image  onClick={navigateToService}  width={100}
+                  height={200}  className={styles.IconCibles} src={item.image} alt="left"   />
 
-                    <p className={styles.SpinnerDescu}>{item}</p>
+
+                    <p className={styles.SpinnerDescu}>{item.title}</p>
                   </div>
                 )
             )}
@@ -305,9 +318,12 @@ const Homee: React.FC = () => {
       rx="20"
     />
   </svg>
-  <div className={styles.buttonDemo}>
+  <h5 className={styles.buttonDemo}>
+    {/* <h5> */}
+
   Book a Demo
-  </div>
+    {/* </h5> */}
+  </h5>
 </button>
 
           </Link>
@@ -320,34 +336,26 @@ const Homee: React.FC = () => {
           <p className={styles.SolutionsDesc}>
             We ensure smooth implementation and long-term success
           </p>
-          <div className={styles.AllServices}>
+         
+           <div className={styles.AllServices}>
             <div className={styles.game_section}>
             <button className={styles.scrollButton1} onClick={scrollLeft1}>
             <Image src={arrowLeft} alt="left" width={11} height={20}  />
           </button>
               <div className={styles.owl_carousel_custom_carousel_owl_theme} ref={scrollRef1}>
                 {games.map((game, index) => (
-                  <div className={styles.row10} key={index}>
-                    <div
-                      key={index}
-                      className={`${styles.item} ${
-                        activeIndex === index ? styles.item_active : ""
-                      }`}
-                      onClick={() => handleCardClick(index)}
-                      style={{ backgroundImage: `url(${game.image})` }}
-                    >
-                      <div className={styles.item_desc}>
-                        <p>{game.description}</p>
-                      </div>
-                      <div
-                        className={styles.item_View}
-                        onClick={() => handleViewMoreClick(game.id)}
-                      >
-                        <p>View more</p>
-                      </div>
-                    </div>
-                    <h3  onClick={() => handleViewMoreClick(game.id)} className={styles.item_title}>{game.title}</h3>
-                  </div>
+                  
+                  <div className={styles.cardSer} key={index} style={{ backgroundImage: `url(${game.image})` }}>
+  <div className={styles.tag}>{game.title}</div>
+
+  <div className={styles.descriptionBox}>
+    <p className={styles.BlogDesc}>{game.description}</p>
+    <button onClick={() => handleViewMoreClick(game.id)} className={styles.arrowBtn}>
+      <i className="fa-solid fa-arrow-right"></i>
+    </button>
+  </div>
+</div>
+
                 ))}
               </div>
               <button className={styles.scrollButton1} onClick={scrollRight1}>
@@ -363,29 +371,11 @@ const Homee: React.FC = () => {
           <h1 className={styles.SolutionTitle2}>Partners</h1>
         </div>
         <p className={styles.SolutionsDesc}>
-          4ina Technologie, we believe in the power of collaboration. Together,
+        4InA Technologie, we believe in the power of collaboration. Together,
           we leverage our strengths to create cutting-edge solutions that drive
           success across various sectors.
         </p>
-        {/* cards */}
-        {/* <div className={styles.wrapper}>
-      
-          <div className={styles.scrollContainer} ref={scrollRef}>
-            {items.map((item, index) => (
-              <div key={index} className={styles.scrollItem}>
-                <Image
-                  width={130}
-                  height={200}
-                  src={item.img}
-                  alt={item.alt}
-                  className={styles.imge}
-                />
-                 
-              </div>
-            ))}
-          </div>
-       
-        </div> */}
+        
 
 
 <div className={styles.imagesLeaning}>
@@ -406,7 +396,7 @@ const Homee: React.FC = () => {
      alt="CEED Tunisie" />
   </div>
   <div className={styles.card + ' ' + styles.card4}>
-    <img src="https://res.cloudinary.com/ddngbriyu/image/upload/v1744808881/images_jp1d7v.png" 
+    <img src="https://res.cloudinary.com/ddngbriyu/image/upload/v1744895023/images_wpj9jb.png" 
     alt="Smart Capital" />
   </div>
 </div>
@@ -458,56 +448,45 @@ const Homee: React.FC = () => {
           Your resource for the latest insights in Energy Management, AI-powered
           Solutions, and Industry 4.0 trends.
         </p>
-        {/* <div className={styles.AllBlog}>
+        <div className={styles.AllBlog}>
         <div id="custom_cursor" />
           {blogs.map((blog) => (
+          
             <div key={blog.id}  data-aos="flip-right"   className={styles.Blog1}>
-              <div className={styles.BlogIcon}>
-                <Image
-                  width={419}
-                  height={400}
-                  className={styles.BlogImage}
-                  src={blog.imageUrl}
-                  alt="blog"
-                />
-              </div>
-              <div className={styles.BlogContent}>
-                <h6
-                  onClick={() => handleGo(blog.id)}
-                  className={styles.BlogTitle}
-                >
-                  {blog.title}
-                </h6>
-                <p className={styles.BlogDesc}>{blog.description}</p>
-                <div className={styles.Blogfooter}>
-                  <p className={styles.BlogDateText}>{blog.date}</p>
-                 
-                  <p 
-                  className={styles.BlogDateText1}
-                     onClick={() => handleGo(blog.id)}
-                  
-                  >
-
-                    Read More
-                  </p>
-                 
-                </div>
-              </div>
+            <div className={styles.BlogIcon}>
+              <Image
+                width={419}
+                height={400}
+                className={styles.BlogImage}
+                src={blog.imageUrl}
+                alt="blog"
+              />
             </div>
-          ))}
-        </div> */}
-        <section className={styles.cards} >
-        {Array(4).fill(null).map((_, index) => (
-  <Card
-    key={index}
-    id={`card-${index + 1}`}
-    frontsrc={cardIm}
-    frontAlt='Card Image'
-    backText=' your card details appear here '
-  />
-))}
+            <div className={styles.BlogContent}>
+              <div className={styles.rowContent} >
+              <i className="fa-solid fa-calendar-days"></i>
 
-        </section>
+            <p className={styles.BlogDateText}>{blog.date}</p>
+                </div>
+              <h6
+                onClick={() => handleGo(blog.id)}
+                className={styles.BlogTitle}
+              >
+                {blog.title}
+              </h6>
+              <p className={styles.BlogDesc}>{blog.description}</p>
+
+              
+                <div className={styles.TeamSocial}>
+      
+                      <i onClick={() => handleGo(blog.id)} className="fa-solid fa-arrow-up"></i>
+                    
+                  </div>
+            </div>
+          </div>
+          ))}
+        </div>
+       
         <Link className={styles.SeeAllText} href="/posts/blog">
           <div className={styles.arrow}>
             <span></span>

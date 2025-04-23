@@ -1,6 +1,6 @@
 "use client";
 import styles from "./index.module.css";
-import React from "react";
+import React, { useState } from "react";
 import { useRef } from "react";
 import PageTransition from "../../components/PageTransition";
 import parti from "../../Assests/svg/parti.svg";
@@ -9,23 +9,28 @@ import Image from "next/image";
 
 import Video from "./video";
 import Video2 from "./video2";
+import Modal from "./Modal";
 
 const Events: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleImageClick = () => setIsOpen(true);
+  const closeModal = () => setIsOpen(false);
   return (
     <PageTransition>
       <div className={styles.container}>
         <div className={styles.Header}>
           <h1 className={styles.title}>Events</h1>
           <p className={styles.desc}>
-            Here, you can explore a diverse lineup of events tailored for
+            Here, you can explore a diverse line up of events tailored for
             enthusiasts, professionals, and curious minds alike. From hands-on
             workshops and industry seminars to casual networking sessions, our
             events offer a chance to learn, engage, and grow.
           </p>
         </div>
         <div className={styles.AllEvents}>
-          <div className={styles.events1}>
-            <div className={styles.eventHeader}>
+          <div data-aos="fade-up" className={styles.events1}>
+            <div data-aos="fade-up"data-aos-delay="200" className={styles.eventHeader}>
               <h2 className={styles.eventTitle}>
                 Join Our Co-Founder "Sabri Mhimdi" on Express FM
               </h2>
@@ -42,8 +47,8 @@ const Events: React.FC = () => {
             </div>
             <Video />
           </div>
-          <div className={styles.events1}>
-            <div className={styles.eventHeader2}>
+          <div data-aos="fade-up" className={styles.events1}>
+            <div data-aos="fade-up" data-aos-delay="200"  className={styles.eventHeader2}>
               <h2 className={styles.eventTitle}>
                 4INA TECHNOLOGIE’s Participation in the Agritech Program
               </h2>
@@ -64,8 +69,8 @@ const Events: React.FC = () => {
             <Video2 />
 
           </div>
-          <div className={styles.events1}>
-            <div className={styles.eventHeader}>
+          {/* <div data-aos="fade-up" className={styles.events1}>
+            <div  data-aos="fade-up" data-aos-delay="200" className={styles.eventHeader}>
               <h2 className={styles.eventTitle}>
               4InA Technologie Shines in the Digital Energy Challenge
               </h2>
@@ -76,7 +81,44 @@ This experience has not only enriched our journey but also strengthened our dedi
               </p>
             </div>
        <Image src={parti}  height="300" width="500" alt="Participation" />
-          </div>
+          </div> */}
+          <div data-aos="fade-up" className={styles.events1}>
+      <div data-aos="fade-up" data-aos-delay="200" className={styles.eventHeader}>
+        <h2 className={styles.eventTitle}>
+          4InA Technologie Shines in the Digital Energy Challenge
+        </h2>
+        <p className={styles.eventDesc}>
+        We are proud to announce 4InA Technologie’s remarkable achievement in the Digital Energy Challenge, organized by the French Development Agency (AFD) in partnership with ADEME and the European Union. Selected from 168 applicants, 4InA Technologie stood out as one of only nine winners from Africa, including five innovative startups and four energy operators.
+
+     This experience has not only enriched our journey but also strengthened our dedication to excellence and innovation in the energy sector. Being part of this esteemed program is both a milestone and a motivation to continue driving impactful solutions for a sustainable energy future in Africa.
+        </p>
+      </div>
+
+      <Image
+        src={parti}
+        height="300"
+        width="500"
+        alt="Participation"
+        onClick={handleImageClick}
+        style={{ cursor: 'zoom-in' }}
+      />
+
+
+{isOpen && (
+  <Modal onClose={closeModal}>
+    <img
+      src={parti.src}
+      alt="Participation"
+      style={{
+        maxWidth: "90vw",
+        maxHeight: "90vh",
+        objectFit: "contain",
+     
+      }}
+    />
+  </Modal>
+)}
+    </div>
         </div>
       </div>
     </PageTransition>

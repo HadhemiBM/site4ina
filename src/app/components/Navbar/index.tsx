@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
   ];
   const solutionsLinks = [
     { id: 2, link: "/solutions/demo", name: "Demo" },
-    // { id: 1, link: "http://localhost:54789", name: "Explore" },
+
     { id: 1, link: "/solutions/explore", name: "Explore" },
   ];
   const postsLinks = [
@@ -153,15 +153,7 @@ const Navbar: React.FC = () => {
                   <span onClick={() => handleDropdownToggle(name)}>{name}</span>
                 )}
               </h3>
-              {/* {name === "technical platform" && solutionsDrop && (
-                <div className={styles.dropdownMenu}>
-                  {solutionsLinks.map(({ id, link, name }) => (
-                    <Link key={id} href={link} className={styles.dropdownItem} onClick={closeMobileMenu}>
-                      {name}
-                    </Link>
-                  ))}
-                </div>
-              )} */}
+             
               {name === "technical platform" && solutionsDrop && (
                 <div className={styles.dropdownMenu}>
                   {solutionsLinks.map(({ id, link, name }) =>

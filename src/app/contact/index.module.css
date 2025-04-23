@@ -5,9 +5,9 @@
   display: flex;
   flex-direction: column;
   gap: 1.875rem;
-  background-color: #acc6f35a;
+  padding: 20px;
+  background-color: #ffffff;
 }
-
 .Left, .Right {
   width: 100%;
   height: auto;
@@ -15,9 +15,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1.25rem;
+  padding: 1rem;
+  align-self: center;
+  /* background-color: aliceblue; */
 }
-
+.Right{
+  will-change: transform;
+  background-image: url("../Assests/Tunisia.png");
+    background-size:contain;
+  background-repeat: no-repeat;
+  background-position: center right;
+}
 .formContainer {
   width: 100%;
   max-width: 31.25rem;
@@ -27,9 +35,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(255, 255, 255);
+  /* background-color: rgb(255, 255, 255); */
   gap: 1.25rem;
   border-radius: 1.25rem;
+  border: var(--blue) 0.5px solid;
 }
 
 .textNo {
@@ -42,21 +51,18 @@
   display: flex;
   flex-direction: column;
 }
-
 .rowContact {
   width: 100%;
   display: flex;
   flex-direction: column;
   color: #000;
   flex-wrap: wrap;
-
   gap: 0.9375rem;
   align-items: flex-start;
   justify-content: flex-start; 
   align-content: center;
 align-self: flex-start;
 }
-
 .rowContact i {
   color: var(--blue);
   width: 2.5rem;
@@ -86,34 +92,56 @@ align-self: flex-start;
   flex-direction: column;
 
 }
-
 .input,
 .inputMessage,
 .select {
   background-color: white;
-
   height: 3.5rem;
   border-radius: 0.5rem;
   padding: 0.25rem 1.25rem;
-  border: 1px solid #c7c5c5;
+  border: 1px solid #7193f0;
   width: 100%;
   font-size: 1rem;
 }
-
 .inputMessage {
   min-height: 6.25rem;
   max-height: 20rem;
   resize: vertical;
 }
-
 .RightTitle {
   font-size: 2rem;
   font-family: "kufam", sans-serif;
   color: black;
   text-align: center;
 }
+.LeftTitle {
+  width: 50%;
+  font-size: 2rem;
+  font-family: "kufam", sans-serif;
+  /* color: black; */
+  text-align: center;
+
+
+  color: transparent;
+  background-image: url('https://res.cloudinary.com/ddngbriyu/image/upload/v1744810615/fond-marbre-liquide-bleu-abstrait-art-experimental-texture-fluide_53876-104502_hr0bz5.jpg');
+  background-size: 200%; /* Enlarged for smooth animation */
+  background-position: 0 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-background 30s infinite alternate linear;
+}
+@keyframes animate-background {
+  0% {
+      background-position: 0 50%;
+  }
+  100% {
+      background-position: 100% 50%;
+  }
+}
 
 .RightDesc {
+  width:60%;
   font-size: 1rem;
   color: black;
   font-family: "kufam", sans-serif;
@@ -137,7 +165,10 @@ align-self: flex-start;
 }
 
 .submitbtn:hover {
-  background-color: #0000cc;
+  box-shadow: 0 4px 4px var(--orange);
+  color: var(--orange);
+  border: 2px;
+  border-color: var(--orange) 2px solid;
 }
 
 @media screen and (min-width: 48rem) {
@@ -164,7 +195,7 @@ align-self: flex-start;
   }
 
   .RightDesc {
-    text-align: left;
+    text-align: center;
   }
 }
 

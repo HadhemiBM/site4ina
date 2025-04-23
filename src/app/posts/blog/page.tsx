@@ -39,7 +39,8 @@ const Blogg: React.FC = () => {
               </div>
               <div className={styles.BlogContent}>
                 <h6
-                  onClick={() => handleGo(blog.id)}
+                onClick={() => handleGo(blog.id)}
+                  
                   className={styles.BlogTitle}
                 >
                   {blog.title}
@@ -47,12 +48,10 @@ const Blogg: React.FC = () => {
                 <p className={styles.BlogDesc}>{blog.description}</p>
                 <div className={styles.Blogfooter}>
                   <p className={styles.BlogDateText}>{blog.date}</p>
-
                   <Link
                     className={styles.BlogButton}
                     href={`./blogDetails?id=${blog.id}`}
-                  >
-                    Read More
+                  > Read More 
                   </Link>
                 </div>
               </div>
