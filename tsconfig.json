@@ -23,6 +23,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/admin/blog/TextEditor.js", "src/app/posts/events/Modal.jsx", "src/app/components/AnimatedScrollPage.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/admin/blog/TextEditor.js", "src/app/posts/events/Modal.jsx", "src/app/components/AnimatedScrollPage.tsx", "src/app/home/CountUp.ts"],
   "exclude": ["node_modules"]
 }

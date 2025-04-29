@@ -23,7 +23,12 @@ export default function AnimatedScrollPage() {
   });
 
   return (
-    <main ref={container} className="relative h-[400vh] bg-white">
+<main
+  ref={container}
+  className="relative h-[400vh]"
+  
+>
+
 
       <Section1 scrollYProgress={scrollYProgress} />
       <Section2 scrollYProgress={scrollYProgress} />
@@ -35,16 +40,23 @@ export default function AnimatedScrollPage() {
 }
 
 const Section1 = ({ scrollYProgress }: SectionProps) => {
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.2]);
-  const rotate = useTransform(scrollYProgress, [0, 1], [0, -10]);
+  const scale = useTransform(scrollYProgress, [0, 0.25], [1, 0.9]);
+  const rotate = useTransform(scrollYProgress, [0, 0.25], [0, -5]);
+  
 
   return (
     <motion.section
-    style={{ scale, rotate, width: "100%" }} 
-    // className="sticky top-0 h-screen bg-gradient-to-t to-[#d9e9f7] from-[#fff8e5] flex flex-col items-center justify-center text-black"
-
+    style={{ scale, rotate, width: "100%" ,
+      backgroundImage: "linear-gradient(180deg, rgb(255, 255, 255), rgba(90, 85, 247, 0.52), rgb(255, 255, 255))",
+      backgroundSize: "cover",
+      backgroundRepeat: "no-repeat",
+    }}
+    // className="sticky top-0 h-screen bg-gradient-to-t to-[#fff8e5] from-[#d9e9f7] flex flex-col items-center justify-center text-black"
   >
-    <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
+    {/* <div 
+   className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_0.px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] 
+   bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" 
+    />  */}
     <article       style={{width: "90%" }}  className="  mx-auto relative z-10 ">
       <div id="technical-support" className={styles.service}>
         <div className={styles.serviceIconLeft}>
@@ -79,16 +91,21 @@ const Section1 = ({ scrollYProgress }: SectionProps) => {
 };
 
 const Section2 = ({ scrollYProgress }: SectionProps) => {
-  const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const rotate = useTransform(scrollYProgress, [0, 1], [5, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.25], [1, 0.9]);
+  const rotate = useTransform(scrollYProgress, [0, 0.25], [0, -5]);
+  
 
   return (
     <motion.section
-      style={{ scale, rotate, width: "100%" }} 
+      style={{ scale, rotate, width: "100%",
+        backgroundImage: "linear-gradient(180deg,rgb(255, 255, 255), var(--blue))",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
       // className="sticky top-0 h-screen bg-gradient-to-t to-[#fff8e5] from-[#d9e9f7] flex flex-col items-center justify-center text-black"
 
     >
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
+      {/* <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" /> */}
       <article       style={{width: "90%" }}  className="  mx-auto relative z-10 ">
         <div id="technical-support" className={styles.service}>
           
@@ -120,16 +137,16 @@ const Section2 = ({ scrollYProgress }: SectionProps) => {
   );
 };
 const Section3 = ({ scrollYProgress }: SectionProps) => {
-  const scale = useTransform(scrollYProgress, [0, 1], [0.6, 1.8]);
-  const rotate = useTransform(scrollYProgress, [0, 1], [10, 10]);
-
+  const scale = useTransform(scrollYProgress, [0.5, 0.75], [1, 0.9]);
+  const rotate = useTransform(scrollYProgress, [0.5, 0.75], [0, -5]);
+  
 
   return (
     <motion.section
       style={{ scale, rotate, width: "100%" }} 
         // className="sticky top-0 h-screen bg-gradient-to-t to-[#d9e9f7] from-[#fff8e5] flex flex-col items-center justify-center text-black"
     >
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
+      {/* <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" /> */}
       <article       style={{width: "90%" }}  className="  mx-auto relative z-10 ">
         <div id="technical-support" className={styles.service}>
         <div className={styles.serviceIconLeft}>
@@ -161,15 +178,16 @@ const Section3 = ({ scrollYProgress }: SectionProps) => {
   );
 };
 const Section4 = ({ scrollYProgress }: SectionProps) => {
-  const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const rotate = useTransform(scrollYProgress, [0, 1], [5, 0]);
+  const scale = useTransform(scrollYProgress, [0.75, 1], [1, 0.9]);
+  const rotate = useTransform(scrollYProgress, [0.75, 1], [0, -5]);
+  
 
   return (
     <motion.section
       style={{ scale, rotate, width: "100%" }} 
       // className="sticky top-0 h-screen bg-gradient-to-t to-[#fff8e5] from-[#d9e9f7] flex flex-col items-center justify-center text-black"
     >
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_0.px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
+      {/* <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_0.px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" /> */}
       <article       style={{width: "90%" }}  className="  mx-auto relative z-10 ">
       <div  className={styles.serviceRight}>
              <div className={styles.serviceContentRight}>

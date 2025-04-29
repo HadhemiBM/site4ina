@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
   const navbarRef = useRef<HTMLDivElement>(null);
 
   const links = [
-    { id: 1, link: "/home", name: "Home" },
+    { id: 1, link: "/accueil", name: "Home" },
     { id: 2, link: "/about", name: "AboutUs" },
     { id: 3, link: "/services", name: "Services" },
     { id: 4, link: "", name: "technical platform" },
@@ -109,7 +109,7 @@ const Navbar: React.FC = () => {
       ref={navbarRef}
     >
       <div className={styles.navbarContainer}>
-        <Link href="/home">
+        <Link href="/accueil">
           <Image
             className={styles.navbarLogoText}
             src={logo}
@@ -118,6 +118,7 @@ const Navbar: React.FC = () => {
             height={70}
           />
         </Link>
+
 
         <button
           className={styles.mobileMenuButton}

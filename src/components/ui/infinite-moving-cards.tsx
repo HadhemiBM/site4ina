@@ -183,7 +183,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import styles from "../../app/home/index.module.css";
+import styles from "../../app/accueil/index.module.css";
 
 export const InfiniteMovingCards = ({
   items,
