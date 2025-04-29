@@ -4,6 +4,8 @@ import { motion } from "motion/react";
 import { twMerge } from "tailwind-merge";
 import { cn } from "@/lib/utils";
 
+import { useRouter } from "next/navigation";
+
 export const TextRevealCard = ({
   text,
   revealText,
@@ -22,7 +24,11 @@ export const TextRevealCard = ({
   const [left, setLeft] = useState(0);
   const [localWidth, setLocalWidth] = useState(0);
   const [isMouseOver, setIsMouseOver] = useState(false);
-
+  const router = useRouter(); 
+  
+  const navigateToHome = () => {
+    router.push("/accueil");
+  };
   useEffect(() => {
     if (cardRef.current) {
       const { left, width: localWidth } =
@@ -75,7 +81,7 @@ export const TextRevealCard = ({
     >
       {children}
       <div>
-        <div className="h-40 relative flex items-center overflow-hidden">
+        <div  className="h-40 relative flex items-center overflow-hidden">
           <motion.div
             style={{ width: "100%" }}
             animate={
@@ -92,6 +98,7 @@ export const TextRevealCard = ({
             className="absolute bg-gradient-to-r from-[#041261] to-[#00072e] z-20 will-change-transform"
           >
             <p
+           
               style={{
                 textShadow: "4px 4px 15px rgba(255, 255, 255, 0.5)",
               }}
@@ -118,7 +125,6 @@ export const TextRevealCard = ({
             <MemoizedStars />
           </div>
         </div>
-
         {/* Place description here */}
         <TextRevealCardDescription className="mt-4">
           {DescriptionText}

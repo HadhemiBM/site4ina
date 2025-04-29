@@ -15,6 +15,13 @@ text-align: center;
   font-size: 32px;
   align-self: center;
   /* text-align: center; */
+  background-image: url('https://res.cloudinary.com/ddngbriyu/image/upload/v1744810615/fond-marbre-liquide-bleu-abstrait-art-experimental-texture-fluide_53876-104502_hr0bz5.jpg');
+  background-size: 200%; /* Enlarged for smooth animation */
+  background-position: 0 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-background 30s infinite alternate linear;
 }
 .CibleDesc {
   font-size: 26px;

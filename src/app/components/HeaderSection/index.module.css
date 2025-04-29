@@ -247,6 +247,8 @@ z-index: 0;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: animate-background 30s infinite alternate linear;
+
   font-size: 32px;
   /* align-self: center; */
   /* text-align: center; */

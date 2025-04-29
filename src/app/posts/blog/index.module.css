@@ -74,6 +74,8 @@
   width: 100%;
   max-width: 26.1875rem;
   min-height: 30.625rem;
+  /* Optional: Add padding to create space for background */
+  padding: 1rem;
 }
 /* .Blog1 {
   display: flex;
@@ -130,6 +132,13 @@
   color: black;
   font-size: 0.875rem;
   text-decoration: none;
+  transition: color 0.2s ease;
+}
+.BlogButton:hover {
+  color: var(--blue);
+
+  text-decoration: none;
+  
 }
 
 .Blogfooter {
@@ -217,4 +226,20 @@
   }
 }
 
+.Blog1 {
+  transition: all 0.3s ease;
+}
 
+
+.AllBlog:hover .Blog1:not(:hover) {
+  filter: blur(2px);
+  opacity: 0.8;
+  
+}
+.Blog1:hover {
+  transform: scale(1.02);
+  z-index: 1; 
+  background: rgba(236, 246, 255, 0.8); /* Light gray with transparency */
+  /* Optional: Add shadow for depth */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

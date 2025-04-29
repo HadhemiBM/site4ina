@@ -11,7 +11,7 @@ const Blogg: React.FC = () => {
   const router = useRouter();
 
   const handleGo = (id: number) => {
-    router.push(`./blogDetails?id=${id}`);
+    router.push(`/posts/blogDetails?id=${id}`);
   };
 
   return (
@@ -50,7 +50,7 @@ const Blogg: React.FC = () => {
                   <p className={styles.BlogDateText}>{blog.date}</p>
                   <Link
                     className={styles.BlogButton}
-                    href={`./blogDetails?id=${blog.id}`}
+                    href={`/posts/blogDetails?id=${blog.id}`}
                   > Read More 
                   </Link>
                 </div>
