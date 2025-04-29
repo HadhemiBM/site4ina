@@ -258,98 +258,15 @@
 "use client";
 import styles from "./index2.module.css";
 import React from "react";
-import { useEffect, useRef } from "react";
+import {  useRef } from "react";
 import PageTransition from "../components/PageTransition";
-import { useRouter } from "next/navigation";
-import service from "../Assests/tech.jpg";
 
-import Image from "next/image";
-import Data from "../Assests/hard.jpg";
-import web from "../Assests/soft.png";
-import iso from "../Assests/iso.png";
-import consult from "../Assests/consult.jpg";
-import integration from "../Assests/integration.jpg";
-import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 import AnimatedScrollPage from "../components/AnimatedScrollPage";
 
 const Service: React.FC = () => {
-  const SmartSectionRef = useRef<HTMLDivElement | null>(null);
-  const DataSectionRef = useRef<HTMLDivElement | null>(null);
-  const MobileSectionRef = useRef<HTMLDivElement | null>(null);
-  const WebSectionRef = useRef<HTMLDivElement | null>(null);
-  const AssistSectionRef = useRef<HTMLDivElement | null>(null);
-  const certifSectionRef = useRef<HTMLDivElement | null>(null);
-  const SmartSection = () => {
-    SmartSectionRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-  const content = [
-    {
-      title: "• Technical Support and Maintenance",
-      description: `
-      At 4InA Technologie, we understand the importance of effectively managing your energy operations by providing the right support at the right time. We provide prompt, expert assistance to resolve any technical issues, ensuring minimal downtime and uninterrupted operations. Our support and maintenance service include:
-        • On-Demand 24/7 Availability
-        • Certified Expertise Advanced
-      • Tools and Methodology
-     • Specialized Support Team
-      `,
-      content: (
-        <div className={styles.serviceIconLeft}>
-          <Image src={service} alt="service" className={styles.techImage} />
-        </div>
-      ),
-    },
-    {
-      title: "• Hardware Development",
-      description: `
-    From concept to production, our hardware development service specializes in creating hardware that is customized to meet your unique energy management requirements.
-    We develop robust, high-performance devices that seamlessly integrate with your existing systems. It includes:
-    • Tailored design
-    • Advanced technology AI and IoT
-      `,
-      content: (
-        <div className={styles.serviceIcon}>
-          <Image src={Data} alt="service" className={styles.techImage} />
-        </div>
-      ),
-    },
-    {
-      title: "Version control",
-      description:
-        "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
-      content: (
-        <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] text-white">
-          Version control
-        </div>
-      ),
-    },
-    {
-      title: "Running out of content",
-      description:
-        "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
-      content: (
-        <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] text-white">
-          Running out of content
-        </div>
-      ),
-    },
-  ];
-  const DataSection = () => {
-    DataSectionRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-  const WebSection = () => {
-    WebSectionRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-  const MobileSection = () => {
-    MobileSectionRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
 
-  const AssistanceSection = () => {
-    AssistSectionRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
+ 
 
-  const certifSection = () => {
-    certifSectionRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <PageTransition>
@@ -357,6 +274,14 @@ const Service: React.FC = () => {
         {/* <div className="w-full py-4">
           <StickyScroll content={content} />
         </div> */}
+          <div className={styles.Left}>
+             <h1 className={styles.title}>Services</h1>
+             <p className={styles.desc}>
+               Explore our comprehensive services that cover every aspect of
+               energy management. We are committed to assisting your company in
+               prospering in the context of sustainable energy.
+             </p>
+           </div>
         <AnimatedScrollPage />
       </div>
     </PageTransition>

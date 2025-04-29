@@ -25,7 +25,7 @@ export default function AnimatedScrollPage() {
   return (
 <main
   ref={container}
-  className="relative h-[400vh]"
+  className="relative h-[420vh]"
   
 >
 
@@ -34,20 +34,21 @@ export default function AnimatedScrollPage() {
       <Section2 scrollYProgress={scrollYProgress} />
       <Section3 scrollYProgress={scrollYProgress} />
       <Section4 scrollYProgress={scrollYProgress} />
+      <Section5 scrollYProgress={scrollYProgress} />
 
     </main>
   );
 }
 
 const Section1 = ({ scrollYProgress }: SectionProps) => {
-  const scale = useTransform(scrollYProgress, [0, 0.25], [1, 0.9]);
+  const scale = useTransform(scrollYProgress, [0, 0.20], [1, 0.9]);
   const rotate = useTransform(scrollYProgress, [0, 0.25], [0, -5]);
   
 
   return (
     <motion.section
     style={{ scale, rotate, width: "100%" ,
-      backgroundImage: "linear-gradient(180deg, rgb(255, 255, 255), rgba(90, 85, 247, 0.52), rgb(255, 255, 255))",
+      // backgroundImage: "linear-gradient(180deg, rgb(255, 255, 255), rgba(90, 85, 247, 0.52), rgb(255, 255, 255))",
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat",
     }}
@@ -57,7 +58,7 @@ const Section1 = ({ scrollYProgress }: SectionProps) => {
    className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_0.px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] 
    bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" 
     />  */}
-    <article       style={{width: "90%" }}  className="  mx-auto relative z-10 ">
+    <article       style={{width: "90%",height:"80vh" }}  className="  mx-auto relative z-10 ">
       <div id="technical-support" className={styles.service}>
         <div className={styles.serviceIconLeft}>
           <Image src={service} alt="service" className={styles.techImage} />
@@ -91,14 +92,14 @@ const Section1 = ({ scrollYProgress }: SectionProps) => {
 };
 
 const Section2 = ({ scrollYProgress }: SectionProps) => {
-  const scale = useTransform(scrollYProgress, [0, 0.25], [1, 0.9]);
+  const scale = useTransform(scrollYProgress, [0.20, 0.40], [1, 0.9]);
   const rotate = useTransform(scrollYProgress, [0, 0.25], [0, -5]);
   
 
   return (
     <motion.section
       style={{ scale, rotate, width: "100%",
-        backgroundImage: "linear-gradient(180deg,rgb(255, 255, 255), var(--blue))",
+        // backgroundImage: "linear-gradient(180deg,rgb(255, 255, 255), var(--blue))",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
@@ -137,7 +138,7 @@ const Section2 = ({ scrollYProgress }: SectionProps) => {
   );
 };
 const Section3 = ({ scrollYProgress }: SectionProps) => {
-  const scale = useTransform(scrollYProgress, [0.5, 0.75], [1, 0.9]);
+  const scale = useTransform(scrollYProgress, [0.4, 0.6], [1, 0.9]);
   const rotate = useTransform(scrollYProgress, [0.5, 0.75], [0, -5]);
   
 
@@ -178,7 +179,7 @@ const Section3 = ({ scrollYProgress }: SectionProps) => {
   );
 };
 const Section4 = ({ scrollYProgress }: SectionProps) => {
-  const scale = useTransform(scrollYProgress, [0.75, 1], [1, 0.9]);
+  const scale = useTransform(scrollYProgress, [0.6, 0.8], [1, 0.9]);
   const rotate = useTransform(scrollYProgress, [0.75, 1], [0, -5]);
   
 
@@ -206,6 +207,47 @@ const Section4 = ({ scrollYProgress }: SectionProps) => {
              </div>
              <div className={styles.serviceIcon}>
                <Image src={consult} alt="service" className={styles.techImage} />
+             </div>
+           </div>
+      </article>
+    </motion.section>
+  );
+};
+const Section5 = ({ scrollYProgress }: SectionProps) => {
+  const scale = useTransform(scrollYProgress, [0.8, 0.9], [1, 0.9]);
+  const rotate = useTransform(scrollYProgress, [0.5, 0.75], [0, -5]);
+  
+
+  return (
+    <motion.section
+      style={{ scale, rotate, width: "100%" }} 
+        // className="sticky top-0 h-screen bg-gradient-to-t to-[#d9e9f7] from-[#fff8e5] flex flex-col items-center justify-center text-black"
+    >
+      {/* <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:54px_54px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" /> */}
+      <article       style={{width: "90%" }}  className="  mx-auto relative z-10 ">
+        <div id="technical-support" className={styles.service}>
+        <div className={styles.serviceIconLeft}>
+          <Image src={iso} alt="service" className={styles.techImage} />
+        </div>
+          <div className={styles.serviceContentLeft}>
+            <div className={styles.row}>
+              {/* <i className="fa-solid fa-circle"></i> */}
+              <h6> • Accredited Certification</h6>
+            </div>
+            <p className={styles.serviceContent_desc}>
+            ISO 50001 is an international standard that applies to
+                 organizations of any size and provides requirements for
+                 establishing, managing and improving their energy consumption
+                 and efficiency. It helps organizations establish, implement, and
+                maintain practices for more efficient energy use.
+               </p>
+               <p className={styles.serviceContent_desc}>
+               The Certification in ISO 50001 reflects your dedication to
+                 reducing energy consumption, enhancing operational efficiency,
+                 and minimizing environmental impact.
+                 <br></br>  We guide through each step of the ISO 50001 Certification
+                                  process.
+               </p>
              </div>
            </div>
       </article>
