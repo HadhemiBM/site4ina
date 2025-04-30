@@ -15,6 +15,7 @@ import Link from "next/link";
 import { ReactNode, useEffect, useState } from "react";
 import { CarouselProps } from "react-responsive-carousel";
 // import SlickCarousel from "./Slider";
+import { motion } from "framer-motion";
 
 const Header = () => {
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
@@ -45,7 +46,7 @@ const Header = () => {
 
 useEffect(() => {
   if (currentSlide === 1 ||currentSlide === 2 ) {
-    // Add slight delay to make sure DOM is mounted
+ 
     const timer = setTimeout(() => setShouldAnimate(true), 100);
     return () => clearTimeout(timer);
   } else {
@@ -54,12 +55,7 @@ useEffect(() => {
 }, [currentSlide]);
 
   const settings = {
-    // showArrows: true,
-    // infiniteLoop: true,
-    // showThumbs: false,
-    // showStatus: false,
-    // // autoPlay: true,
-    // interval: 4000,
+  
     dots: true,
     infinite: true,
     speed: 500,
@@ -69,10 +65,7 @@ useEffect(() => {
     autoplaySpeed: 3000,
     arrows: true,
     onChange: (index: number) => setCurrentSlide(index),
-
-    // beforeChange: (oldIndex, newIndex) => {
-    //   setCurrentSlide(newIndex);
-    // },
+    transitionTime:0,
     renderArrowPrev: (
       onClickHandler: () => void,
       hasPrev: boolean,
@@ -103,6 +96,7 @@ useEffect(() => {
         &gt;
       </button>
     ),
+    
   };
   const cibles = [
     "80% Increased Productivity Time",
@@ -116,25 +110,43 @@ useEffect(() => {
     "Monitoring Machine Behavior and Predicting Failures",
     "Reducing Maintenance Costs",
   ];
+  const [isInitialLoad, setIsInitialLoad] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsInitialLoad(false), 100);
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <div className={styles.carr}>
+   {/* Morphing background that continues from splash */}
+ 
       <Carousel {...settings}>
         {/* carousel 1 */}
         <div className={styles.container}>
           <div className={styles.HeaderText}>
-            <h1 data-aos="zoom-out-left"  className={styles.HeaderTitle}>
+            <h1 
+            // data-aos="zoom-out-left" 
+             className={styles.HeaderTitle}>
               Redefining Energy Management with AI and IoT Excellence
             </h1>
-            <p data-aos="zoom-out-left" className={styles.HeaderDesc}>
+            <p 
+            // data-aos="zoom-out-left" 
+            className={styles.HeaderDesc}>
               Elevating energy management by integrating AI and IoT, enabling
               proactive monitoring, real-time analytics, and smarter
               decision-making to enhance your operational efficiency
             </p>
             <Link  href="/solutions/demo" passHref>
-              <button data-aos="zoom-out-left" data-aos-delay="1500" className={styles.buttonDemo}>Book a Demo</button>
+              <button
+              //  data-aos="zoom-out-left"
+              //  data-aos-delay="1500"
+                className={styles.buttonDemo}>Book a Demo</button>
             </Link>
           </div>
-          <div  data-aos="zoom-out-left" className={styles.Imagecontainer}>
+          {/* <div  
+          // data-aos="zoom-out-left"
+           className={styles.Imagecontainer}>
+          
             <Image
               className={styles.HeadImage}
               width={700}
@@ -142,7 +154,7 @@ useEffect(() => {
               src={dme}
               alt="IA"
             />
-          </div>
+          </div> */}
         </div>
         {/* carousel 2 */}
         
@@ -210,3 +222,156 @@ useEffect(() => {
 };
 
 export default Header;
+// "use client";
+
+// import "react-responsive-carousel/lib/styles/carousel.min.css";
+// import styles from "./index.module.css";
+// import Image from "next/image";
+// // import dme from "../../Assests/dm2.gif";
+// import dme from "../../Assests/dm4.png";
+// // import dme from "../../Assests/HeaderRec1.png";
+// import reduction from "../../Assests/svg/reductionEnergy.svg";
+// import timeincrease from "../../Assests/svg/timeincrease.svg";
+// import moneySave from "../../Assests/svg/moneySave.svg";
+// import TimeReduce from "../../Assests/svg/TimeReduce.svg";
+// import edge from "../../Assests/cont3.gif";
+// import Link from "next/link";
+// import { ReactNode, useEffect, useState } from "react";
+// import { CarouselProps } from "react-responsive-carousel";
+// // import SlickCarousel from "./Slider";
+// import { motion } from "framer-motion";
+// import Carousel from "@/components/ui/carousel";
+
+// const Header = () => {
+//   const [visibleItems, setVisibleItems] = useState<number[]>([]);
+  
+  
+  
+//     useEffect(() => {
+//       const timers: NodeJS.Timeout[] = [];
+  
+//       const showItems = () => {
+//         for (let i = 0; i < 4; i++) {
+//           timers.push(
+//             setTimeout(() => {
+//               setVisibleItems((prev) => [...prev, i]);
+//             }, i * 300)
+//           );
+//         }
+//       };
+  
+//       showItems();
+  
+//       return () => {
+//         timers.forEach((timer) => clearTimeout(timer));
+//       };
+//     }, []);
+//     const [currentSlide, setCurrentSlide] = useState(0);
+//     const [shouldAnimate, setShouldAnimate] = useState(false);
+
+// useEffect(() => {
+//   if (currentSlide === 1 ||currentSlide === 2 ) {
+ 
+//     const timer = setTimeout(() => setShouldAnimate(true), 100);
+//     return () => clearTimeout(timer);
+//   } else {
+//     setShouldAnimate(false); // Reset when slide changes
+//   }
+// }, [currentSlide]);
+
+//   const settings = {
+  
+//     dots: true,
+//     infinite: true,
+//     speed: 500,
+//     slidesToShow: 1, // I assume 1 here since you want full screen animations
+//     slidesToScroll: 1,
+//     // autoplay: true,
+//     autoplaySpeed: 3000,
+//     arrows: true,
+//     onChange: (index: number) => setCurrentSlide(index),
+//     transitionTime:0,
+//     renderArrowPrev: (
+//       onClickHandler: () => void,
+//       hasPrev: boolean,
+//       label: string
+//     ): ReactNode => (
+//       <button
+//         type="button"
+//         className={`${styles.arrow} ${styles.arrowPrev}`}
+//         onClick={onClickHandler}
+//         disabled={!hasPrev}
+//         aria-label={label}
+//       >
+//         &lt;
+//       </button>
+//     ),
+//     renderArrowNext: (
+//       onClickHandler: () => void,
+//       hasNext: boolean,
+//       label: string
+//     ): ReactNode => (
+//       <button
+//         type="button"
+//         className={`${styles.arrow} ${styles.arrowNext}`}
+//         onClick={onClickHandler}
+//         disabled={!hasNext}
+//         aria-label={label}
+//       >
+//         &gt;
+//       </button>
+//     ),
+    
+//   };
+//   const slideData = [
+//     {
+//       title: "Mystic Mountains",
+//       button: "Explore Component",
+//       src: "https://images.unsplash.com/photo-1494806812796-244fe51b774d?q=80&w=3534&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+//     },
+//     {
+//       title: "Urban Dreams",
+//       button: "Explore Component",
+//       src: "https://images.unsplash.com/photo-1518710843675-2540dd79065c?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+//     },
+//     {
+//       title: "Neon Nights",
+//       button: "Explore Component",
+//       src: "https://images.unsplash.com/photo-1590041794748-2d8eb73a571c?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+//     },
+//     {
+//       title: "Desert Whispers",
+//       button: "Explore Component",
+//       src: "https://images.unsplash.com/photo-1679420437432-80cfbf88986c?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+//     },
+//   ];
+//   const cibles = [
+//     "80% Increased Productivity Time",
+//     "80% Reduction in Lost Time Duties",
+//     "50% Cost Reduction",
+//     "20% Consumption Reduction",
+//   ];
+//   const advantages = [
+//     "Monitoring of energy consumption",
+//     "Guidance for energy managers",
+//     "Monitoring Machine Behavior and Predicting Failures",
+//     "Reducing Maintenance Costs",
+//   ];
+//   const [isInitialLoad, setIsInitialLoad] = useState(true);
+
+//   useEffect(() => {
+//     const timer = setTimeout(() => setIsInitialLoad(false), 100);
+//     return () => clearTimeout(timer);
+//   }, []);
+//   return (
+    
+    
+ 
+// <div className="relative overflow-hidden w-full h-full py-20">
+// <Carousel slides={slideData} />
+//     </div>
+//     // <SlickCarousel />
+//   );
+// };
+
+// export default Header;

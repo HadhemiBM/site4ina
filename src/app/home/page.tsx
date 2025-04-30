@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./index.module.css";
 import Logo from '../Assests/logo_white.png'
 import PageTransition from "../components/PageTransition";
-import Animation from './animation'
+import Animation from '../accueil/animation'
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
@@ -12,22 +12,36 @@ import { motion } from "framer-motion";
 import { TextRevealCard, TextRevealCardDescription } from "@/components/ui/text-reveal-card";
 import CountUp from "react-countup";
 const Splash: React.FC = () => {
+  const [isExiting, setIsExiting] = useState(false);
   const router = useRouter(); 
   const navigateToHome = () => {
-    router.push("/accueil");
+    setIsExiting(true);
+    setTimeout(() => router.push("/accueil"), 1000);
   };
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     router.push("/accueil"); 
-  //   }, 7000); 
-  //   return () => clearTimeout(timer); 
-  // }, [router]);
-  return(
-    <PageTransition>
-      <Animation id="particles"  className={styles.back}/>
-   <div className={styles.container}>
-      <div className={styles.centerContent}>
-   
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsExiting(true);
+      setTimeout(() => router.push("/accueil"), 1000);
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, [router]);
+
+  return (
+
+      <motion.div
+        className={styles.container}
+        initial={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+                  <Animation id="particles"  className={styles.back}/>
+
+      
+    <div className={styles.centerContent}>
+
+        {/* <Animation id="particles"  className={styles.back}/> */}
+
             <TextRevealCard data-aos="fade-up" text="Do You Really Know Where Your Energy Is Going?" 
             revealText="Explore how 4InA Technology transforms the future." 
             DescriptionText="From real-time monitoring to predictive maintenance, 4InA Technologie helps you take control">
@@ -76,9 +90,11 @@ Consumption Reduction
                 Explore now
               </motion.button>
             </Link>  
-      </div>
     </div>
-    </PageTransition>
+
+            </motion.div>
+
+    // </PageTransition>
 )
 };
 

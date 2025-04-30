@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tabler/icons-react": "^3.31.0",
     "@tailwindcss/vite": "^4.1.4",
     "@tiptap/pm": "^2.9.1",
     "@tiptap/react": "^2.9.1",
