@@ -580,7 +580,7 @@ import cardIm from "../Assests/card.png";
 import arrowLeft from "../Assests/svg/arrowLeft.svg";
 import arrowRight from "../Assests/svg/arrowRight.svg";
 import { blogs } from "../data/BlogData";
-import Animation from "./animation";
+import Animation from "../home/animation";
 
 const HomePage: React.FC = () => {
   const [showSplash, setShowSplash] = useState(true);
