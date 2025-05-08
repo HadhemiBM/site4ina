@@ -9,17 +9,13 @@
   align-self: center;
   align-content: center;
   justify-content: center;
-
-
     /* background: linear-gradient(90deg, #00193d, var(--blue)); */
     /* background: linear-gradient(to bottom right, #3358ea, #041261, #000000); */
     background-image:  linear-gradient(to bottom right, #3358eac7, #041261eb, #000000),
-    url("../../Assests/elec3.jpg");
+    url("../../Assests/elec4.jpg");
     animation: gradientAnimation 15s ease infinite;
     /* background-size: 200% 200%; */
-    /* animation: gradient 15s ease infinite; */
-
-  
+    /* animation: gradient 15s ease infinite; */ 
 }
 @keyframes gradientAnimation {
   0%, 100% {
@@ -45,7 +41,7 @@
   overflow: hidden;
   /* background-image:  linear-gradient(to bottom right, #3358ea, #041261, #000000) */
   /* ,url("../../Assests/elec1.jpg") */
-  ;
+  /* ; */
   animation: gradientAnimation 15s ease infinite;
 }
 .container2 {
@@ -208,21 +204,12 @@ z-index: 0;
   flex-direction: column;
   gap: 50px;
   z-index: 0;
-
 }
 .HeaderTitle {
   font-family: "kufam";
   color: white;
-  /* background-image: url('https://res.cloudinary.com/ddngbriyu/image/upload/v1744810615/fond-marbre-liquide-bleu-abstrait-art-experimental-texture-fluide_53876-104502_hr0bz5.jpg'); 
-  background-size: 200%; 
-  background-position: 0 50%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: animate-background 30s infinite alternate linear; */
   font-size: 32px;
   margin: 0px 0px ;
- 
 }
 .HeaderTitle2 {
   font-family: "kufam";

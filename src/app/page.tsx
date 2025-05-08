@@ -11,7 +11,7 @@ export default function Home() {
    <Head>
         <meta name="google-site-verification" content="5qRlOQNaJ771i6hFI2xzZQ15dkBy2MUUDkqrzTzYq6A" />
       </Head>
-      <HomePage />
+      <Splash />
     </div>
   );
 }

@@ -255,37 +255,165 @@
 // };
 
 // export default Service;
-"use client";
-import styles from "./index2.module.css";
-import React from "react";
-import {  useRef } from "react";
-import PageTransition from "../components/PageTransition";
+//2
+// "use client";
+// import styles from "./index2.module.css";
+// import React from "react";
+// import {  useRef } from "react";
+// import PageTransition from "../components/PageTransition";
 
-import AnimatedScrollPage from "../components/AnimatedScrollPage";
+// import AnimatedScrollPage from "../components/AnimatedScrollPage";
 
-const Service: React.FC = () => {
+// const Service: React.FC = () => {
 
  
 
 
-  return (
-    <PageTransition>
-      <div className={styles.container}>
-        {/* <div className="w-full py-4">
-          <StickyScroll content={content} />
-        </div> */}
-          <div className={styles.Left}>
-             <h1 className={styles.title}>Services</h1>
-             <p className={styles.desc}>
-               Explore our comprehensive services that cover every aspect of
-               energy management. We are committed to assisting your company in
-               prospering in the context of sustainable energy.
-             </p>
-           </div>
-        <AnimatedScrollPage />
-      </div>
-    </PageTransition>
-  );
-};
+//   return (
+//     <PageTransition>
+//       <div className={styles.container}>
+//         {/* <div className="w-full py-4">
+//           <StickyScroll content={content} />
+//         </div> */}
+//           <div className={styles.Left}>
+//              <h1 className={styles.title}>Services</h1>
+//              <p className={styles.desc}>
+//                Explore our comprehensive services that cover every aspect of
+//                energy management. We are committed to assisting your company in
+//                prospering in the context of sustainable energy.
+//              </p>
+//            </div>
+//         <AnimatedScrollPage />
+//       </div>
+//     </PageTransition>
+//   );
+// };
 
-export default Service;
+// export default Service;
+//3 t5dm
+// "use client";
+// import { useEffect, useState } from "react";
+// import { motion, AnimatePresence } from "framer-motion";
+
+// const services = [
+//   {
+//     title: "Service One",
+//     description: "Description for service one.",
+//     image: "/images/service1.png",
+//   },
+//   {
+//     title: "Service Two",
+//     description: "Description for service two.",
+//     image: "/images/service2.png",
+//   },
+//   {
+//     title: "Service Three",
+//     description: "Description for service three.",
+//     image: "/images/service3.png",
+//   },
+//   {
+//     title: "Service Four",
+//     description: "Description for service four.",
+//     image: "/images/service4.png",
+//   },
+//   {
+//     title: "Service Five",
+//     description: "Description for service five.",
+//     image: "/images/service5.png",
+//   },
+// ];
+
+// export default function ServicePage() {
+//   const [index, setIndex] = useState(0);
+
+//   const handleScroll = (e:any) => {
+//     if (e.deltaY > 0 && index < services.length - 1) {
+//       setIndex((prev) => prev + 1);
+//     } else if (e.deltaY < 0 && index > 0) {
+//       setIndex((prev) => prev - 1);
+//     }
+//   };
+
+//   useEffect(() => {
+//     window.addEventListener("wheel", handleScroll, { passive: true });
+//     return () => window.removeEventListener("wheel", handleScroll);
+//   }, [index]);
+
+//   return (
+//     <div className="w-screen h-[75vh] overflow-hidden flex items-center justify-center bg-black text-white relative">
+//       <AnimatePresence mode="wait">
+//         <motion.div
+//           key={index}
+//           className="absolute inset-0 flex flex-col items-center justify-center px-8 text-center"
+//           initial={{ opacity: 0, y: 50 }}
+//           animate={{ opacity: 1, y: 0 }}
+//           exit={{ opacity: 0, y: -50 }}
+//           transition={{ duration: 0.6 }}
+//         >
+//           <img
+//             src={services[index].image}
+//             alt={services[index].title}
+//             className="mb-8 w-1/2 max-w-md"
+//           />
+//           <h2 className="text-4xl font-bold">{services[index].title}</h2>
+//           <p className="mt-4 text-lg">{services[index].description}</p>
+//         </motion.div>
+//       </AnimatePresence>
+//     </div>
+//   );
+// }
+//4 
+'use client';
+import { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import styles from './index3.module.css';
+import Image from "next/image";
+import Data from "../Assests/hard.jpg";
+import web from "../Assests/soft.png";
+import iso from "../Assests/iso.png";
+import consult from "../Assests/consult.jpg";
+import integration from "../Assests/integration.jpg";
+import { services } from '../data/serviceData';
+
+export default function ServicePage() {
+  const [index, setIndex] = useState(0);
+
+  const handleScroll = (e: WheelEvent) => {
+    if (e.deltaY > 0 && index < services.length - 1) {
+      setIndex((prev) => prev + 1);
+    } else if (e.deltaY < 0 && index > 0) {
+      setIndex((prev) => prev - 1);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('wheel', handleScroll, { passive: true });
+    return () => window.removeEventListener('wheel', handleScroll);
+  }, [index]);
+
+  return (
+    <div className={styles.wrapper}>
+      <AnimatePresence mode="sync">
+        <motion.div
+          key={index}
+          className={styles.content}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -50 }}
+          transition={{ duration: 0.2 }}
+        >
+          <Image
+            src={services[index].image}
+            alt={services[index].title}
+            className={styles.image}
+          />
+          <div className={styles.text} >
+
+          <h2 className={styles.title}>{services[index].title}</h2>
+          <p className={styles.description}>{services[index].description}</p>
+          </div>
+        </motion.div>
+      </AnimatePresence>
+    </div>
+  );
+}
