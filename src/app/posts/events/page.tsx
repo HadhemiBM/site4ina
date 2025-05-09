@@ -21,7 +21,7 @@ const Events: React.FC = () => {
     <PageTransition>
       <div className={styles.container}>
         <div className={styles.Header}>
-          <h1 className={styles.title}>Events</h1>
+          <h1 className={styles.titleHead}>Events</h1>
           <p className={styles.desc}>
             Here, you can explore a diverse line up of events tailored for
             enthusiasts, professionals, and curious minds alike. From hands-on
