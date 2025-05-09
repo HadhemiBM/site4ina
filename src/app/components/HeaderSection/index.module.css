@@ -35,7 +35,7 @@
   justify-content: space-between;
   align-items: center;
   align-content: flex-start;
-  font-family: "kufam";
+  font-family: "Poppins";
   padding-left: 100px;
   gap: 100px;
   overflow: hidden;
@@ -52,7 +52,7 @@
   align-items: center;
   justify-content: space-between;
   align-content: center;
-  font-family: "kufam";
+  font-family: "Poppins";
   gap: 100px;
 }
 .container3 {
@@ -62,7 +62,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  font-family: "kufam";
+  font-family: "Poppins";
   padding: 30px;
 
   gap: 100px;
@@ -148,7 +148,7 @@ z-index: 0;
 
   width: 100%;
   font-size: 25px;
-  font-family: "kufam";
+  font-family: "Poppins";
   color: rgb(255, 255, 255);
   text-align: center; 
   padding-right: 100px;
@@ -206,26 +206,26 @@ z-index: 0;
   z-index: 0;
 }
 .HeaderTitle {
-  font-family: "kufam";
+  font-family: "Poppins";
   color: white;
   font-size: 32px;
   margin: 0px 0px ;
 }
 .HeaderTitle2 {
-  font-family: "kufam";
+  font-family: "Poppins";
   color: var(--orange);
   font-size: 32px;
   margin: 0px 0px ;
 }
 .HeaderTitlee {
-  font-family: "kufam";
+  font-family: "Poppins";
   color: rgb(0, 0, 0);
   font-size: 32px;
   align-self: center;
   text-align: center;
 }
 .HeaderTitle1 {
-  font-family: "kufam";
+  font-family: "Poppins";
   color: rgb(0, 0, 0);
   font-size: 32px;
   align-self: center;
@@ -233,7 +233,7 @@ z-index: 0;
   margin-top: 20px;
 }
 .HeaderTitle4 {
-  font-family: "kufam";
+  font-family: "Poppins";
   color: rgb(0, 0, 0);
   font-size: 24px;
   align-self: center;
@@ -243,7 +243,7 @@ z-index: 0;
 .HeaderTitle3 {
   font-size: 18px;
   color: rgb(0, 0, 0);
-  font-family: "kufam";
+  font-family: "Poppins";
   width: 500px;
   border-radius: 8px;
  padding: 10px;
@@ -326,7 +326,7 @@ z-index: 0;
   height: 52px;
   cursor: pointer;
   font-size: 20px;
-  font-family: "kufam";
+  font-family: "Poppins";
   border: 1px solid var(--blue);
   font-weight: 500;
   /* transition: background-color 0.3s ease; */
@@ -475,7 +475,7 @@ z-index: 0;
     align-items: center;
     align-content: center;
     justify-content: center;
-    font-family: "kufam";
+    font-family: "Poppins";
 
     gap: 0px;
   }
@@ -526,7 +526,7 @@ z-index: 0;
   .HeaderTitle3 {
     font-size: 13px;
     color: rgb(0, 0, 0);
-    font-family: "kufam";
+    font-family: "Poppins";
     width: 270px;
     border-radius: 8px;
     box-shadow: 0 0px 0px rgba(233, 230, 230, 0.1);
@@ -617,7 +617,7 @@ z-index: 0;
     align-items: center;
     align-content: center;
     justify-content: center;
-    font-family: "kufam";
+    font-family: "Poppins";
 
     gap: 0px;
   }
@@ -677,7 +677,7 @@ z-index: 0;
   .HeaderTitle3 {
     font-size: 13px;
     color: black;
-    font-family: "kufam";
+    font-family: "Poppins";
     width: 270px;
     border-radius: 8px;
     box-shadow: 0 0px 0px rgba(233, 230, 230, 0.1);
@@ -782,7 +782,7 @@ z-index: 0;
   .HeaderTitle3 {
     font-size: 7px;
     color: black;
-    font-family: "kufam";
+    font-family: "Poppins";
     width: 200px;
     /* background-color: violet; */
     box-shadow: 0 0px 0px rgba(233, 230, 230, 0.1);
@@ -902,7 +902,7 @@ flex-direction: column;
   .HeaderTitle3 {
     font-size: 9px;
     color: black;
-    font-family: "kufam";
+    font-family: "Poppins";
     width: 170px;
 
     box-shadow: 0 0px 0px rgba(233, 230, 230, 0.1);
@@ -1026,7 +1026,7 @@ flex-direction: column;
 .SpinnerDescu1 {
   font-size: 16px;
 
-  font-family: "kufam";
+  font-family: "Poppins";
   margin: 0px 0px 0px 0px;
   color: var(--orange);
   padding: 3px;

@@ -377,7 +377,7 @@ import { services } from '../data/serviceData';
 
 export default function ServicePage() {
   const [index, setIndex] = useState(0);
-
+  const serviceIndex = 4;
   const handleScroll = (e: WheelEvent) => {
     if (e.deltaY > 0 && index < services.length - 1) {
       setIndex((prev) => prev + 1);
@@ -393,6 +393,18 @@ export default function ServicePage() {
 
   return (
     <div className={styles.wrapper}>
+      <div className={styles.Header}>
+           
+             <h1 className={styles.titleHead}>Services</h1>
+             <p className={styles.desc}>
+               Explore our comprehensive services that cover every aspect of
+               energy management. We are committed to assisting your company in
+               prospering in the context of sustainable energy.
+             </p>
+           
+           </div>
+    <div className={styles.wrapperCont}>
+        
       <AnimatePresence mode="sync">
         <motion.div
           key={index}
@@ -413,7 +425,23 @@ export default function ServicePage() {
           <p className={styles.description}>{services[index].description}</p>
           </div>
         </motion.div>
+        {index < 5 ? (
+        <svg className={styles.arrows}>
+        <path className={styles.a1} d="M0 0 L30 32 L60 0"></path>
+  <path className={styles.a2} d="M0 20 L30 52 L60 20"></path>
+  <path className={styles.a3} d="M0 40 L30 72 L60 40"></path>
+						</svg>
+        )
+        :( <svg className={`${styles.arrows} ${styles.flipped}`}>
+          <path className={styles.a1} d="M0 0 L30 32 L60 0" />
+          <path className={styles.a2} d="M0 20 L30 52 L60 20" />
+          <path className={styles.a3} d="M0 40 L30 72 L60 40" />
+        </svg>)
+        
+        }
       </AnimatePresence>
+    
+    </div>
     </div>
   );
 }

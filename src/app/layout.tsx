@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/style.css";
 import AOSInitializer from "./AOSInitializer";
 
-import { Kufam } from "next/font/google";
+import { Poppins } from "next/font/google";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   
 };
 
-const kufam = Kufam({
+const poppins = Poppins({
   subsets: ["latin"], 
   weight: ["400", "700"],
   
@@ -66,7 +66,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </script>
 
       </head>
-      <body className={kufam.className}>
+      <body className={poppins.className}>
       
   <AOSInitializer />
 <noscript>

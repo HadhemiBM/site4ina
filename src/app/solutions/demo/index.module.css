@@ -102,7 +102,7 @@ align-self: flex-start;
 
 .RightTitle {
   font-size: 2rem;
-  font-family: "kufam", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: black;
   text-align: center;
 }
@@ -110,7 +110,7 @@ align-self: flex-start;
 .RightDesc {
   font-size: 1rem;
   color: black;
-  font-family: "kufam", sans-serif;
+  font-family: "Poppins", sans-serif;
   text-align: center;
 }
 

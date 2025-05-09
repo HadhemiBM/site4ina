@@ -4,7 +4,7 @@
   max-width: 70%;
   margin: 0 auto;
   padding: 20px;
-  font-family: "kufam";
+  font-family: "Poppins";
   display: flex;
   flex-direction: column;
 }
@@ -24,7 +24,7 @@
 .Title {
   font-size: 2rem;
   margin-bottom: 10px;
-  font-family: "kufam";
+  font-family: "Poppins";
 
   color: #333;
 }
@@ -44,7 +44,7 @@
 .Content {
   font-size: 1.2rem;
   line-height: 1.6;
-  font-family: "kufam";
+  font-family: "Poppins";
 
   color: #444;
 }
@@ -62,7 +62,7 @@
   .Content {
     font-size: 1rem;
     line-height: 1.6;
-    font-family: "kufam";
+    font-family: "Poppins";
   
     color: #444;
   }

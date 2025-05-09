@@ -7,14 +7,14 @@
   gap: 30px;
 }
 .CibleTitle {
-  font-family: "kufam";
+  font-family: "Poppins";
   color: white;
   margin-left: 20px;
   font-size: 32px;
   align-self: center;
 }
 .InnovationTitle {
-  font-family: "kufam";
+  font-family: "Poppins";
   color: var(--blue);
   margin-left: 20px;
   font-size: 32px;
@@ -29,12 +29,12 @@
   width: max-content;
   padding: 5px 10px;
   font-size: 24px;
-  font-family: "kufam";
+  font-family: "Poppins";
   box-shadow: 0 2px 4px rgba(46, 57, 75, 0.253);
 }
 .CibleDesc {
   font-size: 28px;
-  font-family: "kufam";
+  font-family: "Poppins";
   width: 80%;
   margin-top: 40px;
   margin-left: 0px;
@@ -209,7 +209,7 @@
 .SolutionTitle2 {
   font-size: 46px;
   color: var(--blue);
-  font-family: "kufam";
+  font-family: "Poppins";
 }
 .SolutionTitle1 {
   color: var(--darkGrey);
@@ -219,7 +219,7 @@
   width: 70%;
   text-align: center;
   color: #000;
-  font-family: "kufam";
+  font-family: "Poppins";
 }
 .row {
   display: flex;
@@ -309,7 +309,7 @@
 .InnovationDes {
   font-size: 24px;
   color: #000;
-  font-family: "kufam";
+  font-family: "Poppins";
   width: 100%;
   margin: auto;
 }
@@ -372,7 +372,7 @@
 .contentP {
   font-size: 24px;
   color: #000;
-  font-family: "kufam";
+  font-family: "Poppins";
   width: 100%;
   margin: auto;
 }
@@ -398,7 +398,7 @@
   height: 52px;
   cursor: pointer;
   font-size: 20px;
-  font-family: "kufam";
+  font-family: "Poppins";
   font-weight: 500;
   display: flex;
   transition: background-color 0.3s ease;
