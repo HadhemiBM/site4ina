@@ -1,21 +1,36 @@
+
 .carr {
+  position: relative;
   width: 100%;
-
-  max-height: 700px;
+  height: 100vh;
   overflow: hidden;
-  display: block;
-
-  align-items: center;
-  align-self: center;
-  align-content: center;
+  display: flex;
   justify-content: center;
-    /* background: linear-gradient(90deg, #00193d, var(--blue)); */
-    /* background: linear-gradient(to bottom right, #3358ea, #041261, #000000); */
-    background-image:  linear-gradient(to bottom right, #3358eac7, #041261eb, #000000),
-    url("../../Assests/elec4.jpg");
-    animation: gradientAnimation 15s ease infinite;
-    /* background-size: 200% 200%; */
-    /* animation: gradient 15s ease infinite; */ 
+  align-items: center;
+  background-image: linear-gradient(to bottom left, #3358ea4b, #ffffff, #ffffff);
+
+}
+
+.carr::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../Assests/hi2.png");
+  background-size: cover;
+
+  background-size: 100% 120%;
+background-repeat: no-repeat;
+  background-position: top center;
+  opacity: 0.2; /* 👈 adjust this value */
+  z-index: 0;
+}
+
+.carr > * {
+  position: relative;
+  z-index: 1;
 }
 @keyframes gradientAnimation {
   0%, 100% {
@@ -27,16 +42,50 @@
     background-position: right center;
   }
 }
+.buttonDiscover {
+  background-color: var(--blue);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  width: 200px;
+  align-self: center;
+  height: 52px;
+  cursor: pointer;
+  font-size: 20px;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  /* margin-top: 40px;
+  margin-left: 20px; */
+  text-align: center;
+  display: flex;
+
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.buttonDiscover:hover {
+  box-shadow: 0 4px 4px var(--orange);
+
+  border-color: var(--orange) 2px solid;
+
+  color: var(--orange);
+
+  border: 2px;
+  border-bottom: var(--blue) 2px solid;
+}
 .container {
   width: 100%;
-  height: 700px;
+  /* height: 800px; */
+  height: 100vh;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  align-content: flex-start;
+  align-content: center;
   font-family: "Poppins";
-  padding-left: 100px;
+  /* padding-left: 100px; */
+  /* background-color: aquamarine; */
   gap: 100px;
   overflow: hidden;
   /* background-image:  linear-gradient(to bottom right, #3358ea, #041261, #000000) */
@@ -149,15 +198,27 @@ z-index: 0;
   width: 100%;
   font-size: 25px;
   font-family: "Poppins";
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   text-align: center; 
-  padding-right: 100px;
-  margin-left: 50px;
+
+  align-self: center;
+/* background-color: bisque; */
+  /* margin-left: 50px; */
   margin-top: 30px;
 }
 .HeadImagered {
   width: 9rem;
   height: 9rem;
+}
+.boutons{
+  width: 70%;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  z-index: 9999;
+
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 .col {
   display: flex;
@@ -178,13 +239,17 @@ z-index: 0;
   gap: 100px;
 }
 .HeaderText {
-  width: 100%;
+  width: 70%;
+  height: 80%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: column;
-  color: rgb(255, 255, 255);
-  gap: 30px;
-  overflow: visible;
+  color: rgb(139, 139, 139);
+  gap: 20px;
+  z-index: 9999;
+
+  align-self: center;
+  /* background-color: blue; */
 }
 
 .HeaderText3 {
@@ -207,8 +272,11 @@ z-index: 0;
 }
 .HeaderTitle {
   font-family: "Poppins";
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 32px;
+  /* background-color: azure; */
+  align-self: center;
+  z-index: 9999;
   margin: 0px 0px ;
 }
 .HeaderTitle2 {
@@ -491,7 +559,7 @@ z-index: 0;
     align-self: center;
     display: flex;
     flex-direction: column;
-    color: white;
+    color: rgb(197, 197, 197);
     gap: 0px;
 
     margin-top: 80px;

@@ -954,10 +954,10 @@ align-self: flex-start;
 cursor:pointer;
 }
 .arrow {
-  position: fixed;
+  position: relative;
   top: 99%;
-  left: 95%;
-  transform: translate(-50%, -50%) rotate(270deg);
+  right: 0%;
+  transform: translate(-80%, -80%) rotate(270deg);
   cursor: pointer;
 
   padding: 10px;

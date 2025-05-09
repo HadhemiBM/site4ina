@@ -16,9 +16,14 @@ import { ReactNode, useEffect, useState } from "react";
 import { CarouselProps } from "react-responsive-carousel";
 // import SlickCarousel from "./Slider";
 import { motion } from "framer-motion";
+import { Boxes } from "@/components/ui/background-boxes";
+import { useRouter } from "next/navigation";
+
+import AnimationHead from './animation'
 
 const Header = () => {
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
+    const router = useRouter();
   
   
   
@@ -53,6 +58,9 @@ useEffect(() => {
     setShouldAnimate(false); // Reset when slide changes
   }
 }, [currentSlide]);
+const navigateToService = () => {
+  router.push("/services");
+};
 
   const settings = {
   
@@ -123,7 +131,8 @@ useEffect(() => {
       <Carousel {...settings}>
         {/* carousel 1 */}
         <div className={styles.container}>
-          <div className={styles.HeaderText}>
+        
+          {/* <div className={styles.HeaderText}>
             <h1 
             // data-aos="zoom-out-left" 
              className={styles.HeaderTitle}>
@@ -142,7 +151,48 @@ useEffect(() => {
               //  data-aos-delay="1500"
                 className={styles.buttonDemo}>Book a Demo</button>
             </Link>
+          </div> */}
+
+          <div className={styles.HeaderText}>
+          <h1 
+            // data-aos="zoom-out-left" 
+             className={styles.HeaderTitle}>
+              Leading Energy Management With AI-Driven Solution
+            </h1>
+            <p 
+            // data-aos="zoom-out-left" 
+            className={styles.HeaderDesc}>
+              Through real-time data and predictive insights, we empower businesses
+to make smarter energy decisions.
+We decode energy complexity, helping you act fast and optimize smarter.
+            </p>
+      <AnimationHead id="particles" className={styles.back}/>
+      <div className={styles.boutons}>
+
+<Link href="/services" passHref>
+    <motion.button
+      onClick={navigateToService}
+      className={styles.buttonDiscover}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+    >
+      Book A Demo
+    </motion.button>
+  </Link>
+  <Link href="/services" passHref>
+    <motion.button
+      onClick={navigateToService}
+      className={styles.buttonDiscover}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+    >
+      See More
+    </motion.button>
+  </Link>
+</div>
           </div>
+          
+
           {/* <div  
           // data-aos="zoom-out-left"
            className={styles.Imagecontainer}>
