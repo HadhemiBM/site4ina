@@ -1,7 +1,7 @@
 "use client";
 import styles from "./index.module.css";
-import React, { useRef } from "react";
-import { useRouter } from "next/navigation";
+import React from "react";
+
 import PageTransition from "../components/PageTransition";
 import Link from "next/link";
 import Image from "next/image";
@@ -26,8 +26,7 @@ const About: React.FC = () => {
 
       post: "Data Science Engineer",
     },
-   
-    
+
     {
       name: "Meriam Zouaoui",
       linkedin:
@@ -99,7 +98,7 @@ const About: React.FC = () => {
             <div className={styles.loader_line}></div>
           </div>
           <div className={styles.row}>
-            <div className={styles.circle}>
+            {/* <div className={styles.circle}>
               <div className={styles.loader}>
                 <div className={styles.loader}>
                   <div className={styles.loader}>
@@ -107,14 +106,14 @@ const About: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
             <p className={styles.CibleDesc}>
               4InA Technologie is a Tunisian startup, founded in November 2020
               and labeled by Startup Act.
             </p>
           </div>
           <div className={styles.row}>
-            <div className={styles.circle}>
+            {/* <div className={styles.circle}>
               <div className={styles.loader}>
                 <div className={styles.loader}>
                   <div className={styles.loader}>
@@ -122,7 +121,7 @@ const About: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
             <p className={styles.CibleDesc}>
               4InA operates in the field of energy management and artificial
               intelligence. Our primary focus is the development and design of
@@ -166,7 +165,9 @@ const About: React.FC = () => {
             <h1 className={styles.SolutionTitle2}>Team</h1>
           </div>
           <p className={styles.SolutionsDesc}>
-          Driven by a shared commitment to excellence, our team combines diverse talents and perspectives to tackle challenges, foster innovation, and achieve outstanding results together
+            Driven by a shared commitment to excellence, our team combines
+            diverse talents and perspectives to tackle challenges, foster
+            innovation, and achieve outstanding results together
           </p>
           <div className={styles.AllTeam1}>
             {founder.map((item, index) => (
@@ -197,32 +198,31 @@ const About: React.FC = () => {
             ))}
           </div>
           <div className={styles.AllTeam2}>
-            {team.map((item, index) => (
-              <div key={index} className={styles.Team2}>
-                <div className={styles.TeamIcon2}>
-                  <div className={styles.TeamImageWrapper}>
-                    <Image
-                      className={styles.TeamImage}
-                      src={item.img}
-                      alt="team_Workers"
-                      fill
-                      style={{ objectFit: "cover" }}
-                    />
-                  </div>
-                </div>
-                <div className={styles.columnn}>
-                  <div className={styles.TeamContent2}>
-                    <h6 className={styles.TeamName}>{item.name}</h6>
-                    <p className={styles.TeamDesc}>{item.post}</p>
-                  </div>
-                  <div className={styles.TeamSocial}>
-                    <Link href={item.linkedin}>
-                      <i className="fa-brands fa-linkedin fa-shake-facebook"></i>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            ))}
+            <div className={styles.Advanages}>
+              <div className={styles.Advanage}>Electrical Department</div>
+              <div className={styles.Advanage}>IT Department</div>
+              <div className={styles.Advanage}>Marketing & HR Department</div>
+            </div>
+
+            <div className={styles.Advanages2}>
+              {/* //1 */}
+              <div className={styles.Advanage2}>Embedded Systems</div>
+              {/* //2 */}
+
+              <div className={styles.Advanage2}>Web & Mobile Development</div>
+              {/* //3 */}
+
+              <div className={styles.Advanage2}>Artificial Intelligence  </div>
+              {/* //4 */}
+
+              <div className={styles.Advanage2}>Human Resources (HR)</div>
+              {/* //5 */}
+
+              <div className={styles.Advanage2}>Digital Marketing
+
+</div>
+     
+            </div>
           </div>
         </div>
       </div>

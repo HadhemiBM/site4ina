@@ -9,6 +9,21 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+		animation: {
+			aurora: 'aurora 60s linear infinite',
+			scroll: "scroll 40s linear infinite",
+		  },
+		  keyframes: {
+			aurora: {
+				'0%': { backgroundPosition: '50% 50%' },
+				'100%': { backgroundPosition: '350% 50%' },
+			  },
+			scroll: {
+			  to: {
+				transform: "translate(calc(-50% - 0.5rem))",
+			  },
+			},
+		  },
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
