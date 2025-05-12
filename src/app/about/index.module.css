@@ -15,13 +15,39 @@
 }
 .InnovationTitle {
   font-family: "Poppins";
-  color: var(--blue);
+  /* color: var(--blue); */
   margin-left: 20px;
   font-size: 32px;
   margin-right: 50px;
   margin-bottom: 50px;
   margin-top: 50px;
   align-self: flex-start;
+  color: transparent;
+  background-image: url('https://res.cloudinary.com/ddngbriyu/image/upload/v1744810615/fond-marbre-liquide-bleu-abstrait-art-experimental-texture-fluide_53876-104502_hr0bz5.jpg');
+  background-size: 200%; /* Enlarged for smooth animation */
+  background-position: 0 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-background 30s infinite alternate linear;
+}
+@keyframes animate-background {
+  0% {
+      background-position: 0 50%;
+  }
+  100% {
+      background-position: 100% 50%;
+  }
+}
+@keyframes gradientAnimation {
+  0%, 100% {
+    background-size: 200% 200%;
+    background-position: left center;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: right center;
+  }
 }
 .InnovationTit h1 {
   color: #000000;
@@ -44,7 +70,7 @@
 }
 .CibleSection {
   display: flex;
-  background-image: linear-gradient(rgba(45, 51, 85, 0.5), rgba(0, 0, 0, 0.7)),
+  background-image: linear-gradient(rgba(0, 65, 243, 0.5), rgba(0, 0, 0, 0.781)),
     url("../Assests/workers.jpg");
   flex-direction: column;
   width: 100%;
@@ -52,6 +78,8 @@
   flex-wrap: wrap;
   background-repeat: no-repeat;
   align-items: center;
+
+  
   align-content: center;
   justify-content: center;
 }
@@ -99,7 +127,7 @@
 }
 .AllTeam2 {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
   height: auto;
   align-items: center;
@@ -205,21 +233,28 @@
   gap: 10px;
   margin-bottom: 30px;
 }
-.SolutionTitle1,
+
 .SolutionTitle2 {
-  font-size: 46px;
-  color: var(--blue);
-  font-family: "Poppins";
+  font-size: 3rem;
+color: transparent;
+  background-image: url('https://res.cloudinary.com/ddngbriyu/image/upload/v1744810615/fond-marbre-liquide-bleu-abstrait-art-experimental-texture-fluide_53876-104502_hr0bz5.jpg');
+  background-size: 200%; /* Enlarged for smooth animation */
+  background-position: 0 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-background 30s infinite alternate linear;
 }
 .SolutionTitle1 {
   color: var(--darkGrey);
+  font-size: 3rem;
 }
 .SolutionsDesc {
-  font-size: 28px;
+  font-size: 1.5rem;
   width: 70%;
   text-align: center;
-  color: #000;
-  font-family: "Poppins";
+  color: #ffffff;
+
 }
 .row {
   display: flex;
@@ -385,13 +420,20 @@
   height: 350px;
   align-items: center;
   justify-content: center;
-  background: #1f499721;
-  background-repeat: no-repeat;
+  overflow: hidden;
+  /* background: #1f499721;
+  background-repeat: no-repeat; */
+background-image: 
+  linear-gradient(90deg, rgba(255, 255, 255, 0.103) 0%, rgba(255, 255, 255, 0) 20%, rgba(0, 65, 243, 0.5) 50%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0.103) 100%),
+  url("../Assests/bgblue.jpg");
+background-size: cover;
+background-position: center;
+  animation: animate-background 30s infinite alternate linear;
   gap: 30px;
 }
 .buttonDemo {
-  background-color: var(--blue);
-  color: white;
+  background-color: white;
+  color: var(--blue);
   padding: 10px 20px;
   border-radius: 8px;
   width: 251px;
@@ -411,11 +453,21 @@
   text-align: center;
 }
 .buttonDemo:hover {
+  box-shadow: 0 4px 4px var(--orange);
+
+  border-color: var(--orange) 2px solid;
+
+  color: var(--orange);
+
+  border: 1px;
+  border-bottom: var(--white) 2px solid;
+}
+/* .buttonDemo:hover {
   background-color: white;
   color: var(--blue);
   border: 2px;
   border-color: var(--blue) 2px solid;
-}
+} */
 @media (max-width: 1440px) {
   .circle {
     width: 20px;
@@ -825,4 +877,136 @@
   .TeamContent2 {
     height: 80px;
   }
+}
+
+ .Advanages {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 20px;
+  /* background-color: antiquewhite; */
+  border-radius: 10px;
+  width: 90%;
+  text-align: center;
+  padding: 20px;
+  justify-content: center;
+  align-content: center;
+}
+
+.Advanage:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.Advanage:nth-child(4) {
+  grid-column: 4;
+  grid-row: 1;
+}
+
+.Advanage:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.Advanage:nth-child(3) {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.Advanage {
+  background-color: var(--blue);
+  padding: 8px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  text-align: center;
+  justify-content: center;
+align-content: center;
+
+  color: #ffffff;
+}
+ /* Second set of items */
+.Advanages2 {
+  display: grid;
+  grid-template-columns: repeat(3, 0.5fr); /* Adjust the number of columns */
+  grid-template-rows: auto;
+  gap: 20px;
+  border-radius: 10px;
+  width: 90%;
+  text-align: center;
+  padding: 20px;
+  justify-content: center;
+  align-content: center;
+}
+
+/* For Advanage2, make sure these also fit the grid properly */
+.Advanages2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  text-align: center;
+  
+}
+
+.Advanage2:nth-child(1){
+
+  grid-column: 1; 
+  grid-row: 1;
+   background-color: #f7c380;
+  padding: 8px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  text-align: center;
+  justify-content: center;
+align-content: center;
+
+  color: #000000;
+}
+
+.Advanage2:nth-child(2) 
+ { 
+  grid-column: 2; 
+  grid-row: 1;
+
+}
+
+.Advanage2:nth-child(3) { 
+  grid-column: 2; 
+  grid-row: 2;
+
+}
+
+.Advanage2:nth-child(4) { 
+  grid-column: 3; 
+  grid-row: 1;
+
+}
+
+.Advanage2:nth-child(5) { 
+  grid-column: 3; 
+  grid-row: 2;
+
+}
+.Advanage2:nth-child(6) { 
+  grid-column: 3; 
+  grid-row: 3;
+
+}
+.Advanage2:nth-child(1),
+.Advanage2:nth-child(2),
+.Advanage2:nth-child(3),
+.Advanage2:nth-child(4),
+.Advanage2:nth-child(5),
+.Advanage2:nth-child(6){
+
+
+   background-color: #f7c380;
+  padding: 8px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  text-align: center;
+  justify-content: center;
+align-content: center;
+
+  color: #000000;
 }

@@ -19,51 +19,47 @@ import { motion } from "framer-motion";
 import { Boxes } from "@/components/ui/background-boxes";
 import { useRouter } from "next/navigation";
 
-import AnimationHead from './animation'
+import AnimationHead from "./animation";
 
 const Header = () => {
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
-    const router = useRouter();
-  
-  
-  
-    useEffect(() => {
-      const timers: NodeJS.Timeout[] = [];
-  
-      const showItems = () => {
-        for (let i = 0; i < 4; i++) {
-          timers.push(
-            setTimeout(() => {
-              setVisibleItems((prev) => [...prev, i]);
-            }, i * 300)
-          );
-        }
-      };
-  
-      showItems();
-  
-      return () => {
-        timers.forEach((timer) => clearTimeout(timer));
-      };
-    }, []);
-    const [currentSlide, setCurrentSlide] = useState(0);
-    const [shouldAnimate, setShouldAnimate] = useState(false);
+  const router = useRouter();
 
-useEffect(() => {
-  if (currentSlide === 1 ||currentSlide === 2 ) {
- 
-    const timer = setTimeout(() => setShouldAnimate(true), 100);
-    return () => clearTimeout(timer);
-  } else {
-    setShouldAnimate(false); // Reset when slide changes
-  }
-}, [currentSlide]);
-const navigateToService = () => {
-  router.push("/services");
-};
+  useEffect(() => {
+    const timers: NodeJS.Timeout[] = [];
+
+    const showItems = () => {
+      for (let i = 0; i < 4; i++) {
+        timers.push(
+          setTimeout(() => {
+            setVisibleItems((prev) => [...prev, i]);
+          }, i * 300)
+        );
+      }
+    };
+
+    showItems();
+
+    return () => {
+      timers.forEach((timer) => clearTimeout(timer));
+    };
+  }, []);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [shouldAnimate, setShouldAnimate] = useState(false);
+
+  useEffect(() => {
+    if (currentSlide === 1 || currentSlide === 2) {
+      const timer = setTimeout(() => setShouldAnimate(true), 100);
+      return () => clearTimeout(timer);
+    } else {
+      setShouldAnimate(false); // Reset when slide changes
+    }
+  }, [currentSlide]);
+  const navigateToService = () => {
+    router.push("/services");
+  };
 
   const settings = {
-  
     dots: true,
     infinite: true,
     speed: 500,
@@ -73,7 +69,7 @@ const navigateToService = () => {
     autoplaySpeed: 3000,
     arrows: true,
     onChange: (index: number) => setCurrentSlide(index),
-    transitionTime:0,
+    transitionTime: 0,
     renderArrowPrev: (
       onClickHandler: () => void,
       hasPrev: boolean,
@@ -104,7 +100,6 @@ const navigateToService = () => {
         &gt;
       </button>
     ),
-    
   };
   const cibles = [
     "80% Increased Productivity Time",
@@ -126,145 +121,134 @@ const navigateToService = () => {
   }, []);
   return (
     <div className={styles.carr}>
-   {/* Morphing background that continues from splash */}
- 
+
       <Carousel {...settings}>
         {/* carousel 1 */}
         <div className={styles.container}>
-        
-          {/* <div className={styles.HeaderText}>
-            <h1 
-            // data-aos="zoom-out-left" 
-             className={styles.HeaderTitle}>
-              Redefining Energy Management with AI and IoT Excellence
-            </h1>
-            <p 
-            // data-aos="zoom-out-left" 
-            className={styles.HeaderDesc}>
-              Elevating energy management by integrating AI and IoT, enabling
-              proactive monitoring, real-time analytics, and smarter
-              decision-making to enhance your operational efficiency
-            </p>
-            <Link  href="/solutions/demo" passHref>
-              <button
-              //  data-aos="zoom-out-left"
-              //  data-aos-delay="1500"
-                className={styles.buttonDemo}>Book a Demo</button>
-            </Link>
-          </div> */}
-
+         
           <div className={styles.HeaderText}>
-          <h1 
-            // data-aos="zoom-out-left" 
-             className={styles.HeaderTitle}>
+            <h1
+       
+              className={styles.HeaderTitle}
+            >
               Leading Energy Management With AI-Driven Solution
             </h1>
-            <p 
-            // data-aos="zoom-out-left" 
-            className={styles.HeaderDesc}>
-              Through real-time data and predictive insights, we empower businesses
-to make smarter energy decisions.
-We decode energy complexity, helping you act fast and optimize smarter.
+            <p
+            
+              className={styles.HeaderDesc}
+            >
+              Through real-time data and predictive insights, we empower
+              businesses to make smarter energy decisions. We decode energy
+              complexity, helping you act fast and optimize smarter.
             </p>
-      <AnimationHead id="particles" className={styles.back}/>
-      <div className={styles.boutons}>
-
-<Link href="/services" passHref>
-    <motion.button
-      onClick={navigateToService}
-      className={styles.buttonDiscover}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.9 }}
-    >
-      Book A Demo
-    </motion.button>
-  </Link>
-  <Link href="/services" passHref>
-    <motion.button
-      onClick={navigateToService}
-      className={styles.buttonDiscover}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.9 }}
-    >
-      See More
-    </motion.button>
-  </Link>
-</div>
+            <AnimationHead id="particles" className={styles.back} />
+            <div className={styles.boutons}>
+              <Link href="/services" passHref>
+                <motion.button
+                  onClick={navigateToService}
+                  className={styles.buttonDiscover}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  Book A Demo
+                </motion.button>
+              </Link>
+              <Link href="/services" passHref>
+                <motion.button
+                  onClick={navigateToService}
+                  className={styles.buttonDiscover}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  See More
+                </motion.button>
+              </Link>
+            </div>
           </div>
-          
 
-          {/* <div  
-          // data-aos="zoom-out-left"
-           className={styles.Imagecontainer}>
-          
-            <Image
-              className={styles.HeadImage}
-              width={700}
-              height={300}
-              src={dme}
-              alt="IA"
-            />
-          </div> */}
+        
         </div>
+      
         {/* carousel 2 */}
-        
-        <div className={styles.container}>
-          <div  className={styles.HeaderText2}>
-            <h1  data-aos="fade-up" data-aos-delay="800" className={styles.HeaderTitle2}>
-            Impact of the System Energy Control on the Industry            </h1>
-            <p data-aos="fade-up" data-aos-delay="800" className={styles.HeaderDesc}>
-            Optimize energy efficiency and drive industrial success with advanced system energy control. Reduce costs, enhance performance, and promote sustainability with smart energy management solutions designed for a greener future.
-            </p>
+         <div className={styles.container}>
+         
+          <div className={styles.HeaderText}>
+            <h1
        
-          </div>
-          <div  data-aos="zoom-out-left" className={styles.Imagecontainer2}>
-          {currentSlide === 1 && (
-  <div className={styles.CibleRight}>
-    {cibles.map((item, index) => (
-      <div
-        key={index} data-aos="flip-up"
-        data-aos-delay={`${index * 200}`}
-        className={`${styles.CibleCont} ${styles[`CibleCont${index + 1}`]} ${shouldAnimate ? styles.show : ""}`}
-
-
-      >
-        <p className={styles.SpinnerDescu}>{item}</p>
-      </div>
-    ))}
-  </div>
-)}
-
-
-
-          </div>
-        </div>
-        {/* carousel 3 */}
-        
-            <div className={styles.container}>
-          <div  className={styles.HeaderText}>
-            <h1  data-aos="fade-up" data-aos-delay="800" className={styles.HeaderTitle}>
-            Advantages of Installing Our Solution           </h1>
-            <p data-aos="fade-up" data-aos-delay="800" className={styles.HeaderDesc}>
-            Our smart energy solution enhances operational efficiency and significantly reduces energy costs through real-time optimization. It empowers businesses to achieve sustainable growth while making smarter, data-driven decisions.
+              className={styles.HeaderTitle}
+            >
+              Advantages of Installing Our Solution
+            </h1>
+            <p
+            
+              className={styles.HeaderDesc}
+            >
+               Our smart energy solution enhances operational efficiency and
+              significantly reduces energy costs through real-time optimization.
+              It empowers businesses to achieve sustainable growth while making
+              smarter, data-driven decisions.
             </p>
-       
+            <AnimationHead id="particles" className={styles.back} />
+            <div className={styles.Advanages}>
+             
+              <div className={styles.Advanage} >
+                Monitoring of energy consumption
+
+              </div>
+             <div className={styles.Advanage} >
+               Guidance for energy managers
+              </div>
+              <div className={styles.Advanage} >
+                Monitoring Machine Behavior and Predicting Failures
+              </div>
+              <div className={styles.Advanage} >
+               Reducing Maintenance Costs
+
+              </div>
+            </div>
           </div>
-          <div  data-aos="zoom-out-left" className={styles.Imagecontainer}>
-          {currentSlide === 2 && (
-  <div className={styles.CibleRight}>
-    {advantages.map((item, index) => (
-      <div
-        key={index} data-aos="flip-up"
-        data-aos-delay={`${index * 200}`}
-        className={`${styles.CibleCont22} ${styles[`CibleCont22${index + 1}`]} ${shouldAnimate ? styles.show : ""}`}
-      >
-        <p className={styles.SpinnerDescu1}>{item}</p>
-      </div>
-    ))}
-  </div>
-)}
-          </div>
+
+        
         </div>
+        {/* <div className={styles.container}>
+          <div className={styles.HeaderText}>
+            <h1
+              data-aos="fade-up"
+              data-aos-delay="800"
+              className={styles.HeaderTitle}
+            >
+              Advantages of Installing Our Solution{" "}
+            </h1>
+            <p
+              data-aos="fade-up"
+              data-aos-delay="800"
+              className={styles.HeaderDesc}
+            >
+              Our smart energy solution enhances operational efficiency and
+              significantly reduces energy costs through real-time optimization.
+              It empowers businesses to achieve sustainable growth while making
+              smarter, data-driven decisions.
+            </p>
+          </div>
+          <div data-aos="zoom-out-left" className={styles.Imagecontainer}>
+            {currentSlide === 1 && (
+              <div className={styles.CibleRight}>
+                {advantages.map((item, index) => (
+                  <div
+                    key={index}
+                    data-aos="flip-up"
+                    data-aos-delay={`${index * 200}`}
+                    className={`${styles.CibleCont22} ${
+                      styles[`CibleCont22${index + 1}`]
+                    } ${shouldAnimate ? styles.show : ""}`}
+                  >
+                    <p className={styles.SpinnerDescu1}>{item}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </div> */}
       </Carousel>
     </div>
     // <SlickCarousel />
@@ -294,12 +278,10 @@ export default Header;
 
 // const Header = () => {
 //   const [visibleItems, setVisibleItems] = useState<number[]>([]);
-  
-  
-  
+
 //     useEffect(() => {
 //       const timers: NodeJS.Timeout[] = [];
-  
+
 //       const showItems = () => {
 //         for (let i = 0; i < 4; i++) {
 //           timers.push(
@@ -309,9 +291,9 @@ export default Header;
 //           );
 //         }
 //       };
-  
+
 //       showItems();
-  
+
 //       return () => {
 //         timers.forEach((timer) => clearTimeout(timer));
 //       };
@@ -321,7 +303,7 @@ export default Header;
 
 // useEffect(() => {
 //   if (currentSlide === 1 ||currentSlide === 2 ) {
- 
+
 //     const timer = setTimeout(() => setShouldAnimate(true), 100);
 //     return () => clearTimeout(timer);
 //   } else {
@@ -330,7 +312,7 @@ export default Header;
 // }, [currentSlide]);
 
 //   const settings = {
-  
+
 //     dots: true,
 //     infinite: true,
 //     speed: 500,
@@ -371,7 +353,7 @@ export default Header;
 //         &gt;
 //       </button>
 //     ),
-    
+
 //   };
 //   const slideData = [
 //     {
@@ -414,9 +396,7 @@ export default Header;
 //     return () => clearTimeout(timer);
 //   }, []);
 //   return (
-    
-    
- 
+
 // <div className="relative overflow-hidden w-full h-full py-20">
 // <Carousel slides={slideData} />
 //     </div>
