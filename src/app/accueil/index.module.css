@@ -303,8 +303,8 @@ justify-content: space-between;
 }
 .AllSolutions {
   display: flex;
-  flex-direction: row;
-  width: 90%;
+  flex-direction: column;
+  width: 100%;
   height: auto;
   align-items: center;
   align-content: center;
@@ -315,26 +315,57 @@ justify-content: space-between;
   margin-top: 0px;
 }
 
-.Solution2 {
-  width: 350px;
-  height: 400px;
-  background: linear-gradient(0deg, #ced7e8 0%, #f0f3f9 42%, #ffffff 79%);
-  align-self: center;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  min-height: 500px;
-  gap: 20px;
-  border-bottom: #495469 2px solid;
-
-  border-bottom-left-radius: 50% 100px;
-  border-bottom-right-radius: 50% 100px;
-}
 .Solution1 {
-  width: 350px;
-  background: linear-gradient(0deg, #ced7e8 0%, #f0f3f9 42%, #ffffff 79%);
+  width: 120%;
+  height: 500px;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 500px;
 
+  position: absolute;
+
+  flex-direction: row;
+  /* overflow: hidden;  */
+  margin-top: 4rem;
+
+  background-image: 
+    linear-gradient(90deg, rgba(255, 255, 255, 0.103) 0%, rgba(255, 255, 255, 0) 20%, rgba(0, 65, 243, 0.5) 50%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0.103) 100%),
+    url("../Assests/bgblue.jpg");
+  
+  background-size: 120% 120%; 
+  background-position: center; 
+  transform: rotate(3deg);  
+  transform-origin: center center; 
+}
+.Solution1Text{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  transform: rotate(3deg);  
+/* background-color: #3f27cd; */
+/* align-items: center; */
+justify-content: center;
+
+}
+.SolutionImgFirst{
+  margin-top:-70px;
+  transform: rotate(3deg);  
+
+
+}
+.SolutionImgSecond{
+  margin-top:-70px;
+  transform: rotate(3deg);  
+  width: 100;
+  height: 200;
+
+}
+.Solution2 {
+  width: 100%;
+  /* background: linear-gradient(0deg, #ced7e8 0%, #f0f3f9 42%, #ffffff 79%); */
   height: 400px;
 
   align-self: center;
@@ -345,11 +376,13 @@ justify-content: space-between;
   min-height: 500px;
   gap: 20px;
 
-  border-bottom-left-radius: 50% 100px;
-  border-bottom-right-radius: 50% 100px;
-  border-bottom: #495469 2px solid;
-}
 
+}
+.SolutionS{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
 .SolutionCircle {
   width: 97%;
   height: auto;
@@ -361,6 +394,7 @@ justify-content: space-between;
   justify-content: center;
   margin-bottom: 10px;
 }
+
 .Image {
   align-items: center;
   align-self: center;
@@ -370,24 +404,45 @@ justify-content: space-between;
   height: auto;
 }
 .SolTitle1 {
-  font-size: 28px;
-  color: black;
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
   font-family: "Poppins";
+  text-align: start;
+}
+.SolTitle2 {
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  font-family: "Poppins";
+  text-align: start;
 }
 .SolutionDesc1 {
   font-size: 18px;
-  color: black;
-  border-left: 3px solid var(--blue);
-  padding-left: 10px;
+  text-align: center;
+
+  color: rgb(255, 255, 255);
+
+  /* padding-left: 10px; */
 
   font-family: "Poppins";
-  width: 90%;
+  width: 80%;
+  text-align: start;
+}
+.SolutionDesc2 {
+  font-size: 18px;
   text-align: center;
+
+  color: rgb(0, 0, 0);
+
+  /* padding-left: 10px; */
+
+  font-family: "Poppins";
+  width: 80%;
+  text-align: start;
 }
 .SolutionDesc12 {
   font-size: 18px;
   color: black;
-  border-right: 3px solid var(--blue);
+
   padding-right: 10px;
 
   font-family: "Poppins";
@@ -963,7 +1018,19 @@ cursor:pointer;
   padding: 10px;
   border-radius: 5px;
 }
+.wrapperCont {
+  width: 110%;
+  height: 75vh;
+  transform: rotate(-3deg);  
 
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; 
+}
 .arrow span {
   display: block;
   width: 1.5vw;
@@ -1456,14 +1523,7 @@ cursor:pointer;
 
     border: 0px solid rgba(255, 255, 255, 0.9);
   }
-  .SolutionDesc1 {
-    border-left: 3px solid rgba(92, 88, 88, 0.9);
-    padding-left: 10px;
-  }
-  .SolutionDesc12 {
-    border-right: 3px solid rgba(92, 88, 88, 0.9);
-    padding-right: 10px;
-  }
+
   .front_case2,
   .back_case2 {
     transform: translateX(27%);

@@ -2,21 +2,13 @@
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import styles from "./index.module.css";
-import Image from "next/image";
-// import dme from "../../Assests/dm2.gif";
-import dme from "../../Assests/dm4.png";
-// import dme from "../../Assests/HeaderRec1.png";
-import reduction from "../../Assests/svg/reductionEnergy.svg";
-import timeincrease from "../../Assests/svg/timeincrease.svg";
-import moneySave from "../../Assests/svg/moneySave.svg";
-import TimeReduce from "../../Assests/svg/TimeReduce.svg";
-import edge from "../../Assests/cont3.gif";
+
 import Link from "next/link";
 import { ReactNode, useEffect, useState } from "react";
-import { CarouselProps } from "react-responsive-carousel";
+
 // import SlickCarousel from "./Slider";
 import { motion } from "framer-motion";
-import { Boxes } from "@/components/ui/background-boxes";
+
 import { useRouter } from "next/navigation";
 
 import AnimationHead from "./animation";

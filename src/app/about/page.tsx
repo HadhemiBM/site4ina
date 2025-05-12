@@ -1,12 +1,11 @@
 "use client";
 import styles from "./index.module.css";
-import React, { useRef } from "react";
-import { useRouter } from "next/navigation";
+import React from "react";
+
 import PageTransition from "../components/PageTransition";
 import Link from "next/link";
 import Image from "next/image";
-import AnimationAbout from "./animation";
-import im from "../Assests/bgblue.jpg";
+
 const About: React.FC = () => {
   const team = [
     {
