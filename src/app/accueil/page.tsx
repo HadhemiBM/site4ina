@@ -358,6 +358,16 @@ const handleScroll = (e: WheelEvent) => {
           <div className={styles.Solution1Text}>
             <h2 className={styles.SolTitle1}>{solutions[index].title}</h2>
             <p className={styles.SolutionDesc1}>{solutions[index].description}</p>
+               <Link href="/services" passHref>
+            <motion.button
+              onClick={navigateToService}
+              className={styles.buttonDemoSol}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              Request Demo 
+            </motion.button>
+          </Link>
           </div>
           {/* <Image
             src={solutions[index].image}
@@ -369,13 +379,13 @@ const handleScroll = (e: WheelEvent) => {
           <Image
   src={solutions[index].image}
   alt={solutions[index].title}
-  // width={700}
-  // height={550}
   className={`${styles.SolutionImg} ${
     index === 0 ? styles.SolutionImgFirst : styles.SolutionImgSecond
   }`}
 />
+
         </motion.div>
+        
       </AnimatePresence>
     </div>
         {/* <div className={styles.AllSolutions}>
@@ -549,19 +559,19 @@ const handleScroll = (e: WheelEvent) => {
         <div className={styles.AllPrices}>
           <div className={styles.price1}>
             <div className={styles.rowloa}>
-              <div className={styles.loader}></div>
+              {/* <div className={styles.loader}></div> */}
               <h3 className={styles.PriceTitle1}>Basic </h3>
             </div>
           </div>
           <div className={styles.price1}>
             <div className={styles.rowloa}>
-              <div className={styles.loader}></div>
+              {/* <div className={styles.loader}></div> */}
               <h3 className={styles.PriceTitle1}>Silver </h3>
             </div>
           </div>
           <div className={styles.price1}>
             <div className={styles.rowloa}>
-              <div className={styles.loader}></div>
+              {/* <div className={styles.loader}></div> */}
               <h3 className={styles.PriceTitle1}>Gold </h3>
             </div>
           </div>
