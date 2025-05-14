@@ -674,7 +674,6 @@ padding: 0;
     height: 40px;
     font-size: 0.8rem;
   }
-
   .Headerim {
     gap: 0px;
     width: 90%;
@@ -701,9 +700,12 @@ padding: 0;
 
 }
   .Advanage {
-  background-color: var(--blue);
+  /* background-color: var(--blue); */
+  background-color: #ffffff;
+  border:1px solid var(--blue);
   padding: 2px;
   font-size: 0.8rem;
+  color: var(--blue);
   width: 90%;
   min-height: 25%;
 

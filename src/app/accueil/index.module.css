@@ -12,7 +12,7 @@
   /* margin-left: 20px; */
   font-weight: bold;
 text-align: center;
-  font-size: 32px;
+
   align-self: center;
   /* text-align: center; */
   background-image: url('https://res.cloudinary.com/ddngbriyu/image/upload/v1744810615/fond-marbre-liquide-bleu-abstrait-art-experimental-texture-fluide_53876-104502_hr0bz5.jpg');
@@ -28,7 +28,7 @@ text-align: center;
   font-family: "Poppins";
   text-align: center;
 
-  width:100%;
+  width:95%;
 
   color: #000;
   align-self: center;
@@ -85,10 +85,12 @@ text-align: center;
   flex-wrap: wrap;
   flex-direction: row;
   width: 70%;
+  gap:10px;
   height: auto;
-justify-content: space-between;
+justify-content: center;
   align-items: center;
   align-self: center;
+  /* background-color: #3f27cd; */
   align-content: center;
   margin-top: 50px;
 }
@@ -196,8 +198,11 @@ justify-content: space-between;
 }
 .CibleCont{
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
-  gap:15%;
+  align-self: center;
+
+
   
 }
 
@@ -206,14 +211,16 @@ justify-content: space-between;
 .CibleCont3,
 .CibleCont4 {
   display: flex;
-  height: 200px;
+  /* height: 30%; */
   align-items: center;
   align-content: center;
   justify-content: flex-start;
   opacity: 0;
   transform: translateX(100%);
-  padding: 15px;
-  width: 300px;
+  padding: 10px;
+  width: 24%;
+
+gap:10px;
   border-radius: 8px;
   box-shadow: 0 10px 15px rgba(4, 17, 133, 0.2);
   transition: opacity 0.1s ease, transform 0.1s ease;
@@ -243,14 +250,13 @@ justify-content: space-between;
 
 .SpinnerDescu,
 .SpinnerDescu1 {
-  font-size: 20px;
+  font-size: 1.3rem;
 
   font-family: "Poppins";
   margin: 0px 0px 0px 0px;
   color: #000;
   padding: 3px;
 
-  border-radius: 50px;
 }
 
 
@@ -1655,17 +1661,17 @@ padding: 10px;
     margin-top: 40px;
     margin-left: 20px;
   }
-  .CibleCont1,
+  /* .CibleCont1,
   .CibleCont,
   .CibleCont2,
   .CibleCont3,
   .CibleCont4 {
     height: 60px;
-  }
-  .SpinnerDescu,
+  } */
+  /* .SpinnerDescu,
   .SpinnerDescu1 {
     font-size: 28px;
-  }
+  } */
   .SolutionTitle1,
   .SolutionTitle2 {
     font-size: 40px;
@@ -1928,22 +1934,65 @@ z-index: 999;
     margin-top: 40px;
     margin-left: 20px;
   }
-  .CibleCont1,
+  /* .CibleCont1,
   .CibleCont2,
   .CibleCont,
   .CibleCont3,
   .CibleCont4 {
     align-self: flex-start;
     height: 40px;
-  }
-  .SpinnerDescu,
+  } */
+  /* .SpinnerDescu,
   .SpinnerDescu1 {
     font-size: 20px;
-  }
-  .CibleRight {
+  } */
+  /* .CibleRight {
     width: 30%;
     height: auto;
-  }
+  } */
+
+.CibleCont{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+align-items: center;
+align-content: center;
+
+
+  
+}
+.IconCibles{
+  width: 20%;
+  height: 40%;
+}
+.CibleCont1,
+.CibleCont2,
+.CibleCont3,
+.CibleCont4 {
+  padding:  10px;
+  width: 90%;  
+}
+.SpinnerDescu,
+.SpinnerDescu1 {
+  font-size: 1.5rem;
+
+  font-family: "Poppins";
+  margin: 0px 0px 0px 0px;
+  color: #000;
+  padding: 3px;
+
+}
+
+.CibleRight {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width:90%;
+  gap:10px;
+  
+  margin-top: 30px;
+}
   .buttonDiscover {
     width: 140px;
     height: 40px;
@@ -2183,24 +2232,24 @@ border-bottom: var(--darkGrey) 1px solid;
     margin-top: 40px;
     margin-left: 15px;
   }
-  .CibleCont1,
+  /* .CibleCont1,
   .CibleCont,
   .CibleCont2,
   .CibleCont3,
   .CibleCont4 {
     align-self: flex-start;
     height: 30px;
-  }
-  .SpinnerDescu,
+  } */
+  /* .SpinnerDescu,
   .SpinnerDescu1 {
     font-size: 18px;
-  }
-  .CibleRight {
+  } */
+  /* .CibleRight {
     width: 32%;
     height: auto;
     align-items: center;
     align-self: center;
-  }
+  } */
   .buttonDiscover {
     width: 140px;
     height: 40px;
@@ -2375,34 +2424,57 @@ width: 90%;
     margin-top: 20px;
     margin-left: 15px;
   }
-  .CibleCont1,
-  .CibleCont,
-  .CibleCont2,
-  .CibleCont3,
-  .CibleCont4 {
-    height: 30px;
-    width: 90%;
-    align-self: center;
-    /* background-color: #333; */
-    flex-wrap: wrap;
-  }
-  .SpinnerDescu,
+.CibleCont{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+align-items: center;
+align-content: center;
+
+
+  
+}
+.SpinnerDescu,
+.SpinnerDescu1 {
+  font-size: 1rem;
+
+
+}
+
+.IconCibles{
+  width: 20%;
+  height: 40%;
+}
+.CibleCont1,
+.CibleCont2,
+.CibleCont3,
+.CibleCont4 {
+  padding:  10px;
+  width: 90%;  
+}
+.CibleRight {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width:90%;
+  gap:10px;
+  
+  margin-top: 30px;
+}
+  /* .SpinnerDescu,
   .SpinnerDescu1 {
-    font-size: 18px;
-  }
-  .CibleRight {
+    font-size: 0.5rem;
+  } */
+  /* .CibleRight {
     width: 100%;
     height: auto;
     align-items: center;
     align-self: center;
     align-content: center;
     justify-content: space-between;
-    display: grid;
-    gap: 10px;
-    /* background-color: #495469; */
-    margin-left: 30px;
-    grid-template-columns: repeat(2, 1fr);
-  }
+
+  } */
 
   .buttonDiscover {
     width: 120px;
@@ -2594,9 +2666,9 @@ border-bottom: var(--darkGrey) 1px solid;
   max-height: 450px;
   min-height: 450px;
 }
-.CibleRight {
+/* .CibleRight {
   margin-left:50px;
- }
+ } */
 }
 @media (max-width: 623px) {
   .CibleSection {
@@ -2618,7 +2690,7 @@ border-bottom: var(--darkGrey) 1px solid;
     align-self: center;
     align-content: center;
   }
-  .CibleCont1,
+  /* .CibleCont1,
   .CibleCont2,
   .CibleCont3,
   .CibleCont4 {
@@ -2629,14 +2701,14 @@ border-bottom: var(--darkGrey) 1px solid;
     justify-content: center;
     align-self: center;
     align-content: center;
-    /* background-color: #333; */
+
     flex-wrap: wrap;
-  }
-  .SpinnerDescu,
+  } */
+  /* .SpinnerDescu,
   .SpinnerDescu1 {
     font-size: 16px;
-  }
-  .CibleRight {
+  } */
+  /* .CibleRight {
     width: 100%;
     height: auto;
     align-items: center;
@@ -2645,10 +2717,10 @@ border-bottom: var(--darkGrey) 1px solid;
     justify-content: space-between;
     display: grid;
     gap: 10px;
-    /* background-color: #495469; */
+
     margin-left: 30px;
     grid-template-columns: repeat(2, 1fr);
-  }
+  } */
 
   .buttonDiscover {
     width: 120px;
@@ -2802,23 +2874,23 @@ width: 90%;
       height: 13px;
 
     }
-    .CibleRight {
+    /* .CibleRight {
       margin-left:40px;
-     }
-     .CibleCont1,
+     } */
+     /* .CibleCont1,
      .CibleCont2,
      .CibleCont,
      .CibleCont3,
      .CibleCont4 {
        align-self: flex-start;
-       /* background-color: #495469; */
+      
        width:200px;
        height: 30px;
-     }
-     .SpinnerDescu,
+     } */
+     /* .SpinnerDescu,
      .SpinnerDescu1 {
        font-size: 12px;
-     }
+     } */
      .arrow {
 
       top: 99%;
@@ -2838,10 +2910,10 @@ width: 90%;
   .CibleSection{
     margin-top: -20px;
   }
-  .SpinnerDescu,
+  /* .SpinnerDescu,
   .SpinnerDescu1 {
     font-size: 12px;
-  }
+  } */
 
   .SolutionTitle1,
   .SolutionTitle2 {
@@ -3081,11 +3153,11 @@ width: 90%;
 
 }
 @media (max-width: 423px) {
-  .SpinnerDescu,
+  /* .SpinnerDescu,
   .SpinnerDescu1 {
     font-size: 10px;
     text-align: center;
-  }
+  } */
   .buttonDiscover {
     width: 80px;
     height: 40px;
@@ -3290,19 +3362,19 @@ border-bottom: var(--darkGrey) 1px solid;
         border-bottom: 3px solid rgb(5, 34, 255);
   border-right:3px solid rgb(5, 34, 255);
       }
-      .CibleRight {
+      /* .CibleRight {
         margin-left:40px;
-       }
-       .CibleCont1,
+       } */
+       /* .CibleCont1,
        .CibleCont2,
        .CibleCont,
        .CibleCont3,
        .CibleCont4 {
          align-self: flex-start;
-         /* background-color: #495469; */
+        
          width:170px;
          height: 30px;
-       }
+       } */
        .ServicesSection{
          margin-top: -250px;
        }
@@ -3322,10 +3394,10 @@ border-bottom: var(--darkGrey) 1px solid;
     margin-top: -240px;
 
   }
-  .CibleRight {
+  /* .CibleRight {
    margin-left:40px;
-  }
-  .CibleCont1,
+  } */
+  /* .CibleCont1,
   .CibleCont2,
   .CibleCont,
   .CibleCont3,
@@ -3333,11 +3405,11 @@ border-bottom: var(--darkGrey) 1px solid;
     align-self: flex-start;
     width:165px;
     height: 30px;
-  }
-  .SpinnerDescu,
+  } */
+  /* .SpinnerDescu,
   .SpinnerDescu1 {
     font-size: 10px;
-  }
+  } */
   .AllSolutions {
     width: 90%;
     display: flex;
