@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   /* background: linear-gradient(90deg, #00193d, var(--blue)); */
   /* background: linear-gradient(to bottom right, #3358ea, #041261, #000000); */
   background-image:  linear-gradient(to bottom right, #3358eac7, #041261eb, #000000),
