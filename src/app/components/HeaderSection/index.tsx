@@ -167,7 +167,7 @@ const Header = () => {
           <div className={styles.HeaderText}>
             <h1
        
-              className={styles.HeaderTitle}
+              className={styles.HeaderTitle2}
             >
               Advantages of Installing Our Solution
             </h1>
