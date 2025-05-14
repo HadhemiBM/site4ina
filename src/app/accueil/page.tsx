@@ -212,18 +212,7 @@ const Accueil: React.FC = () => {
  const [index, setIndex] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // const handleScroll = (e: WheelEvent) => {
-  //   e.preventDefault(); // Stop page scroll
-    
-  //   setIndex((prev) => {
-  //     if (e.deltaY > 0 && prev < solutions.length - 1) {
-  //       return prev + 1; // Scroll down → next solution
-  //     } else if (e.deltaY < 0 && prev > 0) {
-  //       return prev - 1; // Scroll up → previous solution
-  //     }
-  //     return prev;
-  //   });
-  // };
+  
 const handleScroll = (e: WheelEvent) => {
   if (Math.abs(e.deltaY) > 5) { // Check for significant scroll
     setIndex((prev) => {
@@ -315,36 +304,7 @@ const handleScroll = (e: WheelEvent) => {
           Our solutions at 4InA Technologie encompass both hardware and
           software, designed to optimize your energy management
         </p>
-        {/* <div className={styles.AllSolutions}>
-            <div className={styles.music_case}>
-              <div className={styles.front_case}>
-                <h3 className={styles.SolTitle1}>Hardware</h3>
-                <p className={styles.SolutionDesc1}>
-                  Our precision sensors collect real-time energy usage data
-                  continuously , seamlessly connecting with our platform to
-                  provide a clear, data-driven view of your consumption
-                  patterns.
-                </p>
-              </div>
-              <div className={styles.disc}></div>
-       
-            </div>
-            <div className={styles.music_case}>
-              <div className={styles.front_case2}>
-                <h3 className={styles.SolTitle1}>Software</h3>
-                <p className={styles.SolutionDesc12}>
-                  Our cloud-based software analyzes data from each device and
-                  offers intelligent automation that adapts to your energy
-                  needs, providing easy, remote access ( Web & Mobile) to
-                  insights while optimizing consumption and minimizing waste
-                </p>
-              </div>
-              <div className={styles.disc2}>
-           
-              </div>
-           
-            </div>
-          </div> */}
+        
        <div ref={containerRef} className={styles.wrapperCont}>
       <AnimatePresence mode="sync">
         <motion.div
@@ -369,13 +329,7 @@ const handleScroll = (e: WheelEvent) => {
             </motion.button>
           </Link>
           </div>
-          {/* <Image
-            src={solutions[index].image}
-            alt={solutions[index].title}
-            className={styles.SolutionImg}
-            width={700}
-            height={550}
-          /> */}
+         
           <Image
   src={solutions[index].image}
   alt={solutions[index].title}
@@ -388,23 +342,7 @@ const handleScroll = (e: WheelEvent) => {
         
       </AnimatePresence>
     </div>
-        {/* <div className={styles.AllSolutions}>
-          <div className={styles.Solution1}>
-            <div className={styles.Solution1Text}>
-            <h3 className={styles.SolTitle1}>• Hardware</h3>
-
-              <p className={styles.SolutionDesc1}>
-                Our precision sensors collect real-time energy usage data
-                continuously , seamlessly connecting with our platform to
-                provide a clear, data-driven view of your consumption patterns.
-              </p>
-            </div>
-            <Image src={softSol} alt="left" width={700} height={550}  className={styles.SolutionImg} />
-          </div>
-          <div className={styles.Solution2}>
-              <div className={styles.SolutionHard}></div>
-          </div>
-        </div> */}
+        
       </div>
       <div className={styles.DemoSection}>
         <h1 className={styles.SolutionTitle3}>
@@ -589,44 +527,8 @@ const handleScroll = (e: WheelEvent) => {
           Your resource for the latest insights in Energy Management, AI-powered
           Solutions, and Industry 4.0 trends.
         </p>
-        {/* <div className={styles.AllBlog}>
-        <div id="custom_cursor" />
-          {blogs.map((blog) => (
-          
-            <div key={blog.id}  data-aos="flip-right"   className={styles.Blog1}>
-            <div className={styles.BlogIcon}>
-              <Image
-                width={419}
-                height={400}
-                className={styles.BlogImage}
-                src={blog.imageUrl}
-                alt="blog"
-              />
-            </div>
-            <div className={styles.BlogContent}>
-              <div className={styles.rowContent} >
-              <i className="fa-solid fa-calendar-days"></i>
+        
 
-            <p className={styles.BlogDateText}>{blog.date}</p>
-                </div>
-              <h6
-                onClick={() => handleGo(blog.id)}
-                className={styles.BlogTitle}
-              >
-                {blog.title}
-              </h6>
-              <p className={styles.BlogDesc}>{blog.description}</p>
-
-              
-                <div className={styles.TeamSocial}>
-      
-                      <i onClick={() => handleGo(blog.id)} className="fa-solid fa-arrow-up"></i>
-                    
-                  </div>
-            </div>
-          </div>
-          ))}
-        </div> */}
         <div className="h-[40rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
           <InfiniteMovingCards
             items={blogs}
