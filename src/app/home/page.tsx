@@ -65,8 +65,6 @@ Consumption Reduction
 </h5>
 </div>
 </div>
-
-
 <Link  data-aos="fade-up" href="/accueil" passHref>
               <motion.button
                 onClick={navigateToHome}
