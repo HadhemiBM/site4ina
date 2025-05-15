@@ -159,7 +159,7 @@ const Accueil: React.FC = () => {
       title: "Moby-Dick",
     },
   ];
-  
+
   const items = [
     {
       img: "https://res.cloudinary.com/dyrh4zwb1/image/upload/v1729242530/AFD_wfgxdi.png",
@@ -224,9 +224,9 @@ const Accueil: React.FC = () => {
     }
   };
   // Function to handle timer-based change
-const handleTimerChange = () => {
-  setIndex((prev) => (prev + 1) % solutions.length); // Cycle through the solutions
-};
+  const handleTimerChange = () => {
+    setIndex((prev) => (prev + 1) % solutions.length); // Cycle through the solutions
+  };
 
   // useEffect(() => {
   //   const container = containerRef.current;
@@ -238,21 +238,21 @@ const handleTimerChange = () => {
   //     container.removeEventListener("wheel", handleScroll);
   //   };
   // }, []); // No dependencies → runs once
-useEffect(() => {
-  const container = containerRef.current;
-  if (!container) return;
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
 
-  // Add the scroll event listener
-  container.addEventListener("wheel", handleScroll, { passive: false });
+    // Add the scroll event listener
+    container.addEventListener("wheel", handleScroll, { passive: false });
 
-  const timer = setInterval(handleTimerChange, 10000); // Change every 5 seconds
+    const timer = setInterval(handleTimerChange, 10000); // Change every 5 seconds
 
-  // Cleanup the event listener and the timer when the component unmounts
-  return () => {
-    container.removeEventListener("wheel", handleScroll);
-    clearInterval(timer); // Stop the timer
-  };
-}, []); // Only run this effect once on mount
+    // Cleanup the event listener and the timer when the component unmounts
+    return () => {
+      container.removeEventListener("wheel", handleScroll);
+      clearInterval(timer); // Stop the timer
+    };
+  }, []); // Only run this effect once on mount
 
   return (
     // <PageTransition>
@@ -325,45 +325,45 @@ useEffect(() => {
           Our solutions at 4InA Technologie encompass both hardware and
           software, designed to optimize your energy management
         </p>
- <div ref={containerRef} className={styles.wrapperCont}>
-    <AnimatePresence mode="sync">
-      <motion.div
-        key={index} // Update key to re-trigger animation when index changes
-        className={styles.Solution1}
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -50 }}
-        transition={{ duration: 0.5 }}
-      >
-        <div className={styles.Solution1Text}>
-          <h2 className={styles.SolTitle1}>{solutions[index].title}</h2>
-          <p className={styles.SolutionDesc1}>
-            {solutions[index].description}
-          </p>
-          <Link href="/services" passHref>
-            <motion.button
-              onClick={navigateToService}
-              className={styles.buttonDemoSol}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
+        <div ref={containerRef} className={styles.wrapperCont}>
+          <AnimatePresence mode="sync">
+            <motion.div
+              key={index} // Update key to re-trigger animation when index changes
+              className={styles.Solution1}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -50 }}
+              transition={{ duration: 0.5 }}
             >
-              Request Demo
-            </motion.button>
-          </Link>
-        </div>
+              <div className={styles.Solution1Text}>
+                <h2 className={styles.SolTitle1}>{solutions[index].title}</h2>
+                <p className={styles.SolutionDesc1}>
+                  {solutions[index].description}
+                </p>
+                <Link href="/services" passHref>
+                  <motion.button
+                    onClick={navigateToService}
+                    className={styles.buttonDemoSol}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                  >
+                    Request Demo
+                  </motion.button>
+                </Link>
+              </div>
 
-        <Image
-          src={solutions[index].image}
-          alt={solutions[index].title}
-          className={`${styles.SolutionImg} ${
-            index === 0
-              ? styles.SolutionImgFirst
-              : styles.SolutionImgSecond
-          }`}
-        />
-      </motion.div>
-    </AnimatePresence>
-  </div>
+              <Image
+                src={solutions[index].image}
+                alt={solutions[index].title}
+                className={`${styles.SolutionImg} ${
+                  index === 0
+                    ? styles.SolutionImgFirst
+                    : styles.SolutionImgSecond
+                }`}
+              />
+            </motion.div>
+          </AnimatePresence>
+        </div>
         {/* <div ref={containerRef} className={styles.wrapperCont}>
           <AnimatePresence mode="sync">
             <motion.div
@@ -426,25 +426,25 @@ useEffect(() => {
             >
               <rect
                 className={`${styles.buttonLine} ${styles.buttonLineOuter}`}
-                strokeWidth="4"
+                strokeWidth="2"
                 stroke="#6190f5"
                 strokeLinecap="round"
                 fill="none"
                 x="4"
                 y="4"
-                width="292"
+                width="270"
                 height="72"
                 rx="20"
               />
               <rect
                 className={`${styles.buttonLine} ${styles.buttonLineInner}`}
-                strokeWidth="3"
+                strokeWidth="2"
                 stroke="#0003da"
                 strokeLinecap="round"
                 fill="none"
                 x="4"
                 y="4"
-                width="292"
+                width="270"
                 height="72"
                 rx="20"
               />
