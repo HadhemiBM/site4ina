@@ -513,31 +513,31 @@ const Accueil: React.FC = () => {
         </p>
 
         <div className={styles.imagesLeaning}>
-          <div className={styles.card + " " + styles.card1}>
+          <div className={styles.card}>
             <img
               src="https://res.cloudinary.com/dyrh4zwb1/image/upload/v1729242530/AFD_wfgxdi.png"
               alt="AFD - Agence Française de Développement"
             />
           </div>
-          <div className={styles.card + " " + styles.card2}>
+          <div className={styles.card}>
             <img
               src="https://res.cloudinary.com/ddngbriyu/image/upload/v1744809051/images_jp1d7v.jpg"
               alt="European Union"
             />
           </div>
-          <div className={styles.card + " " + styles.card4}>
+          <div className={styles.card }>
             <img
               src="https://res.cloudinary.com/ddngbriyu/image/upload/v1744809407/logo-deutsch-tunesische-zusammenarbeit_skzlyb.jpg"
               alt="La GIZ en Tunisie"
             />
           </div>
-          <div className={styles.card + " " + styles.card3}>
+          <div className={styles.card}>
             <img
               src="https://res.cloudinary.com/dyrh4zwb1/image/upload/v1729242600/ceed_hs3zi9.jpg"
               alt="CEED Tunisie"
             />
           </div>
-          <div className={styles.card + " " + styles.card4}>
+          <div className={styles.card}>
             <img
               src="https://res.cloudinary.com/ddngbriyu/image/upload/v1744895023/images_wpj9jb.png"
               alt="Smart Capital"
