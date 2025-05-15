@@ -35,7 +35,7 @@ text-align: center;
 }
 .CibleSection {
   width: 100%;
-  height: 100%;
+  height: auto;
   /* margin: 0 auto; */
   display: flex;
   font-size: 48px;
@@ -342,7 +342,7 @@ gap:10px;
 }
 
 .Solution1 {
-  width: 120%;
+  width: 100%;
   height: 500px;
   align-self: center;
   justify-content: center;
@@ -465,16 +465,7 @@ justify-content: center;
   width: 80%;
   text-align: start;
 }
-.SolutionDesc12 {
-  font-size: 18px;
-  color: black;
 
-  padding-right: 10px;
-
-  font-family: "Poppins";
-  width: 90%;
-  text-align: center;
-}
 /* Demo Section */
 .DemoSection {
   display: flex;
@@ -1049,7 +1040,6 @@ cursor:pointer;
   right: 0%;
   transform: translate(-80%, -80%) rotate(270deg);
   cursor: pointer;
-
   padding: 10px;
   border-radius: 5px;
 }
@@ -1057,7 +1047,6 @@ cursor:pointer;
   width: 110%;
   height: 75vh;
   transform: rotate(-3deg);  
-
   overflow: hidden;
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
@@ -1702,9 +1691,7 @@ padding: 10px;
       z-index: 999;
     }
   }
-  .SolTitle1 {
-    font-size: 26px;
-  }
+ 
   .disc {
     z-index: -999;
     width: 220px;
@@ -1781,17 +1768,7 @@ padding: 10px;
   margin-right: 20px;
 
 }
-  .SolutionDesc1 {
-    width: 70%;
-    font-size: 16px;
-    flex-wrap: wrap;
-  }
-  .SolutionDesc12 {
-    width: 70%;
-    flex-wrap: wrap;
 
-    font-size: 16px;
-  }
   .SolutionsDesc {
     width: 90%;
 
@@ -1907,6 +1884,64 @@ z-index: 999;
   object-fit: cover;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+}
+}
+@media (max-width: 1100px) {
+    .wrapperCont {
+  margin-bottom: 3rem;
+
+  height: 40vh;
+}
+
+.SolutionImgFirst{
+
+  transform: rotate(3deg);  
+
+  width: 40%;
+  height: 100;
+
+}
+.Solution1Text{
+  display: flex;
+
+
+  flex-direction: column;
+  width:100%;
+  transform: rotate(3deg);  
+/* background-color: #3f27cd; */
+/* align-items: center; */
+justify-content: center;
+text-align: center;
+align-items: center;
+align-self: center;
+
+}
+.Solution1 {
+  height: 1000px;
+
+  flex-direction: column-reverse;
+  /* position: relative; */
+
+}
+.SolutionImgSecond{
+  margin-top:-40px;
+  transform: rotate(3deg);  
+
+  width: 30%;
+  height: auto;
+}
+  .SolTitle1 {
+  font-size: 1rem;
+}
+.buttonDemoSol{
+  padding: 4px 10px;
+  font-size: 0.8rem;
+}
+.SolutionDesc1 {
+  font-size:1rem;
+
+  width: 80%;
+  text-align: center;
 }
 }
 @media (max-width: 900px) {
@@ -2036,9 +2071,7 @@ align-content: center;
       z-index: 999;
     }
   }
-  .SolTitle1 {
-    font-size: 26px;
-  }
+
   .disc {
   display: none;
     z-index: -999;
@@ -2072,12 +2105,7 @@ width: 90%;
   .buttonDemo {
     margin-top: 0px;
   }
-.SolutionDesc1 ,.SolutionDesc12 {
-  font-size: 16px;
 
-  width:70%;
-
-}
    /*  */
    .ServicesSection{
     margin-top: -90px;
@@ -2264,7 +2292,7 @@ border-bottom: var(--darkGrey) 1px solid;
   .SolutionsDesc {
     font-size: 24px;
     margin-bottom: 80px;
-    z-index: 999;
+
   }
   .AllSolutions {
     width: 90%;
@@ -2285,12 +2313,7 @@ border-bottom: var(--darkGrey) 1px solid;
 
       height: auto;
     }
-    .SolutionDesc1 {
-      font-size: 16px;
-    }
-    .SolutionDesc12 {
-      font-size: 16px;
-    }
+
 
     .front_case2 {
       transform: translateX(20%);
@@ -2311,9 +2334,7 @@ border-bottom: var(--darkGrey) 1px solid;
       border-bottom: 1px solid var(--blue);
     }
   }
-  .SolTitle1 {
-    font-size: 26px;
-  }
+ 
   .disc {
 
     width: 250px;
@@ -2501,12 +2522,6 @@ align-content: center;
     margin-bottom: 70px;
     height: 300px;
   }
-  .SolutionDesc1 {
-    font-size: 18px;
-  }
-  .SolutionDesc12 {
-    font-size: 18px;
-  }
 
   .music_case:hover {
     box-shadow: 0px 0px 0px 0px rgba(77, 76, 76, 0.404);
@@ -2515,13 +2530,7 @@ align-content: center;
       transform: translateX(-50px);
       height: auto;
     }
-    .SolutionDesc1 {
-      font-size: 12px;
-    }
-    .SolutionDesc12 {
-      font-size: 12px;
-      width: 70%;
-    }
+  
 
     .front_case2 {
       transform: translateX(20%);
@@ -2544,9 +2553,7 @@ align-content: center;
       border-bottom: 1px solid var(--blue);
     }
   }
-  .SolTitle1 {
-    font-size: 26px;
-  }
+
   .disc {
     width: 100px;
     height: 100px;
@@ -2750,12 +2757,7 @@ border-bottom: var(--darkGrey) 1px solid;
     margin-bottom: 70px;
     height: 300px;
   }
-  .SolutionDesc1 {
-    font-size: 18px;
-  }
-  .SolutionDesc12 {
-    font-size: 18px;
-  }
+
 
   .music_case:hover {
     .front_case {
@@ -2783,9 +2785,7 @@ border-bottom: var(--darkGrey) 1px solid;
       border-bottom: 1px solid var(--blue);
     }
   }
-  .SolTitle1 {
-    font-size: 26px;
-  }
+
   .disc {
     width: 100px;
     height: 100px;
@@ -2906,7 +2906,7 @@ width: 90%;
     }
 }
 
-@media (max-width: 508px) {
+@media (max-width: 580px) {
   .CibleSection{
     margin-top: -20px;
   }
@@ -2919,6 +2919,7 @@ width: 90%;
   .SolutionTitle2 {
     font-size: 30px;
   }
+
   .SolutionsDesc {
     width: 90%;
     font-size: 16px;
@@ -2929,41 +2930,62 @@ width: 90%;
     flex-direction: column;
     gap: 0px;
   }
-  .music_case {
-    margin-bottom: 40px;
-    height: 300px;
-  }
-  .SolutionDesc1 {
-    font-size: 18px;
-  }
-  .SolutionDesc12 {
-    font-size: 14px;
-    margin-left: 14px;
-  }
-  .music_case {
-    margin-bottom: 30px;
-  }
-  .music_case:hover {
-    .front_case {
-      transform: translateX(-00px);
-    }
+  .wrapperCont {
+  margin-bottom: 3rem;
+  padding: 10px;
+  height: 40vh;
+}
 
-    .front_case2 {
-      transform: translateX(00px);
-    }
-    .disc {
-      transform: translateY(140px) translateX(180px);
-      border-bottom: 0px solid var(--blue);
-    }
-    .disc2 {
-      border-bottom: 0px solid var(--blue);
+.SolutionImgFirst{
 
-      transform: translateY(160px) translateX(140px);
-    }
-  }
+  transform: rotate(3deg);  
+
+  width: 40%;
+  height: 100;
+
+}
+.Solution1Text{
+  display: flex;
+
+
+  flex-direction: column;
+  width:100%;
+  transform: rotate(3deg);  
+/* background-color: #3f27cd; */
+/* align-items: center; */
+justify-content: center;
+text-align: center;
+align-items: center;
+align-self: center;
+
+}
+.Solution1 {
+  height: 1000px;
+
+  flex-direction: column-reverse;
+  /* position: relative; */
+
+}
+.SolutionImgSecond{
+  margin-top:-50px;
+  transform: rotate(3deg);  
+
+  width: 35%;
+  height: auto;
+}
   .SolTitle1 {
-    font-size: 26px;
-  }
+  font-size: 1rem;
+}
+.buttonDemoSol{
+  padding: 4px 10px;
+  font-size: 0.8rem;
+}
+.SolutionDesc1 {
+  font-size:0.7rem;
+
+  width: 85%;
+  text-align: center;
+}
   .disc {
     width: 100px;
     height: 100px;
@@ -3192,12 +3214,7 @@ width: 90%;
     margin-bottom: 40px;
     height: 300px;
   }
-  .SolutionDesc1 {
-    font-size: 16px;
-  }
-  .SolutionDesc12 {
-    font-size: 16px;
-  }
+
   .music_case {
     margin-bottom: 30px;
   }
@@ -3225,9 +3242,7 @@ width: 90%;
   .front_case2 {
     width: 90%;
   }
-  .SolTitle1 {
-    font-size: 26px;
-  }
+
   .disc {
     width: 100px;
     height: 100px;
@@ -3420,12 +3435,7 @@ border-bottom: var(--darkGrey) 1px solid;
     margin-bottom: 40px;
     height: 300px;
   }
-  .SolutionDesc1 {
-    font-size: 16px;
-  }
-  .SolutionDesc12 {
-    font-size: 16px;
-  }
+ 
   .music_case {
     margin-bottom: 30px;
   }
@@ -3453,9 +3463,7 @@ border-bottom: var(--darkGrey) 1px solid;
   .front_case2 {
     width: 90%;
   }
-  .SolTitle1 {
-    font-size: 26px;
-  }
+
   .disc {
     width: 100px;
     height: 100px;

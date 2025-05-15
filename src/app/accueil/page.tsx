@@ -159,6 +159,7 @@ const Accueil: React.FC = () => {
       title: "Moby-Dick",
     },
   ];
+  
   const items = [
     {
       img: "https://res.cloudinary.com/dyrh4zwb1/image/upload/v1729242530/AFD_wfgxdi.png",
@@ -209,29 +210,49 @@ const Accueil: React.FC = () => {
   const handleGo = (id: number) => {
     router.push(`/posts/blogDetails?id=${id}`);
   };
- const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  
-const handleScroll = (e: WheelEvent) => {
-  if (Math.abs(e.deltaY) > 5) { // Check for significant scroll
-    setIndex((prev) => {
-      if (e.deltaY > 0 && prev < solutions.length - 1) return prev + 1;
-      if (e.deltaY < 0 && prev > 0) return prev - 1;
-      return prev;
-    });
-  }
+  const handleScroll = (e: WheelEvent) => {
+    if (Math.abs(e.deltaY) > 5) {
+      // Check for significant scroll
+      setIndex((prev) => {
+        if (e.deltaY > 0 && prev < solutions.length - 1) return prev + 1;
+        if (e.deltaY < 0 && prev > 0) return prev - 1;
+        return prev;
+      });
+    }
+  };
+  // Function to handle timer-based change
+const handleTimerChange = () => {
+  setIndex((prev) => (prev + 1) % solutions.length); // Cycle through the solutions
 };
-  useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
 
-    container.addEventListener("wheel", handleScroll, { passive: false });
+  // useEffect(() => {
+  //   const container = containerRef.current;
+  //   if (!container) return;
 
-    return () => {
-      container.removeEventListener("wheel", handleScroll);
-    };
-  }, []); // No dependencies → runs once
+  //   container.addEventListener("wheel", handleScroll, { passive: false });
+
+  //   return () => {
+  //     container.removeEventListener("wheel", handleScroll);
+  //   };
+  // }, []); // No dependencies → runs once
+useEffect(() => {
+  const container = containerRef.current;
+  if (!container) return;
+
+  // Add the scroll event listener
+  container.addEventListener("wheel", handleScroll, { passive: false });
+
+  const timer = setInterval(handleTimerChange, 10000); // Change every 5 seconds
+
+  // Cleanup the event listener and the timer when the component unmounts
+  return () => {
+    container.removeEventListener("wheel", handleScroll);
+    clearInterval(timer); // Stop the timer
+  };
+}, []); // Only run this effect once on mount
 
   return (
     // <PageTransition>
@@ -304,45 +325,84 @@ const handleScroll = (e: WheelEvent) => {
           Our solutions at 4InA Technologie encompass both hardware and
           software, designed to optimize your energy management
         </p>
-        
-       <div ref={containerRef} className={styles.wrapperCont}>
-      <AnimatePresence mode="sync">
-        <motion.div
-          key={index}
-          className={styles.Solution1}
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -50 }}
-          transition={{ duration: 0.5 }}
-        >
-          <div className={styles.Solution1Text}>
-            <h2 className={styles.SolTitle1}>{solutions[index].title}</h2>
-            <p className={styles.SolutionDesc1}>{solutions[index].description}</p>
-               <Link href="/services" passHref>
+ <div ref={containerRef} className={styles.wrapperCont}>
+    <AnimatePresence mode="sync">
+      <motion.div
+        key={index} // Update key to re-trigger animation when index changes
+        className={styles.Solution1}
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -50 }}
+        transition={{ duration: 0.5 }}
+      >
+        <div className={styles.Solution1Text}>
+          <h2 className={styles.SolTitle1}>{solutions[index].title}</h2>
+          <p className={styles.SolutionDesc1}>
+            {solutions[index].description}
+          </p>
+          <Link href="/services" passHref>
             <motion.button
               onClick={navigateToService}
               className={styles.buttonDemoSol}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              Request Demo 
+              Request Demo
             </motion.button>
           </Link>
-          </div>
-         
-          <Image
-  src={solutions[index].image}
-  alt={solutions[index].title}
-  className={`${styles.SolutionImg} ${
-    index === 0 ? styles.SolutionImgFirst : styles.SolutionImgSecond
-  }`}
-/>
+        </div>
 
-        </motion.div>
-        
-      </AnimatePresence>
-    </div>
-        
+        <Image
+          src={solutions[index].image}
+          alt={solutions[index].title}
+          className={`${styles.SolutionImg} ${
+            index === 0
+              ? styles.SolutionImgFirst
+              : styles.SolutionImgSecond
+          }`}
+        />
+      </motion.div>
+    </AnimatePresence>
+  </div>
+        {/* <div ref={containerRef} className={styles.wrapperCont}>
+          <AnimatePresence mode="sync">
+            <motion.div
+              key={index}
+              className={styles.Solution1}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -50 }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className={styles.Solution1Text}>
+                <h2 className={styles.SolTitle1}>{solutions[index].title}</h2>
+                <p className={styles.SolutionDesc1}>
+                  {solutions[index].description}
+                </p>
+                <Link href="/services" passHref>
+                  <motion.button
+                    onClick={navigateToService}
+                    className={styles.buttonDemoSol}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                  >
+                    Request Demo
+                  </motion.button>
+                </Link>
+              </div>
+
+              <Image
+                src={solutions[index].image}
+                alt={solutions[index].title}
+                className={`${styles.SolutionImg} ${
+                  index === 0
+                    ? styles.SolutionImgFirst
+                    : styles.SolutionImgSecond
+                }`}
+              />
+            </motion.div>
+          </AnimatePresence>
+        </div> */}
       </div>
       <div className={styles.DemoSection}>
         <h1 className={styles.SolutionTitle3}>
@@ -527,7 +587,6 @@ const handleScroll = (e: WheelEvent) => {
           Your resource for the latest insights in Energy Management, AI-powered
           Solutions, and Industry 4.0 trends.
         </p>
-        
 
         <div className="h-[40rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
           <InfiniteMovingCards
