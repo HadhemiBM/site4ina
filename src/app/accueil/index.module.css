@@ -12,10 +12,10 @@
   /* margin-left: 20px; */
   font-weight: bold;
 text-align: center;
-
-  align-self: center;
-  /* text-align: center; */
-  background-image: url('https://res.cloudinary.com/ddngbriyu/image/upload/v1744810615/fond-marbre-liquide-bleu-abstrait-art-experimental-texture-fluide_53876-104502_hr0bz5.jpg');
+align-self: center;
+/* text-align: center; */
+background-image: url('https://res.cloudinary.com/ddngbriyu/image/upload/v1744810615/fond-marbre-liquide-bleu-abstrait-art-experimental-texture-fluide_53876-104502_hr0bz5.jpg');
+/* background-color: #ff00dd; */
   background-size: 200%; /* Enlarged for smooth animation */
   /* background-position: 0 50%; */
   background-clip: text;
@@ -45,6 +45,7 @@ text-align: center;
   align-content: center;
   gap: 20px;
   align-self: center;
+
   justify-content: space-between;
 }
 .arrowBtn {
@@ -71,6 +72,7 @@ text-align: center;
   align-items: center;
   align-content: center;
   align-self: center;
+
   justify-content: center;
   gap:50px
 }
@@ -99,13 +101,12 @@ text-align: center;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  width: 70%;
-  gap:10px;
+  width: 90%;
+  gap:4px;
   height: auto;
 justify-content: center;
   align-items: center;
   align-self: center;
-  /* background-color: #3f27cd; */
   align-content: center;
   margin-top: 50px;
 }
@@ -231,30 +232,17 @@ justify-content: center;
   flex-wrap: wrap;
   flex-direction: column;
   align-self: center;
-
-
-  
-}
-
-.CibleCont1,
-.CibleCont2,
-.CibleCont3,
-.CibleCont4 {
-  display: flex;
-  /* height: 30%; */
   align-items: center;
   align-content: center;
-  justify-content: flex-start;
-  opacity: 0;
-  transform: translateX(100%);
+gap: 4px;
   padding: 10px;
-  width: 24%;
-
-gap:10px;
-  border-radius: 8px;
+  width: 20%;
+    border-radius: 8px;
   box-shadow: 0 10px 15px rgba(4, 17, 133, 0.2);
   transition: opacity 0.1s ease, transform 0.1s ease;
 }
+
+
 .IconCibles:hover {
   transform: scale(1.1) rotateZ(0deg);
   z-index: 10;
@@ -354,8 +342,8 @@ gap:10px;
   font-family: "Poppins";
 }
 .IconCibles{
-  width: 40%;
-  height: 60%;
+  width: 50%;
+  height: 40%;
 }
 .descriptionBox {
   background-color: rgba(255, 255, 255, 0.664);
@@ -521,12 +509,6 @@ justify-content: center;
   justify-content: center;
     background-repeat: no-repeat;
   gap: 20px;
-  /* background-image: url("../Assests/Ellipse.png");
-
-  background-size: 70% 100%;
-
-  background-repeat: repeat;
-  background-position: left center; */
 
 
 }
@@ -735,12 +717,12 @@ justify-content: center;
 .AllPrices {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   width: 90%;
   height: auto;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 
-  gap: 30px;
 }
 .priceHed {
   display: flex;
@@ -752,8 +734,7 @@ justify-content: center;
   gap: 10px;
   margin: 0px 0px 10px 0px;
 }
-.PriceTitle1 ,
-.PriceTitleSilver  {
+.PriceTitle1   {
   font-size:1.5rem;
   color: #ffffffdc;
   font-family: "Poppins";
@@ -761,22 +742,9 @@ justify-content: center;
 margin: 0;
 }
 
-.PriceTitleSilver  {
- 
-  color: var(--blue);
- 
-}
 
-.price1 {
-  width: 390px;
-  height: 87.72px;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
 
-}
+
 .Desc1 {
   font-size: 20px;
   color: black;
@@ -1175,12 +1143,10 @@ align-self: flex-start;
     transform: perspective(150px) rotateY(180deg) rotate(90deg);
   }
 }
-.rowloa,
-.rowloaSilver,
-.rowloaGold
+.rowloa
+
 {
   display: flex;
-  flex-direction: row;
   background-image: 
     linear-gradient(90deg, rgba(255, 255, 255, 0.103) 0%, rgba(255, 255, 255, 0) 20%, rgba(0, 65, 243, 0.5) 50%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0.103) 100%),
     url("../Assests/bgblue.jpg");
@@ -1188,26 +1154,14 @@ align-self: flex-start;
    background-size: 100% 200%; 
   background-position: center; 
   transform-origin: center center; 
-  gap: 20px;
-  width: 40%;
+  width: 25%;
   align-items: center;
   justify-content: center;
   align-content: center;
   border-radius: 10px;
 padding: 10px;
 }
-.rowloaSilver
-{
-  background-image: 
-    /* linear-gradient(90deg, rgba(255, 255, 255, 0.103) 0%, rgba(255, 255, 255, 0) 20%, rgba(0, 65, 243, 0.5) 50%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0.103) 100%), */
-    url("../Assests/silver.jpg");
-}
-.rowloaGold
-{
-  background-image: 
-    /* linear-gradient(90deg, rgba(255, 255, 255, 0.103) 0%, rgba(255, 255, 255, 0) 20%, rgba(0, 65, 243, 0.5) 50%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0.103) 100%), */
-    url("../Assests/gold.jpg");
-}
+
 .AvantagesSection {
   display: flex;
   flex-direction: column;
@@ -1718,10 +1672,7 @@ padding: 10px;
     width: 90%;
 
       }
-      .PriceTitle1  , .viewDetails{
-        font-size: 24px;
-
-      }
+     
   .music_case:hover {
 
     .front_case {
@@ -1752,29 +1703,21 @@ height: 150px;
   .disc {
     z-index: -999;
     width: 0px;
-
   }
   .disc2 {
     z-index: -999;
-
   }
   /* Blogs */
  .AllBlog {
   width: 90%;
 flex-direction: row;
-
   gap: 20px;
 }
-
-
 .Blog1 {
   display: flex;
   flex-direction: row;
 margin-bottom: 40px;
-
 border-bottom: var(--darkGrey) 1px solid;
-
-
   width: 70%;
   max-height: 420px;
   min-height: 420px;
@@ -1839,6 +1782,27 @@ z-index: 999;
   margin-left: 12px;
   cursor: pointer;
 }
+.SpinnerDescu,
+.SpinnerDescu1 {
+  font-size: 0.8rem;
+
+ 
+
+}
+.CibleCont{
+
+align-items: center;
+align-content: center;
+text-align: center;
+
+  
+}
+  
+.CibleRight {
+  /* background-color: #3f27cd; */
+  gap:20px;
+
+}
 .descriptionBox {
   background-color: rgba(255, 255, 255, 0.801);
   padding: 15px;
@@ -1852,6 +1816,9 @@ z-index: 999;
 .cardSer{
   height: 500px;
   min-width: 100%;
+}
+.PriceTitle1{
+  font-size: 0.8rem;
 }
 .SolutionImgFirst{
   transform: rotate(3deg);  
@@ -1898,9 +1865,9 @@ align-self: center;
   width: 150px;
   font-size: 0.8rem;
   font-family: "Poppins";
-
-
 }
+
+
 }
 @media (max-width: 900px) {
   .AllSolutions {
@@ -1932,27 +1899,21 @@ align-self: center;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-
+gap: 10px;
 align-items: center;
 align-content: center;
 
-
+width: 100%;
   
 }
 .IconCibles{
   width: 20%;
-  height: 40%;
+  height: 30%;
 }
-.CibleCont1,
-.CibleCont2,
-.CibleCont3,
-.CibleCont4 {
-  padding:  10px;
-  width: 90%;  
-}
+
 .SpinnerDescu,
 .SpinnerDescu1 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 
   font-family: "Poppins";
   margin: 0px 0px 0px 0px;
@@ -1965,8 +1926,8 @@ align-content: center;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  width:90%;
-  gap:10px;
+  width:100%;
+
   
   margin-top: 30px;
 }
@@ -2089,14 +2050,12 @@ width: 90%;
       border-bottom: var(--blue) 1px solid;
     }
     /* Price */
-    .rowloa {
-      gap: 10px;
-    }
+
     .loader {
       width: 20px;
       height: 20px;
     }
-    .PriceTitle1 , .viewDetails {
+ .viewDetails {
       font-size: 20px;
 
     }
@@ -2322,7 +2281,11 @@ width: 90%;
 }
 
 @media (max-width: 668px) {
-  .PriceTitle1 , .viewDetails {
+  .container {
+
+  gap: 50px;
+}
+ .viewDetails {
     font-size: 18px;
 
   }
@@ -2351,7 +2314,7 @@ width: 90%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-
+width: 100%;
 align-items: center;
 align-content: center;
 
@@ -2367,22 +2330,15 @@ align-content: center;
 
 .IconCibles{
   width: 20%;
-  height: 40%;
+  height: 30%;
 }
-.CibleCont1,
-.CibleCont2,
-.CibleCont3,
-.CibleCont4 {
-  padding:  10px;
-  width: 90%;  
-}
+
 .CibleRight {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   width:90%;
   gap:10px;
-  
   margin-top: 30px;
 }
 
@@ -2517,15 +2473,7 @@ width: 93%;
     }
     /* price */
 
-    .AllPrices {
-      width: 100%;
-      height: 200px;
-      align-items: center;
-      align-content: center;
-      justify-content: center;
-      /* margin-top: 30px; */
-      gap: 20px;
-    }
+
     .loader {
       width: 13px;
       height: 13px;
@@ -2659,19 +2607,11 @@ width: 90%;
     }
 
     /* Price */
-    .PriceTitle1 , .viewDetails{
+   .viewDetails{
       font-size: 14px;
 
     }
-    .AllPrices {
-      width: 100%;
-      height: 200px;
-      align-items: center;
-      align-content: center;
-      justify-content: center;
-      /* margin-top: 30px; */
-      gap: 20px;
-    }
+  
     .loader {
       width: 13px;
       height: 13px;
@@ -2803,7 +2743,7 @@ width: 90%;
       height: 50px;
     }
     /* Price */
-    .PriceTitle1 , .viewDetails {
+ .viewDetails {
       font-size: 12px;
 
     }
@@ -2848,20 +2788,12 @@ width: 90%;
     flex-direction: column;
   }
   /* Price */
-  .PriceTitle1 , .viewDetails {
+ .viewDetails {
     font-size: 14px;
     text-align: center;
 
   }
-  .AllPrices {
-    width: 100%;
-    height: 200px;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    /* margin-top: 30px; */
-    gap: 20px;
-  }
+
   .loader {
     width: 13px;
     height: 13px;
@@ -2869,11 +2801,7 @@ width: 90%;
     text-align: center;
 
   }
-  .rowloa {
 
-    flex-direction: column;
-
-  }
   .arrow1 span {
     display: none;
     width: 20px;
@@ -2988,7 +2916,7 @@ width: 90%;
 
   .SolutionTitle3  {
 
-    font-size: 16px;
+    font-size: 0.9rem;
 
   }
   .SolutionTitle1,
@@ -3030,7 +2958,7 @@ width: 90%;
         height: 50px;
       }
       /* Price */
-      .PriceTitle1 , .viewDetails{
+ .viewDetails{
         font-size: 12px;
         text-align: center;
 
@@ -3092,6 +3020,12 @@ border-bottom: var(--darkGrey) 1px solid;
 
 
 @media (max-width: 400px) {
+  
+  .SolutionTitle3  {
+
+    font-size: 0.8rem;
+
+  }
   .AllSolutions {
     width: 90%;
     display: flex;

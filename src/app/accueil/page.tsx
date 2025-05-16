@@ -228,16 +228,6 @@ const Accueil: React.FC = () => {
     setIndex((prev) => (prev + 1) % solutions.length); // Cycle through the solutions
   };
 
-  // useEffect(() => {
-  //   const container = containerRef.current;
-  //   if (!container) return;
-
-  //   container.addEventListener("wheel", handleScroll, { passive: false });
-
-  //   return () => {
-  //     container.removeEventListener("wheel", handleScroll);
-  //   };
-  // }, []); // No dependencies → runs once
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
@@ -261,6 +251,7 @@ const Accueil: React.FC = () => {
       <div className={styles.CibleSection}>
         <div className={styles.CibleLeft}>
           <div
+          className={styles.CibleTitleDiv}
           // data-aos="fade-up" data-aos-delay="400"
           >
             <h1 className={styles.CibleTitle}>
@@ -296,8 +287,7 @@ const Accueil: React.FC = () => {
               visibleItems.includes(index) && (
                 <div
                   key={index}
-                  className={`${styles.CibleCont} ${
-                    styles[`CibleCont${index + 1}`]
+                  className={`${styles.CibleCont} 
                   } ${visibleItems.includes(index) ? styles.show : ""}`}
                 >
                   {/* <div className={styles.loader}></div> */}
@@ -555,24 +545,23 @@ const Accueil: React.FC = () => {
           optimization.
         </p>
         <div className={styles.AllPrices}>
-          <div className={styles.price1}>
+          
             <div className={styles.rowloa}>
               {/* <div className={styles.loader}></div> */}
               <h3 className={styles.PriceTitle1}>Basic </h3>
             </div>
-          </div>
-          <div className={styles.price1}>
+  
             <div className={styles.rowloa}>
               {/* <div className={styles.loader}></div> */}
               <h3 className={styles.PriceTitle1}>Silver </h3>
             </div>
-          </div>
-          <div className={styles.price1}>
+    
+          
             <div className={styles.rowloa}>
               {/* <div className={styles.loader}></div> */}
               <h3 className={styles.PriceTitle1}>Gold </h3>
             </div>
-          </div>
+      
         </div>
         <Link href="/priceDetails" className={styles.viewDetails}>
           View Details

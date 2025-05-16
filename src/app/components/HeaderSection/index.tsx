@@ -177,8 +177,7 @@ const Header = () => {
             >
                Our smart energy solution enhances operational efficiency and
               significantly reduces energy costs through real-time optimization.
-              It empowers businesses to achieve sustainable growth while making
-              smarter, data-driven decisions.
+              
             </p>
             <AnimationHead id="particles" className={styles.back} />
             <div className={styles.Advanages}>
