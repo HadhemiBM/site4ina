@@ -159,6 +159,7 @@ const Accueil: React.FC = () => {
       title: "Moby-Dick",
     },
   ];
+
   const items = [
     {
       img: "https://res.cloudinary.com/dyrh4zwb1/image/upload/v1729242530/AFD_wfgxdi.png",
@@ -209,29 +210,39 @@ const Accueil: React.FC = () => {
   const handleGo = (id: number) => {
     router.push(`/posts/blogDetails?id=${id}`);
   };
- const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  
-const handleScroll = (e: WheelEvent) => {
-  if (Math.abs(e.deltaY) > 5) { // Check for significant scroll
-    setIndex((prev) => {
-      if (e.deltaY > 0 && prev < solutions.length - 1) return prev + 1;
-      if (e.deltaY < 0 && prev > 0) return prev - 1;
-      return prev;
-    });
-  }
-};
+  const handleScroll = (e: WheelEvent) => {
+    if (Math.abs(e.deltaY) > 5) {
+      // Check for significant scroll
+      setIndex((prev) => {
+        if (e.deltaY > 0 && prev < solutions.length - 1) return prev + 1;
+        if (e.deltaY < 0 && prev > 0) return prev - 1;
+        return prev;
+      });
+    }
+  };
+  // Function to handle timer-based change
+  const handleTimerChange = () => {
+    setIndex((prev) => (prev + 1) % solutions.length); // Cycle through the solutions
+  };
+
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
 
+    // Add the scroll event listener
     container.addEventListener("wheel", handleScroll, { passive: false });
 
+    const timer = setInterval(handleTimerChange, 10000); // Change every 5 seconds
+
+    // Cleanup the event listener and the timer when the component unmounts
     return () => {
       container.removeEventListener("wheel", handleScroll);
+      clearInterval(timer); // Stop the timer
     };
-  }, []); // No dependencies → runs once
+  }, []); // Only run this effect once on mount
 
   return (
     // <PageTransition>
@@ -240,6 +251,7 @@ const handleScroll = (e: WheelEvent) => {
       <div className={styles.CibleSection}>
         <div className={styles.CibleLeft}>
           <div
+          className={styles.CibleTitleDiv}
           // data-aos="fade-up" data-aos-delay="400"
           >
             <h1 className={styles.CibleTitle}>
@@ -275,8 +287,7 @@ const handleScroll = (e: WheelEvent) => {
               visibleItems.includes(index) && (
                 <div
                   key={index}
-                  className={`${styles.CibleCont} ${
-                    styles[`CibleCont${index + 1}`]
+                  className={`${styles.CibleCont} 
                   } ${visibleItems.includes(index) ? styles.show : ""}`}
                 >
                   {/* <div className={styles.loader}></div> */}
@@ -304,45 +315,84 @@ const handleScroll = (e: WheelEvent) => {
           Our solutions at 4InA Technologie encompass both hardware and
           software, designed to optimize your energy management
         </p>
-        
-       <div ref={containerRef} className={styles.wrapperCont}>
-      <AnimatePresence mode="sync">
-        <motion.div
-          key={index}
-          className={styles.Solution1}
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -50 }}
-          transition={{ duration: 0.5 }}
-        >
-          <div className={styles.Solution1Text}>
-            <h2 className={styles.SolTitle1}>{solutions[index].title}</h2>
-            <p className={styles.SolutionDesc1}>{solutions[index].description}</p>
-               <Link href="/services" passHref>
-            <motion.button
-              onClick={navigateToService}
-              className={styles.buttonDemoSol}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
+        <div ref={containerRef} className={styles.wrapperCont}>
+          <AnimatePresence mode="sync">
+            <motion.div
+              key={index} // Update key to re-trigger animation when index changes
+              className={styles.Solution1}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -50 }}
+              transition={{ duration: 0.5 }}
             >
-              Request Demo 
-            </motion.button>
-          </Link>
-          </div>
-         
-          <Image
-  src={solutions[index].image}
-  alt={solutions[index].title}
-  className={`${styles.SolutionImg} ${
-    index === 0 ? styles.SolutionImgFirst : styles.SolutionImgSecond
-  }`}
-/>
+              <div className={styles.Solution1Text}>
+                <h2 className={styles.SolTitle1}>{solutions[index].title}</h2>
+                <p className={styles.SolutionDesc1}>
+                  {solutions[index].description}
+                </p>
+                <Link href="/services" passHref>
+                  <motion.button
+                    onClick={navigateToService}
+                    className={styles.buttonDemoSol}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                  >
+                    Request Demo
+                  </motion.button>
+                </Link>
+              </div>
 
-        </motion.div>
-        
-      </AnimatePresence>
-    </div>
-        
+              <Image
+                src={solutions[index].image}
+                alt={solutions[index].title}
+                className={`${styles.SolutionImg} ${
+                  index === 0
+                    ? styles.SolutionImgFirst
+                    : styles.SolutionImgSecond
+                }`}
+              />
+            </motion.div>
+          </AnimatePresence>
+        </div>
+        {/* <div ref={containerRef} className={styles.wrapperCont}>
+          <AnimatePresence mode="sync">
+            <motion.div
+              key={index}
+              className={styles.Solution1}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -50 }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className={styles.Solution1Text}>
+                <h2 className={styles.SolTitle1}>{solutions[index].title}</h2>
+                <p className={styles.SolutionDesc1}>
+                  {solutions[index].description}
+                </p>
+                <Link href="/services" passHref>
+                  <motion.button
+                    onClick={navigateToService}
+                    className={styles.buttonDemoSol}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                  >
+                    Request Demo
+                  </motion.button>
+                </Link>
+              </div>
+
+              <Image
+                src={solutions[index].image}
+                alt={solutions[index].title}
+                className={`${styles.SolutionImg} ${
+                  index === 0
+                    ? styles.SolutionImgFirst
+                    : styles.SolutionImgSecond
+                }`}
+              />
+            </motion.div>
+          </AnimatePresence>
+        </div> */}
       </div>
       <div className={styles.DemoSection}>
         <h1 className={styles.SolutionTitle3}>
@@ -366,25 +416,25 @@ const handleScroll = (e: WheelEvent) => {
             >
               <rect
                 className={`${styles.buttonLine} ${styles.buttonLineOuter}`}
-                strokeWidth="4"
+                strokeWidth="2"
                 stroke="#6190f5"
                 strokeLinecap="round"
                 fill="none"
                 x="4"
                 y="4"
-                width="292"
+                width="270"
                 height="72"
                 rx="20"
               />
               <rect
                 className={`${styles.buttonLine} ${styles.buttonLineInner}`}
-                strokeWidth="3"
+                strokeWidth="2"
                 stroke="#0003da"
                 strokeLinecap="round"
                 fill="none"
                 x="4"
                 y="4"
-                width="292"
+                width="270"
                 height="72"
                 rx="20"
               />
@@ -453,31 +503,31 @@ const handleScroll = (e: WheelEvent) => {
         </p>
 
         <div className={styles.imagesLeaning}>
-          <div className={styles.card + " " + styles.card1}>
+          <div className={styles.card}>
             <img
               src="https://res.cloudinary.com/dyrh4zwb1/image/upload/v1729242530/AFD_wfgxdi.png"
               alt="AFD - Agence Française de Développement"
             />
           </div>
-          <div className={styles.card + " " + styles.card2}>
+          <div className={styles.card}>
             <img
               src="https://res.cloudinary.com/ddngbriyu/image/upload/v1744809051/images_jp1d7v.jpg"
               alt="European Union"
             />
           </div>
-          <div className={styles.card + " " + styles.card4}>
+          <div className={styles.card }>
             <img
               src="https://res.cloudinary.com/ddngbriyu/image/upload/v1744809407/logo-deutsch-tunesische-zusammenarbeit_skzlyb.jpg"
               alt="La GIZ en Tunisie"
             />
           </div>
-          <div className={styles.card + " " + styles.card3}>
+          <div className={styles.card}>
             <img
               src="https://res.cloudinary.com/dyrh4zwb1/image/upload/v1729242600/ceed_hs3zi9.jpg"
               alt="CEED Tunisie"
             />
           </div>
-          <div className={styles.card + " " + styles.card4}>
+          <div className={styles.card}>
             <img
               src="https://res.cloudinary.com/ddngbriyu/image/upload/v1744895023/images_wpj9jb.png"
               alt="Smart Capital"
@@ -495,24 +545,23 @@ const handleScroll = (e: WheelEvent) => {
           optimization.
         </p>
         <div className={styles.AllPrices}>
-          <div className={styles.price1}>
+          
             <div className={styles.rowloa}>
               {/* <div className={styles.loader}></div> */}
               <h3 className={styles.PriceTitle1}>Basic </h3>
             </div>
-          </div>
-          <div className={styles.price1}>
+  
             <div className={styles.rowloa}>
               {/* <div className={styles.loader}></div> */}
               <h3 className={styles.PriceTitle1}>Silver </h3>
             </div>
-          </div>
-          <div className={styles.price1}>
+    
+          
             <div className={styles.rowloa}>
               {/* <div className={styles.loader}></div> */}
               <h3 className={styles.PriceTitle1}>Gold </h3>
             </div>
-          </div>
+      
         </div>
         <Link href="/priceDetails" className={styles.viewDetails}>
           View Details
@@ -527,7 +576,6 @@ const handleScroll = (e: WheelEvent) => {
           Your resource for the latest insights in Energy Management, AI-powered
           Solutions, and Industry 4.0 trends.
         </p>
-        
 
         <div className="h-[40rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
           <InfiniteMovingCards

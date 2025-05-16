@@ -4,6 +4,7 @@
   justify-content: center;
   width: 100%;
   min-height: 100vh;
+  padding: 20px;
   /* background: linear-gradient(90deg, #00193d, var(--blue)); */
   /* background: linear-gradient(to bottom right, #3358ea, #041261, #000000); */
   background-image:  linear-gradient(to bottom right, #3358eac7, #041261eb, #000000),
@@ -61,7 +62,7 @@
   align-self: center;
   height: 52px;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 1.2rem;
   /* font-family: Arial, Helvetica, sans-serif; */
   transition: background-color 0.3s ease;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);

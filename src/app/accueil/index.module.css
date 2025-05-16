@@ -12,10 +12,10 @@
   /* margin-left: 20px; */
   font-weight: bold;
 text-align: center;
-  font-size: 32px;
-  align-self: center;
-  /* text-align: center; */
-  background-image: url('https://res.cloudinary.com/ddngbriyu/image/upload/v1744810615/fond-marbre-liquide-bleu-abstrait-art-experimental-texture-fluide_53876-104502_hr0bz5.jpg');
+align-self: center;
+/* text-align: center; */
+background-image: url('https://res.cloudinary.com/ddngbriyu/image/upload/v1744810615/fond-marbre-liquide-bleu-abstrait-art-experimental-texture-fluide_53876-104502_hr0bz5.jpg');
+/* background-color: #ff00dd; */
   background-size: 200%; /* Enlarged for smooth animation */
   /* background-position: 0 50%; */
   background-clip: text;
@@ -28,24 +28,40 @@ text-align: center;
   font-family: "Poppins";
   text-align: center;
 
-  width:100%;
+  width:95%;
 
   color: #000;
   align-self: center;
 }
 .CibleSection {
   width: 100%;
-  height: 100%;
+  height: auto;
   /* margin: 0 auto; */
   display: flex;
   font-size: 48px;
   flex-direction: column;
-  margin-top: 20px;
+
   align-items: center;
   align-content: center;
   gap: 20px;
   align-self: center;
+
   justify-content: space-between;
+}
+.arrowBtn {
+  background-color: var(--blue);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-35deg);
+
+  margin-left: 12px;
+  cursor: pointer;
 }
 .CibleLeft {
   position: relative;
@@ -56,6 +72,7 @@ text-align: center;
   align-items: center;
   align-content: center;
   align-self: center;
+
   justify-content: center;
   gap:50px
 }
@@ -84,9 +101,10 @@ text-align: center;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  width: 70%;
+  width: 90%;
+  gap:4px;
   height: auto;
-justify-content: space-between;
+justify-content: center;
   align-items: center;
   align-self: center;
   align-content: center;
@@ -132,6 +150,21 @@ justify-content: space-between;
   justify-content: center;
   align-content: center;
   align-items: center;
+}
+.cardSer{
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  height: 400px;
+  min-width: 30%;
+
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 .buttonDemoSol:hover,
 .buttonDiscover:hover {
@@ -196,28 +229,20 @@ justify-content: space-between;
 }
 .CibleCont{
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
-  gap:15%;
-  
-}
-
-.CibleCont1,
-.CibleCont2,
-.CibleCont3,
-.CibleCont4 {
-  display: flex;
-  height: 200px;
+  align-self: center;
   align-items: center;
   align-content: center;
-  justify-content: flex-start;
-  opacity: 0;
-  transform: translateX(100%);
-  padding: 15px;
-  width: 300px;
-  border-radius: 8px;
+gap: 4px;
+  padding: 10px;
+  width: 20%;
+    border-radius: 8px;
   box-shadow: 0 10px 15px rgba(4, 17, 133, 0.2);
   transition: opacity 0.1s ease, transform 0.1s ease;
 }
+
+
 .IconCibles:hover {
   transform: scale(1.1) rotateZ(0deg);
   z-index: 10;
@@ -243,14 +268,13 @@ justify-content: space-between;
 
 .SpinnerDescu,
 .SpinnerDescu1 {
-  font-size: 20px;
+  font-size: 1.3rem;
 
   font-family: "Poppins";
   margin: 0px 0px 0px 0px;
   color: #000;
   padding: 3px;
 
-  border-radius: 50px;
 }
 
 
@@ -318,9 +342,24 @@ justify-content: space-between;
   font-family: "Poppins";
 }
 .IconCibles{
-  width: 40%;
-  height: 60%;
+  width: 50%;
+  height: 40%;
 }
+.descriptionBox {
+  background-color: rgba(255, 255, 255, 0.664);
+  padding: 15px;
+  margin: 20px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 90%;
+  min-width: 90%;
+  max-height: 25%;
+  min-height: 25%;
+  align-self: center;
+}
+
 .AllSolutions {
   display: flex;
   flex-direction: column;
@@ -336,7 +375,7 @@ justify-content: space-between;
 }
 
 .Solution1 {
-  width: 120%;
+  width: 100%;
   height: 500px;
   align-self: center;
   justify-content: center;
@@ -459,34 +498,17 @@ justify-content: center;
   width: 80%;
   text-align: start;
 }
-.SolutionDesc12 {
-  font-size: 18px;
-  color: black;
 
-  padding-right: 10px;
-
-  font-family: "Poppins";
-  width: 90%;
-  text-align: center;
-}
 /* Demo Section */
 .DemoSection {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-top: -10px;
-  height: 530px;
+  height: auto;
   align-items: center;
   justify-content: center;
     background-repeat: no-repeat;
   gap: 20px;
-  margin-bottom: 4rem;
-  /* background-image: url("../Assests/Ellipse.png");
-
-  background-size: 70% 100%;
-
-  background-repeat: repeat;
-  background-position: left center; */
 
 
 }
@@ -495,19 +517,10 @@ justify-content: center;
   color: var(--black);
   padding: 10px ;
   width: 200px;
-
-  /* padding: 10px 20px;
-  border-radius: 8px;
-  width: 251px;
-  height: 52px;
-  cursor: pointer; */
   font-size: 16px;
   font-family: "Poppins";
   font-weight: 600;
-  /* transition: background-color 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  margin-top: 40px;
-  margin-left: 20px; */
+
 }
 
 /* .buttonDemo:hover {
@@ -525,14 +538,13 @@ justify-content: center;
   align-items: center;
   align-content: center;
   justify-content: center;
-  margin-top: -80px;
+
   align-self: center;
 
   padding: 10px;
 }
 .AllServices {
   width: 100%;
-
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -705,12 +717,12 @@ justify-content: center;
 .AllPrices {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   width: 90%;
-  height: 200px;
+  height: auto;
   align-items: center;
-  justify-content: center;
-  margin-top: 30px;
-  gap: 30px;
+  justify-content: space-between;
+
 }
 .priceHed {
   display: flex;
@@ -722,8 +734,7 @@ justify-content: center;
   gap: 10px;
   margin: 0px 0px 10px 0px;
 }
-.PriceTitle1 ,
-.PriceTitleSilver  {
+.PriceTitle1   {
   font-size:1.5rem;
   color: #ffffffdc;
   font-family: "Poppins";
@@ -731,22 +742,9 @@ justify-content: center;
 margin: 0;
 }
 
-.PriceTitleSilver  {
- 
-  color: var(--blue);
- 
-}
 
-.price1 {
-  width: 390px;
-  height: 87.72px;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
 
-}
+
 .Desc1 {
   font-size: 20px;
   color: black;
@@ -759,7 +757,7 @@ margin: 0;
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 400px;
+  height: auto;
   align-items: center;
 
   background-color: #1f499718;
@@ -777,7 +775,7 @@ margin: 0;
   align-content: center;
   background-color: transparent;
   justify-content: center;
-  margin-bottom: 4rem;
+
 }
 .AllBlog {
   display: flex;
@@ -824,11 +822,11 @@ margin: 0;
   justify-content: center;
 }
 .BlogDesc {
-  font-size: 14px;
+  font-size: 0.9rem;
   color: black;
   font-family: "Poppins";
   width: 90%;
-  margin: 10px 0px 0px 0px;
+  margin: 4px 0px 0px 0px;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -904,6 +902,21 @@ margin: 0;
   align-self: center;
   justify-content: space-between;
 }
+.card {
+  width: 15%;
+  height: 25vh;
+  transform-origin: bottom center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 10px 15px rgba(4, 17, 133, 0.2);
+  justify-content: center;
+  align-content: center;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
 .SeeAll {
   color: var(--blue);
   font-size: 16px;
@@ -941,109 +954,21 @@ font-size:15px;
 align-self: flex-start;
 
 }
-/* Team Section */
-.TeamSection {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: auto;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  margin-top: 50px;
-}
-.AllTeam {
-  display: flex;
-  flex-direction: row;
-  width: 80%;
-  height: auto;
-  align-items: center;
-  justify-content: center;
-  align-self: center;
-  margin-top: 30px;
-  align-self: center;
-  gap: 50px;
-}
-.Team1 {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
 
-  margin: 0px 0px 0px 0px;
 
-  border-bottom: 2mm double rgba(230, 241, 245, 0.6);
-  width: 300px;
-  height: 9rem;
-  gap: 10px;
-}
-
-.TeamIcon {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.TeamImageWrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.TeamImage {
-  border-radius: 50%;
-  object-fit: cover;
-}
 .column {
   display: flex;
   flex-direction: column;
   gap: 10px;
   flex-wrap: wrap;
 }
-.TeamContent p {
-  margin: 0px 0px 0px 0px;
-}
-.TeamSocial {
-  display: flex;
-  /* flex-direction: row; */
-  /* gap: 20px; */
-  /* width: 10%; */
-  /* background-color: var(--orange); */
-  align-self: flex-end;
-  padding-right: 10px;
-  /* background-color: var(--orange); */
 
-}
-.TeamSocial i {
-  background-color: var(--blue);
-  color: white;
-  width: 35px;
-  height: 35px;
-
-  font-size: 1rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  transform: rotate(35deg);
-}
-.TeamSocial  :hover{
-cursor:pointer;
-}
 .arrow {
   position: relative;
   top: 99%;
   right: 0%;
   transform: translate(-80%, -80%) rotate(270deg);
   cursor: pointer;
-
   padding: 10px;
   border-radius: 5px;
 }
@@ -1051,7 +976,6 @@ cursor:pointer;
   width: 110%;
   height: 75vh;
   transform: rotate(-3deg);  
-
   overflow: hidden;
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
@@ -1219,12 +1143,10 @@ cursor:pointer;
     transform: perspective(150px) rotateY(180deg) rotate(90deg);
   }
 }
-.rowloa,
-.rowloaSilver,
-.rowloaGold
+.rowloa
+
 {
   display: flex;
-  flex-direction: row;
   background-image: 
     linear-gradient(90deg, rgba(255, 255, 255, 0.103) 0%, rgba(255, 255, 255, 0) 20%, rgba(0, 65, 243, 0.5) 50%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0.103) 100%),
     url("../Assests/bgblue.jpg");
@@ -1232,26 +1154,14 @@ cursor:pointer;
    background-size: 100% 200%; 
   background-position: center; 
   transform-origin: center center; 
-  gap: 20px;
-  width: 40%;
+  width: 25%;
   align-items: center;
   justify-content: center;
   align-content: center;
   border-radius: 10px;
 padding: 10px;
 }
-.rowloaSilver
-{
-  background-image: 
-    /* linear-gradient(90deg, rgba(255, 255, 255, 0.103) 0%, rgba(255, 255, 255, 0) 20%, rgba(0, 65, 243, 0.5) 50%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0.103) 100%), */
-    url("../Assests/silver.jpg");
-}
-.rowloaGold
-{
-  background-image: 
-    /* linear-gradient(90deg, rgba(255, 255, 255, 0.103) 0%, rgba(255, 255, 255, 0) 20%, rgba(0, 65, 243, 0.5) 50%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0.103) 100%), */
-    url("../Assests/gold.jpg");
-}
+
 .AvantagesSection {
   display: flex;
   flex-direction: column;
@@ -1345,7 +1255,7 @@ padding: 10px;
   display: flex;
   gap: 20px;
   flex-direction: row;
-  margin-bottom: 50px;
+
   align-items: center;
   justify-content: center;
   align-self: center;
@@ -1639,7 +1549,7 @@ padding: 10px;
 @media (max-width: 1440px) {
   .CibleSection {
     font-size: 40px;
-    margin-top: 30px;
+  
 
   }
   .CibleLeft {
@@ -1655,17 +1565,7 @@ padding: 10px;
     margin-top: 40px;
     margin-left: 20px;
   }
-  .CibleCont1,
-  .CibleCont,
-  .CibleCont2,
-  .CibleCont3,
-  .CibleCont4 {
-    height: 60px;
-  }
-  .SpinnerDescu,
-  .SpinnerDescu1 {
-    font-size: 28px;
-  }
+
   .SolutionTitle1,
   .SolutionTitle2 {
     font-size: 40px;
@@ -1696,9 +1596,7 @@ padding: 10px;
       z-index: 999;
     }
   }
-  .SolTitle1 {
-    font-size: 26px;
-  }
+ 
   .disc {
     z-index: -999;
     width: 220px;
@@ -1734,9 +1632,7 @@ padding: 10px;
 
   }
   /* partners */
-  .PartnerSection {
-    margin-top: 0px;
-  }
+
   .wrapper {
     padding: 0px 10px;
   }
@@ -1763,11 +1659,7 @@ padding: 10px;
     font-size: 34px;
 
   }
-  .DemoSection {
 
-    margin-top: -70px;
-
-  }
 .front_case {
   margin-left: 20px;
 }
@@ -1775,25 +1667,12 @@ padding: 10px;
   margin-right: 20px;
 
 }
-  .SolutionDesc1 {
-    width: 70%;
-    font-size: 16px;
-    flex-wrap: wrap;
-  }
-  .SolutionDesc12 {
-    width: 70%;
-    flex-wrap: wrap;
 
-    font-size: 16px;
-  }
   .SolutionsDesc {
     width: 90%;
 
       }
-      .PriceTitle1  , .viewDetails{
-        font-size: 24px;
-
-      }
+     
   .music_case:hover {
 
     .front_case {
@@ -1824,56 +1703,37 @@ height: 150px;
   .disc {
     z-index: -999;
     width: 0px;
-
   }
   .disc2 {
     z-index: -999;
-
   }
   /* Blogs */
  .AllBlog {
   width: 90%;
 flex-direction: row;
-
   gap: 20px;
-}
-
-.BlogDesc {
-  font-size: 16px;
-
-  width: 100%;
-  margin: 10px 0px 0px 0px;
-gap: 10px;
-
 }
 .Blog1 {
   display: flex;
   flex-direction: row;
 margin-bottom: 40px;
-
 border-bottom: var(--darkGrey) 1px solid;
-
-
   width: 70%;
   max-height: 420px;
   min-height: 420px;
 }
 .BlogTitle {
   font-size: 16px;
-
   margin: 0px 0px 0px 0px;
 }
 .BlogDateText {
   font-size: 14px;
-
 }
 .BlogDateText1 {
   font-size: 14px;
-
 }
 .BlogDateText1 :hover {
   font-size: 18px;
-
 }
 .BlogContent {
   padding-left: 0.3rem;
@@ -1881,16 +1741,12 @@ border-bottom: var(--darkGrey) 1px solid;
   min-height: 230px;
 }
 .arrow {
-
-  top: 99%;
+top: 99%;
 z-index: 999;
-
 }
 .arrow span {
-
   width: 2vw;
   height: 2vw;
-
 }
 .BlogIcon{
   width: 100%;
@@ -1903,6 +1759,116 @@ z-index: 999;
   border-top-right-radius: 8px;
 }
 }
+@media (max-width: 1100px) {
+    .wrapperCont {
+  margin-bottom: 3rem;
+  height: 40vh;
+}
+.card {
+  width: 60%;
+  height: auto;
+}
+.card img {
+  width: 100%;
+  height: auto;
+}
+.owl_carousel_custom_carousel_owl_theme {
+  height:70vh;
+  gap: 10px;
+}
+.arrowBtn {
+  width: 35px;
+  height:35px;
+  margin-left: 12px;
+  cursor: pointer;
+}
+.SpinnerDescu,
+.SpinnerDescu1 {
+  font-size: 0.8rem;
+
+ 
+
+}
+.CibleCont{
+
+align-items: center;
+align-content: center;
+text-align: center;
+
+  
+}
+  
+.CibleRight {
+  /* background-color: #3f27cd; */
+  gap:20px;
+
+}
+.descriptionBox {
+  background-color: rgba(255, 255, 255, 0.801);
+  padding: 15px;
+  margin: 10px;
+  max-height: 30%;
+  min-height: 30%;
+}
+.BlogDesc { 
+  -webkit-line-clamp: 5;
+}
+.cardSer{
+  height: 500px;
+  min-width: 100%;
+}
+.PriceTitle1{
+  font-size: 0.8rem;
+}
+.SolutionImgFirst{
+  transform: rotate(3deg);  
+  width: 40%;
+  height: 100;
+}
+.Solution1Text{
+  display: flex;
+  flex-direction: column;
+  width:100%;
+  transform: rotate(3deg);  
+justify-content: center;
+text-align: center;
+align-items: center;
+align-self: center;
+}
+.Solution1 {
+  height: 1000px;
+  flex-direction: column-reverse;
+  /* position: relative; */
+}
+.SolutionImgSecond{
+  margin-top:-40px;
+  transform: rotate(3deg);  
+  width: 30%;
+  height: auto;
+}
+.SolTitle1 {
+  font-size: 1rem;
+}
+.buttonDemoSol{
+  padding: 4px 10px;
+  font-size: 0.8rem;
+}
+.SolutionDesc1 {
+  font-size:1rem;
+
+  width: 80%;
+  text-align: center;
+}
+.buttonDemo {
+
+  padding: 4px ;
+  width: 150px;
+  font-size: 0.8rem;
+  font-family: "Poppins";
+}
+
+
+}
 @media (max-width: 900px) {
   .AllSolutions {
     width: 100%;
@@ -1912,8 +1878,8 @@ z-index: 999;
   .CibleSection {
     font-size: 30px;
     width: 100%;
-    margin-bottom: 20px;
-    margin-top: 0px;
+
+
   }
   .CibleLeft {
     padding: 10px;
@@ -1928,22 +1894,43 @@ z-index: 999;
     margin-top: 40px;
     margin-left: 20px;
   }
-  .CibleCont1,
-  .CibleCont2,
-  .CibleCont,
-  .CibleCont3,
-  .CibleCont4 {
-    align-self: flex-start;
-    height: 40px;
-  }
-  .SpinnerDescu,
-  .SpinnerDescu1 {
-    font-size: 20px;
-  }
-  .CibleRight {
-    width: 30%;
-    height: auto;
-  }
+
+.CibleCont{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+gap: 10px;
+align-items: center;
+align-content: center;
+
+width: 100%;
+  
+}
+.IconCibles{
+  width: 20%;
+  height: 30%;
+}
+
+.SpinnerDescu,
+.SpinnerDescu1 {
+  font-size: 1.3rem;
+
+  font-family: "Poppins";
+  margin: 0px 0px 0px 0px;
+  color: #000;
+  padding: 3px;
+
+}
+
+.CibleRight {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width:100%;
+
+  
+  margin-top: 30px;
+}
   .buttonDiscover {
     width: 140px;
     height: 40px;
@@ -1987,9 +1974,7 @@ z-index: 999;
       z-index: 999;
     }
   }
-  .SolTitle1 {
-    font-size: 26px;
-  }
+
   .disc {
   display: none;
     z-index: -999;
@@ -2000,11 +1985,7 @@ z-index: 999;
 
     z-index: -999;
   }
-  .DemoSection {
 
-    margin-top: -120px;
-
-  }
   .SolutionTitle3  {
 
     font-size: 34px;
@@ -2023,16 +2004,9 @@ width: 90%;
   .buttonDemo {
     margin-top: 0px;
   }
-.SolutionDesc1 ,.SolutionDesc12 {
-  font-size: 16px;
 
-  width:70%;
-
-}
    /*  */
-   .ServicesSection{
-    margin-top: -90px;
-   }
+
    .item {
     width: 250px;
     height: 230px;
@@ -2060,9 +2034,7 @@ width: 90%;
     height: 70px;
   }
     /* partners */
-    .PartnerSection {
-      margin-top: 0px;
-    }
+
     .wrapper {
       padding: 0px 10px;
     }
@@ -2078,14 +2050,12 @@ width: 90%;
       border-bottom: var(--blue) 1px solid;
     }
     /* Price */
-    .rowloa {
-      gap: 10px;
-    }
+
     .loader {
       width: 20px;
       height: 20px;
     }
-    .PriceTitle1 , .viewDetails {
+ .viewDetails {
       font-size: 20px;
 
     }
@@ -2097,14 +2067,7 @@ flex-direction: column;
   gap: 30px;
 }
 
-.BlogDesc {
-  font-size: 16px;
 
-  width: 100%;
-  margin: 10px 0px 0px 0px;
-gap: 10px;
-
-}
 .Blog1 {
   display: flex;
   flex-direction: row;
@@ -2162,16 +2125,14 @@ border-bottom: var(--darkGrey) 1px solid;
 
 @media (max-width: 800px) {
   .CibleSection {
-    /* background-color: #b91a1a; */
-    width: 100%;
-    margin-bottom: 20px;
-    margin-top: 0px;
+  width: 100%;
+
 
   }
   .CibleLeft {
     padding: 10px;
     width: 65%;
-    /* background-color: #333; */
+
   }
   .CibleTitle {
     font-size: 20px;
@@ -2183,24 +2144,7 @@ border-bottom: var(--darkGrey) 1px solid;
     margin-top: 40px;
     margin-left: 15px;
   }
-  .CibleCont1,
-  .CibleCont,
-  .CibleCont2,
-  .CibleCont3,
-  .CibleCont4 {
-    align-self: flex-start;
-    height: 30px;
-  }
-  .SpinnerDescu,
-  .SpinnerDescu1 {
-    font-size: 18px;
-  }
-  .CibleRight {
-    width: 32%;
-    height: auto;
-    align-items: center;
-    align-self: center;
-  }
+
   .buttonDiscover {
     width: 140px;
     height: 40px;
@@ -2215,7 +2159,7 @@ border-bottom: var(--darkGrey) 1px solid;
   .SolutionsDesc {
     font-size: 24px;
     margin-bottom: 80px;
-    z-index: 999;
+
   }
   .AllSolutions {
     width: 90%;
@@ -2236,12 +2180,7 @@ border-bottom: var(--darkGrey) 1px solid;
 
       height: auto;
     }
-    .SolutionDesc1 {
-      font-size: 16px;
-    }
-    .SolutionDesc12 {
-      font-size: 16px;
-    }
+
 
     .front_case2 {
       transform: translateX(20%);
@@ -2262,9 +2201,7 @@ border-bottom: var(--darkGrey) 1px solid;
       border-bottom: 1px solid var(--blue);
     }
   }
-  .SolTitle1 {
-    font-size: 26px;
-  }
+ 
   .disc {
 
     width: 250px;
@@ -2277,11 +2214,7 @@ border-bottom: var(--darkGrey) 1px solid;
     height: 250px;
 
   }
-  .DemoSection {
 
-    margin-top: -60px;
-
-  }
   .SolutionTitle3  {
 
     font-size: 28px;
@@ -2303,9 +2236,7 @@ width: 90%;
     margin-top: 0px;
   }
   /*  */
-  .ServicesSection{
-    margin-top: -120px;
-   }
+
    .item {
     width: 220px;
     height: 200px;
@@ -2350,7 +2281,11 @@ width: 90%;
 }
 
 @media (max-width: 668px) {
-  .PriceTitle1 , .viewDetails {
+  .container {
+
+  gap: 50px;
+}
+ .viewDetails {
     font-size: 18px;
 
   }
@@ -2358,7 +2293,7 @@ width: 90%;
 @media (max-width: 650px) {
   .CibleSection {
     width: 100%;
-    margin-bottom: 20px;
+
     flex-direction: column;
   }
   .CibleLeft {
@@ -2375,34 +2310,38 @@ width: 90%;
     margin-top: 20px;
     margin-left: 15px;
   }
-  .CibleCont1,
-  .CibleCont,
-  .CibleCont2,
-  .CibleCont3,
-  .CibleCont4 {
-    height: 30px;
-    width: 90%;
-    align-self: center;
-    /* background-color: #333; */
-    flex-wrap: wrap;
-  }
-  .SpinnerDescu,
-  .SpinnerDescu1 {
-    font-size: 18px;
-  }
-  .CibleRight {
-    width: 100%;
-    height: auto;
-    align-items: center;
-    align-self: center;
-    align-content: center;
-    justify-content: space-between;
-    display: grid;
-    gap: 10px;
-    /* background-color: #495469; */
-    margin-left: 30px;
-    grid-template-columns: repeat(2, 1fr);
-  }
+.CibleCont{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+width: 100%;
+align-items: center;
+align-content: center;
+
+
+  
+}
+.SpinnerDescu,
+.SpinnerDescu1 {
+  font-size: 1rem;
+
+
+}
+
+.IconCibles{
+  width: 20%;
+  height: 30%;
+}
+
+.CibleRight {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width:90%;
+  gap:10px;
+  margin-top: 30px;
+}
+
 
   .buttonDiscover {
     width: 120px;
@@ -2429,12 +2368,6 @@ width: 90%;
     margin-bottom: 70px;
     height: 300px;
   }
-  .SolutionDesc1 {
-    font-size: 18px;
-  }
-  .SolutionDesc12 {
-    font-size: 18px;
-  }
 
   .music_case:hover {
     box-shadow: 0px 0px 0px 0px rgba(77, 76, 76, 0.404);
@@ -2443,13 +2376,7 @@ width: 90%;
       transform: translateX(-50px);
       height: auto;
     }
-    .SolutionDesc1 {
-      font-size: 12px;
-    }
-    .SolutionDesc12 {
-      font-size: 12px;
-      width: 70%;
-    }
+  
 
     .front_case2 {
       transform: translateX(20%);
@@ -2472,9 +2399,7 @@ width: 90%;
       border-bottom: 1px solid var(--blue);
     }
   }
-  .SolTitle1 {
-    font-size: 26px;
-  }
+
   .disc {
     width: 100px;
     height: 100px;
@@ -2483,11 +2408,7 @@ width: 90%;
     width: 180px;
     height: 180px;
   }
-  .DemoSection {
 
-    margin-top: -90px;
-
-  }
   .SolutionTitle3  {
 
     font-size: 22px;
@@ -2505,18 +2426,7 @@ width: 93%;
     margin-bottom: 20px;
 
   }
-  .buttonDemo {
-    /* margin-top: -10px;
-    width: 140px;
-  padding: 10px 10px;
-  font-size: 16px;
 
-    height: 40px; */
-  }
-  /*  */
-  .ServicesSection{
-    margin-top: -220px;
-   }
    .item {
     width: 180px;
     height:160px;
@@ -2544,9 +2454,7 @@ width: 93%;
     height: 50px;
   }
     /* partners */
-    .PartnerSection {
-      margin-top: 0px;
-    }
+
     .wrapper {
       padding: 0px 10px;
     }
@@ -2565,43 +2473,24 @@ width: 93%;
     }
     /* price */
 
-    .AllPrices {
-      width: 100%;
-      height: 200px;
-      align-items: center;
-      align-content: center;
-      justify-content: center;
-      /* margin-top: 30px; */
-      gap: 20px;
-    }
+
     .loader {
       width: 13px;
       height: 13px;
-
     }
-
-     /* Blogs */
-
 .Blog1 {
   display: flex;
   flex-direction: row;
 margin-bottom: 40px;
-
 border-bottom: var(--darkGrey) 1px solid;
-
-
   width: 80%;
   max-height: 450px;
   min-height: 450px;
 }
-.CibleRight {
-  margin-left:50px;
- }
 }
 @media (max-width: 623px) {
   .CibleSection {
     width: 100%;
-    margin-bottom: 20px;
     flex-direction: column;
   }
   .CibleLeft {
@@ -2618,38 +2507,6 @@ border-bottom: var(--darkGrey) 1px solid;
     align-self: center;
     align-content: center;
   }
-  .CibleCont1,
-  .CibleCont2,
-  .CibleCont3,
-  .CibleCont4 {
-    height: 30px;
-    width: 90%;
-
-    align-items: center;
-    justify-content: center;
-    align-self: center;
-    align-content: center;
-    /* background-color: #333; */
-    flex-wrap: wrap;
-  }
-  .SpinnerDescu,
-  .SpinnerDescu1 {
-    font-size: 16px;
-  }
-  .CibleRight {
-    width: 100%;
-    height: auto;
-    align-items: center;
-    align-self: center;
-    align-content: center;
-    justify-content: space-between;
-    display: grid;
-    gap: 10px;
-    /* background-color: #495469; */
-    margin-left: 30px;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .buttonDiscover {
     width: 120px;
     height: 40px;
@@ -2659,7 +2516,6 @@ border-bottom: var(--darkGrey) 1px solid;
 
     align-self: center;
   }
-
   .SolutionTitle1,
   .SolutionTitle2 {
     font-size: 30px;
@@ -2678,19 +2534,11 @@ border-bottom: var(--darkGrey) 1px solid;
     margin-bottom: 70px;
     height: 300px;
   }
-  .SolutionDesc1 {
-    font-size: 18px;
-  }
-  .SolutionDesc12 {
-    font-size: 18px;
-  }
-
   .music_case:hover {
     .front_case {
       transform: translateX(-50px);
       height: auto;
     }
-
     .front_case2 {
       transform: translateX(80px);
       height: auto;
@@ -2711,9 +2559,6 @@ border-bottom: var(--darkGrey) 1px solid;
       border-bottom: 1px solid var(--blue);
     }
   }
-  .SolTitle1 {
-    font-size: 26px;
-  }
   .disc {
     width: 100px;
     height: 100px;
@@ -2722,40 +2567,18 @@ border-bottom: var(--darkGrey) 1px solid;
     width: 180px;
     height: 180px;
   }
-  .DemoSection {
-
-    margin-top: -240px;
-
-  }
   .SolutionTitle3  {
-
     font-size: 22px;
-
   }
   .SolutionTitle1,
   .SolutionTitle2   {
-
     font-size: 20px;
-
   }
   .SolutionsDesc {
 width: 90%;
     font-size: 18px;
     margin-bottom: 20px;
-
   }
-  /* .buttonDemo {
-    margin-top: -10px;
-    width: 140px;
-  padding: 10px 10px;
-  font-size: 16px;
-
-    height: 40px;
-  } */
-    /*  */
-    .ServicesSection{
-      margin-top: -200px;
-     }
      .item {
       width: 180px;
       height:160px;
@@ -2784,69 +2607,30 @@ width: 90%;
     }
 
     /* Price */
-    .PriceTitle1 , .viewDetails{
+   .viewDetails{
       font-size: 14px;
 
     }
-    .AllPrices {
-      width: 100%;
-      height: 200px;
-      align-items: center;
-      align-content: center;
-      justify-content: center;
-      /* margin-top: 30px; */
-      gap: 20px;
-    }
+  
     .loader {
       width: 13px;
       height: 13px;
-
     }
-    .CibleRight {
-      margin-left:40px;
-     }
-     .CibleCont1,
-     .CibleCont2,
-     .CibleCont,
-     .CibleCont3,
-     .CibleCont4 {
-       align-self: flex-start;
-       /* background-color: #495469; */
-       width:200px;
-       height: 30px;
-     }
-     .SpinnerDescu,
-     .SpinnerDescu1 {
-       font-size: 12px;
-     }
      .arrow {
-
       top: 99%;
       left: 90%;
-
-
     }
     .arrow span {
-
       width: 3vw;
       height: 3vw;
-
     }
 }
-
-@media (max-width: 508px) {
-  .CibleSection{
-    margin-top: -20px;
-  }
-  .SpinnerDescu,
-  .SpinnerDescu1 {
-    font-size: 12px;
-  }
-
+@media (max-width: 580px) {
   .SolutionTitle1,
   .SolutionTitle2 {
     font-size: 30px;
   }
+
   .SolutionsDesc {
     width: 90%;
     font-size: 16px;
@@ -2857,41 +2641,54 @@ width: 90%;
     flex-direction: column;
     gap: 0px;
   }
-  .music_case {
-    margin-bottom: 40px;
-    height: 300px;
-  }
-  .SolutionDesc1 {
-    font-size: 18px;
-  }
-  .SolutionDesc12 {
-    font-size: 14px;
-    margin-left: 14px;
-  }
-  .music_case {
-    margin-bottom: 30px;
-  }
-  .music_case:hover {
-    .front_case {
-      transform: translateX(-00px);
-    }
+  .wrapperCont {
+  margin-bottom: 5rem;
+  padding: 10px;
+  height: 40vh;
+}
+.SolutionImgFirst{
+  transform: rotate(3deg);  
+  width: 40%;
+  height: 100;
+}
+.Solution1Text{
+  display: flex;
+  flex-direction: column;
+  width:100%;
+  transform: rotate(3deg);  
+/* background-color: #3f27cd; */
+/* align-items: center; */
+justify-content: center;
+text-align: center;
+align-items: center;
+align-self: center;
 
-    .front_case2 {
-      transform: translateX(00px);
-    }
-    .disc {
-      transform: translateY(140px) translateX(180px);
-      border-bottom: 0px solid var(--blue);
-    }
-    .disc2 {
-      border-bottom: 0px solid var(--blue);
-
-      transform: translateY(160px) translateX(140px);
-    }
-  }
+}
+.Solution1 {
+  height: 1000px;
+  flex-direction: column-reverse;
+  /* position: relative; */
+  background-size: cover; 
+}
+.SolutionImgSecond{
+  margin-top:-50px;
+  transform: rotate(3deg);  
+  width: 35%;
+  height: auto;
+}
   .SolTitle1 {
-    font-size: 26px;
-  }
+  font-size: 1rem;
+}
+.buttonDemoSol{
+  padding: 4px 10px;
+  font-size: 0.8rem;
+}
+.SolutionDesc1 {
+  font-size:0.7rem;
+
+  width: 85%;
+  text-align: center;
+}
   .disc {
     width: 100px;
     height: 100px;
@@ -2900,11 +2697,7 @@ width: 90%;
     width: 180px;
     height: 180px;
   }
-  .DemoSection {
 
-    margin-top: -140px;
-
-  }
   .SolutionTitle3  {
 
     font-size: 18px;
@@ -2922,18 +2715,7 @@ width: 90%;
     margin-bottom: 20px;
 
   }
-  /* .buttonDemo {
-    margin-top: -10px;
-    width: 140px;
-  padding: 10px 10px;
-  font-size: 16px;
 
-    height: 40px;
-  } */
-    /*  */
-    .ServicesSection{
-      margin-top: -120px;
-     }
      .item {
       width: 100px;
       height:120px;
@@ -2961,7 +2743,7 @@ width: 90%;
       height: 50px;
     }
     /* Price */
-    .PriceTitle1 , .viewDetails {
+ .viewDetails {
       font-size: 12px;
 
     }
@@ -2979,12 +2761,7 @@ width: 90%;
       max-height: 370px;
       min-height: 370px;
     }
-    .BlogDesc {
-      font-size: 12px;
 
-
-
-    }
     .BlogTitle {
       font-size: 12px;
 
@@ -3008,24 +2785,15 @@ width: 90%;
 @media (max-width: 475px) {
   .CibleSection {
     width: 100%;
-    margin-bottom: 0px;
     flex-direction: column;
   }
   /* Price */
-  .PriceTitle1 , .viewDetails {
+ .viewDetails {
     font-size: 14px;
     text-align: center;
 
   }
-  .AllPrices {
-    width: 100%;
-    height: 200px;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    /* margin-top: 30px; */
-    gap: 20px;
-  }
+
   .loader {
     width: 13px;
     height: 13px;
@@ -3033,11 +2801,7 @@ width: 90%;
     text-align: center;
 
   }
-  .rowloa {
 
-    flex-direction: column;
-
-  }
   .arrow1 span {
     display: none;
     width: 20px;
@@ -3075,17 +2839,9 @@ width: 90%;
     height: 3vw;
 
   }
-  .ServicesSection{
-    margin-top: -250px;
-  }
 
 }
 @media (max-width: 423px) {
-  .SpinnerDescu,
-  .SpinnerDescu1 {
-    font-size: 10px;
-    text-align: center;
-  }
   .buttonDiscover {
     width: 80px;
     height: 40px;
@@ -3120,12 +2876,7 @@ width: 90%;
     margin-bottom: 40px;
     height: 300px;
   }
-  .SolutionDesc1 {
-    font-size: 16px;
-  }
-  .SolutionDesc12 {
-    font-size: 16px;
-  }
+
   .music_case {
     margin-bottom: 30px;
   }
@@ -3153,9 +2904,7 @@ width: 90%;
   .front_case2 {
     width: 90%;
   }
-  .SolTitle1 {
-    font-size: 26px;
-  }
+
   .disc {
     width: 100px;
     height: 100px;
@@ -3164,15 +2913,10 @@ width: 90%;
     width: 180px;
     height: 180px;
   }
-  .DemoSection {
 
-    margin-top: -140px;
-  gap: 10px;
-
-  }
   .SolutionTitle3  {
 
-    font-size: 16px;
+    font-size: 0.9rem;
 
   }
   .SolutionTitle1,
@@ -3185,20 +2929,9 @@ width: 90%;
 width: 90%;
     font-size: 16px;
     margin-bottom: 20px;
-
   }
   .buttonDemo {
-    /* margin-top: -10px; */
-    /* width: 120px; */
-  /* padding: 10px 10px; */
-  /* font-size: 14px; */
-
-    /* height: 40px; */
   }
-      /*  */
-      .ServicesSection{
-        margin-top: -180px;
-       }
        .item {
         width: 80px;
         height:90px;
@@ -3225,7 +2958,7 @@ width: 90%;
         height: 50px;
       }
       /* Price */
-      .PriceTitle1 , .viewDetails{
+ .viewDetails{
         font-size: 12px;
         text-align: center;
 
@@ -3238,15 +2971,7 @@ width: 90%;
         gap: 10px;
       }
 
-      .BlogDesc {
-        font-size: 10px;
-        color: black;
-        font-family: "Poppins";
-        width: 100%;
-        margin: 10px 0px 0px 0px;
-  gap: 10px;
-
-      }
+      
       .Blog1 {
         display: flex;
         flex-direction: row;
@@ -3290,53 +3015,16 @@ border-bottom: var(--darkGrey) 1px solid;
         border-bottom: 3px solid rgb(5, 34, 255);
   border-right:3px solid rgb(5, 34, 255);
       }
-      .CibleRight {
-        margin-left:40px;
-       }
-       .CibleCont1,
-       .CibleCont2,
-       .CibleCont,
-       .CibleCont3,
-       .CibleCont4 {
-         align-self: flex-start;
-         /* background-color: #495469; */
-         width:170px;
-         height: 30px;
-       }
-       .ServicesSection{
-         margin-top: -250px;
-       }
 
 }
 
 
 @media (max-width: 400px) {
-  .SolutionSection {
-    margin-top: -50px;
-  }
-  .ServicesSection {
-    margin-top: -250px;
+  
+  .SolutionTitle3  {
 
-  }
-  .DemoSection {
-    margin-top: -240px;
+    font-size: 0.8rem;
 
-  }
-  .CibleRight {
-   margin-left:40px;
-  }
-  .CibleCont1,
-  .CibleCont2,
-  .CibleCont,
-  .CibleCont3,
-  .CibleCont4 {
-    align-self: flex-start;
-    width:165px;
-    height: 30px;
-  }
-  .SpinnerDescu,
-  .SpinnerDescu1 {
-    font-size: 10px;
   }
   .AllSolutions {
     width: 90%;
@@ -3347,12 +3035,6 @@ border-bottom: var(--darkGrey) 1px solid;
   .music_case {
     margin-bottom: 40px;
     height: 300px;
-  }
-  .SolutionDesc1 {
-    font-size: 16px;
-  }
-  .SolutionDesc12 {
-    font-size: 16px;
   }
   .music_case {
     margin-bottom: 30px;
@@ -3381,9 +3063,7 @@ border-bottom: var(--darkGrey) 1px solid;
   .front_case2 {
     width: 90%;
   }
-  .SolTitle1 {
-    font-size: 26px;
-  }
+
   .disc {
     width: 100px;
     height: 100px;
@@ -3399,10 +3079,9 @@ left: 90%;
 
   }
 }
-
-/* styles.module.css */
 .imagesLeaning {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-end;
@@ -3412,36 +3091,7 @@ left: 90%;
   perspective: 2000px;
 }
 
-.card {
-  width: 250px;
-  height: 250px;
-  transform-origin: bottom center;
-  transition: transform 0.3s ease;
-  box-shadow: 0 10px 15px rgba(4, 17, 133, 0.2);
-  justify-content: center;
-  align-content: center;
-}
 
-.card img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 8px;
-}
-
-/* Individual rotations */
-/* .card1 {
-  transform: rotateZ(10deg);
-}
-.card2 {
-  transform: rotateZ(-5deg);
-}
-.card3 {
-  transform: rotateZ(5deg);
-}
-.card4 {
-  transform: rotateZ(10deg);
-} */
 
 /* Optional: Add hover effect */
 .card:hover {
@@ -3533,6 +3183,8 @@ left: 90%;
   stroke-dashoffset: 0;
   stroke-dasharray: 300 300;
   animation: inner-dashoffset 5s linear infinite;
+align-items: center;
+align-content: center;
 
 
 }
@@ -3568,21 +3220,7 @@ left: 90%;
 
 
 }
-.cardSer{
-  background-size: cover;
-  background-position: center;
-  border-radius: 20px;
-  height: 500px;
-  min-width: 25%;
-  max-width: 25%;
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: flex-end;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-}
+
 .tag {
   position: absolute;
   top: 20px;
@@ -3594,45 +3232,4 @@ left: 90%;
   border-radius: 50px;
   font-weight: 500;
   z-index: 2;
-}
-.descriptionBox {
-  background-color: rgba(255, 255, 255, 0.664);
-  padding: 15px;
-  margin: 20px;
-  border-radius: 15px;
-  font-size: 14px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 90%;
-  min-width: 90%;
-  max-height: 25%;
-  min-height: 25%;
-  align-self: center;
-}
-
-/* .descriptionBox p {
-
-  color: var(--black);
-
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-} */
-
-.arrowBtn {
-  background-color: var(--blue);
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: rotate(-35deg);
-
-  margin-left: 12px;
-  cursor: pointer;
 }
