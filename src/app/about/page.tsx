@@ -164,7 +164,7 @@ const About: React.FC = () => {
             <h1 className={styles.SolutionTitle1}>Our</h1>
             <h1 className={styles.SolutionTitle2}>Team</h1>
           </div>
-          <p className={styles.SolutionsDesc}>
+          <p className={styles.SolutionsDesc1}>
             Driven by a shared commitment to excellence, our team combines
             diverse talents and perspectives to tackle challenges, foster
             innovation, and achieve outstanding results together
