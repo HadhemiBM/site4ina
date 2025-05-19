@@ -80,7 +80,9 @@ align-self: flex-start;
   flex-direction: column;
   gap: 0.9375rem;
 }
-
+.label{
+  font-size: 1rem;
+}
 .columnContact_p {
   color: var(--blue);
   font-size: 1rem;
@@ -170,7 +172,7 @@ align-self: flex-start;
   border: 2px;
   border-color: var(--orange) 2px solid;
 }
-
+/* //768px */
 @media screen and (min-width: 48rem) {
   .container {
     flex-direction: row;
@@ -198,8 +200,8 @@ align-self: flex-start;
     text-align: center;
   }
 }
-
-@media screen and (min-width: 64rem) {
+/*1024px */
+/* @media screen and (min-width: 64rem) {
   .container {
     font-size: 18px;
   }
@@ -214,27 +216,35 @@ align-self: flex-start;
   .rowContact {
     flex-direction: row;
   }
-}
-
-@media screen and (min-width: 80rem) {
+} */
+/* 1280px */
+/* @media screen and (min-width: 80rem) {
   .container {
     font-size: 20px;
   }
   .rowContact {
     flex-direction: row;
   }
-}
-@media (max-width: 1200px) {
+} */
+@media (max-width: 1210px) {
   .input,
 .inputMessage,
 .select {
 
   font-size: 0.8rem;
 }
+.LeftTitle {
+  width: 100%;
+}
 .RightTitle {
   font-size: 2rem;
   
 }
+.RightDesc {
+  width:80%;
+
+}
+
 .rowContact {
   flex-direction: row;
 }
@@ -256,25 +266,52 @@ align-self: flex-start;
 }
 }
 @media (max-width: 910px) {
-  .input,
-.inputMessage,
+
+
 .select {
   padding: 0;
-text-align: center;
+
   font-size: 0.7rem;
+}
+.input,
+.inputMessage
+ {
+
+  height: 3rem;
+  padding: 0rem 0rem;
+ text-align: start;
+  font-size: 1rem;
 }
 .rowContact {
   flex-direction: row;
 }
+.LeftTitle {
+  
+  font-size: 1.5rem;
+}
+.RightDesc {
+  width:90%;
+  font-size: 1rem;
 
 }
+.label{
+  font-size: 0.8rem;
+}
+}
 @media (max-width: 866px) {
-  .input,
-.inputMessage,
+
+
 .select {
   padding: 0;
-text-align: center;
+text-align: start;
   font-size: 0.7rem;
+}
+.input,
+.inputMessage
+ {
+  font-size: 0.8rem;
+
+  padding: 1rem 1rem;
 }
 
 .rowContact {
