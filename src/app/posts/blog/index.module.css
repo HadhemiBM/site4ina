@@ -1,12 +1,10 @@
-
 .container {
   width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  font-family: 'Poppins', sans-serif;
-
+  font-family: "Poppins", sans-serif;
 }
 
 .Header {
@@ -14,43 +12,43 @@
   flex-direction: column;
   width: 100%;
   margin-top: 3rem;
-  gap: 1.25rem;
 
-}
-
-.title {
-  color: var(--blue);
-  font-size:2.1rem;
-  background-color: rgb(255, 255, 255);
-  padding: 0.625rem;
-  border-bottom: 0.125rem var(--blue) solid;
-  border-right: 0.125rem var(--blue) solid;
-  border-radius: 3.125rem;
-  width: 50%;
-  max-width: 42.5625rem;
-  height: 10%;
-  display: flex;
   align-items: center;
+  align-content: center;
   justify-content: center;
   text-align: center;
+  gap: 1.25rem;
+}
+.titleHead {
+  font-size: 46px;
+  font-weight: bold;
+  font-family: "Poppins";
+  text-align: center;
+  color: transparent;
+  background-image: url("https://res.cloudinary.com/ddngbriyu/image/upload/v1744810615/fond-marbre-liquide-bleu-abstrait-art-experimental-texture-fluide_53876-104502_hr0bz5.jpg");
+  background-size: 200%; /* Enlarged for smooth animation */
+  background-position: 0 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-background 30s infinite alternate linear;
+}
+@keyframes animate-background {
+  0% {
+    background-position: 0 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
 .desc {
   color: black;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   padding: 0.625rem;
-  width:100%;
+  width: 100%;
   align-self: center;
   text-align: center;
-}
-
-.BlogSection {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-  background-color: transparent;
-  margin-top: 3.125rem;
 }
 
 .AllBlog {
@@ -61,6 +59,7 @@
   justify-content: center;
   align-self: center;
   gap: 1rem;
+  margin-bottom: 2rem;
 }
 
 .Blog1 {
@@ -73,32 +72,21 @@
   border-radius: 0.5rem;
   width: 100%;
   max-width: 26.1875rem;
-  min-height: 30.625rem;
+  height: auto;
+
   /* Optional: Add padding to create space for background */
   padding: 1rem;
 }
-/* .Blog1 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: var(--darkGrey) 0.0625rem solid;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
-  border-radius: 0.5rem;
-  width: 100%;
-  max-width: 26.1875rem;
-  min-height: 30.625rem;
-} */
 
 .BlogContent {
   font-size: 1.25rem;
   color: black;
-  padding: 0 1.5rem;
+  padding: 0 1rem;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex: 1;
+  height: auto;
 }
 
 .BlogDesc,
@@ -106,7 +94,7 @@
   font-size: 0.875rem;
   color: black;
   width: 100%;
-  margin: 0.625rem 0 0 0;
+  margin: 0 0 0 0;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -115,14 +103,15 @@
 }
 
 .BlogDateText {
-  width: 75%;
+  width: 60%;
+
 }
 
 .BlogTitle {
   font-size: 1.125rem;
   margin: 0.625rem 0;
   display: -webkit-box;
-  -webkit-line-clamp:3;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -131,6 +120,8 @@
 .BlogButton {
   color: black;
   font-size: 0.875rem;
+align-items: center;
+align-content: center;
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -138,7 +129,6 @@
   color: var(--blue);
 
   text-decoration: none;
-  
 }
 
 .Blogfooter {
@@ -147,7 +137,9 @@
   margin: 1.25rem 0 0.625rem 0;
   border-top: var(--darkGrey) 0.0625rem solid;
   align-items: center;
-  justify-content: center;
+  align-content: center;
+
+  justify-content: space-between;
   padding-top: 0.625rem;
 }
 
@@ -162,18 +154,30 @@
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
 }
+.Blog1 {
+  transition: all 0.3s ease;
+}
 
-
+.AllBlog:hover .Blog1:not(:hover) {
+  filter: blur(2px);
+  opacity: 0.8;
+}
+.Blog1:hover {
+  transform: scale(1.02);
+  z-index: 1;
+  background: rgba(236, 246, 255, 0.8); /* Light gray with transparency */
+  /* Optional: Add shadow for depth */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* //768px */
 @media screen and (min-width: 48rem) {
-  .title {
+  .titleHead {
     font-size: 2.8rem;
-
   }
 
-  .BlogButton , .BlogDateText {
-
-    font-size: 0.7rem;
-
+  .BlogButton,
+  .BlogDateText {
+    font-size: 0.8rem;
   }
   .desc {
     font-size: 1.2rem;
@@ -182,64 +186,46 @@
   .AllBlog {
     flex-direction: row;
     flex-wrap: wrap;
-  gap: 1.25rem;
-
- 
+    gap: 1.25rem;
   }
 
   .Blog1 {
     width: calc(50% - 1.25rem);
-  min-height: 20rem;
-
+    min-height: 20rem;
   }
 }
+/*1024px */
 
 @media screen and (min-width: 64rem) {
-  .title {
+  .titleHead {
     font-size: 3rem;
-
   }
 
   .desc {
     font-size: 1.5rem;
     width: 80%;
   }
-
+  .BlogButton,
+  .BlogDateText {
+    font-size: 0.9rem;
+  }
   .AllBlog {
-
   }
 
   .Blog1 {
     width: calc(33.33% - 1.25rem);
   }
 }
-
+/* 1280px */
 @media screen and (min-width: 80rem) {
-
-
-  .title {
+  .titleHead {
     font-size: 3rem;
   }
-
+  .BlogButton,
+  .BlogDateText {
+    font-size: 1rem;
+  }
   .desc {
     width: 70%;
   }
-}
-
-.Blog1 {
-  transition: all 0.3s ease;
-}
-
-
-.AllBlog:hover .Blog1:not(:hover) {
-  filter: blur(2px);
-  opacity: 0.8;
-  
-}
-.Blog1:hover {
-  transform: scale(1.02);
-  z-index: 1; 
-  background: rgba(236, 246, 255, 0.8); /* Light gray with transparency */
-  /* Optional: Add shadow for depth */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }

@@ -1,11 +1,7 @@
 
-import analytics from "../Assests/analytics.png";
-import smart_devices from "../Assests/smart-devices.png";
+
 import web from "../Assests/soft.png";
-import mobile from "../Assests/mobile.png";
-import assistance  from "../Assests/assistance.png";
-import client  from "../Assests/client.png";
-import Image from "next/image";
+
 import Data from "../Assests/hard.jpg";
 import service from "../Assests/tech.jpg";
 

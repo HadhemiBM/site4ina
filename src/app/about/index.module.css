@@ -207,6 +207,7 @@ align-content: center;
   width: 100%;
   height: 700px;
   flex-wrap: wrap;
+  background-size: cover;
   background-repeat: no-repeat;
   align-items: center;
 
@@ -854,7 +855,7 @@ background-position: center;
   .CibleSection {
     width: 100%;
     height: 400px;
-    background-size: 100% 500px;
+    background-size: 100% 100%;
   }
   .InnovationTitle {
     font-size: 24px;
@@ -967,7 +968,7 @@ align-content: center;
   .CibleSection {
     width: 100%;
     height: 300px;
-    background-size: 100% 300px;
+    background-size: 100% 100%;
   }
   .loader_line {
     width: 150px;
