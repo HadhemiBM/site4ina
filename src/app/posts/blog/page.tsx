@@ -18,7 +18,7 @@ const Blogg: React.FC = () => {
     <PageTransition>
       <div className={styles.container}>
         <div className={styles.Header}>
-          <h1 className={styles.title}>Blogs</h1>
+          <h1 className={styles.titleHead}>Blogs</h1>
           <p className={styles.desc}>
             Your resource for the latest insights in Energy Management,
             AI-powered Solutions, and Industry 4.0 trends.
