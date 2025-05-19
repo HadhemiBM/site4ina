@@ -193,7 +193,6 @@ animation: animate-background 30s infinite alternate linear;
   text-align: center;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
- 
 }
 
 .mobileCard::after {
