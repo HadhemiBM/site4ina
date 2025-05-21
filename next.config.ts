@@ -1,7 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-
   output: "export",
   reactStrictMode: false,
   env: {
@@ -22,16 +21,10 @@ const nextConfig: NextConfig = {
       },
     ],
     unoptimized: true,
-
   },
+  // Redirections personnalisées ne fonctionnent pas avec next export
   async redirects() {
-    return [
-      {
-        source: "/",
-        destination: "/home",
-        permanent: true,
-      },
-    ];
+    return [];
   },
 
   trailingSlash: true,
