@@ -154,7 +154,6 @@ const Navbar: React.FC = () => {
                   <span onClick={() => handleDropdownToggle(name)}>{name}</span>
                 )}
               </h3>
-             
               {name === "technical platform" && solutionsDrop && (
                 <div className={styles.dropdownMenu}>
                   {solutionsLinks.map(({ id, link, name }) =>
@@ -182,7 +181,6 @@ const Navbar: React.FC = () => {
                   )}
                 </div>
               )}
-
               {name === "Posts" && postDrop && (
                 <div className={styles.dropdownMenu}>
                   {postsLinks.map(({ id, link, name }) => (
