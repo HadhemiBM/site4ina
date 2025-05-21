@@ -227,23 +227,18 @@ const Accueil: React.FC = () => {
   const handleTimerChange = () => {
     setIndex((prev) => (prev + 1) % solutions.length); // Cycle through the solutions
   };
-
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
-
     // Add the scroll event listener
     container.addEventListener("wheel", handleScroll, { passive: false });
-
     const timer = setInterval(handleTimerChange, 10000); // Change every 5 seconds
-
     // Cleanup the event listener and the timer when the component unmounts
     return () => {
       container.removeEventListener("wheel", handleScroll);
       clearInterval(timer); // Stop the timer
     };
   }, []); // Only run this effect once on mount
-
   return (
     // <PageTransition>
     <div className={styles.container}>
@@ -325,6 +320,7 @@ const Accueil: React.FC = () => {
               exit={{ opacity: 0, y: -50 }}
               transition={{ duration: 0.5 }}
             >
+              
               <div className={styles.Solution1Text}>
                 <h2 className={styles.SolTitle1}>{solutions[index].title}</h2>
                 <p className={styles.SolutionDesc1}>
@@ -337,11 +333,10 @@ const Accueil: React.FC = () => {
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                   >
-                    Request De  mo
+                    Request Demo
                   </motion.button>
                 </Link>
               </div>
-
               <Image
                 src={solutions[index].image}
                 alt={solutions[index].title}
@@ -515,12 +510,7 @@ const Accueil: React.FC = () => {
               alt="European Union"
             />
           </div>
-          <div className={styles.card }>
-            <img
-              src="https://res.cloudinary.com/ddngbriyu/image/upload/v1744809407/logo-deutsch-tunesische-zusammenarbeit_skzlyb.jpg"
-              alt="La GIZ en Tunisie"
-            />
-          </div>
+          
           <div className={styles.card}>
             <img
               src="https://res.cloudinary.com/dyrh4zwb1/image/upload/v1729242600/ceed_hs3zi9.jpg"
@@ -531,6 +521,12 @@ const Accueil: React.FC = () => {
             <img
               src="https://res.cloudinary.com/ddngbriyu/image/upload/v1744895023/images_wpj9jb.png"
               alt="Smart Capital"
+            />
+          </div>
+          <div className={styles.card }>
+            <img
+              src="https://res.cloudinary.com/ddngbriyu/image/upload/v1744809407/logo-deutsch-tunesische-zusammenarbeit_skzlyb.jpg"
+              alt="La GIZ en Tunisie"
             />
           </div>
         </div>
