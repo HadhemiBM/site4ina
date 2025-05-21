@@ -6,7 +6,6 @@ import styles from "./index.module.css";
 
 const LoginPage = () => {
   return (
-    
     <div className={styles.boddy}>
     <div className={styles.container}>
       <div className={styles.loginBox}>

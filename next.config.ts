@@ -2,6 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "export",
+  // basePath:"/out",
   reactStrictMode: false,
   env: {
     NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: "ddngbriyu",
@@ -22,11 +23,15 @@ const nextConfig: NextConfig = {
     ],
     unoptimized: true,
   },
-  // Redirections personnalisées ne fonctionnent pas avec next export
-  async redirects() {
-    return [];
+   async redirects() {
+        return [
+      {
+        source: "/",
+        destination: "/home",
+        permanent: true,
+      },
+    ];
   },
-
   trailingSlash: true,
   webpack(config, { isServer }) {
     if (!isServer) {
