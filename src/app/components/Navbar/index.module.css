@@ -372,7 +372,9 @@
   .navbarLinksContainer.mobileMenuOpen {
     display: flex;
   }
-
+.mobileMenuOpen {
+    width: 80%;
+  }
   .navbarLinkContainer {
     width: 100%;
     margin-bottom: 10px;
