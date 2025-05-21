@@ -409,7 +409,7 @@ flex-direction: column;
 
   .dropdownItem {
     font-size: 14px;
-    padding: 10px;
+    padding: 8px;
     color: #000;
   }
   .dropdownItem:hover {
