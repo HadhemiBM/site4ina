@@ -250,18 +250,18 @@ const Accueil: React.FC = () => {
           // data-aos="fade-up" data-aos-delay="400"
           >
             <h1 className={styles.CibleTitle}>
-              Tailored Energy Management Solutions for Key Sectors and
-              Businesses of All Sizes
+             Adaptive Energy Systems for Industrial and Commercial Use
             </h1>
           </div>
           <div
           // data-aos="fade-up"
           >
             <p className={styles.CibleDesc}>
-              Our expertise spans agriculture, manufacturing, healthcare, and
-              hospitality. From small businesses to large enterprises, we
-              provide scalable and adaptive AI-powered energy solutions aligned
-              with Industry 4.0 standards.
+              We deliver scalable, AI-driven energy systems for agriculture, manufacturing, healthcare, and hospitality helping businesses of all sizes.
+            </p>
+            <p className={styles.CibleDescGras}>
+              Cut costs, Boost efficiency, and Meet Industry 4.0 standards.
+
             </p>
           </div>
 
@@ -391,16 +391,16 @@ const Accueil: React.FC = () => {
       </div>
       <div className={styles.DemoSection}>
         <h1 className={styles.SolutionTitle3}>
-          Experience 4InA Technologie’s EMS in Action
+         Explore our real-time EMS in action
         </h1>
-        <h1 className={styles.SolutionTitle2}>Book a Demo Today!</h1>
+        <h1 className={styles.SolutionTitle2}>optimize save and automate </h1>
         <p className={styles.SolutionsDesc}>
           Schedule a personalized demo with our experts to explore how we can
           help you optimize energy usage, reduce costs, and drive sustainable
           growth
         </p>
-        <Link href="/solutions/demo" passHref>
-          {/* <button className={styles.buttonDemo}>Book a Demo</button> */}
+        {/* <Link href="/solutions/demo" passHref>
+          
           <button className={styles.button}>
             <svg
               className={styles.buttonSvg}
@@ -434,13 +434,23 @@ const Accueil: React.FC = () => {
                 rx="20"
               />
             </svg>
-            <h5 className={styles.buttonDemo}>
-              {/* <h5> */}
-              Book a Demo
-              {/* </h5> */}
+            <h5 className={styles.buttonDiscover}>
+             
+              Start Your Free Demo
+          
             </h5>
           </button>
-        </Link>
+        </Link> */}
+        <Link href="/solutions/demo" passHref>
+                <motion.button
+                  onClick={navigateToService}
+                  className={styles.buttonDiscoverDemo}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                 Start Your Free Demo
+                </motion.button>
+              </Link>
       </div>
       <div className={styles.ServicesSection}>
         <div className={styles.SolutionTitle}>

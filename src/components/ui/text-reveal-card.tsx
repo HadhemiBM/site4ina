@@ -81,7 +81,7 @@ export const TextRevealCard = ({
     >
       {children}
       <div>
-        <div  className="h-40 relative flex items-center overflow-hidden">
+        <div  className="h-40 relative flex items-center  overflow-hidden">
           <motion.div
             style={{ width: "100%" }}
             animate={
@@ -102,7 +102,7 @@ export const TextRevealCard = ({
               style={{
                 textShadow: "4px 4px 15px rgba(255, 255, 255, 0.5)",
               }}
-              className="text-[1.2rem] sm:text-[1rem] py-10 font-bold text-white bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-300"
+              className="text-[1rem] sm:text-[1.5rem] py-10 font-bold text-white bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-300"
             >
               {revealText}
             </p>
@@ -115,11 +115,11 @@ export const TextRevealCard = ({
               opacity: widthPercentage > 0 ? 1 : 0,
             }}
             transition={isMouseOver ? { duration: 0 } : { duration: 0.4 }}
-            className="h-40 w-[8px] bg-gradient-to-b from-transparent via-neutral-100 to-transparent absolute z-50 will-change-transform"
+            className="h-40 w-[8px] items-center bg-gradient-to-b from-transparent via-neutral-100 to-transparent absolute z-50 will-change-transform"
           />
 
-          <div className="overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]">
-            <p className="text-[2rem] sm:text-[3rem] py-10 font-bold bg-clip-text text-transparent bg-[#323238]">
+          <div className="overflow-hidden w-full [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]">
+            <p className="text-[2rem]  items-center sm:text-[3rem] py-10 font-bold bg-clip-text text-transparent bg-[#323238]">
               {text}
             </p>
             <MemoizedStars />

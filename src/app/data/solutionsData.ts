@@ -13,12 +13,12 @@ export const solutions: Solution[] = [
  
   {
     title: 'Software',
-    description: ` Our cloud-based software analyzes data from each device and offers intelligent automation that adapts to your energy needs, providing easy, remote access ( Web & Mobile) to insights while optimizing consumption and minimizing waste`,
+    description: "The 4InA Dashboard is available on web, desktop, and mobile platforms. You get real-time energy data, enabling intelligent automation and remote access. Gain actionable insights, minimize energy waste, and boost operational efficiency anytime, anywhere.",
     image: softSol,
   },
   {
     title: 'Hardware',
-    description: 'Our precision sensors collect real-time energy usage data continuously , seamlessly connecting with our platform to provide a clear, data-driven view of your consumption patterns.',
+    description: 'The smart sensors capture real-time energy usage with high precision and feed data directly into our platform. This enables accurate monitoring, behavior prediction, and a clear view of consumption trends.',
     image: hardSol,
   },
   

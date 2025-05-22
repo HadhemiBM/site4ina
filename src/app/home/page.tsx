@@ -31,7 +31,8 @@ const Splash: React.FC = () => {
    
             <TextRevealCard data-aos="fade-up" text="Do You Really Know Where Your Energy Is Going?" 
             revealText="Explore how 4InA Technology transforms the future." 
-            DescriptionText="From real-time monitoring to predictive maintenance, 4InA Technologie helps you take control">
+            // DescriptionText="From real-time monitoring to predictive maintenance, 4InA Technologie helps you take control">
+            DescriptionText="Gain full control over your energy usage with real-time energy monitoring and AI-powered predictive maintenance from 4InA Technologie.">
            
 </TextRevealCard>
 <div className={styles.row}>
@@ -75,6 +76,9 @@ Consumption Reduction
                 Explore now
               </motion.button>
             </Link>  
+            <div className={styles.visually_hidden}>
+  High-voltage power lines and transmission towers silhouetted against a colorful sky at sunrise or sunset, representing the backbone of energy management systems like 4ina energy solutions’ custom EMS platform.
+  </div>
       </div>
     </div>
     </PageTransition>

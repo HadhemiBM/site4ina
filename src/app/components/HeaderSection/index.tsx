@@ -123,15 +123,13 @@ const Header = () => {
        
               className={styles.HeaderTitle}
             >
-              Leading Energy Management With AI-Driven Solution
+             AI-Powered Energy Management Solutions for Smarter Business Efficiency
             </h1>
             <p
             
               className={styles.HeaderDesc}
             >
-              Through real-time data and predictive insights, we empower
-              businesses to make smarter energy decisions. We decode energy
-              complexity, helping you act fast and optimize smarter.
+              We transform energy data into real-time insights and predictive analytics, empowering industries to reduce energy waste, cut costs, and drive smarter operations with AI-driven decisions. 
             </p>
             <AnimationHead id="particles" className={styles.back} />
             <div className={styles.boutons}>
@@ -169,31 +167,30 @@ const Header = () => {
        
               className={styles.HeaderTitle2}
             >
-              Advantages of Installing Our Solution
+             Unlock Operational Excellence With Intelligent Energy Insights
             </h1>
             <p
             
               className={styles.HeaderDesc}
             >
-               Our smart energy solution enhances operational efficiency and
-              significantly reduces energy costs through real-time optimization.
+              From predictive maintenance to real-time machine behavior analysis, our system helps you prevent costly failures, extend equipment life, and support sustainability goals, all while giving energy managers actionable insights
               
             </p>
             <AnimationHead id="particles" className={styles.back} />
             <div className={styles.Advanages}>
              
               <div className={styles.Advanage} >
-                Monitoring of energy consumption
+                Track and analyze energy usage in real time
 
               </div>
              <div className={styles.Advanage} >
-               Guidance for energy managers
+               Empower energy teams with intelligent recommendations
               </div>
               <div className={styles.Advanage} >
-                Monitoring Machine Behavior and Predicting Failures
+                Detect anomalies and anticipate machine breakdowns
               </div>
               <div className={styles.Advanage} >
-               Reducing Maintenance Costs
+               Lower maintenance costs and reduce downtime
 
               </div>
             </div>
