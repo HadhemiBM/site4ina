@@ -82,7 +82,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <Navbar  />
 
           
-          <main className="content-wrapper">{children}</main>
+          <main className="content-wrapper">{children}
+ <Analytics />
+
+          </main>
         </div>
           <Footer/>
       </body>
