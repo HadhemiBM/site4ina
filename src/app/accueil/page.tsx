@@ -458,7 +458,7 @@ const Accueil: React.FC = () => {
           <h1 className={styles.SolutionTitle2}>Services</h1>
         </div>
         <p className={styles.SolutionsDesc}>
-          We ensure smooth implementation and long-term success
+         Insuring a smooth implementation and long term follow-up 
         </p>
 
         <div className={styles.AllServices}>
