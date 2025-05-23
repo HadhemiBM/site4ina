@@ -7,7 +7,7 @@ const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    phoneNumber:"",
+    phoneNumber: "",
     message: "",
   });
   const handleChange = (
@@ -21,21 +21,37 @@ const Contact: React.FC = () => {
       [name]: value,
     });
   };
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log("Form Data:", formData);
+  type ContactItemProps = {
+    icon: string;
+    title: string;
+    children: React.ReactNode;
   };
+
+  const ContactItem = ({ icon, title, children }: ContactItemProps) => (
+    <div className={styles.rowContact}>
+      <i className={`fa-solid ${icon}`} />
+      <div className={styles.columnContact}>
+        <p>{title}</p>
+
+        {children}
+      </div>
+    </div>
+  );
   return (
     <PageTransition>
       <div className={styles.container}>
         <div className={styles.Left}>
-          <form className={styles.formContainer}  
-                  action="https://formsubmit.co/4inatechnologie@gmail.com"
-          method="POST"
-          encType="multipart/form-data" >
+          <form
+            className={styles.formContainer}
+            action="https://formsubmit.co/4inatechnologie@gmail.com"
+            method="POST"
+            encType="multipart/form-data"
+          >
             <div className={styles.row}>
               <div className={styles.column}>
-                <label className={styles.label}>Full name*</label>
+                <label htmlFor="Full name" className={styles.label}>
+                  Full name*
+                </label>
                 <input
                   className={styles.input}
                   type="text"
@@ -47,13 +63,14 @@ const Contact: React.FC = () => {
                 />
               </div>
               <div className={styles.column}>
-                <label className={styles.label}>Phone number*</label>
+                <label htmlFor="Phone number" className={styles.label}>
+                  Phone number*
+                </label>
                 <input
                   className={styles.input}
-                  type="phone"
+                  type="tel"
                   value={formData.phoneNumber}
                   name="phoneNumber"
-
                   onChange={handleChange}
                   placeholder="Enter your phone number"
                   required
@@ -61,84 +78,95 @@ const Contact: React.FC = () => {
               </div>
             </div>
             <div className={styles.column}>
-              <label className={styles.label}>Email*</label>
+              <label htmlFor="Email" className={styles.label}>
+                Email*
+              </label>
               <input
-               value={formData.email}
-               onChange={handleChange}
+                value={formData.email}
+                onChange={handleChange}
                 className={styles.input}
-            name="email"
+                name="email"
                 type="email"
                 placeholder="Enter your email"
                 required
               />
             </div>
             <div className={styles.column}>
-              <label className={styles.label}>Additional information*</label>
+              <label htmlFor="Additional information" className={styles.label}>
+                Additional information*
+              </label>
               <textarea
-               value={formData.message}
-            name="message"
-               onChange={handleChange}
+                value={formData.message}
+                name="message"
+                onChange={handleChange}
                 className={styles.inputMessage}
                 placeholder="Your Message"
                 required
               />
             </div>
-            <button className={styles.submitbtn} type="submit">Submit</button>
+            <button className={styles.submitbtn} type="submit">
+              Submit
+            </button>
           </form>
         </div>
         <div className={styles.Right}>
           <h2 className={styles.RightTitle}>
-          Book Demo – Let's Bring Your Vision to Life
+            Book Demo – Let's Bring Your Vision to Life
           </h2>
           <p className={styles.RightDesc}>
             Kindly fill this form with your details about your inquiries and we
             would respond your inquiry shortly.
           </p>
-          <div className={styles.rowContact}>
-          <Link href="mailto:contact@4inatechnologie.com" className={styles.textNo}>
-          <i className="fa-solid fa-paper-plane" ></i>
+        {/* <div className={styles.rowContact}>
+  <a
+    href="mailto:contact@4inatechnologie.com"
+    className={styles.textNo}
+  >
+    <i className="fa-solid fa-paper-plane"></i>
+  </a>
+  <div className={styles.columnContact}>
+    <p>Send an email</p>
+    <a
+      href="mailto:contact@4inatechnologie.com"
+      className={styles.textNo}
+    >
+      <span className={styles.columnContact_p}>
+        contact@4inatechnologie.com
+      </span>
+    </a>
+  </div>
+</div> */}
 
-              </Link>
-            <div className={styles.columnContact}>
-              <p>Send an email</p>
-              <Link href="mailto:contact@4inatechnologie.com" className={styles.textNo}>
-              <p className={styles.columnContact_p}>contact@4inatechnologie.com</p>
-              </Link>
-            </div>
-          </div>
-          <div className={styles.rowContact}>
-          <i className="fa-solid fa-phone"></i>
-            <div className={styles.columnContact}>
-              <p>Give us a call</p>
-              <Link href="tel:+21623507648" className={styles.Link}>
+
+             <ContactItem icon="fa-solid fa-paper-plane" title="Send an email">
+  <Link href="mailto:contact@4inatechnologie.com" className={styles.Link}>
+   <p className={styles.columnContact_p}> contact@4inatechnologie.com</p>
+  </Link>
+</ContactItem>
+          <ContactItem icon="fa-phone" title="Give us a call">
+            <Link href="tel:+21623507648" className={styles.Link}>
               <p className={styles.columnContact_p}>+216 23 507 648</p>
+            </Link>
+          </ContactItem>
 
+          <ContactItem icon="fa-solid fa-location-dot" title="Office address">
+            <Link
+              href="https://maps.app.goo.gl/qMi4e4pi4yWP7PK46"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.Link}
+            >
+              <p className={styles.columnContact_p}>
+                {" "}
+                Technopark Manouba, Tunisia
+              </p>
+            </Link>
+          </ContactItem>
+           <ContactItem icon="fa-solid fa-clock" title="Working hours">
+  
+   <p className={styles.columnContact_p}>Mon - Fri: 08am - 5pm</p>
 
-              </Link>
-            </div>
-          </div>
-          <div className={styles.rowContact}>
-          <i className="fa-solid fa-location-dot"></i>
-            <div className={styles.columnContact}>
-              <p>Office address</p>
-              <Link
-                href="https://maps.app.goo.gl/qMi4e4pi4yWP7PK46"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.Link}
-              >
-                            <p className={styles.columnContact_p}>Technopark manouba, Manouba Tunisia</p>
-
-              </Link>
-            </div>
-          </div>
-          <div className={styles.rowContact}>
-          <i className="fa-solid fa-clock"></i>
-            <div className={styles.columnContact}>
-              <p>Working hours</p>
-              <p className={styles.columnContact_p}>Mon - Fri: 08am - 5pm</p>
-            </div>
-          </div>
+</ContactItem>
         </div>
       </div>
     </PageTransition>
