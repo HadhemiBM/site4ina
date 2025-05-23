@@ -113,8 +113,12 @@ const Contact: React.FC = () => {
                   Select one
                 </option>
                 <option value="General inquiry">General inquiry</option>
-                <option value="Bug report">Bug report</option>
-                <option value="Feature request">Feature request</option>
+                <option value="Partnership opportunity">Partnership opportunity</option>
+                <option value="AI & IoT integration">AI & IoT integration</option>
+                <option value="Request for a demo">Request for a demo</option>
+                <option value="Technical support">Technical support</option>
+                <option value="Media or press contact">Media or press contact</option>
+                  <option value="Career or internship opportunity">Career or internship opportunity</option>
                 <option value="Other">Other</option>
               </select>
             </div>
