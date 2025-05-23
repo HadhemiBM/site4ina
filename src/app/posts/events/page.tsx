@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { useRef } from "react";
 import PageTransition from "../../components/PageTransition";
 import parti from "../../Assests/svg/parti.svg";
-import foire from '../../Assests/foire.jpeg'
+import foire from '../../Assests/foire.png'
 import foire2 from '../../Assests/foire2.png'
 import Image from "next/image";
 
@@ -54,7 +54,7 @@ This impactful exchange reinforced the role of innovation in shaping Africa’s 
       <Image
         src={foire}
         height="300"
-        width="500"
+        width="700"
         alt="Participation"
         onClick={handleImageClick}
         style={{ cursor: 'zoom-in' }}
@@ -193,7 +193,7 @@ This experience has not only enriched our journey but also strengthened our dedi
       <Image
         src={parti}
         height="300"
-        width="500"
+        width="700"
         alt="Participation"
         onClick={handleImageClick}
         style={{ cursor: 'zoom-in' }}

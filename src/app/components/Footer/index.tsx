@@ -7,7 +7,11 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.Logo}>
+                 <Link href="/accueil">
+  
+
           <Image className={styles.RightLogo} src={logo} alt="Log4ina" />
+        </Link>
 
           <p>Innovate, Collaborate, Succeed </p>
         </div>
