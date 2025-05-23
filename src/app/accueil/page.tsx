@@ -2,23 +2,16 @@
 import styles from "./index.module.css";
 import React, { useEffect, useState } from "react";
 import { useRef } from "react";
-
 import Image from "next/image";
 import Header from "../components/HeaderSection";
-
 import arrowLeft from "../Assests/svg/arrowLeft.svg";
 import arrowRight from "../Assests/svg/arrowRight.svg";
-import softSol from "../Assests/softSol.png";
 import { blogs } from "../data/BlogData";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
-import Animation from "../home/animation";
-import { BackgroundBeams } from "@/components/ui/background-beams";
-import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 import { solutions } from "../data/solutionsData";
-
 const Accueil: React.FC = () => {
   const games = [
     {
@@ -49,7 +42,6 @@ const Accueil: React.FC = () => {
     },
     {
       id: "consulting",
-
       title: "Consulting",
       description:
         " Your business can confidently address its energy challenges while building a path toward sustainable growth and greater ROI. We offer personalized recommendations aligned with your business goal after conducting in-depth assessments to uncover  inefficiencies to enable targeted improvement and develop customized strategies..",
@@ -103,10 +95,8 @@ const Accueil: React.FC = () => {
   const handleViewMoreClick = (sectionId: string) => {
     router.push(`/services?section={sectionId}`);
   };
-
   const scrollRef = useRef<HTMLDivElement>(null);
   const scrollRef1 = useRef<HTMLDivElement>(null);
-
   const router = useRouter();
   const navigateToService = () => {
     router.push("/services");
@@ -313,7 +303,7 @@ const Accueil: React.FC = () => {
         <div ref={containerRef} className={styles.wrapperCont}>
           <AnimatePresence mode="sync">
             <motion.div
-              key={index} // Update key to re-trigger animation when index changes
+              key={index}
               className={styles.Solution1}
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -349,45 +339,7 @@ const Accueil: React.FC = () => {
             </motion.div>
           </AnimatePresence>
         </div>
-        {/* <div ref={containerRef} className={styles.wrapperCont}>
-          <AnimatePresence mode="sync">
-            <motion.div
-              key={index}
-              className={styles.Solution1}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -50 }}
-              transition={{ duration: 0.5 }}
-            >
-              <div className={styles.Solution1Text}>
-                <h2 className={styles.SolTitle1}>{solutions[index].title}</h2>
-                <p className={styles.SolutionDesc1}>
-                  {solutions[index].description}
-                </p>
-                <Link href="/services" passHref>
-                  <motion.button
-                    onClick={navigateToService}
-                    className={styles.buttonDemoSol}
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                  >
-                    Request Demo
-                  </motion.button>
-                </Link>
-              </div>
-
-              <Image
-                src={solutions[index].image}
-                alt={solutions[index].title}
-                className={`${styles.SolutionImg} ${
-                  index === 0
-                    ? styles.SolutionImgFirst
-                    : styles.SolutionImgSecond
-                }`}
-              />
-            </motion.div>
-          </AnimatePresence>
-        </div> */}
+       
       </div>
       <div className={styles.DemoSection}>
         <h1 className={styles.SolutionTitle3}>
@@ -399,48 +351,6 @@ const Accueil: React.FC = () => {
           help you optimize energy usage, reduce costs, and drive sustainable
           growth
         </p>
-        {/* <Link href="/solutions/demo" passHref>
-          
-          <button className={styles.button}>
-            <svg
-              className={styles.buttonSvg}
-              width="300"
-              height="80"
-              viewBox="0 0 300 80"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                className={`${styles.buttonLine} ${styles.buttonLineOuter}`}
-                strokeWidth="2"
-                stroke="#6190f5"
-                strokeLinecap="round"
-                fill="none"
-                x="4"
-                y="4"
-                width="270"
-                height="72"
-                rx="20"
-              />
-              <rect
-                className={`${styles.buttonLine} ${styles.buttonLineInner}`}
-                strokeWidth="2"
-                stroke="#0003da"
-                strokeLinecap="round"
-                fill="none"
-                x="4"
-                y="4"
-                width="270"
-                height="72"
-                rx="20"
-              />
-            </svg>
-            <h5 className={styles.buttonDiscover}>
-             
-              Start Your Free Demo
-          
-            </h5>
-          </button>
-        </Link> */}
         <Link href="/solutions/demo" passHref>
                 <motion.button
                   onClick={navigateToService}
@@ -460,7 +370,6 @@ const Accueil: React.FC = () => {
         <p className={styles.SolutionsDesc}>
          Insuring a smooth implementation and long term follow-up 
         </p>
-
         <div className={styles.AllServices}>
           <div className={styles.game_section}>
             <button className={styles.scrollButton1} onClick={scrollLeft1}>
@@ -477,7 +386,6 @@ const Accueil: React.FC = () => {
                   style={{ backgroundImage: `url(${game.image})` }}
                 >
                   <div className={styles.tag}>{game.title}</div>
-
                   <div className={styles.descriptionBox}>
                     <p className={styles.BlogDesc}>{game.description}</p>
                     <button
@@ -506,7 +414,6 @@ const Accueil: React.FC = () => {
           we leverage our strengths to create cutting-edge solutions that drive
           success across various sectors.
         </p>
-
         <div className={styles.imagesLeaning}>
           <div className={styles.card}>
             <img
@@ -519,8 +426,7 @@ const Accueil: React.FC = () => {
               src="https://res.cloudinary.com/ddngbriyu/image/upload/v1744809051/images_jp1d7v.jpg"
               alt="European Union"
             />
-          </div>
-          
+          </div>         
           <div className={styles.card}>
             <img
               src="https://res.cloudinary.com/dyrh4zwb1/image/upload/v1729242600/ceed_hs3zi9.jpg"
