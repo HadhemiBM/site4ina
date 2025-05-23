@@ -148,10 +148,7 @@ const Contact: React.FC = () => {
 </ContactItem>
         </div>
       </div>
-      <div>
-    <h2>Mon Design Figma</h2>
- <iframe  width="800" height="1000" src="https://embed.figma.com/proto/9Ro2GWIHqNgJYjVt95At4N/BLASTI--Community-?page-id=0%3A1&node-id=902-163&viewport=744%2C372%2C0.18&scaling=contain&content-scaling=responsive&starting-point-node-id=1%3A69&show-proto-sidebar=1&embed-host=share" allowfullscreen></iframe>
-  </div>
+      
     </PageTransition>
   );
 };
