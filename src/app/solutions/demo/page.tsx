@@ -37,6 +37,7 @@ const Contact: React.FC = () => {
       </div>
     </div>
   );
+  
   return (
     <PageTransition>
       <div className={styles.container}>
@@ -117,27 +118,6 @@ const Contact: React.FC = () => {
             Kindly fill this form with your details about your inquiries and we
             would respond your inquiry shortly.
           </p>
-        {/* <div className={styles.rowContact}>
-  <a
-    href="mailto:contact@4inatechnologie.com"
-    className={styles.textNo}
-  >
-    <i className="fa-solid fa-paper-plane"></i>
-  </a>
-  <div className={styles.columnContact}>
-    <p>Send an email</p>
-    <a
-      href="mailto:contact@4inatechnologie.com"
-      className={styles.textNo}
-    >
-      <span className={styles.columnContact_p}>
-        contact@4inatechnologie.com
-      </span>
-    </a>
-  </div>
-</div> */}
-
-
              <ContactItem icon="fa-solid fa-paper-plane" title="Send an email">
   <Link href="mailto:contact@4inatechnologie.com" className={styles.Link}>
    <p className={styles.columnContact_p}> contact@4inatechnologie.com</p>
@@ -157,7 +137,6 @@ const Contact: React.FC = () => {
               className={styles.Link}
             >
               <p className={styles.columnContact_p}>
-                {" "}
                 Technopark Manouba, Tunisia
               </p>
             </Link>
@@ -169,6 +148,10 @@ const Contact: React.FC = () => {
 </ContactItem>
         </div>
       </div>
+      <div>
+    <h2>Mon Design Figma</h2>
+ <iframe  width="800" height="1000" src="https://embed.figma.com/proto/9Ro2GWIHqNgJYjVt95At4N/BLASTI--Community-?page-id=0%3A1&node-id=902-163&viewport=744%2C372%2C0.18&scaling=contain&content-scaling=responsive&starting-point-node-id=1%3A69&show-proto-sidebar=1&embed-host=share" allowfullscreen></iframe>
+  </div>
     </PageTransition>
   );
 };

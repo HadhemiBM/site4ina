@@ -23,13 +23,23 @@ const Contact: React.FC = () => {
       [name]: value,
     });
   };
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    console.log("Form Data:", formData);
+  type ContactItemProps = {
+    icon: string;
+    title: string;
+    children: React.ReactNode;
   };
 
+  const ContactItem = ({ icon, title, children }: ContactItemProps) => (
+    <div className={styles.rowContact}>
+      <i className={`fa-solid ${icon}`} />
+      <div className={styles.columnContact}>
+        <p>{title}</p>
+
+        {children}
+      </div>
+    </div>
+  );
+  
   return (
     <PageTransition>
       <div className={styles.container}>
@@ -124,58 +134,34 @@ const Contact: React.FC = () => {
           </form>
         </div>
         <div className={styles.Right}>
-        {/* <h2 className={styles.RightTitle}>
-            Connect with 4ina Technologie Innovate, Collaborate, Succeed
-          </h2> */}
-          {/* <p className={styles.RightDesc}>
-            Kindly fill this form with your details about your inquiries and we
-            would respond your inquiry shortly.
-          </p> */}
-          <div className={styles.rowContact}>
-          <Link href="mailto:contact@4inatechnologie.com" className={styles.textNo}>
-          <i className="fa-solid fa-paper-plane" ></i>
 
-              </Link>
-            <div className={styles.columnContact}>
-              <p>Send an email</p>
-              <Link href="mailto:contact@4inatechnologie.com" className={styles.textNo}>
-              <p className={styles.columnContact_p}>contact@4inatechnologie.com</p>
-              </Link>
-            </div>
-          </div>
-          <div className={styles.rowContact}>
-          <i className="fa-solid fa-phone"></i>
-            <div className={styles.columnContact}>
-              <p>Give us a call</p>
-              <Link href="tel:+21623507648" className={styles.Link}>
+             <ContactItem icon="fa-solid fa-paper-plane" title="Send an email">
+  <Link href="mailto:contact@4inatechnologie.com" className={styles.Link}>
+   <p className={styles.columnContact_p}> contact@4inatechnologie.com</p>
+  </Link>
+</ContactItem>
+          <ContactItem icon="fa-phone" title="Give us a call">
+            <Link href="tel:+21623507648" className={styles.Link}>
               <p className={styles.columnContact_p}>+216 23 507 648</p>
+            </Link>
+          </ContactItem>
+          <ContactItem icon="fa-solid fa-location-dot" title="Office address">
+            <Link
+              href="https://maps.app.goo.gl/qMi4e4pi4yWP7PK46"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.Link}
+            >
+              <p className={styles.columnContact_p}>
+                Technopark Manouba, Tunisia
+              </p>
+            </Link>
+          </ContactItem>
+           <ContactItem icon="fa-solid fa-clock" title="Working hours">
+  
+   <p className={styles.columnContact_p}>Mon - Fri: 08am - 5pm</p>
 
-
-              </Link>
-            </div>
-          </div>
-          <div className={styles.rowContact}>
-          <i className="fa-solid fa-location-dot"></i>
-            <div className={styles.columnContact}>
-              <p>Office address</p>
-              <Link
-                href="https://maps.app.goo.gl/qMi4e4pi4yWP7PK46"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.Link}
-              >
-                            <p className={styles.columnContact_p}>Technopark manouba, Manouba Tunisia</p>
-
-              </Link>
-            </div>
-          </div>
-          <div className={styles.rowContact}>
-          <i className="fa-solid fa-clock"></i>
-            <div className={styles.columnContact}>
-              <p>Working hours</p>
-              <p className={styles.columnContact_p}>Mon - Fri: 08am - 5pm</p>
-            </div>
-          </div>
+</ContactItem>
         </div>
       </div>
     </PageTransition>

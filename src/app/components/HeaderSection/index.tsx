@@ -2,24 +2,16 @@
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import styles from "./index.module.css";
-
 import Link from "next/link";
 import { ReactNode, useEffect, useState } from "react";
-
-// import SlickCarousel from "./Slider";
 import { motion } from "framer-motion";
-
 import { useRouter } from "next/navigation";
-
 import AnimationHead from "./animation";
-
 const Header = () => {
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
   const router = useRouter();
-
   useEffect(() => {
     const timers: NodeJS.Timeout[] = [];
-
     const showItems = () => {
       for (let i = 0; i < 4; i++) {
         timers.push(
@@ -29,16 +21,13 @@ const Header = () => {
         );
       }
     };
-
     showItems();
-
     return () => {
       timers.forEach((timer) => clearTimeout(timer));
     };
   }, []);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [shouldAnimate, setShouldAnimate] = useState(false);
-
   useEffect(() => {
     if (currentSlide === 1 || currentSlide === 2) {
       const timer = setTimeout(() => setShouldAnimate(true), 100);
@@ -198,45 +187,7 @@ const Header = () => {
 
         
         </div>
-        {/* <div className={styles.container}>
-          <div className={styles.HeaderText}>
-            <h1
-              data-aos="fade-up"
-              data-aos-delay="800"
-              className={styles.HeaderTitle}
-            >
-              Advantages of Installing Our Solution{" "}
-            </h1>
-            <p
-              data-aos="fade-up"
-              data-aos-delay="800"
-              className={styles.HeaderDesc}
-            >
-              Our smart energy solution enhances operational efficiency and
-              significantly reduces energy costs through real-time optimization.
-              It empowers businesses to achieve sustainable growth while making
-              smarter, data-driven decisions.
-            </p>
-          </div>
-          <div data-aos="zoom-out-left" className={styles.Imagecontainer}>
-            {currentSlide === 1 && (
-              <div className={styles.CibleRight}>
-                {advantages.map((item, index) => (
-                  <div
-                    key={index}
-                    data-aos="flip-up"
-                    data-aos-delay={`${index * 200}`}
-                    className={`${styles.CibleCont22} ${
-                      styles[`CibleCont22${index + 1}`]
-                    } ${shouldAnimate ? styles.show : ""}`}
-                  >
-                    <p className={styles.SpinnerDescu1}>{item}</p>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-        </div> */}
+        
       </Carousel>
     </div>
     // <SlickCarousel />
