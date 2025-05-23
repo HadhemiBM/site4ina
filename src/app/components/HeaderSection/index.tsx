@@ -39,6 +39,9 @@ const Header = () => {
   const navigateToService = () => {
     router.push("/services");
   };
+  const navigateToDemo= () => {
+    router.push("/demo");
+  };
 
   const settings = {
     dots: true,
@@ -122,9 +125,9 @@ const Header = () => {
             </p>
             <AnimationHead id="particles" className={styles.back} />
             <div className={styles.boutons}>
-              <Link href="/services" passHref>
+              <Link href="/solutions/demo/" passHref>
                 <motion.button
-                  onClick={navigateToService}
+                  onClick={navigateToDemo}
                   className={styles.buttonDiscover}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
@@ -158,13 +161,13 @@ const Header = () => {
             >
              Unlock Operational Excellence With Intelligent Energy Insights
             </h1>
-            <p
+            {/* <p
             
               className={styles.HeaderDesc}
             >
               From predictive maintenance to real-time machine behavior analysis, our system helps you prevent costly failures, extend equipment life, and support sustainability goals, all while giving energy managers actionable insights
               
-            </p>
+            </p> */}
             <AnimationHead id="particles" className={styles.back} />
             <div className={styles.Advanages}>
              

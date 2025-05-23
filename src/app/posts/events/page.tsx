@@ -4,7 +4,8 @@ import React, { useState } from "react";
 import { useRef } from "react";
 import PageTransition from "../../components/PageTransition";
 import parti from "../../Assests/svg/parti.svg";
-
+import foire from '../../Assests/foire.jpeg'
+import foire2 from '../../Assests/foire2.png'
 import Image from "next/image";
 
 import Video from "./video";
@@ -30,6 +31,96 @@ const Events: React.FC = () => {
           </p>
         </div>
         <div className={styles.AllEvents}>
+
+
+       {/* eventsssss */}
+              <div data-aos="fade-up" className={styles.events1}>
+      <div data-aos="fade-up" data-aos-delay="200" className={styles.eventHeader}>
+        <h2 className={styles.eventTitle}>
+        Official Visit of the Democratic Republic of Congo Delegation to 4InA Technologie
+        </h2>
+       <p className={styles.eventDesc}>
+
+ `We had the honor of welcoming a high-level delegation from the Democratic Republic of Congo, led by H.E. Kibasa Maliba Augustin, Minister of Posts and Digital Telecommunications, to our offices at Manouba Technopark. The delegation included key digital leaders such as Dominique Migisha (ADN) and Marie Monzele Kalala, alongside Tunisian representatives.
+<br/> <strong>Purpose of the Visit:</strong><br/>
+- Explore collaboration between DRC’s digital vision and 4InA’s AI- and IoT-powered smart energy solutions.<br/>
+- Address energy transition challenges and opportunities in Africa.<br/>
+- Initiate future Tunisia–DRC technological partnerships.<br/>
+This impactful exchange reinforced the role of innovation in shaping Africa’s sustainable energy future.`
+</p>
+
+      </div>
+      <Lens hovering={hovering} setHovering={setHovering}>
+      <Image
+        src={foire}
+        height="300"
+        width="500"
+        alt="Participation"
+        onClick={handleImageClick}
+        style={{ cursor: 'zoom-in' }}
+      />
+      </Lens>
+
+
+{isOpen && (
+  <Modal onClose={closeModal}>
+    <img
+      src={parti.src}
+      alt="Participation"
+      style={{
+        maxWidth: "90vw",
+        maxHeight: "90vh",
+        objectFit: "contain",
+     
+      }}
+    />
+  </Modal>
+)}
+    </div>
+
+            {/* eventsssss */}
+              <div data-aos="fade-up" className={styles.events1}>
+      <div data-aos="fade-up" data-aos-delay="200" className={styles.eventHeader}>
+        <h2 className={styles.eventTitle}>
+         4InA Technologie at PetroAfrica 2025 - Powering Africa’s sustainable energy 
+        </h2>
+        <p className={styles.eventDesc}>
+        `We proudly participated in <strong>PetroAfrica 2025</strong>, held in Tunis, a landmark event bringing together energy professionals, innovators, and government representatives from across Africa and beyond. 
+The event served as a powerful platform to highlight our <strong>cutting-edge energy management solutions</strong>, combining <strong>AI, IoT, and real-time monitoring</strong> to drive sustainable transformation in the energy sector.
+During the event, our team presented the latest version of our <strong>smart hardware and software systems</strong>, tailored for industrial energy optimization and predictive maintenance.`
+        </p>
+      </div>
+      <Lens hovering={hovering} setHovering={setHovering}>
+      <Image
+        src={foire2}
+        height="300"
+        width="500"
+        alt="Participation"
+        onClick={handleImageClick}
+        style={{ cursor: 'zoom-in' }}
+      />
+      </Lens>
+
+
+{isOpen && (
+  <Modal onClose={closeModal}>
+    <img
+      src={parti.src}
+      alt="Participation"
+      style={{
+        maxWidth: "90vw",
+        maxHeight: "90vh",
+        objectFit: "contain",
+     
+      }}
+    />
+  </Modal>
+)}
+    </div>
+
+
+
+
           <div data-aos="fade-up" className={styles.events1}>
             <div data-aos="fade-up"data-aos-delay="200" className={styles.eventHeader}>
               <h2 className={styles.eventTitle}>
@@ -125,6 +216,13 @@ This experience has not only enriched our journey but also strengthened our dedi
   </Modal>
 )}
     </div>
+
+  
+
+
+
+
+
         </div>
       </div>
     </PageTransition>
