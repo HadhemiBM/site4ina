@@ -1,0 +1,432 @@
+.Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+
+  font-family: "Poppins";
+
+  gap: 5rem;
+}
+.Header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+}
+.Whats {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  gap: 2rem;
+}
+.tabsImage {
+  margin-left: -6rem;
+}
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-self: center;
+  width: 60%;
+  align-items: center;
+  align-content: center;
+  gap: 2rem;
+}
+.textContainer h1,
+.Whats h1,
+.textContainer h6,
+.textContainer p {
+  font-family: "Poppins";
+}
+.textContainer h1,
+.Whats h1 {
+  font-size: 4.5rem;
+  font-weight: bold;
+}
+.textContainer h6 {
+  font-size: 1.9rem;
+  font-weight: bold;
+}
+.textContainer p {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #091e3e;
+
+  width: 60%;
+  text-align: center;
+}
+.FirstH1 {
+  display: flex;
+  flex-direction: row;
+
+  align-items: flex-end;
+}
+.ZitounaImage {
+  margin-left: -5rem;
+}
+.buttonStarted,
+.buttonDemo {
+  background-color: var(--white);
+  color: #988f09;
+  padding: 10px 20px;
+  border-radius: 99px;
+  border: 1px solid #988f09;
+  width: 12.5rem;
+  align-self: center;
+  height: 3.25rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-family: "Poppins";
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.buttonDemo {
+  background-color: #988f09;
+  color: white;
+}
+
+.buttonStarted:hover {
+  box-shadow: 0 4px 4px #988f09;
+
+  border-color: #988f09 2px solid;
+
+  color: #988f09;
+
+  border: 1px;
+  border-bottom: var(--white) 2px solid;
+}
+.btns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 50%;
+}
+.WhatsTitle {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+.Whats p {
+  font-size: 1.75rem;
+  text-align: center;
+  color: #091e3e;
+  width: 80%;
+}
+.WhatsTitle2 {
+  color: #988f09;
+}
+.Innovating {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  gap: 2rem;
+}
+.Innovating h1 {
+  color: #091e3e;
+  width: 55%;
+  font-size: 2.2rem;
+  text-align: center;
+  font-weight: bold;
+}
+.InnovatingContent {
+  /* background-color: #747765; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 75%;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+}
+.item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  align-content: center;
+  color: #091e3e;
+}
+.ContentLeft {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  /* background-color: #2a300e; */
+  width: 70%;
+  gap: 1rem;
+}
+.text p {
+  font-size: 1.25rem;
+  font-family: "Poppins";
+}
+.text h6 {
+  font-size: 1.4rem;
+  font-family: "Poppins";
+}
+.Action{
+    display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #988f09;
+  width: 100%;
+  align-items: center;
+  align-content: center;
+}
+.Action h1 {
+  color: white;
+  font-weight:bold ;
+  font-size: 3rem;
+  font-family: "Poppins";
+}
+.Action p {
+  color: white;
+width: 70%;
+  font-family: "Poppins";
+  font-size: 25px;
+}
+.ActionLeft{
+      display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 70%;
+padding: 2.5rem;
+gap:1.5rem;
+}
+.ActionRight{
+      display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 25%;
+  padding: 1rem;
+justify-content: space-between;
+}
+.Actionbutton {
+  background-color: var(--white);
+  color: #444004;
+  padding: 10px 20px;
+  border-radius: 99px;
+  border: 1px solid #988f09;
+  width: 12.5rem;
+  align-self: center;
+  height: 3.25rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-family: "Poppins";
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.Tap{
+    display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+    align-items: center;
+  align-content: center;
+  justify-content: center;
+
+}
+.TapTitle{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap:0.5rem;
+  text-align: center;
+  align-items: center;
+  align-content: center;}
+
+  .TapTitle1,
+  .TapTitle2{
+  color: #091e3e;
+  font-size: 2.2rem;
+  text-align: center;
+  font-family: "Poppins";
+
+  font-weight: bold;
+  }
+  .TapTitle1{
+  font-size: 3.5rem;
+
+  }
+.Advanages {
+  display: grid;
+  grid-template-columns: repeat(3, 0.5fr); /* Adjust the number of columns */
+  grid-template-rows: auto auto;
+  gap: 1.5rem;
+  border-radius: 10px;
+  width:90%;
+  text-align: center;
+  align-content: center;
+align-items: center;
+align-self: center;
+}
+.Advanage:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.Advanage:nth-child(4) {
+  grid-column: 4;
+  grid-row: 1;
+}
+
+.Advanage:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.Advanage:nth-child(3) {
+  grid-column: 3;
+  grid-row: 1;
+}
+.Advanage {
+  background-color: #988f09;
+  padding: 8px;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  text-align: center;
+  justify-content: center;
+align-content: center;
+width: 100%;
+  color: #ffffff;
+}
+/* /////////////// */
+.Advanages2 {
+  display: grid;
+  grid-template-columns: repeat(3, 0.5fr); /* Adjust the number of columns */
+  grid-template-rows: auto;
+  gap: 1.5rem;
+  border-radius: 10px;
+  width:90%;
+
+  text-align: center;
+  align-content: center;
+align-items: center;
+align-self: center;
+}
+
+
+
+.Advanage2:nth-child(1){
+
+  grid-column: 1; 
+  grid-row: 1;
+  
+}
+
+.Advanage2:nth-child(2) 
+ { 
+  grid-column: 1; 
+  grid-row: 2;
+
+}
+
+.Advanage2:nth-child(3) { 
+  grid-column: 1; 
+  grid-row: 3;
+
+}
+
+.Advanage2:nth-child(4) { 
+  grid-column: 1; 
+  grid-row: 4;
+
+}
+
+.Advanage2:nth-child(5) { 
+  grid-column: 1; 
+  grid-row: 5;
+
+}
+.Advanage2:nth-child(6) { 
+  grid-column: 2; 
+  grid-row: 1;
+
+}
+.Advanage2:nth-child(7) { 
+  grid-column: 2; 
+  grid-row: 2;
+
+}
+.Advanage2:nth-child(8) { 
+  grid-column: 2; 
+  grid-row: 3;
+
+}
+.Advanage2:nth-child(9) { 
+  grid-column: 2; 
+  grid-row: 4;
+
+}
+.Advanage2:nth-child(10) { 
+  grid-column: 3; 
+  grid-row: 1;
+
+}
+.Advanage2:nth-child(11) { 
+  grid-column: 3; 
+  grid-row: 2;
+
+}.Advanage2:nth-child(12) { 
+  grid-column: 3; 
+  grid-row: 3;
+
+}
+.Advanage2:nth-child(13) { 
+  grid-column: 3; 
+  grid-row: 4;
+
+}
+/* .Advanage2:nth-child(1),
+.Advanage2:nth-child(2),
+.Advanage2:nth-child(3),
+.Advanage2:nth-child(4),
+.Advanage2:nth-child(5),
+.Advanage2:nth-child(6),
+.Advanage2:nth-child(7),
+.Advanage2:nth-child(8),
+.Advanage2:nth-child(9),
+.Advanage2:nth-child(10),
+.Advanage2:nth-child(11),
+.Advanage2:nth-child(12),
+.Advanage2:nth-child(13) */
+.Advanage2
+{
+   background-color: #BF9A7933;
+  padding: 8px;
+  font-size: 1.2rem;
+  border-radius:50px;
+  text-align: center;
+  justify-content: center;
+align-content: center;
+align-self: center;
+width: 100%;
+
+  color: #091e3e;
+}
+.Adv {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width:70%;
+  align-items: center;
+  align-content: center;
+
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
