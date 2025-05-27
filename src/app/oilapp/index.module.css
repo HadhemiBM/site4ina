@@ -30,7 +30,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 1rem;
+
   align-self: center;
   width: 60%;
   align-items: center;
@@ -148,7 +148,7 @@
 .item {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+
   gap: 1.5rem;
   align-items: center;
   align-content: center;
@@ -179,7 +179,7 @@
   align-items: center;
   align-content: center;
   justify-content: center;
-  
+
 }
 .Action h1 {
   color: white;
@@ -257,7 +257,7 @@ justify-content: space-between;
   }
 .Advanages {
   display: grid;
-  grid-template-columns: repeat(3, 0.5fr); 
+  grid-template-columns: repeat(3, 0.5fr);
   grid-template-rows: auto auto;
   gap: 1.5rem;
   border-radius: 10px;
@@ -297,7 +297,7 @@ width: 100%;
 /* /////////////// */
 .Advanages2 {
   display: grid;
-  grid-template-columns: repeat(3, 0.5fr); 
+  grid-template-columns: repeat(3, 0.5fr);
   grid-template-rows: auto;
   gap: 1.5rem;
   border-radius: 10px;
@@ -308,70 +308,58 @@ align-items: center;
 align-self: center;
 }
 .Advanage2:nth-child(1){
-  grid-column: 1; 
+  grid-column: 1;
   grid-row: 1;
 }
-.Advanage2:nth-child(2) 
- { 
-  grid-column: 1; 
+.Advanage2:nth-child(2)
+ {
+  grid-column: 1;
   grid-row: 2;
 }
-.Advanage2:nth-child(3) { 
-  grid-column: 1; 
+.Advanage2:nth-child(3) {
+  grid-column: 1;
   grid-row: 3;
 }
-.Advanage2:nth-child(4) { 
-  grid-column: 1; 
+.Advanage2:nth-child(4) {
+  grid-column: 1;
   grid-row: 4;
 }
-.Advanage2:nth-child(5) { 
-  grid-column: 1; 
+.Advanage2:nth-child(5) {
+  grid-column: 1;
   grid-row: 5;
 }
-.Advanage2:nth-child(6) { 
-  grid-column: 2; 
+.Advanage2:nth-child(6) {
+  grid-column: 2;
   grid-row: 1;
 }
-.Advanage2:nth-child(7) { 
-  grid-column: 2; 
+.Advanage2:nth-child(7) {
+  grid-column: 2;
   grid-row: 2;
 }
-.Advanage2:nth-child(8) { 
-  grid-column: 2; 
+.Advanage2:nth-child(8) {
+  grid-column: 2;
   grid-row: 3;
 }
-.Advanage2:nth-child(9) { 
-  grid-column: 2; 
+.Advanage2:nth-child(9) {
+  grid-column: 2;
   grid-row: 4;
 }
-.Advanage2:nth-child(10) { 
-  grid-column: 3; 
+.Advanage2:nth-child(10) {
+  grid-column: 3;
   grid-row: 1;
 }
-.Advanage2:nth-child(11) { 
-  grid-column: 3; 
+.Advanage2:nth-child(11) {
+  grid-column: 3;
   grid-row: 2;
-}.Advanage2:nth-child(12) { 
-  grid-column: 3; 
+}.Advanage2:nth-child(12) {
+  grid-column: 3;
   grid-row: 3;
 }
-.Advanage2:nth-child(13) { 
-  grid-column: 3; 
+.Advanage2:nth-child(13) {
+  grid-column: 3;
   grid-row: 4;
 }
-/* .Advanage2:nth-child(1),
-.Advanage2:nth-child(2),
-.Advanage2:nth-child(3),
-.Advanage2:nth-child(4),
-.Advanage2:nth-child(5),
-.Advanage2:nth-child(6),
-.Advanage2:nth-child(7),
-.Advanage2:nth-child(8),
-.Advanage2:nth-child(9),
-.Advanage2:nth-child(10),
-.Advanage2:nth-child(11),
-.Advanage2:nth-child(12),
-.Advanage2:nth-child(13) */
+
 .Advanage2
 {
    background-color: #BF9A7933;
@@ -412,7 +400,7 @@ width: 100%;
   justify-content: space-between;
   width: 90%;
   align-self: center;
- 
+
 
 }
 .KeyLeft{
@@ -421,7 +409,7 @@ width: 100%;
 align-items: center;
 align-content: center;
 justify-content: space-between;
-  flex-wrap: wrap;
+
   gap:1rem;
   width: 100%;
 }
@@ -461,6 +449,7 @@ gap:1rem;
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
+  gap:1rem;
 
 }.Questions {
   display: flex;
@@ -505,7 +494,7 @@ align-self: center;
 
   border-radius: 5px;
   display: flex;
-  height: 70px;
+  height: auto;
   flex-direction: row;
   align-items:center ;
   align-content: center;
@@ -534,4 +523,375 @@ align-self: center;
 
 .show {
   display: block;
+}
+@media (max-width: 1740px) {
+.InnovatingContent {
+  width: 90%;
+}
+.ActionRight{
+
+  width: 30%;
+
+}
+.tabsImage2{
+  width: 30%;
+}
+.tabsImage1{
+  width: 300PX;
+
+}
+}
+@media (max-width: 1450px) {
+  .buttonStarted,
+.buttonDemo {
+  width: 11rem;
+  padding: 0px 0px;
+  height: 3.25rem;
+  font-size: 1.2rem;
+
+}
+.Actionbutton {
+  width: 10rem;
+  padding: 0px 0px;
+  height: 3.25rem;
+  font-size: 1.2rem;
+}
+.tabsImage{
+  width: 30%;
+}
+.textContainer {
+  width: 70%;
+}
+}
+@media (max-width: 1200px) {
+  .Header {
+
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.textContainer {
+
+  width: 100%;
+
+}
+.tabsImage{
+  width: 30%;
+  align-self: baseline;
+  margin-top: 200px;
+}
+
+.textContainer h1,
+.WhatsTitle h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+.Whats p {
+  font-size: 1.5rem;
+}
+.tabsImage3{
+  width: 90%;
+
+}
+.InnovatingContent {
+ 
+  width: 90%;
+  background-image: 
+    url("../Assests/oilapp/telMockUp.png");
+
+  background-size: 20% 100%;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+
+
+}
+.ContentLeft {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  width: 80%;
+
+  gap: 1rem;
+}
+.Innovating h1 {
+  font-size: 1.8rem;
+   width:80%;
+}
+.tabsImage1{
+/* opacity: ; */
+width: 0%;
+}
+.itemIcon{
+  width: 60px;
+}
+.ZitounaImage{
+  width: 130px;
+  margin-left: -3rem;
+
+}
+.Action{
+
+  flex-direction: column;
+}
+
+.ActionLeft{
+  width: 90%;
+}
+.Action h1 ,
+.Action p {
+text-align: center;
+width: 100%;
+}
+.ActionRight{
+  width: 50%;
+}
+.Actionbutton {
+
+  width: 13rem;
+
+
+  font-size: 1.4rem;
+
+}
+.Adv {
+
+  width:90%;
+
+}
+}
+@media (max-width: 1000px) {
+  .InnovatingContent {
+
+  background-size: 15% 70%;
+
+
+}
+.Adv {
+  width:100%;
+}
+.Actionbutton {
+  width: 11rem;
+  font-size: 1.2rem;
+
+}
+.ActionRight{
+
+  width: 60%;
+
+}
+.btns {
+  width: 80%;
+}
+}
+@media (max-width:750px) {
+.tabsImage {width: 0%;}
+.Header {
+ 
+  width: 100%;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.521), rgba(255, 255, 255, 0.61)),
+
+    url("../Assests/oilapp/2Tabs_Header.png");
+
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+
+
+}
+.InnovatingContent {
+  background-image: 
+    url("../Assests/oilapp/telMockUp.png");
+  background-size:15% 60%;
+}
+.TapTitle{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap:0.5rem;
+  text-align: center;
+  align-items: center;
+  align-content: center;}
+  .TapTitle1,
+  .TapTitle2{
+  color: #091e3e;
+  font-size: 1.4rem;
+  }
+.Advanage,
+.Advanage2 {
+  padding: 3px;
+  font-size: 0.8rem;
+}
+.KeyDiv{
+  flex-direction: column-reverse;
+}
+.items{
+  width: 100%;
+}
+.tabsImage2{
+  width: 40%;
+}
+.faqContainer {
+ width: 90%;
+}
+}
+@media (max-width:550px) {
+.textContainer h1{
+font-size: 2.5rem;
+}
+.textContainer p {
+
+  width: 80%;
+
+}
+ .Innovating{
+  margin-top: -4rem;
+ }
+  .Innovating h1 {
+
+  width: 100%;
+  font-size: 2rem;
+
+}
+.InnovatingContent {
+
+
+  background-size: 0% 0%;
+
+  flex-direction: column;
+
+
+}
+.tabsImage1{
+  width: 30%;
+  align-self: center;
+}
+.ContentLeft {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  width: 100%;
+
+  gap: 1rem;
+}
+.ActionRight{
+
+  width: 70%;
+
+}
+  .Action h1 {
+font-size: 2rem;
+
+  }
+
+.Actionbutton {
+  width: 9rem;
+  padding: 0px 0px;
+  height: 3.25rem;
+  font-size: 1rem;
+}
+.TapTitle{
+  flex-direction: column;
+}
+.Whats h1 {
+  font-size: 2.2rem;
+
+}
+.Whats p {
+  font-size: 1.2rem;
+  width: 100%;
+}
+}
+@media (max-width:550px) {
+  .ActionRight ,
+  .ActionLeft{
+    width: 100%;
+  }
+  .Action p {
+text-align: center;
+width: 100%;
+font-size: 1.2rem;
+}
+.textContainer h1{
+font-size: 1.5rem;
+}
+.textContainer h6 {
+  font-size: 1.2rem;
+
+}
+.textContainer p {
+  font-size: 0.9rem;
+
+  width:90%;
+
+}
+.ZitounaImage{
+  width: 90px;
+  height: 90px;
+  margin-left: -3rem;
+  margin-top: 3rem;
+
+}
+.textContainer {
+
+  gap: 1rem;
+}
+.FirstH1{
+  padding:0.5rem;
+}
+.btns {
+  width: 90%;
+}
+  .buttonStarted,
+.buttonDemo {
+  width: 8rem;
+  padding: 0px 0px;
+  height: 3.25rem;
+  font-size: 0.8rem;
+
+}
+.text p {
+  font-size: 0.9rem;
+  font-family: "Poppins";
+}
+.text h6 {
+  font-size: 1rem;
+  font-family: "Poppins";
+}
+.Advanages ,
+.Advanages2{
+  gap: 0.5rem;
+  width:95%;
+}
+.Advanage,
+.Advanage2 {
+  padding: 2px;
+  font-size: 0.8rem;
+  height: 50px;
+}
+.KeyImage{
+  width: 30px;
+}
+.KeyLeft{
+align-items: flex-start;
+}
+.itemText p {
+  font-size: 0.9rem;
+  font-family: "Poppins";
+}
+.itemText h6 {
+  font-size: 1rem;
+  font-family: "Poppins";
+}
+.Questions h1 {
+ 
+  font-size: 1.2rem;
+
+}
+.faqQuestion, 
+.faqAnswer{
+  font-size: 0.9rem;
+
+
+}
 }

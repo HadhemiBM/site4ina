@@ -128,14 +128,14 @@ const OIlapp: React.FC = () => {
             src={whatsChart}
             width={900}
             height={900}
-            className={styles.tabsImage}
+            className={styles.tabsImage3}
             alt="interface application oil"
           />
         </div>
         <div className={styles.Innovating}>
           <h1>
             Innovating Oil Press Factory Management with a User-Friendly
-            Application{" "}
+            Application
           </h1>
           <div className={styles.InnovatingContent}>
             <div className={styles.ContentLeft}>
@@ -164,7 +164,7 @@ const OIlapp: React.FC = () => {
               src={telMockUp}
               width={350}
               height={600}
-              className={styles.tabsImage}
+              className={styles.tabsImage1}
               alt="interface application oil"
             />
           </div>
@@ -320,7 +320,7 @@ Reduce costs and environmental impact with smart energy management tools.
                 src={TabFeat}
                 width={600}
                 height={600}
-                className={styles.tabsImage}
+                className={styles.tabsImage2}
                 alt="interface application oil"
               />
       
