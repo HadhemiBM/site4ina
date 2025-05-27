@@ -1,58 +1,16 @@
 "use client";
 import styles from "./index.module.css";
 import React from "react";
-
 import PageTransition from "../components/PageTransition";
 import Link from "next/link";
 import Image from "next/image";
-
 const About: React.FC = () => {
-  const team = [
-    {
-      name: "Oumaima Ben Aziza",
-      linkedin:
-        "https://www.linkedin.com/in/oumaimabenaziza?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-      facebook:
-        "https://www.facebook.com/share/95iqP7MBQDRPiHvX/?mibextid=qi2Omg",
-      img: "https://res.cloudinary.com/ddngbriyu/image/upload/v1730884975/oumaima_4801_cvjawx.png",
-
-      post: "Marketing & Communication Assistant",
-    },
-    {
-      name: "Nouressafa Chaabani",
-      linkedin: "https://www.linkedin.com/in/nouressafa-c-753456216/",
-      facebook: "https://www.facebook.com/nour.essafa.73",
-      img: "https://res.cloudinary.com/ddngbriyu/image/upload/v1730885407/nour_tyujtfcgyj_coewza.jpg",
-
-      post: "Data Science Engineer",
-    },
-
-    {
-      name: "Meriam Zouaoui",
-      linkedin:
-        "https://www.linkedin.com/in/meriam-zouaoui-b08a51234?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-      facebook: "https://www.facebook.com/meriam.zouaoui.1?mibextid=ZbWKwL",
-      img: "https://res.cloudinary.com/ddngbriyu/image/upload/v1730884958/mariem_4801_p9vo8o.png",
-
-      post: "Embedded System Engineer",
-    },
-    {
-      name: "Hadhemi Ben Mansour",
-      linkedin:
-        "https://www.linkedin.com/in/hadhemi-ben-mansour-0241701a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-      facebook: "https://www.facebook.com/share/1gHaTjDcGmz2JKWJ/",
-      img: "https://res.cloudinary.com/ddngbriyu/image/upload/v1730884967/hadhemi_72011_vz4iry.jpg",
-
-      post: "FullStack Engineer",
-    },
-  ];
   const founder = [
     {
       name: "Hinda Zribi",
       linkedin: "https://www.linkedin.com/in/hinda-zribi-258555140/",
       facebook: "https://www.facebook.com/nour.essafa.73",
       img: "https://res.cloudinary.com/ddngbriyu/image/upload/v1730448418/henda_fmfzae.webp",
-
       post: "Co-Founder",
     },
     {
@@ -60,7 +18,6 @@ const About: React.FC = () => {
       linkedin: "https://www.linkedin.com/in/sabri-mhimdi-aa636260/",
       facebook: "https://www.facebook.com/nour.essafa.73",
       img: "https://res.cloudinary.com/ddngbriyu/image/upload/v1730885413/Capture_d_%C3%A9cran_2024-11-06_102522_efj596.png",
-
       post: "Co-Founder",
     },
   ];
@@ -74,7 +31,6 @@ const About: React.FC = () => {
     75% { transform: translate(-1px, 0); }
     100% { transform: translate(1px, 0); }
 }
-
 @keyframes shakeFacebook {
     0% { transform: rotate(5deg); }
     25% { transform: rotate(-5deg); }
@@ -82,11 +38,9 @@ const About: React.FC = () => {
     75% { transform: rotate(-5deg); }
     100% { transform: rotate(5deg); }
 }
-
 .fa-shake-linkedin {
     animation: shakeLinkedIn 1s infinite; /* Adjust duration and iteration as needed */
 }
-
 .fa-shake-facebook {
     animation: shakeFacebook 1s infinite; /* Adjust duration and iteration as needed */
 }
@@ -131,15 +85,12 @@ const About: React.FC = () => {
         </div>
         <div className={styles.InnovationSection}>
           <h1 className={styles.InnovationTitle}>Our Mission</h1>
-
           <p className={styles.InnovationDes}>
             We use real-time electricity data to optimize energy consumption,
             reduce costs, and drive sustainable growth. Our goal is to make
             energy management more efficient and effective.
           </p>
-
           <h1 className={styles.InnovationTitle}>Our Vision</h1>
-
           <p className={styles.InnovationDes}>
             We envision 4InA Technologie as a catalyst reshaping the future of
             energy management through digitalization and transformative
@@ -147,7 +98,6 @@ const About: React.FC = () => {
             where sustainability and profitability go hand in hand.
           </p>
         </div>
-
         <div className={styles.DemoSection}>
           <p className={styles.SolutionsDesc}>
             Want to learn more about our innovative approach?
@@ -203,25 +153,17 @@ const About: React.FC = () => {
               <div className={styles.Advanage}>IT Department</div>
               <div className={styles.Advanage}>Marketing & HR Department</div>
             </div>
-
             <div className={styles.Advanages2}>
               {/* //1 */}
               <div className={styles.Advanage2}>Embedded Systems</div>
               {/* //2 */}
-
               <div className={styles.Advanage2}>Web & Mobile Development</div>
               {/* //3 */}
-
-              <div className={styles.Advanage2}>Artificial Intelligence  </div>
+              <div className={styles.Advanage2}>Artificial Intelligence </div>
               {/* //4 */}
-
               <div className={styles.Advanage2}>Human Resources (HR)</div>
               {/* //5 */}
-
-              <div className={styles.Advanage2}>Digital Marketing
-
-</div>
-     
+              <div className={styles.Advanage2}>Digital Marketing</div>
             </div>
           </div>
         </div>
@@ -229,5 +171,4 @@ const About: React.FC = () => {
     </PageTransition>
   );
 };
-
 export default About;

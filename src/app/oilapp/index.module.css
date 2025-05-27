@@ -3,9 +3,7 @@
   flex-direction: column;
   justify-content: center;
   width: 100%;
-
   font-family: "Poppins";
-
   gap: 5rem;
 }
 .Header {
@@ -58,7 +56,6 @@
   font-size: 1.25rem;
   font-weight: bold;
   color: #091e3e;
-
   width: 60%;
   text-align: center;
 }
@@ -94,14 +91,10 @@
   background-color: #988f09;
   color: white;
 }
-
 .buttonStarted:hover {
   box-shadow: 0 4px 4px #988f09;
-
   border-color: #988f09 2px solid;
-
   color: #988f09;
-
   border: 1px;
   border-bottom: var(--white) 2px solid;
 }
@@ -239,7 +232,6 @@ justify-content: space-between;
     align-items: center;
   align-content: center;
   justify-content: center;
-
 }
 .TapTitle{
   display: flex;
@@ -249,23 +241,20 @@ justify-content: space-between;
   text-align: center;
   align-items: center;
   align-content: center;}
-
   .TapTitle1,
   .TapTitle2{
   color: #091e3e;
   font-size: 2.2rem;
   text-align: center;
   font-family: "Poppins";
-
   font-weight: bold;
   }
   .TapTitle1{
   font-size: 3.5rem;
-
   }
 .Advanages {
   display: grid;
-  grid-template-columns: repeat(3, 0.5fr); /* Adjust the number of columns */
+  grid-template-columns: repeat(3, 0.5fr); 
   grid-template-rows: auto auto;
   gap: 1.5rem;
   border-radius: 10px;
@@ -279,17 +268,14 @@ align-self: center;
   grid-column: 1;
   grid-row: 1;
 }
-
 .Advanage:nth-child(4) {
   grid-column: 4;
   grid-row: 1;
 }
-
 .Advanage:nth-child(2) {
   grid-column: 2;
   grid-row: 1;
 }
-
 .Advanage:nth-child(3) {
   grid-column: 3;
   grid-row: 1;
@@ -308,89 +294,67 @@ width: 100%;
 /* /////////////// */
 .Advanages2 {
   display: grid;
-  grid-template-columns: repeat(3, 0.5fr); /* Adjust the number of columns */
+  grid-template-columns: repeat(3, 0.5fr); 
   grid-template-rows: auto;
   gap: 1.5rem;
   border-radius: 10px;
   width:90%;
-
   text-align: center;
   align-content: center;
 align-items: center;
 align-self: center;
 }
-
-
-
 .Advanage2:nth-child(1){
-
   grid-column: 1; 
   grid-row: 1;
-  
 }
-
 .Advanage2:nth-child(2) 
  { 
   grid-column: 1; 
   grid-row: 2;
-
 }
-
 .Advanage2:nth-child(3) { 
   grid-column: 1; 
   grid-row: 3;
-
 }
-
 .Advanage2:nth-child(4) { 
   grid-column: 1; 
   grid-row: 4;
-
 }
-
 .Advanage2:nth-child(5) { 
   grid-column: 1; 
   grid-row: 5;
-
 }
 .Advanage2:nth-child(6) { 
   grid-column: 2; 
   grid-row: 1;
-
 }
 .Advanage2:nth-child(7) { 
   grid-column: 2; 
   grid-row: 2;
-
 }
 .Advanage2:nth-child(8) { 
   grid-column: 2; 
   grid-row: 3;
-
 }
 .Advanage2:nth-child(9) { 
   grid-column: 2; 
   grid-row: 4;
-
 }
 .Advanage2:nth-child(10) { 
   grid-column: 3; 
   grid-row: 1;
-
 }
 .Advanage2:nth-child(11) { 
   grid-column: 3; 
   grid-row: 2;
-
 }.Advanage2:nth-child(12) { 
   grid-column: 3; 
   grid-row: 3;
-
 }
 .Advanage2:nth-child(13) { 
   grid-column: 3; 
   grid-row: 4;
-
 }
 /* .Advanage2:nth-child(1),
 .Advanage2:nth-child(2),
@@ -416,7 +380,6 @@ align-self: center;
 align-content: center;
 align-self: center;
 width: 100%;
-
   color: #091e3e;
 }
 .Adv {
@@ -426,7 +389,146 @@ width: 100%;
   width:70%;
   align-items: center;
   align-content: center;
-
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+.Features{
+   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+
+  width: 100%;
+}
+.KeyDiv{
+    display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  width: 90%;
+  align-self: center;
+ 
+
+}
+.KeyLeft{
+      display: flex;
+  flex-direction: row;
+align-items: center;
+align-content: center;
+justify-content: space-between;
+  flex-wrap: wrap;
+  gap:1rem;
+  width: 100%;
+}
+.itemText{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 90%;
+
+}
+
+.itemText p {
+  font-size: 1.25rem;
+  font-family: "Poppins";
+}
+.itemText h6 {
+  font-size: 1.4rem;
+  font-family: "Poppins";
+}
+.items{
+        display: flex;
+  flex-direction: column;
+  width: 60%;
+gap:1rem;
+}
+.TapTitle1{
+  color: #988f09;
+  font-size: 2.2rem;
+  text-align: center;
+  font-family: "Poppins";
+
+  font-weight: bold;
+}
+
+.KeyDiv1{
+    display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+
+}.Questions {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+gap:3rem
+}
+.Questions h1 {
+  color: #091e3e;
+  font-size: 2.2rem;
+  text-align: center;
+  font-family: "Poppins";
+
+  font-weight: bold;
+}
+
+
+
+.faqContainer {
+ width: 70%;
+align-self: center;
+  padding: 10px;
+
+
+}
+
+.faqItem {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 30px;
+
+}
+
+.faqQuestion {
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+
+  border-radius: 5px;
+  display: flex;
+  height: 70px;
+  flex-direction: row;
+  align-items:center ;
+  align-content: center;
+  justify-content: space-between;
+   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ajout d'un ombrage subtil */
+
+  transition: box-shadow 0.3s ease-in-out; /* Pour un effet de transition fluide */
+}
+
+.faqQuestion:hover {
+  box-shadow: 0px 2px 6px #988f09 ; /* Ombrage plus prononcé au survol */
+}
+
+.faqAnswer {
+  font-size: 16px;
+  padding: 10px;
+  display: none;
+  background-color: #f9f9f9;
+  margin-top: 5px;
+  border-left: 5px solid #988f09;
+  border-radius: 5px;
+  height: 70px;
+    align-items:center ;
+  align-content: center;
+}
+
+.show {
+  display: block;
 }
