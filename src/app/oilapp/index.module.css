@@ -178,6 +178,8 @@
   width: 100%;
   align-items: center;
   align-content: center;
+  justify-content: center;
+  
 }
 .Action h1 {
   color: white;
@@ -195,9 +197,10 @@ width: 70%;
       display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 70%;
+  width: 60%;
 padding: 2.5rem;
 gap:1.5rem;
+
 }
 .ActionRight{
       display: flex;
