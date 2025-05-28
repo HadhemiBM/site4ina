@@ -491,36 +491,34 @@ align-self: center;
   font-weight: bold;
   cursor: pointer;
   padding: 10px;
-
   border-radius: 5px;
   display: flex;
   height: auto;
+  min-height: 70px;
   flex-direction: row;
   align-items:center ;
   align-content: center;
   justify-content: space-between;
    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ajout d'un ombrage subtil */
-
   transition: box-shadow 0.3s ease-in-out; /* Pour un effet de transition fluide */
 }
-
 .faqQuestion:hover {
   box-shadow: 0px 2px 6px #988f09 ; /* Ombrage plus prononcé au survol */
 }
-
 .faqAnswer {
   font-size: 16px;
   padding: 10px;
   display: none;
-  background-color: #f9f9f9;
+  background-color: #f1f8e4;
+  
   margin-top: 5px;
   border-left: 5px solid #988f09;
   border-radius: 5px;
-  height: 70px;
-    align-items:center ;
+  height: auto;
+  min-height: 70px;
+  align-items:center ;
   align-content: center;
 }
-
 .show {
   display: block;
 }
@@ -529,16 +527,13 @@ align-self: center;
   width: 90%;
 }
 .ActionRight{
-
   width: 30%;
-
 }
 .tabsImage2{
   width: 30%;
 }
 .tabsImage1{
   width: 300PX;
-
 }
 }
 @media (max-width: 1450px) {
@@ -548,7 +543,6 @@ align-self: center;
   padding: 0px 0px;
   height: 3.25rem;
   font-size: 1.2rem;
-
 }
 .Actionbutton {
   width: 10rem;
@@ -565,21 +559,17 @@ align-self: center;
 }
 @media (max-width: 1200px) {
   .Header {
-
   flex-direction: row;
   flex-wrap: nowrap;
 }
 .textContainer {
-
   width: 100%;
-
 }
 .tabsImage{
   width: 30%;
   align-self: baseline;
   margin-top: 200px;
 }
-
 .textContainer h1,
 .WhatsTitle h1 {
   font-size: 3.5rem;
@@ -593,24 +583,18 @@ align-self: center;
 
 }
 .InnovatingContent {
- 
   width: 90%;
   background-image: 
     url("../Assests/oilapp/telMockUp.png");
-
   background-size: 20% 100%;
   background-repeat: no-repeat;
   background-position: bottom right;
-
-
 }
 .ContentLeft {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-
   width: 80%;
-
   gap: 1rem;
 }
 .Innovating h1 {
@@ -627,13 +611,10 @@ width: 0%;
 .ZitounaImage{
   width: 130px;
   margin-left: -3rem;
-
 }
 .Action{
-
   flex-direction: column;
 }
-
 .ActionLeft{
   width: 90%;
 }
@@ -646,25 +627,16 @@ width: 100%;
   width: 50%;
 }
 .Actionbutton {
-
   width: 13rem;
-
-
   font-size: 1.4rem;
-
 }
 .Adv {
-
   width:90%;
-
 }
 }
 @media (max-width: 1000px) {
   .InnovatingContent {
-
   background-size: 15% 70%;
-
-
 }
 .Adv {
   width:100%;
@@ -672,12 +644,9 @@ width: 100%;
 .Actionbutton {
   width: 11rem;
   font-size: 1.2rem;
-
 }
 .ActionRight{
-
   width: 60%;
-
 }
 .btns {
   width: 80%;
@@ -739,27 +708,18 @@ width: 100%;
 font-size: 2.5rem;
 }
 .textContainer p {
-
   width: 80%;
-
 }
  .Innovating{
   margin-top: -4rem;
  }
   .Innovating h1 {
-
   width: 100%;
   font-size: 2rem;
-
 }
 .InnovatingContent {
-
-
   background-size: 0% 0%;
-
   flex-direction: column;
-
-
 }
 .tabsImage1{
   width: 30%;
@@ -769,21 +729,15 @@ font-size: 2.5rem;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-
   width: 100%;
-
   gap: 1rem;
 }
 .ActionRight{
-
   width: 70%;
-
 }
   .Action h1 {
 font-size: 2rem;
-
   }
-
 .Actionbutton {
   width: 9rem;
   padding: 0px 0px;
@@ -795,7 +749,6 @@ font-size: 2rem;
 }
 .Whats h1 {
   font-size: 2.2rem;
-
 }
 .Whats p {
   font-size: 1.2rem;
@@ -817,23 +770,18 @@ font-size: 1.5rem;
 }
 .textContainer h6 {
   font-size: 1.2rem;
-
 }
 .textContainer p {
   font-size: 0.9rem;
-
   width:90%;
-
 }
 .ZitounaImage{
   width: 90px;
   height: 90px;
   margin-left: -3rem;
   margin-top: 3rem;
-
 }
 .textContainer {
-
   gap: 1rem;
 }
 .FirstH1{
@@ -848,7 +796,7 @@ font-size: 1.5rem;
   padding: 0px 0px;
   height: 3.25rem;
   font-size: 0.8rem;
-
+  font-weight: bold;
 }
 .text p {
   font-size: 0.9rem;
@@ -884,14 +832,10 @@ align-items: flex-start;
   font-family: "Poppins";
 }
 .Questions h1 {
- 
   font-size: 1.2rem;
-
 }
 .faqQuestion, 
 .faqAnswer{
   font-size: 0.9rem;
-
-
 }
 }
