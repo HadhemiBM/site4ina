@@ -1,18 +1,16 @@
 "use client";
-
 import React, { useState } from "react";
 import styles from "./index.module.css";
 import { useRouter } from "next/navigation";
 import { StaticImageData } from "next/image";
-
 import PageTransition from "../components/PageTransition";
 import Image from "next/image";
 import tabs from "../Assests/oilapp/2Tabs_Header.png";
 import whatsChart from "../Assests/oilapp/whatsChart.png";
-import icon1 from "../Assests/oilapp/icon1.png";
-import icon2 from "../Assests/oilapp/icon2.png";
-import icon3 from "../Assests/oilapp/icon3.png";
-import icon4 from "../Assests/oilapp/icon4.png";
+import icon1 from "../Assests/oilapp/ico1.png";
+import icon2 from "../Assests/oilapp/ico2.png";
+import icon3 from "../Assests/oilapp/ico3.png";
+import icon4 from "../Assests/oilapp/ico4.png";
 import Zitouna from "../Assests/oilapp/zi1.png";
 import Zitouna2 from "../Assests/oilapp/zitouna2.png";
 import TabFeat from "../Assests/oilapp/TabFeat.png";
@@ -21,7 +19,6 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 const OIlapp: React.FC = () => {
   const router = useRouter();
-
   // Utilisation du state pour gérer l'affichage des réponses
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
@@ -46,13 +43,16 @@ const OIlapp: React.FC = () => {
   );
   const Item = ({ icon, title, desc }: ItemProps) => (
     <div className={styles.item}>
+      <div  className={styles.itemIcon}>
       <Image
         src={icon}
-        width={100}
-        height={70}
-        className={styles.itemIcon}
+        // width={100}
+        // height={70}
+        className={styles.itemIconImage}
         alt="interface application oil"
       />
+      </div>
+
       <div className={styles.text}>
         <h6>{title}</h6>
         <p>{desc}</p>

@@ -522,6 +522,20 @@ align-self: center;
 .show {
   display: block;
 }
+.itemIcon{
+  width: 85px;
+  background-color: #988f09;
+border-radius: 20px;
+display: flex;
+align-items: center;
+align-content: center;
+justify-content: center;
+padding: 4px;
+}
+.itemIconImage{
+  width: 80%;
+  align-self: center;
+}
 @media (max-width: 1740px) {
 .InnovatingContent {
   width: 90%;
@@ -606,7 +620,7 @@ align-self: center;
 width: 0%;
 }
 .itemIcon{
-  width: 60px;
+  min-width: 90px;
 }
 .ZitounaImage{
   width: 130px;
