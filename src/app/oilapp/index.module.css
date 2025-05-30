@@ -62,7 +62,6 @@
 .FirstH1 {
   display: flex;
   flex-direction: row;
-
   align-items: flex-end;
 }
 .ZitounaImage {
@@ -148,7 +147,6 @@
 .item {
   display: flex;
   flex-direction: row;
-
   gap: 1.5rem;
   align-items: center;
   align-content: center;
@@ -179,7 +177,6 @@
   align-items: center;
   align-content: center;
   justify-content: center;
-
 }
 .Action h1 {
   color: white;
@@ -388,7 +385,6 @@ width: 100%;
   flex-wrap: wrap;
   align-items: center;
   align-content: center;
-
   width: 100%;
 }
 .KeyDiv{
@@ -400,8 +396,6 @@ width: 100%;
   justify-content: space-between;
   width: 90%;
   align-self: center;
-
-
 }
 .KeyLeft{
       display: flex;
@@ -418,7 +412,6 @@ justify-content: space-between;
   flex-direction: column;
   flex-wrap: wrap;
   width: 90%;
-
 }
 
 .itemText p {
@@ -440,7 +433,6 @@ gap:1rem;
   font-size: 2.2rem;
   text-align: center;
   font-family: "Poppins";
-
   font-weight: bold;
 }
 
@@ -476,14 +468,11 @@ gap:3rem
  width: 70%;
 align-self: center;
   padding: 10px;
-
-
 }
 
 .faqItem {
   border-bottom: 1px solid #ddd;
   margin-bottom: 30px;
-
 }
 
 .faqQuestion {

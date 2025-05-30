@@ -55,7 +55,12 @@ export default function RootLayout({
       <head>
       <link rel="icon" href="/favicon.ico" type="image/x-icon" />
                 <script src="https://upload-widget.cloudinary.com/global/all.js"></script>
-
+<script>
+   {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WXT2GD33');  `}</script>
         <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
         <link href="css/bootstrap.min.css" rel="stylesheet" />
         <link href="lib/animate/animate.min.css" rel="stylesheet" />
@@ -66,7 +71,7 @@ export default function RootLayout({
         <link href="css/style.css" rel="stylesheet" />
       
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QL8MY4WB9"></script>
-{/* <script>
+<script>
 {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -74,56 +79,22 @@ export default function RootLayout({
 
             gtag('config', 'G-9QL8MY4WB9');
           `}
-</script> */}
-{/* <script>
-  {`
-  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TM4X5LFM');
-  `}
-</script> */}
-<script
-  dangerouslySetInnerHTML={{
-    __html: `
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-9QL8MY4WB9');
-    `,
-  }}
-></script>
-<script
-  dangerouslySetInnerHTML={{
-    __html: `
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-TM4X5LFM');
-    `,
-  }}
-></script>
+</script> 
+
+
+
 
       </head>
       <body className={poppins.className}>
       
   <AOSInitializer />
-{/* <noscript>
+ <noscript>
   {`
-  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TM4X5LFM"
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXT2GD33"
 height="0" width="0" style="display:none;visibility:hidden"></iframe>
   `}
-</noscript> */}
-<noscript
-  dangerouslySetInnerHTML={{
-    __html: `
-      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TM4X5LFM"
-      height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    `,
-  }}
-></noscript>
+</noscript> 
+
 
       <script src="https://upload-widget.cloudinary.com/global/all.js"></script>
 
