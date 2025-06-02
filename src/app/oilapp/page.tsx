@@ -52,7 +52,6 @@ const OIlapp: React.FC = () => {
         alt="interface application oil"
       />
       </div>
-
       <div className={styles.text}>
         <h6>{title}</h6>
         <p>{desc}</p>

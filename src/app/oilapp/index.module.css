@@ -30,7 +30,6 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-
   align-self: center;
   width: 60%;
   align-items: center;
@@ -86,8 +85,28 @@
   align-content: center;
   align-items: center;
 }
+@keyframes animate-background {
+  0% {
+    background-position: 0 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
 .buttonDemo {
-  background-color: #988f09;
+  /* background-color: #988f09; */
+    background-image:   
+  /* linear-gradient(
+      90deg,
+      rgba(9, 53, 3, 0.552),
+      rgba(131, 163, 24, 0)
+    ),
+   */
+  url("../Assests/bg-green2.jpg");
+  background-size: 300%; /* Enlarged for smooth animation */
+  animation: animate-background 30s infinite alternate linear;
+
   color: white;
 }
 .buttonStarted:hover {
@@ -116,8 +135,24 @@
   width: 80%;
 }
 .WhatsTitle2 {
-  color: #988f09;
+  /* color: #988f09; */
+  color: transparent;
+  background-image:   
+  /* linear-gradient(
+      90deg,
+      rgba(9, 53, 3, 0.552),
+      rgba(131, 163, 24, 0)
+    ),
+   */
+  url("../Assests/bg-green2.jpg");
+  background-size: 400%; /* Enlarged for smooth animation */
+  background-position: 0 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-background 30s infinite alternate linear;
 }
+
 .Innovating {
   display: flex;
   flex-direction: column;
@@ -168,44 +203,53 @@
   font-size: 1.4rem;
   font-family: "Poppins";
 }
-.Action{
-    display: flex;
+.Action {
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  background-color: #988f09;
   width: 100%;
   align-items: center;
   align-content: center;
   justify-content: center;
+  /* background-color: #988f09; */
+  background-image: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.552),
+      rgba(0, 0, 0, 0)
+    ),
+    url("../Assests/bg-green2.jpg");
+  /* background-size: cover; */
+  background-repeat: no-repeat;
+  /* transform: rotate(180deg); */
 }
 .Action h1 {
-  color: white;
-  font-weight:bold ;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
   font-size: 3rem;
   font-family: "Poppins";
 }
 .Action p {
-  color: white;
-width: 70%;
+  color: rgb(255, 255, 255);
+  width: 70%;
   font-family: "Poppins";
   font-size: 25px;
+  /* font-weight:bold ; */
 }
-.ActionLeft{
-      display: flex;
+.ActionLeft {
+  display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   width: 60%;
-padding: 2.5rem;
-gap:1.5rem;
-
+  padding: 2.5rem;
+  gap: 1.5rem;
 }
-.ActionRight{
-      display: flex;
+.ActionRight {
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 25%;
   padding: 1rem;
-justify-content: space-between;
+  justify-content: space-between;
 }
 .Actionbutton {
   background-color: var(--white);
@@ -225,44 +269,45 @@ justify-content: space-between;
   align-content: center;
   align-items: center;
 }
-.Tap{
-    display: flex;
+.Tap {
+  display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-    align-items: center;
+  align-items: center;
   align-content: center;
   justify-content: center;
 }
-.TapTitle{
+.TapTitle {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap:0.5rem;
+  gap: 0.5rem;
   text-align: center;
   align-items: center;
-  align-content: center;}
-  .TapTitle1,
-  .TapTitle2{
+  align-content: center;
+}
+.TapTitle1,
+.TapTitle2 {
   color: #091e3e;
   font-size: 2.2rem;
   text-align: center;
   font-family: "Poppins";
   font-weight: bold;
-  }
-  .TapTitle1{
+}
+.TapTitle1 {
   font-size: 3.5rem;
-  }
+}
 .Advanages {
   display: grid;
   grid-template-columns: repeat(3, 0.5fr);
   grid-template-rows: auto auto;
   gap: 1.5rem;
   border-radius: 10px;
-  width:90%;
+  width: 90%;
   text-align: center;
   align-content: center;
-align-items: center;
-align-self: center;
+  align-items: center;
+  align-self: center;
 }
 .Advanage:nth-child(1) {
   grid-column: 1;
@@ -281,14 +326,25 @@ align-self: center;
   grid-row: 1;
 }
 .Advanage {
-  background-color: #988f09;
+  /* background-color: #988f09; */
+    background-image:   
+  /* linear-gradient(
+      90deg,
+      rgba(9, 53, 3, 0.552),
+      rgba(131, 163, 24, 0)
+    ),
+   */
+  url("../Assests/bg-green2.jpg");
+  animation: animate-background 30s infinite alternate linear;
+  background-size: 200%; /* Enlarged for smooth animation */
+
   padding: 8px;
   font-size: 1.2rem;
   border-radius: 50px;
   text-align: center;
   justify-content: center;
-align-content: center;
-width: 100%;
+  align-content: center;
+  width: 100%;
   color: #ffffff;
 }
 /* /////////////// */
@@ -298,18 +354,17 @@ width: 100%;
   grid-template-rows: auto;
   gap: 1.5rem;
   border-radius: 10px;
-  width:90%;
+  width: 90%;
   text-align: center;
   align-content: center;
-align-items: center;
-align-self: center;
+  align-items: center;
+  align-self: center;
 }
-.Advanage2:nth-child(1){
+.Advanage2:nth-child(1) {
   grid-column: 1;
   grid-row: 1;
 }
-.Advanage2:nth-child(2)
- {
+.Advanage2:nth-child(2) {
   grid-column: 1;
   grid-row: 2;
 }
@@ -348,7 +403,8 @@ align-self: center;
 .Advanage2:nth-child(11) {
   grid-column: 3;
   grid-row: 2;
-}.Advanage2:nth-child(12) {
+}
+.Advanage2:nth-child(12) {
   grid-column: 3;
   grid-row: 3;
 }
@@ -357,38 +413,37 @@ align-self: center;
   grid-row: 4;
 }
 
-.Advanage2
-{
-   background-color: #BF9A7933;
+.Advanage2 {
+  background-color: #bf9a7933;
   padding: 8px;
   font-size: 1.2rem;
-  border-radius:50px;
+  border-radius: 50px;
   text-align: center;
   justify-content: center;
-align-content: center;
-align-self: center;
-width: 100%;
+  align-content: center;
+  align-self: center;
+  width: 100%;
   color: #091e3e;
 }
 .Adv {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width:70%;
+  width: 70%;
   align-items: center;
   align-content: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-.Features{
-   display: flex;
+.Features {
+  display: flex;
   flex-wrap: wrap;
   align-items: center;
   align-content: center;
   width: 100%;
 }
-.KeyDiv{
-    display: flex;
+.KeyDiv {
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
@@ -397,17 +452,17 @@ width: 100%;
   width: 90%;
   align-self: center;
 }
-.KeyLeft{
-      display: flex;
+.KeyLeft {
+  display: flex;
   flex-direction: row;
-align-items: center;
-align-content: center;
-justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
 
-  gap:1rem;
+  gap: 1rem;
   width: 100%;
 }
-.itemText{
+.itemText {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -422,28 +477,43 @@ justify-content: space-between;
   font-size: 1.4rem;
   font-family: "Poppins";
 }
-.items{
-        display: flex;
+.items {
+  display: flex;
   flex-direction: column;
   width: 60%;
-gap:1rem;
+  gap: 1rem;
 }
-.TapTitle1{
-  color: #988f09;
+.TapTitle1 {
+  /* color: #988f09; */
   font-size: 2.2rem;
   text-align: center;
   font-family: "Poppins";
   font-weight: bold;
+  color: transparent;
+  background-image:   
+  /* linear-gradient(
+      90deg,
+      rgba(9, 53, 3, 0.552),
+      rgba(131, 163, 24, 0)
+    ),
+   */
+  url("../Assests/bg-green2.jpg");
+  background-size: 300%; /* Enlarged for smooth animation */
+  background-position: 0 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-background 30s infinite alternate linear;
 }
 
-.KeyDiv1{
-    display: flex;
+.KeyDiv1 {
+  display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
-  gap:1rem;
-
-}.Questions {
+  gap: 1rem;
+}
+.Questions {
   display: flex;
   flex-direction: column;
   padding: 1rem;
@@ -451,7 +521,7 @@ gap:1rem;
   align-items: center;
   align-content: center;
   justify-content: center;
-gap:3rem
+  gap: 3rem;
 }
 .Questions h1 {
   color: #091e3e;
@@ -462,11 +532,9 @@ gap:3rem
   font-weight: bold;
 }
 
-
-
 .faqContainer {
- width: 70%;
-align-self: center;
+  width: 70%;
+  align-self: center;
   padding: 10px;
 }
 
@@ -485,360 +553,359 @@ align-self: center;
   height: auto;
   min-height: 70px;
   flex-direction: row;
-  align-items:center ;
+  align-items: center;
   align-content: center;
   justify-content: space-between;
-   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ajout d'un ombrage subtil */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ajout d'un ombrage subtil */
   transition: box-shadow 0.3s ease-in-out; /* Pour un effet de transition fluide */
 }
 .faqQuestion:hover {
-  box-shadow: 0px 2px 6px #988f09 ; /* Ombrage plus prononcé au survol */
+  box-shadow: 0px 2px 6px #988f09; /* Ombrage plus prononcé au survol */
 }
 .faqAnswer {
   font-size: 16px;
   padding: 10px;
   display: none;
   background-color: #f1f8e4;
-  
+
   margin-top: 5px;
   border-left: 5px solid #988f09;
   border-radius: 5px;
   height: auto;
   min-height: 70px;
-  align-items:center ;
+  align-items: center;
   align-content: center;
 }
 .show {
   display: block;
 }
-.itemIcon{
+.itemIcon {
   width: 85px;
   background-color: #988f09;
-border-radius: 20px;
-display: flex;
-align-items: center;
-align-content: center;
-justify-content: center;
-padding: 4px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  padding: 4px;
 }
-.itemIconImage{
+.itemIconImage {
   width: 80%;
   align-self: center;
 }
 @media (max-width: 1740px) {
-.InnovatingContent {
-  width: 90%;
-}
-.ActionRight{
-  width: 30%;
-}
-.tabsImage2{
-  width: 30%;
-}
-.tabsImage1{
-  width: 300PX;
-}
+  .InnovatingContent {
+    width: 90%;
+  }
+  .ActionRight {
+    width: 30%;
+  }
+  .tabsImage2 {
+    width: 30%;
+  }
+  .tabsImage1 {
+    width: 300px;
+  }
 }
 @media (max-width: 1450px) {
   .buttonStarted,
-.buttonDemo {
-  width: 11rem;
-  padding: 0px 0px;
-  height: 3.25rem;
-  font-size: 1.2rem;
-}
-.Actionbutton {
-  width: 10rem;
-  padding: 0px 0px;
-  height: 3.25rem;
-  font-size: 1.2rem;
-}
-.tabsImage{
-  width: 30%;
-}
-.textContainer {
-  width: 70%;
-}
+  .buttonDemo {
+    width: 11rem;
+    padding: 0px 0px;
+    height: 3.25rem;
+    font-size: 1.2rem;
+  }
+  .Actionbutton {
+    width: 10rem;
+    padding: 0px 0px;
+    height: 3.25rem;
+    font-size: 1.2rem;
+  }
+  .tabsImage {
+    width: 30%;
+  }
+  .textContainer {
+    width: 70%;
+  }
 }
 @media (max-width: 1200px) {
   .Header {
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
-.textContainer {
-  width: 100%;
-}
-.tabsImage{
-  width: 30%;
-  align-self: baseline;
-  margin-top: 200px;
-}
-.textContainer h1,
-.WhatsTitle h1 {
-  font-size: 3.5rem;
-  font-weight: bold;
-}
-.Whats p {
-  font-size: 1.5rem;
-}
-.tabsImage3{
-  width: 90%;
-
-}
-.InnovatingContent {
-  width: 90%;
-  background-image: 
-    url("../Assests/oilapp/telMockUp.png");
-  background-size: 20% 100%;
-  background-repeat: no-repeat;
-  background-position: bottom right;
-}
-.ContentLeft {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 80%;
-  gap: 1rem;
-}
-.Innovating h1 {
-  font-size: 1.8rem;
-   width:80%;
-}
-.tabsImage1{
-/* opacity: ; */
-width: 0%;
-}
-.itemIcon{
-  min-width: 90px;
-}
-.ZitounaImage{
-  width: 130px;
-  margin-left: -3rem;
-}
-.Action{
-  flex-direction: column;
-}
-.ActionLeft{
-  width: 90%;
-}
-.Action h1 ,
-.Action p {
-text-align: center;
-width: 100%;
-}
-.ActionRight{
-  width: 50%;
-}
-.Actionbutton {
-  width: 13rem;
-  font-size: 1.4rem;
-}
-.Adv {
-  width:90%;
-}
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .textContainer {
+    width: 100%;
+  }
+  .tabsImage {
+    width: 30%;
+    align-self: baseline;
+    margin-top: 200px;
+  }
+  .textContainer h1,
+  .WhatsTitle h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+  }
+  .Whats p {
+    font-size: 1.5rem;
+  }
+  .tabsImage3 {
+    width: 90%;
+  }
+  .InnovatingContent {
+    width: 90%;
+    background-image: url("../Assests/oilapp/telMockUp.png");
+    background-size: 20% 100%;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+  }
+  .ContentLeft {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 80%;
+    gap: 1rem;
+  }
+  .Innovating h1 {
+    font-size: 1.8rem;
+    width: 80%;
+  }
+  .tabsImage1 {
+    /* opacity: ; */
+    width: 0%;
+  }
+  .itemIcon {
+    min-width: 90px;
+  }
+  .ZitounaImage {
+    width: 130px;
+    margin-left: -3rem;
+  }
+  .Action {
+    flex-direction: column;
+  }
+  .ActionLeft {
+    width: 90%;
+  }
+  .Action h1,
+  .Action p {
+    text-align: center;
+    width: 100%;
+  }
+  .ActionRight {
+    width: 50%;
+  }
+  .Actionbutton {
+    width: 13rem;
+    font-size: 1.4rem;
+  }
+  .Adv {
+    width: 90%;
+  }
 }
 @media (max-width: 1000px) {
   .InnovatingContent {
-  background-size: 15% 70%;
+    background-size: 15% 70%;
+  }
+  .Adv {
+    width: 100%;
+  }
+  .Actionbutton {
+    width: 11rem;
+    font-size: 1.2rem;
+  }
+  .ActionRight {
+    width: 60%;
+  }
+  .btns {
+    width: 80%;
+  }
 }
-.Adv {
-  width:100%;
-}
-.Actionbutton {
-  width: 11rem;
-  font-size: 1.2rem;
-}
-.ActionRight{
-  width: 60%;
-}
-.btns {
-  width: 80%;
-}
-}
-@media (max-width:750px) {
-.tabsImage {width: 0%;}
-.Header {
- 
-  width: 100%;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.521), rgba(255, 255, 255, 0.61)),
+@media (max-width: 750px) {
+  .tabsImage {
+    width: 0%;
+  }
+  .Header {
+    width: 100%;
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.521),
+        rgba(255, 255, 255, 0.61)
+      ),
+      url("../Assests/oilapp/2Tabs_Header.png");
 
-    url("../Assests/oilapp/2Tabs_Header.png");
-
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: bottom right;
-
-
-}
-.InnovatingContent {
-  background-image: 
-    url("../Assests/oilapp/telMockUp.png");
-  background-size:15% 60%;
-}
-.TapTitle{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap:0.5rem;
-  text-align: center;
-  align-items: center;
-  align-content: center;}
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+  }
+  .InnovatingContent {
+    background-image: url("../Assests/oilapp/telMockUp.png");
+    background-size: 15% 60%;
+  }
+  .TapTitle {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+  }
   .TapTitle1,
-  .TapTitle2{
-  color: #091e3e;
-  font-size: 1.4rem;
+  .TapTitle2 {
+    color: #091e3e;
+    font-size: 1.4rem;
   }
-.Advanage,
-.Advanage2 {
-  padding: 3px;
-  font-size: 0.8rem;
+  .Advanage,
+  .Advanage2 {
+    padding: 3px;
+    font-size: 0.8rem;
+  }
+  .KeyDiv {
+    flex-direction: column-reverse;
+  }
+  .items {
+    width: 100%;
+  }
+  .tabsImage2 {
+    width: 40%;
+  }
+  .faqContainer {
+    width: 90%;
+  }
 }
-.KeyDiv{
-  flex-direction: column-reverse;
-}
-.items{
-  width: 100%;
-}
-.tabsImage2{
-  width: 40%;
-}
-.faqContainer {
- width: 90%;
-}
-}
-@media (max-width:550px) {
-.textContainer h1{
-font-size: 2.5rem;
-}
-.textContainer p {
-  width: 80%;
-}
- .Innovating{
-  margin-top: -4rem;
- }
+@media (max-width: 550px) {
+  .textContainer h1 {
+    font-size: 2.5rem;
+  }
+  .textContainer p {
+    width: 80%;
+  }
+  .Innovating {
+    margin-top: -4rem;
+  }
   .Innovating h1 {
-  width: 100%;
-  font-size: 2rem;
-}
-.InnovatingContent {
-  background-size: 0% 0%;
-  flex-direction: column;
-}
-.tabsImage1{
-  width: 30%;
-  align-self: center;
-}
-.ContentLeft {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 100%;
-  gap: 1rem;
-}
-.ActionRight{
-  width: 70%;
-}
-  .Action h1 {
-font-size: 2rem;
+    width: 100%;
+    font-size: 2rem;
   }
-.Actionbutton {
-  width: 9rem;
-  padding: 0px 0px;
-  height: 3.25rem;
-  font-size: 1rem;
+  .InnovatingContent {
+    background-size: 0% 0%;
+    flex-direction: column;
+  }
+  .tabsImage1 {
+    width: 30%;
+    align-self: center;
+  }
+  .ContentLeft {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 1rem;
+  }
+  .ActionRight {
+    width: 70%;
+  }
+  .Action h1 {
+    font-size: 2rem;
+  }
+  .Actionbutton {
+    width: 9rem;
+    padding: 0px 0px;
+    height: 3.25rem;
+    font-size: 1rem;
+  }
+  .TapTitle {
+    flex-direction: column;
+  }
+  .Whats h1 {
+    font-size: 2.2rem;
+  }
+  .Whats p {
+    font-size: 1.2rem;
+    width: 100%;
+  }
 }
-.TapTitle{
-  flex-direction: column;
-}
-.Whats h1 {
-  font-size: 2.2rem;
-}
-.Whats p {
-  font-size: 1.2rem;
-  width: 100%;
-}
-}
-@media (max-width:550px) {
-  .ActionRight ,
-  .ActionLeft{
+@media (max-width: 550px) {
+  .ActionRight,
+  .ActionLeft {
     width: 100%;
   }
   .Action p {
-text-align: center;
-width: 100%;
-font-size: 1.2rem;
-}
-.textContainer h1{
-font-size: 1.5rem;
-}
-.textContainer h6 {
-  font-size: 1.2rem;
-}
-.textContainer p {
-  font-size: 0.9rem;
-  width:90%;
-}
-.ZitounaImage{
-  width: 90px;
-  height: 90px;
-  margin-left: -3rem;
-  margin-top: 3rem;
-}
-.textContainer {
-  gap: 1rem;
-}
-.FirstH1{
-  padding:0.5rem;
-}
-.btns {
-  width: 90%;
-}
+    text-align: center;
+    width: 100%;
+    font-size: 1.2rem;
+  }
+  .textContainer h1 {
+    font-size: 1.5rem;
+  }
+  .textContainer h6 {
+    font-size: 1.2rem;
+  }
+  .textContainer p {
+    font-size: 0.9rem;
+    width: 90%;
+  }
+  .ZitounaImage {
+    width: 90px;
+    height: 90px;
+    margin-left: -3rem;
+    margin-top: 3rem;
+  }
+  .textContainer {
+    gap: 1rem;
+  }
+  .FirstH1 {
+    padding: 0.5rem;
+  }
+  .btns {
+    width: 90%;
+  }
   .buttonStarted,
-.buttonDemo {
-  width: 8rem;
-  padding: 0px 0px;
-  height: 3.25rem;
-  font-size: 0.8rem;
-  font-weight: bold;
-}
-.text p {
-  font-size: 0.9rem;
-  font-family: "Poppins";
-}
-.text h6 {
-  font-size: 1rem;
-  font-family: "Poppins";
-}
-.Advanages ,
-.Advanages2{
-  gap: 0.5rem;
-  width:95%;
-}
-.Advanage,
-.Advanage2 {
-  padding: 2px;
-  font-size: 0.8rem;
-  height: 50px;
-}
-.KeyImage{
-  width: 30px;
-}
-.KeyLeft{
-align-items: flex-start;
-}
-.itemText p {
-  font-size: 0.9rem;
-  font-family: "Poppins";
-}
-.itemText h6 {
-  font-size: 1rem;
-  font-family: "Poppins";
-}
-.Questions h1 {
-  font-size: 1.2rem;
-}
-.faqQuestion, 
-.faqAnswer{
-  font-size: 0.9rem;
-}
+  .buttonDemo {
+    width: 8rem;
+    padding: 0px 0px;
+    height: 3.25rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+  .text p {
+    font-size: 0.9rem;
+    font-family: "Poppins";
+  }
+  .text h6 {
+    font-size: 1rem;
+    font-family: "Poppins";
+  }
+  .Advanages,
+  .Advanages2 {
+    gap: 0.5rem;
+    width: 95%;
+  }
+  .Advanage,
+  .Advanage2 {
+    padding: 2px;
+    font-size: 0.8rem;
+    height: 50px;
+  }
+  .KeyImage {
+    width: 30px;
+  }
+  .KeyLeft {
+    align-items: flex-start;
+  }
+  .itemText p {
+    font-size: 0.9rem;
+    font-family: "Poppins";
+  }
+  .itemText h6 {
+    font-size: 1rem;
+    font-family: "Poppins";
+  }
+  .Questions h1 {
+    font-size: 1.2rem;
+  }
+  .faqQuestion,
+  .faqAnswer {
+    font-size: 0.9rem;
+  }
 }
