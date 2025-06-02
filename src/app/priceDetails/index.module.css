@@ -2,7 +2,7 @@
 .container {
   padding: 2rem;
   max-width: 100%;
-  min-height: 60vh;
+  min-height: 80vh;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -178,19 +178,16 @@
   padding: 1rem;
   font-weight: 500;
 }
-
 .cell {
   padding: 1rem;
   text-align: center;
   border: 1px solid #e5e7eb;
 }
-
 .checkIcon {
   color: var(--green);
   width: 24px;
   height: 24px;
 }
-
 .xIcon {
   color: var(--red);
   width: 24px;
@@ -201,11 +198,9 @@
   .container {
     padding: 3rem;
   }
-
   .title {
     font-size: 3rem;
   }
-
   .description {
     font-size: 1.125rem;
   }

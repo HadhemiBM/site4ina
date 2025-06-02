@@ -7,12 +7,10 @@ import parti from "../../Assests/svg/parti.svg";
 import foire from '../../Assests/foire.png'
 import foire2 from '../../Assests/foire2.png'
 import Image from "next/image";
-
 import Video from "./video";
 import Video2 from "./video2";
 import Modal from "./Modal";
 import { Lens } from "@/components/ui/lens";
-
 const Events: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [hovering, setHovering] = useState(false);
@@ -31,8 +29,6 @@ const Events: React.FC = () => {
           </p>
         </div>
         <div className={styles.AllEvents}>
-
-
        {/* eventsssss */}
               <div data-aos="fade-up" className={styles.events1}>
       <div data-aos="fade-up" data-aos-delay="200" className={styles.eventHeader}>
@@ -48,20 +44,17 @@ const Events: React.FC = () => {
 - Initiate future Tunisia–DRC technological partnerships.<br/>
 This impactful exchange reinforced the role of innovation in shaping Africa’s sustainable energy future.`
 </p>
-
       </div>
       <Lens hovering={hovering} setHovering={setHovering}>
       <Image
         src={foire}
         height="300"
         width="700"
-        alt="Participation"
+        alt="Official Visit of the Democratic Republic of Congo Delegation to 4InA Technologie"
         onClick={handleImageClick}
         style={{ cursor: 'zoom-in' }}
       />
       </Lens>
-
-
 {isOpen && (
   <Modal onClose={closeModal}>
     <img
@@ -70,14 +63,12 @@ This impactful exchange reinforced the role of innovation in shaping Africa’s 
       style={{
         maxWidth: "90vw",
         maxHeight: "90vh",
-        objectFit: "contain",
-     
+        objectFit: "contain",    
       }}
     />
   </Modal>
 )}
     </div>
-
             {/* eventsssss */}
               <div data-aos="fade-up" className={styles.events1}>
       <div data-aos="fade-up" data-aos-delay="200" className={styles.eventHeader}>
@@ -95,13 +86,11 @@ During the event, our team presented the latest version of our <strong>smart har
         src={foire2}
         height="300"
         width="500"
-        alt="Participation"
+        alt="4InA Technologie at PetroAfrica 2025 - Powering Africa’s sustainable energy "
         onClick={handleImageClick}
         style={{ cursor: 'zoom-in' }}
       />
       </Lens>
-
-
 {isOpen && (
   <Modal onClose={closeModal}>
     <img
@@ -110,17 +99,12 @@ During the event, our team presented the latest version of our <strong>smart har
       style={{
         maxWidth: "90vw",
         maxHeight: "90vh",
-        objectFit: "contain",
-     
+        objectFit: "contain",    
       }}
     />
   </Modal>
 )}
     </div>
-
-
-
-
           <div data-aos="fade-up" className={styles.events1}>
             <div data-aos="fade-up"data-aos-delay="200" className={styles.eventHeader}>
               <h2 className={styles.eventTitle}>
@@ -137,11 +121,7 @@ During the event, our team presented the latest version of our <strong>smart har
                 miss it!
               </p>
             </div>
-          
-
             <Video />
-     
-
           </div>
           <div data-aos="fade-up" className={styles.events1}>
             <div data-aos="fade-up" data-aos-delay="200"  className={styles.eventHeader2}>
@@ -162,22 +142,8 @@ During the event, our team presented the latest version of our <strong>smart har
                 transformation of agriculture!
               </p>
             </div>
-
             <Video2 />
           </div>
-          {/* <div data-aos="fade-up" className={styles.events1}>
-            <div  data-aos="fade-up" data-aos-delay="200" className={styles.eventHeader}>
-              <h2 className={styles.eventTitle}>
-              4InA Technologie Shines in the Digital Energy Challenge
-              </h2>
-              <p className={styles.eventDesc}>
-              We are proud to announce 4InA Technologie’s remarkable achievement in the Digital Energy Challenge, organized by the French Development Agency (AFD) in partnership with ADEME and the European Union. Selected from 168 applicants, 4InA Technologie stood out as one of only nine winners from Africa, including five innovative startups and four energy operators.
-
-This experience has not only enriched our journey but also strengthened our dedication to excellence and innovation in the energy sector. Being part of this esteemed program is both a milestone and a motivation to continue driving impactful solutions for a sustainable energy future in Africa.
-              </p>
-            </div>
-       <Image src={parti}  height="300" width="500" alt="Participation" />
-          </div> */}
           <div data-aos="fade-up" className={styles.events1}>
       <div data-aos="fade-up" data-aos-delay="200" className={styles.eventHeader}>
         <h2 className={styles.eventTitle}>
@@ -185,7 +151,6 @@ This experience has not only enriched our journey but also strengthened our dedi
         </h2>
         <p className={styles.eventDesc}>
         We are proud to announce 4InA Technologie’s remarkable achievement in the Digital Energy Challenge, organized by the French Development Agency (AFD) in partnership with ADEME and the European Union. Selected from 168 applicants, 4InA Technologie stood out as one of only nine winners from Africa, including five innovative startups and four energy operators.
-
      This experience has not only enriched our journey but also strengthened our dedication to excellence and innovation in the energy sector. Being part of this esteemed program is both a milestone and a motivation to continue driving impactful solutions for a sustainable energy future in Africa.
         </p>
       </div>
@@ -194,13 +159,11 @@ This experience has not only enriched our journey but also strengthened our dedi
         src={parti}
         height="300"
         width="700"
-        alt="Participation"
+        alt="4InA Technologie Shines in the Digital Energy Challenge"
         onClick={handleImageClick}
         style={{ cursor: 'zoom-in' }}
       />
       </Lens>
-
-
 {isOpen && (
   <Modal onClose={closeModal}>
     <img
@@ -210,19 +173,11 @@ This experience has not only enriched our journey but also strengthened our dedi
         maxWidth: "90vw",
         maxHeight: "90vh",
         objectFit: "contain",
-     
       }}
     />
   </Modal>
 )}
     </div>
-
-  
-
-
-
-
-
         </div>
       </div>
     </PageTransition>

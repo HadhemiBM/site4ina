@@ -77,7 +77,7 @@ const OIlapp: React.FC = () => {
                 width={170}
                 height={40}
                 className={styles.ZitounaImage}
-                alt="interface application oil"
+                alt="Olive"
               />
             </div>
             <h1>Empowered Processes</h1>
@@ -128,7 +128,7 @@ const OIlapp: React.FC = () => {
             width={900}
             height={900}
             className={styles.tabsImage3}
-            alt="interface application oil"
+            alt="the application users"
           />
         </div>
         <div className={styles.Innovating}>
@@ -164,7 +164,7 @@ const OIlapp: React.FC = () => {
               width={350}
               height={600}
               className={styles.tabsImage1}
-              alt="interface application oil"
+              alt="Interface application oilapp mobile"
             />
           </div>
         </div>
@@ -265,7 +265,7 @@ const OIlapp: React.FC = () => {
                   width={70}
                   height={100}
                   className={styles.KeyImage}
-                  alt="interface application oil"
+                  alt="Olive"
                 />
 
                 <KeyDIV
@@ -285,7 +285,7 @@ Assign delivery schedules and monitor progress effortlessly
                   width={70}
                   height={100}
                   className={styles.KeyImage}
-                  alt="Invoice & Accounting Integration"
+                  alt="Olive"
                 />
 
                 <KeyDIV
@@ -303,7 +303,7 @@ Keep track of payments, outstanding balances, and financial reports.
                   width={70}
                   height={100}
                   className={styles.KeyImage}
-                  alt="Invoice & Accounting Integration"
+                  alt="Olive"
                 />
                 <KeyDIV
                   title=" Energy Management:"
@@ -320,7 +320,7 @@ Reduce costs and environmental impact with smart energy management tools.
                 width={600}
                 height={600}
                 className={styles.tabsImage2}
-                alt="interface application oil"
+                alt="interface application oilapp "
               />
       
           </div>

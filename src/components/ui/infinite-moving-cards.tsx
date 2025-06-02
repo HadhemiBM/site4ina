@@ -315,11 +315,10 @@ export const InfiniteMovingCards = ({
                   className="object-cover w-full h-full"
                 />
               </div>
-              <div className="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400">
-  <i className="fa-solid fa-calendar-days text-base leading-none"></i>
+         <div className="flex items-baseline gap-2 text-sm text-neutral-500 dark:text-neutral-400">
+  <i className="fa-solid fa-calendar-days text-base"></i>
   <p className={`leading-none ${styles.BlogDateText}`}>{blog.date}</p>
 </div>
-
               <h6
                 onClick={() => handleGo(blog.id)}
                 className="text-base font-semibold cursor-pointer hover:underline text-neutral-800 dark:text-neutral-100"

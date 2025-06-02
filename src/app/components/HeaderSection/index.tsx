@@ -85,18 +85,7 @@ const Header = () => {
       </button>
     ),
   };
-  const cibles = [
-    "80% Increased Productivity Time",
-    "80% Reduction in Lost Time Duties",
-    "50% Cost Reduction",
-    "20% Consumption Reduction",
-  ];
-  const advantages = [
-    "Monitoring of energy consumption",
-    "Guidance for energy managers",
-    "Monitoring Machine Behavior and Predicting Failures",
-    "Reducing Maintenance Costs",
-  ];
+
   const [isInitialLoad, setIsInitialLoad] = useState(true);
 
   useEffect(() => {

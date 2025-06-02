@@ -26,7 +26,6 @@ const Contact: React.FC = () => {
     title: string;
     children: React.ReactNode;
   };
-
   const ContactItem = ({ icon, title, children }: ContactItemProps) => (
     <div className={styles.rowContact}>
       <i className={`fa-solid ${icon}`} />
@@ -37,7 +36,6 @@ const Contact: React.FC = () => {
       </div>
     </div>
   );
-  
   return (
     <PageTransition>
       <div className={styles.container}>

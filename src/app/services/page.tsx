@@ -9,7 +9,7 @@ import { services } from '../data/serviceData';
 
 export default function ServicePage() {
   const [index, setIndex] = useState(0);
-  const serviceIndex = 4;
+
   // const handleScroll = (e: WheelEvent) => {
   //   if (e.deltaY > 0 && index < services.length - 1) {
   //     setIndex((prev) => prev + 1);
@@ -24,7 +24,7 @@ const handleScroll = (e: WheelEvent) => {
 
   scrollTimeout = setTimeout(() => {
     scrollTimeout = null;
-  }, 400); // Adjust duration as needed
+  }, 400); 
 
   setIndex((prev) => {
     if (e.deltaY > 0 && prev < services.length - 1) {
@@ -43,8 +43,8 @@ useEffect(() => {
     setIsMobile(window.innerWidth <= 900);
   };
 
-  checkMobile(); // on load
-  window.addEventListener("resize", checkMobile); // on resize
+  checkMobile(); 
+  window.addEventListener("resize", checkMobile); 
 
   return () => window.removeEventListener("resize", checkMobile);
 }, []);
@@ -128,7 +128,6 @@ useEffect(() => {
         
          }
        </AnimatePresence>
-    
      </div>
      </div>
       </>

@@ -34,7 +34,7 @@ const Blogg: React.FC = () => {
                   height={100}
                   className={styles.BlogImage}
                   src={blog.imageUrl}
-                  alt="blog"
+                  alt={blog.title}
                 />
               </div>
               <div className={styles.BlogContent}>

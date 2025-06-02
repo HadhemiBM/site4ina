@@ -1,14 +1,4 @@
 .wrapper {
-  /* width: 100vw;
-  height: 75vh;
-  height: 100vh;
-  overflow: hidden;
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative; */
   display: flex;
   flex-direction: column;
 padding: 2rem ;
@@ -27,7 +17,6 @@ padding: 2rem ;
 }
 .content {
   position: absolute;
-  /* inset: 0; */
   width: 90%;
   height: 90%;
   display: flex;
@@ -35,26 +24,21 @@ padding: 2rem ;
   align-items: center;
   justify-content: space-around;
   text-align: center;
-  /* background-color: aqua; */
   padding: 2rem;
-  /* gap: 4rem; */
 }
 .image {
   margin-bottom: 2rem;
   width: 40%;
   border-radius:35px;
 max-height: 100%;
-  /* background-color: blue; */
 }
 .text{
   display: flex;
   flex-direction: column;
   text-align: center;
-  /* background-color: bisque; */
  align-self: center;
  gap:1rem;
  width: 50%;
- /* background-color: blue; */
 }
 .title {
   font-size: 2.5rem;
@@ -63,7 +47,6 @@ max-height: 100%;
   font-family: Poppins;
 }
 .description {
-  /* margin-top: 1rem; */
   font-size: 1.125rem;
   text-align: center;
   white-space: pre-line;
@@ -94,7 +77,7 @@ animation: arrow 2s infinite;
 100% {opacity:0}
 }
 
-@-webkit-keyframes arrow /*Safari and Chrome*/
+@-webkit-keyframes arrow 
 {
 0% {opacity:0}
 40% {opacity:1}
@@ -104,17 +87,17 @@ animation: arrow 2s infinite;
 
 .arrows path.a1 {
 animation-delay:-1s;
--webkit-animation-delay:-1s; /* Safari 和 Chrome */
+-webkit-animation-delay:-1s; 
 }
 
 .arrows path.a2 {
 animation-delay:-0.5s;
--webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+-webkit-animation-delay:-0.5s; 
 }
 
 .arrows path.a3 {	
 animation-delay:0s;
--webkit-animation-delay:0s; /* Safari 和 Chrome */
+-webkit-animation-delay:0s; 
 }
 .flipped {
   transform: rotate(180deg);
@@ -126,7 +109,7 @@ font-family: "Poppins";
 text-align: center;
 color: transparent;
 background-image: url('https://res.cloudinary.com/ddngbriyu/image/upload/v1744810615/fond-marbre-liquide-bleu-abstrait-art-experimental-texture-fluide_53876-104502_hr0bz5.jpg');
-background-size: 200%; /* Enlarged for smooth animation */
+background-size: 200%; 
 background-position: 0 50%;
 background-clip: text;
 -webkit-background-clip: text;
@@ -153,10 +136,6 @@ animation: animate-background 30s infinite alternate linear;
   align-self: center;
   width: 70%;
 }
-.mobileVersion{
-
-
-}
 .HeaderMObile{
   align-self: center;
   width: 100%;
@@ -169,7 +148,7 @@ font-family: "Poppins";
 text-align: center;
 color: transparent;
 background-image: url('https://res.cloudinary.com/ddngbriyu/image/upload/v1744810615/fond-marbre-liquide-bleu-abstrait-art-experimental-texture-fluide_53876-104502_hr0bz5.jpg');
-background-size: 200%; /* Enlarged for smooth animation */
+background-size: 200%; 
 background-position: 0 50%;
 background-clip: text;
 -webkit-background-clip: text;
@@ -194,7 +173,6 @@ animation: animate-background 30s infinite alternate linear;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
 }
-
 .mobileCard::after {
   content: "";
   position: absolute;
@@ -205,9 +183,7 @@ animation: animate-background 30s infinite alternate linear;
   box-shadow: 0 0 10px var(--blue), 0 0 10px var(--blue);
   pointer-events: none;
 }
-
 .wrapperMobile {
-
   display: flex;
   flex-direction: column;
 padding: 2rem 1rem ;
@@ -216,11 +192,8 @@ padding: 2rem 1rem ;
   margin-bottom: 2rem;
   width: 70%;
   border-radius:35px;
-
-  /* background-color: blue; */
 }
 .mobileCard p {
-  /* margin-top: 1rem; */
   font-size: 1rem;
   text-align: center;
   white-space: pre-line;

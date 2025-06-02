@@ -1,12 +1,8 @@
 "use client";
 import styles from "./index.module.css";
-
-import { useState } from 'react'
-import { ChevronDown, ChevronUp, Check } from 'lucide-react'
+import { Check } from 'lucide-react'
 
 const priceDetails = () => {
- 
-  const [openDetails, setOpenDetails] = useState<string | null>(null)
 
   const solutions = [
     {
@@ -14,8 +10,7 @@ const priceDetails = () => {
       description: 'Perfect for small businesses starting their AI journey',
       features: [
         'Device + Platform',
-        'Maintenance contract with AI model updates',
-        
+        'Maintenance contract with AI model updates',        
       ],
     },
     {
@@ -24,8 +19,7 @@ const priceDetails = () => {
       features: [
         'Device + Platform',
         'Maintenance contract with AI model updates',
-        'Web Application',
-        
+        'Web Application',    
       ],
     },
     {
@@ -39,10 +33,6 @@ const priceDetails = () => {
       ],
     }
   ]
-  const toggleDetails = (solutionName: string) => {
-    setOpenDetails(openDetails === solutionName ? null : solutionName)
-  }
-
   return (
     <div className={styles.container}>
       <div className={styles.titleContainer}>
@@ -74,12 +64,6 @@ const priceDetails = () => {
             
           </div>
         ))}
-      </div>
-
-      <div className={styles.tableContainer}>
-        <table className={styles.table}>
-          {/* Table content */}
-        </table>
       </div>
     </div>
   )

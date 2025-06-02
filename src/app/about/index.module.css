@@ -18,7 +18,6 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto auto;
   gap: 20px;
-  /* background-color: antiquewhite; */
   border-radius: 10px;
   width: 90%;
   text-align: center;
@@ -58,10 +57,10 @@ align-content: center;
 
   color: #ffffff;
 }
- /* Second set of items */
+
 .Advanages2 {
   display: grid;
-  grid-template-columns: repeat(3, 0.5fr); /* Adjust the number of columns */
+  grid-template-columns: repeat(3, 0.5fr); 
   grid-template-rows: auto;
   gap: 20px;
   border-radius: 10px;
@@ -72,7 +71,6 @@ align-content: center;
   align-content: center;
 }
 
-/* For Advanage2, make sure these also fit the grid properly */
 .Advanages2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -146,7 +144,6 @@ align-content: center;
 }
 .InnovationTitle {
   font-family: "Poppins";
-  /* color: var(--blue); */
   margin-left: 20px;
   font-size: 32px;
   margin-right: 50px;
@@ -155,7 +152,7 @@ align-content: center;
   align-self: flex-start;
   color: transparent;
   background-image: url('https://res.cloudinary.com/ddngbriyu/image/upload/v1744810615/fond-marbre-liquide-bleu-abstrait-art-experimental-texture-fluide_53876-104502_hr0bz5.jpg');
-  background-size: 200%; /* Enlarged for smooth animation */
+  background-size: 200%; 
   background-position: 0 50%;
   background-clip: text;
   -webkit-background-clip: text;
@@ -225,7 +222,6 @@ align-content: center;
   align-self: center;
   justify-content: center;
 }
-/* Team Section */
 .TeamSection {
   display: flex;
   flex-direction: column;
@@ -365,12 +361,11 @@ align-content: center;
   gap: 10px;
   margin-bottom: 30px;
 }
-
 .SolutionTitle2 {
   font-size: 3rem;
 color: transparent;
   background-image: url('https://res.cloudinary.com/ddngbriyu/image/upload/v1744810615/fond-marbre-liquide-bleu-abstrait-art-experimental-texture-fluide_53876-104502_hr0bz5.jpg');
-  background-size: 200%; /* Enlarged for smooth animation */
+  background-size: 200%; 
   background-position: 0 50%;
   background-clip: text;
   -webkit-background-clip: text;
@@ -387,12 +382,9 @@ color: transparent;
   width: 80%;
   text-align: center;
   color: #ffffff;
-
 }
 .SolutionsDesc1 {
-
   color: #000000;
-
 }
 .row {
   display: flex;
@@ -465,7 +457,6 @@ color: transparent;
   -moz-border-radius: 20px;
   border-radius: 20px;
 }
-
 @keyframes lineAnim {
   0% {
     left: -40%;
@@ -486,8 +477,6 @@ color: transparent;
   width: 100%;
   margin: auto;
 }
-/* Avantages */
-
 .item {
   display: flex;
   align-items: center;
@@ -549,7 +538,7 @@ color: transparent;
   width: 100%;
   margin: auto;
 }
-/* Demo Section */
+
 .DemoSection {
   display: flex;
   flex-direction: column;
@@ -559,8 +548,6 @@ color: transparent;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  /* background: #1f499721;
-  background-repeat: no-repeat; */
 background-image: 
   linear-gradient(90deg, rgba(255, 255, 255, 0.103) 0%, rgba(255, 255, 255, 0) 20%, rgba(0, 65, 243, 0.5) 50%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0.103) 100%),
   url("../Assests/bgblue.jpg");
@@ -600,12 +587,6 @@ background-position: center;
   border: 1px;
   border-bottom: var(--white) 2px solid;
 }
-/* .buttonDemo:hover {
-  background-color: white;
-  color: var(--blue);
-  border: 2px;
-  border-color: var(--blue) 2px solid;
-} */
 @media (max-width: 1440px) {
   .circle {
     width: 20px;

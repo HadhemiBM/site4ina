@@ -10,7 +10,7 @@ const Footer = () => {
                  <Link href="/accueil">
   
 
-          <Image className={styles.RightLogo} src={logo} alt="Log4ina" />
+          <Image className={styles.RightLogo} src={logo} alt="Log-4inaTechnologie" />
         </Link>
 
           <p>Innovate, Collaborate, Succeed </p>
