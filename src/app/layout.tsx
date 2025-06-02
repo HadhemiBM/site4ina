@@ -38,8 +38,8 @@ import { Analytics } from "@vercel/analytics/next"
 //   },
 // };
 export const metadata = {
-  title: '4ina Technologie – Développement Web, Mobile et Data',
-  description: '4ina Technologie est un acteur majeur en développement informatique, web, mobile et analyse de données. Basé en Tunisie.',
+  title: '4InA Technologie – AI-Powered Energy Monitoring & Predictive Maintenance',
+  description: '4InA Technologie provides real-time energy monitoring and AI-driven predictive maintenance solutions for optimal energy efficiency.',
 }
 const poppins = Poppins({
   subsets: ["latin"], 
@@ -83,13 +83,22 @@ export default function RootLayout({
         }) }} />
         {/* kk */}
       <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+      <meta name="description" content="4InA Technologie provides real-time energy monitoring and AI-driven predictive maintenance solutions for optimal energy efficiency." />
+
                 <script src="https://upload-widget.cloudinary.com/global/all.js"></script>
-<script>
-   {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WXT2GD33');  `}</script>
+<script
+  dangerouslySetInnerHTML={{
+    __html: `
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-WXT2GD33');
+    `,
+  }}
+></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
         <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
         <link href="css/bootstrap.min.css" rel="stylesheet" />
         <link href="lib/animate/animate.min.css" rel="stylesheet" />
@@ -100,15 +109,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <link href="css/style.css" rel="stylesheet" />
       
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QL8MY4WB9"></script>
-<script>
-{`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+<script
+  dangerouslySetInnerHTML={{
+    __html: `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-9QL8MY4WB9');
+    `,
+  }}
+></script>
 
-            gtag('config', 'G-9QL8MY4WB9');
-          `}
-</script> 
 
 
 
@@ -125,7 +136,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript> 
 
 
-      <script src="https://upload-widget.cloudinary.com/global/all.js"></script>
+    
 
         <div className="page_container">
           <Navbar  />
