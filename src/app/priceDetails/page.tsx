@@ -10,7 +10,7 @@ const priceDetails = () => {
       description: 'Perfect for small businesses starting their AI journey',
       features: [
         'Device + Platform',
-        'Maintenance contract with AI model updates',        
+        'Maintenance contract',        
       ],
     },
     {
@@ -18,7 +18,7 @@ const priceDetails = () => {
       description: 'Ideal for growing companies with expanding AI needs',
       features: [
         'Device + Platform',
-        'Maintenance contract with AI model updates',
+        'Maintenance contract',
         'Web Application',    
       ],
     },
@@ -29,7 +29,9 @@ const priceDetails = () => {
         'Device + Platform',
         'Maintenance contract with AI model updates',
         'Web Application',
-        'Mobile Application'
+        'Mobile Application',
+        "AI with anomaly prediction",
+        "Automatic updates via subscription"
       ],
     }
   ]

@@ -118,8 +118,6 @@ const Accueil: React.FC = () => {
       });
     }
   };
-  
-
 
   const cibles = [
     {
@@ -143,7 +141,6 @@ const Accueil: React.FC = () => {
         "https://res.cloudinary.com/ddngbriyu/image/upload/v1745246764/Business_qomkvv.png",
     },
   ];
-
 
   const [index, setIndex] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -181,22 +178,23 @@ const Accueil: React.FC = () => {
       <div className={styles.CibleSection}>
         <div className={styles.CibleLeft}>
           <div
-          className={styles.CibleTitleDiv}
-          // data-aos="fade-up" data-aos-delay="400"
+            className={styles.CibleTitleDiv}
+            // data-aos="fade-up" data-aos-delay="400"
           >
             <h1 className={styles.CibleTitle}>
-             Adaptive Energy Systems for Industrial and Commercial Use
+              Adaptive Energy Systems for Industrial and Commercial Use
             </h1>
           </div>
           <div
           // data-aos="fade-up"
           >
             <p className={styles.CibleDesc}>
-              We deliver scalable, AI-driven energy systems for agriculture, manufacturing, healthcare, and hospitality helping businesses of all sizes.
+              We deliver scalable, AI-driven energy systems for agriculture,
+              manufacturing, healthcare, and hospitality helping businesses of
+              all sizes.
             </p>
             <p className={styles.CibleDescGras}>
               Cut costs, Boost efficiency, and Meet Industry 4.0 standards.
-
             </p>
           </div>
 
@@ -220,7 +218,6 @@ const Accueil: React.FC = () => {
                   className={`${styles.CibleCont} 
                   } ${visibleItems.includes(index) ? styles.show : ""}`}
                 >
-                 
                   <Image
                     onClick={navigateToService}
                     width={100}
@@ -255,7 +252,6 @@ const Accueil: React.FC = () => {
               exit={{ opacity: 0, y: -50 }}
               transition={{ duration: 0.5 }}
             >
-              
               <div className={styles.Solution1Text}>
                 <h2 className={styles.SolTitle1}>{solutions[index].title}</h2>
                 <p className={styles.SolutionDesc1}>
@@ -284,11 +280,10 @@ const Accueil: React.FC = () => {
             </motion.div>
           </AnimatePresence>
         </div>
-       
       </div>
       <div className={styles.DemoSection}>
         <h1 className={styles.SolutionTitle3}>
-         Explore our real-time EMS in action
+          Explore our real-time EMS in action
         </h1>
         <h1 className={styles.SolutionTitle2}>optimize save and automate </h1>
         <p className={styles.SolutionsDesc}>
@@ -297,15 +292,15 @@ const Accueil: React.FC = () => {
           growth
         </p>
         <Link href="/solutions/demo" passHref>
-                <motion.button
-                  onClick={navigateToService}
-                  className={styles.buttonDiscoverDemo}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                 Start Your Free Demo
-                </motion.button>
-              </Link>
+          <motion.button
+            onClick={navigateToService}
+            className={styles.buttonDiscoverDemo}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            Start Your Free Demo
+          </motion.button>
+        </Link>
       </div>
       <div className={styles.ServicesSection}>
         <div className={styles.SolutionTitle}>
@@ -313,7 +308,7 @@ const Accueil: React.FC = () => {
           <h1 className={styles.SolutionTitle2}>Services</h1>
         </div>
         <p className={styles.SolutionsDesc}>
-         Insuring a smooth implementation and long term follow-up 
+          Insuring a smooth implementation and long term follow-up
         </p>
         <div className={styles.AllServices}>
           <div className={styles.game_section}>
@@ -344,7 +339,12 @@ const Accueil: React.FC = () => {
               ))}
             </div>
             <button className={styles.scrollButton1} onClick={scrollRight1}>
-              <Image src={arrowRight} alt="arrow-Right" width={11} height={20} />
+              <Image
+                src={arrowRight}
+                alt="arrow-Right"
+                width={11}
+                height={20}
+              />
             </button>
           </div>
         </div>
@@ -371,7 +371,7 @@ const Accueil: React.FC = () => {
               src="https://res.cloudinary.com/ddngbriyu/image/upload/v1744809051/images_jp1d7v.jpg"
               alt="European Union"
             />
-          </div>         
+          </div>
           <div className={styles.card}>
             <img
               src="https://res.cloudinary.com/dyrh4zwb1/image/upload/v1729242600/ceed_hs3zi9.jpg"
@@ -384,7 +384,7 @@ const Accueil: React.FC = () => {
               alt="Smart Capital"
             />
           </div>
-          <div className={styles.card }>
+          <div className={styles.card}>
             <img
               src="https://res.cloudinary.com/ddngbriyu/image/upload/v1744809407/logo-deutsch-tunesische-zusammenarbeit_skzlyb.jpg"
               alt="La GIZ en Tunisie"
@@ -402,20 +402,16 @@ const Accueil: React.FC = () => {
           optimization.
         </p>
         <div className={styles.AllPrices}>
-          
-            <div className={styles.rowloa}>
-           
-              <h3 className={styles.PriceTitle1}>Basic </h3>
-            </div>
-  
-            <div className={styles.rowloa}>
-           
-              <h3 className={styles.PriceTitle1}>Silver </h3>
-            </div>         
-            <div className={styles.rowloa}>
-           
-              <h3 className={styles.PriceTitle1}>Gold </h3>
-            </div>     
+          <div className={styles.rowloa}>
+            <h3 className={styles.PriceTitle1}>Basic </h3>
+          </div>
+
+          <div className={styles.rowloa}>
+            <h3 className={styles.PriceTitle1}>Silver </h3>
+          </div>
+          <div className={styles.rowloa}>
+            <h3 className={styles.PriceTitle1}>Gold </h3>
+          </div>
         </div>
         <Link href="/priceDetails" className={styles.viewDetails}>
           View Details
