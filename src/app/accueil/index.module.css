@@ -2398,7 +2398,6 @@ width: 90%;
   .front_case2 {
     width: 90%;
   }
-
   .disc {
     width: 100px;
     height: 100px;
@@ -2407,17 +2406,12 @@ width: 90%;
     width: 180px;
     height: 180px;
   }
-
   .SolutionTitle3  {
-
     font-size: 0.9rem;
-
   }
   .SolutionTitle1,
   .SolutionTitle2   {
-
     font-size: 18px;
-
   }
   .SolutionsDesc {
 width: 90%;
@@ -2449,9 +2443,7 @@ width: 90%;
  .viewDetails{
         font-size: 12px;
         text-align: center;
-
       }
-
       .BlogDateText {
         font-size: 10px;
 
