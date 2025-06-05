@@ -1,7 +1,8 @@
 
 
 .BlogDetails {
-  max-width: 70%;
+  max-width: 80%;
+  
   margin: 0 auto;
   padding: 20px;
   font-family: "Poppins";
@@ -25,8 +26,11 @@
   font-size: 2rem;
   margin-bottom: 10px;
   font-family: "Poppins";
-
+padding :4px;
   color: #333;
+  width: 100%;
+ hyphens: auto;
+  word-break: break-word;
 }
 
 .Date {

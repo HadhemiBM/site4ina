@@ -36,14 +36,11 @@ const response = await fetch("http://localhost:3001/blogs/create", {
   body: JSON.stringify(newBlog),
   credentials: "include", // ✅ OBLIGATOIRE pour envoyer le cookie JWT
 });
-
 if (!response.ok) {
   const errData = await response.json();
   console.error("Error from server:", errData);
   throw new Error(errData.message || "Failed to create blog");
 }
-
-
     const data = await response.json();
     console.log("Blog created:", data);
     setIsSubmitted(true);
@@ -177,7 +174,6 @@ if (!response.ok) {
               />
             </div>
           )}
-  
           <div
             ref={previewRef}
             dangerouslySetInnerHTML={{ __html: message }}
@@ -188,5 +184,4 @@ if (!response.ok) {
     </div>
   );
 };
-
 export default BlogPage;

@@ -29,7 +29,7 @@
 }
 .previewContainer {
   width: 80%;
-  background-color: #4e634f;
+  /* background-color: #4e634f; */
   padding: 10px;
   align-self: center;
   display: flex;

@@ -325,9 +325,9 @@ export const InfiniteMovingCards = ({
               >
                 {blog.title}
               </h6>
-              <p className="line-clamp-3 text-sm text-neutral-600 dark:text-neutral-300">
+              {/* <p className="line-clamp-3 text-sm text-neutral-600 dark:text-neutral-300">
                 {blog.description}
-              </p>
+              </p> */}
               <div className="flex justify-end">
                 {/* <i
                   onClick={() => handleGo(blog.id)}
@@ -335,7 +335,7 @@ export const InfiniteMovingCards = ({
                 ></i> */}
                      <div className={styles.TeamSocial}>
       
-      <i onClick={() => handleGo(blog.id)} className="fa-solid fa-arrow-up"></i>
+      <i onClick={() => handleGo(blog.id)} className="fa-solid fa-arrow-right"></i>
     
   </div>
 
