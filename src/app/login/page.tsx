@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
+import styles from './index.module.css';
 
 const LoginPage: React.FC = () => {
   const [email, setEmail] = useState("");
@@ -38,32 +39,41 @@ const LoginPage: React.FC = () => {
 };
 
   return (
-    <div style={{ maxWidth: "400px", margin: "auto", paddingTop: "100px" }}>
+    <div className={styles.Container}
+>
+
+    <div className={styles.SmallContainer}>
+    {/* <div style={{ maxWidth: "400px", margin: "auto", paddingTop: "100px" }}> */}
       <h2>Login</h2>
-      <form onSubmit={handleLogin}>
-        <div style={{ marginBottom: "10px" }}>
+      <form onSubmit={handleLogin} className={styles.form}>
+        <div className={styles.inputContainer} >
           <label>Email:</label>
           <input
+          className={styles.inputForm}
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            style={{ width: "100%" }}
+           
           />
         </div>
-        <div style={{ marginBottom: "10px" }}>
+               <div className={styles.inputContainer} >
+
           <label>Password:</label>
           <input
+          className={styles.inputForm}
+
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
-            style={{ width: "100%" }}
+          
           />
         </div>
-        <button type="submit">Login</button>
+        <button   className={styles.buttonLogin} type="submit">Login</button>
       </form>
       {error && <p style={{ color: "red", marginTop: "10px" }}>{error}</p>}
+    </div>
     </div>
   );
 };

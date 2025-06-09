@@ -1,0 +1,127 @@
+.Container{
+  width:100% ;
+  /* background-color: aquamarine; */
+height: 80vh;
+align-items: center;
+align-content: center;
+justify-content: center;
+display: flex;
+ /* background-image:  linear-gradient( #3358eac7, #041261eb, #000000);
+  /* url("../Assests/electric-02.png"); */
+  /* animation: gradientAnimation 15s ease infinite;  */
+}
+@keyframes gradientAnimation {
+  0%, 100% {
+    background-size: 200% 200%;
+    background-position: left center;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: right center;
+  }
+}
+.SmallContainer h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: "Poppins";
+
+  color: transparent;
+  background-image: url("https://res.cloudinary.com/ddngbriyu/image/upload/v1744810615/fond-marbre-liquide-bleu-abstrait-art-experimental-texture-fluide_53876-104502_hr0bz5.jpg");
+  background-size: 200%;
+  background-position: 0 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-background 30s infinite alternate linear;
+}
+
+@keyframes animate-background {
+  0% {
+    background-position: 0 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.SmallContainer{
+width: 50%;
+/* background-color: blueviolet; */
+align-self: center;
+align-items: center;
+align-content: center;
+justify-content: center;
+display: flex;
+flex-direction: column;
+
+}
+.form{
+  width: 90%;
+  align-items: center;
+display: flex;
+flex-direction: column;
+  align-items: center;
+align-content: center;
+justify-content: center;
+
+}
+.inputForm{
+  width: 100%;
+  padding: 8px;
+  border-radius: 12px;
+  border : 0.5px solid rgb(179, 176, 176)
+}
+.inputContainer{
+  padding: 4px;
+  width: 100%;
+
+  margin-bottom: 1rem;
+}
+.inputContainer label {
+  font-size: 1.5rem;
+  font-family: "Poppins";
+  color: rgb(61, 60, 60);
+  margin-bottom: 8px;
+
+}
+.buttonLogin {
+  background-color: var(--blue);
+  color: white;
+  padding: 10px 20px;
+  border-radius:  8px;
+  width: 200px;
+  align-self: center;
+  height: 45px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  display: flex;
+align-self: center;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.buttonLogin:hover {
+  box-shadow: 0 4px 4px var(--orange);
+
+  border-color: var(--orange) 2px solid;
+
+  color: var(--orange);
+
+  border: 2px;
+  border-bottom: var(--blue) 2px solid;
+}
+@media (max-width:950px) {
+
+.SmallContainer{
+width: 90%;
+}
+.inputContainer label {
+  font-size: 1rem;
+  margin-bottom: 8px;
+
+}
+}
