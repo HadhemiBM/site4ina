@@ -20,13 +20,12 @@ export async function POST(req: Request) {
 await transporter.sendMail({
   from: `"Contact Form" <${process.env.EMAIL_USER}>`,
   to: process.env.EMAIL_USER,
-  subject: `[Contact] ${subject}`,
+  subject: `[Demo] `,
   replyTo: email,
   html: `
     <p><strong>Name:</strong> ${name}</p>
     <p><strong>Email:</strong> ${email}</p>
     <p><strong>Phone Number:</strong> ${phoneNumber}</p>
-    <p><strong>Subject:</strong> ${subject}</p>
     <p><strong>Message:</strong></p>
     <p>${message}</p>
   `,

@@ -3,7 +3,43 @@ import styles from "./index.module.css";
 import React, { useState } from "react";
 import PageTransition from "../../components/PageTransition";
 import Link from "next/link";
+import Swal from "sweetalert2";
+
 const Contact: React.FC = () => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+  
+    try {
+      const res = await fetch("/api/demo", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+  
+      const result = await res.json();
+      if (res.ok) {
+        // alert("Your message has been sent successfully!");
+        Swal.fire({
+        icon: "success",
+        title: "Message Sent!",
+        text: "Thank you for reaching out. We'll get back to you shortly.",
+        confirmButtonColor: "#0003da",
+      });
+        setFormData({ name: "", email: "", phoneNumber: "", message: "" });
+      } else {
+        // alert("Failed to send message: " + result.message);
+         Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong. Please try again later.",
+        confirmButtonColor: "#d33",
+      });
+      }
+    } catch (err) {
+      alert("An error occurred. Please try again later.");
+      console.error(err);
+    }
+  };
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -40,12 +76,14 @@ const Contact: React.FC = () => {
     <PageTransition>
       <div className={styles.container}>
         <div className={styles.Left}>
-          <form
+          {/* <form
             className={styles.formContainer}
             action="https://formsubmit.co/4inatechnologie@gmail.com"
             method="POST"
             encType="multipart/form-data"
-          >
+          > */}
+          <form className={styles.formContainer} onSubmit={handleSubmit}>
+
             <div className={styles.row}>
               <div className={styles.column}>
                 <label htmlFor="Full name" className={styles.label}>

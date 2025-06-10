@@ -3,7 +3,7 @@ import styles from "./index.module.css";
 import React, { useState } from "react";
 import PageTransition from "../components/PageTransition";
 import Link from "next/link";
-
+import Swal from "sweetalert2";
 const Contact: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
@@ -17,10 +17,22 @@ const Contact: React.FC = () => {
 
     const result = await res.json();
     if (res.ok) {
-      alert("Your message has been sent successfully!");
+      // alert("Your message has been sent successfully!");
+      Swal.fire({
+      icon: "success",
+      title: "Message Sent!",
+      text: "Thank you for reaching out. We'll get back to you shortly.",
+      confirmButtonColor: "#0003da",
+    });
       setFormData({ name: "", email: "", phoneNumber: "", subject: "", message: "" });
     } else {
-      alert("Failed to send message: " + result.message);
+      // alert("Failed to send message: " + result.message);
+       Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Something went wrong. Please try again later.",
+      confirmButtonColor: "#d33",
+    });
     }
   } catch (err) {
     alert("An error occurred. Please try again later.");
