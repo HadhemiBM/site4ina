@@ -87,12 +87,17 @@ const handleTextFormatting = (command: string) => {
           className={styles.colorPalette}
         />
    
-        <input
-          type="file"
-          accept="image/*"
-           title="Import Image"
-          onChange={handleImageInsert}
-        />
+        <label htmlFor="imageUpload"    className={styles.btnupload}>
+  Upload Image
+</label>
+<input
+  id="imageUpload"
+  type="file"
+
+  accept="image/*"
+  style={{ display: 'none' }}
+  onChange={handleImageInsert}
+/>
       </div>
       <div
          ref={editorRef}

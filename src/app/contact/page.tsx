@@ -5,6 +5,29 @@ import PageTransition from "../components/PageTransition";
 import Link from "next/link";
 
 const Contact: React.FC = () => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+
+  try {
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    const result = await res.json();
+    if (res.ok) {
+      alert("Your message has been sent successfully!");
+      setFormData({ name: "", email: "", phoneNumber: "", subject: "", message: "" });
+    } else {
+      alert("Failed to send message: " + result.message);
+    }
+  } catch (err) {
+    alert("An error occurred. Please try again later.");
+    console.error(err);
+  }
+};
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -52,11 +75,13 @@ const Contact: React.FC = () => {
             Kindly fill this form with your details about your inquiries and we
             would respond your inquiry shortly.
           </p>
-          <form className={styles.formContainer}  
+          {/* <form className={styles.formContainer}  
                   action="https://formsubmit.co/4inatechnologie@gmail.com"
 
           method="POST"
-          encType="multipart/form-data" >
+          encType="multipart/form-data" > */}
+          <form className={styles.formContainer} onSubmit={handleSubmit}>
+
             <div className={styles.row}>
               <div className={styles.column}>
                 <label className={styles.label}>Full name*</label>

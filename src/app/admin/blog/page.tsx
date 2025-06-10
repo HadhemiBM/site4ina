@@ -161,7 +161,7 @@ if (!response.ok) {
         </button>
       </div>
 
-      {isSubmitted && (
+      {/* {isSubmitted && (
         <div className={styles.container2} style={{ marginTop: "20px" }}>
             <h4>{title}</h4>
           {thumbnail && (
@@ -180,7 +180,7 @@ if (!response.ok) {
             className={styles.previewContainer}
           />
         </div>
-      )}
+      )} */}
     </div>
   );
 };
