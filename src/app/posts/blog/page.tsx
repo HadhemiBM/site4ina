@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 // import { Blog, blogs } from "../../data/BlogData";
 import Link from "next/link";
+import Swal from "sweetalert2";
 interface Blog {
   id: number;
   title: string;
@@ -40,7 +41,13 @@ const [blogs, setBlogs] = useState<Blog[]>([]);
       setBlogs(data); // Met à jour l'état avec les blogs récupérés
     } catch (error) {
       console.error("Error fetching blogs:", error);
-      alert("Something went wrong. Please try again.");
+      // alert("Something went wrong. Please try again.");
+      Swal.fire({
+    icon: "warning",
+    title: "Oops!",
+    text: "We couldn't load the blog articles at the moment. Please try again later.",
+    confirmButtonColor: "#0003da",
+  });
     }
   };
     useEffect(() => {
