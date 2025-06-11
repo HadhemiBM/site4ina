@@ -80,7 +80,7 @@ const BlogDetails: React.FC = () => {
       if (!id) return;
 
       try {
-        const response = await fetch(`http://localhost:3001/blogs/${id}`);
+        const response = await fetch(`https://site4ina-back.onrender.com/blogs/${id}`);
         if (!response.ok) {
           throw new Error("Failed to fetch blog details");
         }

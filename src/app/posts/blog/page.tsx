@@ -24,7 +24,7 @@ const [blogs, setBlogs] = useState<Blog[]>([]);
   };
  const fetchBlogs = async () => {
     try {
-      const response = await fetch("http://localhost:3001/blogs/getAll", {
+      const response = await fetch("https://site4ina-back.onrender.com/blogs/getAll", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

@@ -13,7 +13,7 @@ const LoginPage: React.FC = () => {
   e.preventDefault();
   setError("");
   try {
-    const res = await fetch("http://localhost:3001/users/login", {
+    const res = await fetch("https://site4ina-back.onrender.com/users/login", {
       method: "POST",
   headers: {
     "Content-Type": "application/json",
@@ -33,9 +33,10 @@ const LoginPage: React.FC = () => {
     localStorage.setItem("user", JSON.stringify(data.user));
     router.push("/");
   } catch (err: any) {
-    console.error("Login error:", err);
-    setError(err.message || "Unexpected error. Try again later.");
-  }
+  console.error("Login error:", err.message);
+  console.dir(err); // 👈 add this for more insight
+  setError(err.message || "Unexpected error. Try again later.");
+}
 };
 
   return (

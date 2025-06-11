@@ -27,7 +27,7 @@ const handleSubmit = async () => {
   };
 const token = localStorage.getItem("token");
   try {
-const response = await fetch("http://localhost:3001/blogs/create", {
+const response = await fetch("https://site4ina-back.onrender.com/blogs/create", {
   method: "POST",
   headers: {
     "Content-Type": "application/json",

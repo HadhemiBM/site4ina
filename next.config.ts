@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "export",
-  // basePath:"/out",
+  basePath:"/out",
   reactStrictMode: false,
   env: {
     NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: "ddngbriyu",
