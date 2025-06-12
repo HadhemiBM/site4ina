@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import styles from "./index.module.css";
+import { cookies } from "next/headers";
 
 const LoginPage: React.FC = () => {
   const [email, setEmail] = useState("");
@@ -32,14 +33,13 @@ const LoginPage: React.FC = () => {
           "Login failed.";
         throw new Error(message);
       }
-
       localStorage.setItem("token", data.access_token);
-      // localStorage.setItem("user", JSON.stringify(data.user));
+      localStorage.setItem("user", JSON.stringify(data.user));
       // localStorage.setItem("user", JSON.stringify(data.user)); // ✅ optional
 
       console.log("succ"); // 👈 add this for more insight
 
-      router.push("/");
+      router.push("/admin/blog");
     } catch (err: any) {
       console.error("Login error:", err.message);
       console.dir(err); // 👈 add this for more insight

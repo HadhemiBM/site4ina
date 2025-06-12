@@ -89,7 +89,6 @@ const [blogs, setBlogs] = useState<Blog[]>([]);
                  <p className={styles.BlogDateText}>
   {new Date(blog.createAt).toLocaleDateString("en-CA")}
 </p>
-
                   <Link
                     className={styles.BlogButton}
                     href={`/posts/blogDetails?id=${blog.id}`}
@@ -104,5 +103,4 @@ const [blogs, setBlogs] = useState<Blog[]>([]);
     </PageTransition>
   );
 };
-
 export default Blogg;
