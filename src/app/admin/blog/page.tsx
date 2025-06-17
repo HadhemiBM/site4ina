@@ -1,4 +1,3 @@
-
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import RichTextEditor from "./RichTextEditor";
@@ -18,37 +17,40 @@ const BlogPage: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
   const previewRef = useRef<HTMLDivElement | null>(null);
-const handleSubmit = async () => {
-  const newBlog: Blog = {
-    title: title,
-    description: message,
-    thumbnail_url: thumbnail,
-    images: [], // tu peux gérer ça plus tard si tu ajoutes des images multiples
+  const handleSubmit = async () => {
+    const newBlog: Blog = {
+      title: title,
+      description: message,
+      thumbnail_url: thumbnail,
+      images: [], // tu peux gérer ça plus tard si tu ajoutes des images multiples
+    };
+    const token = localStorage.getItem("token");
+    try {
+      const response = await fetch(
+        "https://site4ina-back.onrender.com/blogs/create",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            // Pas besoin d'Authorization ici car le JWT est dans un cookie
+          },
+          body: JSON.stringify(newBlog),
+          credentials: "include", // ✅ OBLIGATOIRE pour envoyer le cookie JWT
+        }
+      );
+      if (!response.ok) {
+        const errData = await response.json();
+        console.error("Error from server:", errData);
+        throw new Error(errData.message || "Failed to create blog");
+      }
+      const data = await response.json();
+      console.log("Blog created:", data);
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error("Error submitting blog:", error);
+      alert("Something went wrong. Please try again.");
+    }
   };
-const token = localStorage.getItem("token");
-  try {
-const response = await fetch("https://site4ina-back.onrender.com/blogs/create", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-    // Pas besoin d'Authorization ici car le JWT est dans un cookie
-  },
-  body: JSON.stringify(newBlog),
-  credentials: "include", // ✅ OBLIGATOIRE pour envoyer le cookie JWT
-});
-if (!response.ok) {
-  const errData = await response.json();
-  console.error("Error from server:", errData);
-  throw new Error(errData.message || "Failed to create blog");
-}
-    const data = await response.json();
-    console.log("Blog created:", data);
-    setIsSubmitted(true);
-  } catch (error) {
-    console.error("Error submitting blog:", error);
-    alert("Something went wrong. Please try again.");
-  }
-};
 
   const handleMessageChange = (newValue: string) => {
     setMessage(newValue);
@@ -69,17 +71,17 @@ if (!response.ok) {
     }
   };
 
-//   const handleSubmit = () => {
-//     const newBlog: Blog = {
-//       title: title,
-//       description: message,
-//       thumbnail: thumbnail,
-//       images: [],
-//     };
-//     console.log("Submitting blog:", newBlog);
+  //   const handleSubmit = () => {
+  //     const newBlog: Blog = {
+  //       title: title,
+  //       description: message,
+  //       thumbnail: thumbnail,
+  //       images: [],
+  //     };
+  //     console.log("Submitting blog:", newBlog);
 
-//     setIsSubmitted(true);
-//   };
+  //     setIsSubmitted(true);
+  //   };
 
   useEffect(() => {
     if (previewRef.current) {
@@ -133,25 +135,25 @@ if (!response.ok) {
           />
         )}
       </div> */}
-<div className={styles.inputContainer}>
-  <label htmlFor="thumbnail_url">Thumbnail URL:</label>
-  <input
-    type="text"
-    id="thumbnail_url"
-    value={thumbnail}
-    onChange={(e) => setThumbnail(e.target.value)}
-    placeholder="https://example.com/image.png"
-    className={styles.input}
-  />
-</div>
+      <div className={styles.inputContainer}>
+        <label htmlFor="thumbnail_url">Thumbnail URL:</label>
+        <input
+          type="text"
+          id="thumbnail_url"
+          value={thumbnail}
+          onChange={(e) => setThumbnail(e.target.value)}
+          placeholder="https://example.com/image.png"
+          className={styles.input}
+        />
+      </div>
 
-{thumbnail && (
-  <img
-    src={thumbnail}
-    alt="Thumbnail Blog"
-    className={styles.thumbnailPreview}
-  />
-)}
+      {thumbnail && (
+        <img
+          src={thumbnail}
+          alt="Thumbnail Blog"
+          className={styles.thumbnailPreview}
+        />
+      )}
 
       <RichTextEditor value={message} onChange={handleMessageChange} />
 

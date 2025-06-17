@@ -19,7 +19,7 @@ export async function POST(req: Request) {
   try {
 await transporter.sendMail({
   from: `"Contact Form" <${process.env.EMAIL_USER}>`,
-  to: process.env.EMAIL_USER,
+  to: process.env.EMAIL_USER2,
   subject: `[Contact] ${subject}`,
   replyTo: email,
   html: `

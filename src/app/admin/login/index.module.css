@@ -24,7 +24,6 @@ display: flex;
   font-size: 3rem;
   font-weight: bold;
   font-family: "Poppins";
-
   color: transparent;
   background-image: url("https://res.cloudinary.com/ddngbriyu/image/upload/v1744810615/fond-marbre-liquide-bleu-abstrait-art-experimental-texture-fluide_53876-104502_hr0bz5.jpg");
   background-size: 200%;
@@ -43,7 +42,6 @@ display: flex;
     background-position: 100% 50%;
   }
 }
-
 .SmallContainer{
 width: 50%;
 /* background-color: blueviolet; */
@@ -74,7 +72,6 @@ justify-content: center;
 .inputContainer{
   padding: 4px;
   width: 100%;
-
   margin-bottom: 1rem;
 }
 .inputContainer label {
@@ -82,7 +79,6 @@ justify-content: center;
   font-family: "Poppins";
   color: rgb(61, 60, 60);
   margin-bottom: 8px;
-
 }
 .buttonLogin {
   background-color: var(--blue);
