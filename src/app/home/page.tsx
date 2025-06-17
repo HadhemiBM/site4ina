@@ -16,6 +16,7 @@ const Splash: React.FC = () => {
   const navigateToHome = () => {
     router.push("/accueil");
   };
+  
   // useEffect(() => {
   //   const timer = setTimeout(() => {
   //     router.push("/accueil"); 

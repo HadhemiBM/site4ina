@@ -64,4 +64,26 @@ background-color: antiquewhite;
   .spacer {
     height: 10rem; /* h-40 */
   }
-  
+  .SolutionTitle2 {
+  font-size: 46px;
+  font-weight: bold;
+  font-family: "Poppins";
+
+  color: transparent;
+  background-image: url("https://res.cloudinary.com/ddngbriyu/image/upload/v1744810615/fond-marbre-liquide-bleu-abstrait-art-experimental-texture-fluide_53876-104502_hr0bz5.jpg");
+  background-size: 200%;
+  background-position: 0 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-background 30s infinite alternate linear;
+}
+
+@keyframes animate-background {
+  0% {
+    background-position: 0 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}

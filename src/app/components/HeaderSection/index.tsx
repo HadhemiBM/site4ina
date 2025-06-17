@@ -112,7 +112,7 @@ const Header = () => {
             >
               We transform energy data into real-time insights and predictive analytics, empowering industries to reduce energy waste, cut costs, and drive smarter operations with AI-driven decisions. 
             </p>
-            <AnimationHead id="particles" className={styles.back} />
+            {/* <AnimationHead id="particles" className={styles.back} /> */}
             <div className={styles.boutons}>
               <Link href="/solutions/demo/" passHref>
                 <motion.button
@@ -157,7 +157,7 @@ const Header = () => {
               From predictive maintenance to real-time machine behavior analysis, our system helps you prevent costly failures, extend equipment life, and support sustainability goals, all while giving energy managers actionable insights
               
             </p> */}
-            <AnimationHead id="particles" className={styles.back} />
+            {/* <AnimationHead id="particles" className={styles.back} /> */}
             <div className={styles.Advanages}>
              
               <div className={styles.Advanage} >

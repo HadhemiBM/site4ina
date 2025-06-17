@@ -12,7 +12,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@tabler/icons-react": "^3.31.0",
+    "@tabler/icons-react": "^3.34.0",
     "@tailwindcss/vite": "^4.1.4",
     "@tiptap/pm": "^2.9.1",
     "@tiptap/react": "^2.9.1",
@@ -37,7 +37,7 @@
     "jquery": "^3.7.1",
     "lucide-react": "^0.460.0",
     "mini-svg-data-uri": "^1.4.4",
-    "motion": "^12.11.0",
+    "motion": "^12.18.1",
     "next": "15.0.1",
     "next-cloudinary": "^6.16.0",
     "next-sitemap": "^4.2.3",

@@ -12,6 +12,7 @@ import { useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { solutions } from "../data/solutionsData";
+import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 const Accueil: React.FC = () => {
   const games = [
     {
@@ -141,6 +142,28 @@ const Accueil: React.FC = () => {
         "https://res.cloudinary.com/ddngbriyu/image/upload/v1745246764/Business_qomkvv.png",
     },
   ];
+const testimonials = [
+  {
+    id:1,
+    quote:
+      "Proud to represent Tunisia’s energy innovation on an international stage 4InA Technologie has been  selected among 1,400+ startups to participate in the 5th Edition of Lab’Innova for Tunisia Startups 2025;  an exclusive program organized by the Italian Embassy in Tunisia in partnership with the Tunisian Ministry of Technology.📣 As a selected startup, we’re proud to act as a tech innovation ambassador, showcasing our AI-powered energy management solutions as part of a forward-looking ecosystem. Lab’Innova is more than an event — it’s a gateway to international collaboration, visibility, and impactful partnerships for the most promising Tunisian startups. Stay tuned for the next stages of the program",
+       name: "4InA selected for the elite #619TechVibes Accelerator by Business Keys!",
+
+    designation: "April 2025 - InnovateAfrica",
+    src: "https://res.cloudinary.com/ddngbriyu/image/upload/v1750170237/WhatsApp_Image_2025-06-17_at_16.07.16_qoc2t9.jpg",
+  },
+  {
+    id:2,
+
+    quote:
+      "Taking our growth to the next level through training, strategy & tech leadership We’re proud to announce that 4InA Technologie has been selected for the first round of the 619TechVibes Program , led by Business Keys ; a growth accelerator designed to empower the most promising startups. Our team is currently participating in a hybrid series of online and on-site workshops, strategic mentoring, and expert sessions aimed at accelerating our business model and expanding our market footprint. It's a  valuable opportunity to connect with new markets in Mauritania and Senegal;  two high-potential countries where energy innovation is both needed and rapidly evolving. Stay Tuned for what's next",
+    name: "Selected from 1,400+ startups:  4InA joins Lab’Innova 2025 with the Italian Embassy & Tunisian Ministry!",
+
+    designation: "JUNE 2025 - Lab’Innova",
+    src: "https://res.cloudinary.com/ddngbriyu/image/upload/v1750170233/WhatsApp_Image_2025-06-17_at_16.05.47_hvptdo.jpg",
+  },
+  
+];
 
   const [index, setIndex] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -174,7 +197,12 @@ const Accueil: React.FC = () => {
   return (
     // <PageTransition>
     <div className={styles.container}>
-      <Header />
+      <Header  />
+      <div className={styles.Actuties} >
+      <h1 className={styles.SolutionTitle2}>4InA Technologie in the Spotlight!</h1>
+
+      <AnimatedTestimonials testimonials={testimonials} autoplay={true}/>
+      </div>
       <div className={styles.CibleSection}>
         <div className={styles.CibleLeft}>
           <div
