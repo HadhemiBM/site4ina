@@ -146,8 +146,8 @@ const testimonials = [
   {
     id:1,
     quote:
-      "Proud to represent Tunisia’s energy innovation on an international stage 4InA Technologie has been  selected among 1,400+ startups to participate in the 5th Edition of Lab’Innova for Tunisia Startups 2025;  an exclusive program organized by the Italian Embassy in Tunisia in partnership with the Tunisian Ministry of Technology.📣 As a selected startup, we’re proud to act as a tech innovation ambassador, showcasing our AI-powered energy management solutions as part of a forward-looking ecosystem. Lab’Innova is more than an event — it’s a gateway to international collaboration, visibility, and impactful partnerships for the most promising Tunisian startups. Stay tuned for the next stages of the program",
-       name: "4InA selected for the elite #619TechVibes Accelerator by Business Keys!",
+      "We’re proud to be part of the #619TechVibes Program by Business Keys ; a dynamic accelerator designed to empower innovative startups through hands-on mentoring, matchmaking with key industry players , and strategic business development. This opportunity opens strategic gateways into Mauritania and Senegal ,  two priority markets with immense potential, where the demand for intelligent energy solutions is accelerating and where 4InA Technologie is uniquely positioned to lead the transformation. 4InA Technologie is proud to be driving innovation across borders and this is just the beginning.",
+       name: "4InA Technologie Joins the #619TechVibes Accelerator by Business Keys ",
 
     designation: "April 2025 - InnovateAfrica",
     src: "https://res.cloudinary.com/ddngbriyu/image/upload/v1750170237/WhatsApp_Image_2025-06-17_at_16.07.16_qoc2t9.jpg",

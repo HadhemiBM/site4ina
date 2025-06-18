@@ -2,10 +2,8 @@
 
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "motion/react";
-
 import { useEffect, useState } from "react";
 import styles from "./index.module.css";
-
 type Testimonial = {
   quote: string;
   name: string;
@@ -20,8 +18,10 @@ export const AnimatedTestimonials = ({
   autoplay?: boolean;
 }) => {
   const [active, setActive] = useState(0);
-const [showModal, setShowModal] = useState(false);
-const [modalTestimonial, setModalTestimonial] = useState<Testimonial | null>(null);
+  const [showModal, setShowModal] = useState(false);
+  const [modalTestimonial, setModalTestimonial] = useState<Testimonial | null>(
+    null
+  );
 
   const handleNext = () => {
     setActive((prev) => (prev + 1) % testimonials.length);
@@ -34,21 +34,20 @@ const [modalTestimonial, setModalTestimonial] = useState<Testimonial | null>(nul
   const isActive = (index: number) => {
     return index === active;
   };
-
   // useEffect(() => {
   //   if (autoplay) {
   //     const interval = setInterval(handleNext, 3000);
   //     return () => clearInterval(interval);
   //   }
   // }, [autoplay]);
-useEffect(() => {
-  if (autoplay && !showModal) {
-    const interval = setInterval(() => {
-      setActive((prev) => (prev + 1) % testimonials.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }
-}, [autoplay, showModal]); 
+  useEffect(() => {
+    if (autoplay && !showModal) {
+      const interval = setInterval(() => {
+        setActive((prev) => (prev + 1) % testimonials.length);
+      }, 4000);
+      return () => clearInterval(interval);
+    }
+  }, [autoplay, showModal]);
 
   const randomRotateY = () => {
     return Math.floor(Math.random() * 21) - 10;
@@ -96,7 +95,6 @@ useEffect(() => {
                     width={500}
                     height={500}
                     draggable={false}
-                    
                     className="h-full w-full rounded-3xl object-cover object-center shadow-2xl "
                   />
                 </motion.div>
@@ -124,11 +122,12 @@ useEffect(() => {
               ease: "easeInOut",
             }}
           >
-            <h3 className="text-2xl font-bold text-black dark:text-white"
-             onClick={() => {
-    setModalTestimonial(testimonials[active]);
-    setShowModal(true);
-  }}
+            <h3
+              className="text-2xl font-bold text-black dark:text-white"
+              onClick={() => {
+                setModalTestimonial(testimonials[active]);
+                setShowModal(true);
+              }}
             >
               {testimonials[active].name}
             </h3>
@@ -136,70 +135,65 @@ useEffect(() => {
               {testimonials[active].designation}
             </p>
             {/* <p className="text-sm text-blue-500 da">See more</p> */}
-<p
-  className="text-sm text-blue-500 cursor-pointer hover:underline"
-  onClick={() => {
-    setModalTestimonial(testimonials[active]);
-    setShowModal(true);
-  }}
->
-  See more
-</p>
+            <p
+              className="text-sm text-blue-500 cursor-pointer hover:underline"
+              onClick={() => {
+                setModalTestimonial(testimonials[active]);
+                setShowModal(true);
+              }}
+            >
+              See more
+            </p>
 
-{modalTestimonial && (
-  <div
-    className={`fixed inset-0 z-50 items-center justify-center bg-black/50 backdrop-blur-sm transition-opacity duration-300 ${
-      showModal ? "flex opacity-100" : "hidden opacity-0"
-    }`}
-  >
-
-    <motion.div
-      initial={{ scale: 0.9, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      exit={{ scale: 0.9, opacity: 0 }}
-      transition={{ duration: 0.3 }}
-    className="relative w-[1200px] max-w-full rounded-2xl bg-white p-6 shadow-2xl"
-
-    >
-      <button
-        onClick={() => {
-          setShowModal(false);
-          // setModalTestimonial(null); // 👈 Ne réinitialise PAS immédiatement
-        }}
-        className="absolute top-3 right-3 text-gray-400 hover:text-gray-600 dark:hover:text-white"
-      >
-        ✕
-      </button>
-
-      <div className="flex flex-col md:flex-row gap-6">
-        <img
-          src={modalTestimonial.src}
-          alt={modalTestimonial.name}
-          className="h-full w-full md:w-1/2 object-cover rounded-xl shadow-lg"
-        />
-        <div className="md:w-1/2">
-          <h3 className="text-2xl font-bold mb-2 text-black dark:text-white">
-            {modalTestimonial.name}
-          </h3>
-          <p className="text-sm text-black  mb-4">
-            {modalTestimonial.designation}
-          </p>
-          <p className="text-base text-black ">
-            {modalTestimonial.quote}
-          </p>
-        </div>
-      </div>
-    </motion.div>
-  </div>
-)}
-
-
-
-            <motion.p className="mt-8 text-lg text-gray-500 dark:text-neutral-300 line-clamp-3 overflow-hidden"
-             onClick={() => {
-    setModalTestimonial(testimonials[active]);
-    setShowModal(true);
-  }}
+            {modalTestimonial && (
+              <div
+                className={`fixed inset-0 z-50 items-center justify-center bg-black/50 backdrop-blur-sm transition-opacity duration-300 ${
+                  showModal ? "flex opacity-100" : "hidden opacity-0"
+                }`}
+              >
+                <motion.div
+                  initial={{ scale: 0.9, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  exit={{ scale: 0.9, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="relative w-[1200px] max-w-full rounded-2xl bg-white p-6 shadow-2xl"
+                >
+                  <button
+                    onClick={() => {
+                      setShowModal(false);
+                      // setModalTestimonial(null); // 👈 Ne réinitialise PAS immédiatement
+                    }}
+                    className="absolute top-3 right-3 text-gray-400 hover:text-gray-600 dark:hover:text-white"
+                  >
+                    ✕
+                  </button>
+                  <div className="flex flex-col md:flex-row gap-6">
+                    <img
+                      src={modalTestimonial.src}
+                      alt={modalTestimonial.name}
+                      className="h-full w-full md:w-1/2 object-cover rounded-xl shadow-lg"
+                    />
+                    <div className="md:w-1/2">
+                      <h3 className="text-2xl font-bold mb-2 text-black dark:text-white">
+                        {modalTestimonial.name}
+                      </h3>
+                      <p className="text-sm text-black  mb-4">
+                        {modalTestimonial.designation}
+                      </p>
+                      <p className="text-base text-black ">
+                        {modalTestimonial.quote}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+            )}
+            <motion.p
+              className="mt-8 text-lg text-gray-500 dark:text-neutral-300 line-clamp-3 overflow-hidden"
+              onClick={() => {
+                setModalTestimonial(testimonials[active]);
+                setShowModal(true);
+              }}
             >
               {testimonials[active].quote.split(" ").map((word, index) => (
                 <motion.span
