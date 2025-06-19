@@ -20,7 +20,7 @@ import Splash from "./home/page";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "4ina Technologie – Energy Management & Smart Solutions",
+  title: "4InA Technologie – AI-Powered Energy Monitoring & Predictive Maintenance",
   description:
     "Explore how 4ina Technologie boosts energy efficiency and productivity using AI-driven EMS platforms.",
   keywords: [
