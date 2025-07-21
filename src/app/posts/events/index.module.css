@@ -93,6 +93,21 @@
   box-shadow: 0 10px 15px rgba(4, 17, 133, 0.2);
 
 }
+.noevents {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 60vh;
+  gap: 1.25rem;
+  padding:0.5rem;
+  align-items: center;
+  justify-content: center;
+
+
+  align-self: center;
+
+
+}
 
 .eventHeader, .eventHeader2 {
   width: 100%;

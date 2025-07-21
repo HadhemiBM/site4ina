@@ -297,7 +297,8 @@ import Video2 from "./video2";
 import Modal from "./Modal";
 import { Lens } from "@/components/ui/lens";
 import Swal from "sweetalert2";
-
+import spinner from "../../Assests/svg/Spinne.svg";
+import Empty from "../../Assests/gif/Empty.gif";
 interface Event {
   id: number;
   title: string;
@@ -311,7 +312,8 @@ const Events: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [hovering, setHovering] = useState(false);
   const [events, setEvents] = useState<Event[]>([]);
-
+ const [error, setError] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(true);
   const handleImageClick = () => setIsOpen(true);
   const closeModal = () => setIsOpen(false);
   const fetchEvents = async () => {
@@ -335,6 +337,7 @@ const Events: React.FC = () => {
       const data = await response.json();
       setEvents(data); // Met à jour l'état avec les blogs récupérés
     } catch (error) {
+      setError(true);
       console.error("Error fetching blogs:", error);
       // alert("Something went wrong. Please try again.");
       Swal.fire({
@@ -344,6 +347,9 @@ const Events: React.FC = () => {
         confirmButtonColor: "#0003da",
       });
     }
+    finally {
+        setLoading(false);
+      }
   };
   useEffect(() => {
     fetchEvents();
@@ -388,7 +394,34 @@ const Events: React.FC = () => {
               />
             </div>
           ))} */}
-          {events.map((event) => {
+          {loading ? (
+                  <div  d className={styles.noevents}>
+
+        {/* <p>Loading events...</p> */}
+        <Image
+            src={spinner}
+            alt="Loading events"
+            width={400}
+            height={400}
+            />
+            </div>
+      ) : error || events.length === 0 ? (
+        <div  className={styles.noevents}>
+          <Image
+            src={Empty}
+            alt="No events"
+            width={500}
+            height={500}
+          />
+         
+           {/* <p className={styles.noEventsText}>
+            {error
+              ? "Failed to load events. Please try again later."
+              : "No events available at the moment."}
+          </p> */}
+        </div>
+      ) : (
+          events.map((event) => {
   const isVideo = /\.(mp4|webm|ogg)$/i.test(event.thumbnail_url); // Simple extension check
 
   return (
@@ -401,9 +434,7 @@ const Events: React.FC = () => {
         <h2 className={styles.eventTitle}>{event.title}</h2>
         <p className={styles.eventDesc}
           dangerouslySetInnerHTML={{ __html: event.description }}
-          
-
-          
+ 
          />
       </div>
 
@@ -425,7 +456,7 @@ const Events: React.FC = () => {
       )}
     </div>
   );
-})}
+}))}
 
         </div>
       </div>
