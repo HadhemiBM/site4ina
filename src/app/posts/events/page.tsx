@@ -395,7 +395,7 @@ const Events: React.FC = () => {
             </div>
           ))} */}
           {loading ? (
-                  <div  d className={styles.noevents}>
+                  <div  className={styles.noevents}>
 
         {/* <p>Loading events...</p> */}
         <Image
