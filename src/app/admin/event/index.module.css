@@ -1,0 +1,118 @@
+.container {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  font-family: 'kufam';
+
+}
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 80%;
+}
+.input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.thumbnailPreview {
+  margin-top: 10px;
+  max-width: 200px;
+  border-radius: 10px;
+}
+.previewContainer {
+  width: 80%;
+  /* background-color: #4e634f; */
+  padding: 10px;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+.previewContainer img {
+  max-width: 100%;
+  min-height: 300px;
+  max-height: 500px;
+  text-align: start;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  text-align: start;
+border-radius: 20px;
+
+  margin : 10px;
+}
+
+.container2 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-self: center;
+  width: 80%;
+}
+.submitButton {
+  padding: 10px 20px;
+  background-color: var(--blue);
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.submitButton:hover {
+}
+.thumbnailPreviewWrapper {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.thumbnailPreview {
+  max-width: 200px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+.thumbnailPreview2 {
+  max-width: 80%;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+.container h2{
+ font-size: 3rem;
+  font-weight: bold;
+  font-family: "Poppins";
+
+  color: transparent;
+  background-image: url("https://res.cloudinary.com/ddngbriyu/image/upload/v1744810615/fond-marbre-liquide-bleu-abstrait-art-experimental-texture-fluide_53876-104502_hr0bz5.jpg");
+  background-size: 200%;
+  background-position: 0 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-background 30s infinite alternate linear;
+}
+
+@keyframes animate-background {
+  0% {
+    background-position: 0 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
