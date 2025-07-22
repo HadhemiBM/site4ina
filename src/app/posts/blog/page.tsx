@@ -88,8 +88,8 @@ const [blogs, setBlogs] = useState<Blog[]>([]);
                 {/* <p className={styles.BlogDesc}>{blog.description}</p> */}
                 <div className={styles.Blogfooter}>
                  <p className={styles.BlogDateText}>
-  {/* {new Date(blog.createAt).toLocaleDateString("en-CA")} */}
-  {blog.date}
+  {new Date(blog.createAt).toLocaleDateString("en-CA")}
+  {/* {blog.date} */}
 </p>
                   <Link
                     className={styles.BlogButton}

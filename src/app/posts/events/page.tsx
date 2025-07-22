@@ -296,6 +296,7 @@ import Video from "./video";
 import Video2 from "./video2";
 import Modal from "./Modal";
 import { Lens } from "@/components/ui/lens";
+
 import Swal from "sweetalert2";
 import spinner from "../../Assests/svg/Spinne.svg";
 import Empty from "../../Assests/gif/Empty.gif";
@@ -421,7 +422,7 @@ const Events: React.FC = () => {
           </p> */}
         </div>
       ) : (
-          events.map((event) => {
+          events.reverse().map((event) => {
   const isVideo = /\.(mp4|webm|ogg)$/i.test(event.thumbnail_url); // Simple extension check
 
   return (
@@ -439,20 +440,26 @@ const Events: React.FC = () => {
       </div>
 
       {isVideo ? (
+        
         <video
-          width={1000}
+          width={550}
           controls
           className={styles.BlogImage}
           src={event.thumbnail_url}
         />
       ) : (
+        <>
+        <Lens hovering={hovering} setHovering={setHovering}>
         <Image
-          width={550}
-          height={100}
-          className={styles.BlogImage}
-          src={event.thumbnail_url}
-          alt={event.title}
+        width={550}
+        height={100}
+        className={styles.BlogImage}
+        src={event.thumbnail_url}
+        alt={event.title}
         />
+            </Lens>
+        </>
+
       )}
     </div>
   );
