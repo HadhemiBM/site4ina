@@ -47,11 +47,11 @@ const Events: React.FC = () => {
       }
 
       const data = await response.json();
-      setEvents(data); // Met à jour l'état avec les blogs récupérés
+      setEvents(data); 
     } catch (error) {
       setError(true);
       console.error("Error fetching blogs:", error);
-      // alert("Something went wrong. Please try again.");
+     
       Swal.fire({
         icon: "warning",
         title: "Oops!",

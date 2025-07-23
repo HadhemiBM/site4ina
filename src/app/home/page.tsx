@@ -16,13 +16,7 @@ const Splash: React.FC = () => {
   const navigateToHome = () => {
     router.push("/accueil");
   };
-  
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     router.push("/accueil"); 
-  //   }, 7000); 
-  //   return () => clearTimeout(timer); 
-  // }, [router]);
+
   return(
     <PageTransition>
       <Animation id="particles"  className={styles.back}/>
