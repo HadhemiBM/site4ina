@@ -23,6 +23,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/admin/blog/TextEditor.js", "src/app/posts/events/Modal.jsx", "src/app/components/AnimatedScrollPage.tsx", "src/app/home/CountUp.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/admin/blogs/TextEditor.js", "src/app/posts/events/Modal.jsx", "src/app/components/AnimatedScrollPage.tsx", "src/app/home/CountUp.ts", "src/app/components/uiverseCard.js"],
   "exclude": ["node_modules"]
 }

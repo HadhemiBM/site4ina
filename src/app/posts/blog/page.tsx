@@ -105,7 +105,7 @@ const [blogs, setBlogs] = useState<Blog[]>([]);
           </p> */}
         </div>
       ) : (
-          blogs.map((blog) => (
+         [...blogs].reverse().map((blog) => (
             <div key={blog.id} className={styles.Blog1}>
               <div className={styles.BlogIcon}>
                 <Image

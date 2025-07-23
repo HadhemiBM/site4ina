@@ -3,51 +3,57 @@ import React, { useState, useEffect, useRef } from "react";
 import RichTextEditor from "./RichTextEditor";
 import styles from "./index.module.css";
 
-interface Event {
+interface Blog {
   title: string;
   description: string;
   thumbnail_url: string;
+  date: string;
+  place: string;
   images: string[];
 }
 
-const EventPage: React.FC = () => {
+const BlogPage: React.FC = () => {
   const [title, setTitle] = useState<string>("");
+  const [date, setDate] = useState<string>("");
+  const [place, setPlace] = useState<string>("");
   const [message, setMessage] = useState<string>("");
   const [thumbnail, setThumbnail] = useState<string>("");
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
   const previewRef = useRef<HTMLDivElement | null>(null);
   const handleSubmit = async () => {
-    const newEvent: Event = {
+    const newBlog: Blog = {
       title: title,
       description: message,
+      date: date,
+      place: place,
       thumbnail_url: thumbnail,
-      images: [], // tu peux gérer ça plus tard si tu ajoutes des images multiples
+      images: [], 
     };
-    const token = localStorage.getItem("token");
+   
     try {
       const response = await fetch(
-        "https://site4ina-back.onrender.com/events/create",
+        "https://site4ina-back.onrender.com/spotlights/create",
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            // Pas besoin d'Authorization ici car le JWT est dans un cookie
+           
           },
-          body: JSON.stringify(newEvent),
-          credentials: "include", // ✅ OBLIGATOIRE pour envoyer le cookie JWT
+          body: JSON.stringify(newBlog),
+          credentials: "include", 
         }
       );
       if (!response.ok) {
         const errData = await response.json();
         console.error("Error from server:", errData);
-        throw new Error(errData.message || "Failed to create event");
+        throw new Error(errData.message || "Failed to create blog");
       }
       const data = await response.json();
       console.log("Blog created:", data);
       setIsSubmitted(true);
     } catch (error) {
-      console.error("Error submitting event:", error);
+      console.error("Error submitting blog:", error);
       alert("Something went wrong. Please try again.");
     }
   };
@@ -58,6 +64,12 @@ const EventPage: React.FC = () => {
 
   const handleTitleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTitle(e.target.value);
+  };
+  const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setDate(e.target.value);
+  };
+  const handlePlaceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPlace(e.target.value);
   };
 
   const handleThumbnailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -83,7 +95,7 @@ const EventPage: React.FC = () => {
 
   return (
     <div className={styles.container}>
-      <h2>Add Your Event</h2>
+      <h2>Add New Spotlight</h2>
 
       <div className={styles.inputContainer}>
         <label htmlFor="title">Title:</label>
@@ -96,13 +108,33 @@ const EventPage: React.FC = () => {
           className={styles.input}
         />
       </div>
-
-
-      <div className={styles.inputContainer}>
-        <label htmlFor="imageEvent">Image URL:</label>
+       <div className={styles.inputContainer}>
+        <label htmlFor="date">Date:</label>
         <input
           type="text"
-          id="imageEvent"
+          id="date"
+          value={date}
+          onChange={handleDateChange}
+          placeholder="June 2025"
+          className={styles.input}
+        />
+      </div>
+         <div className={styles.inputContainer}>
+        <label htmlFor="place">Place:</label>
+        <input
+          type="text"
+          id="place"
+          value={place}
+          onChange={handlePlaceChange}
+          placeholder="InnovateAfrica"
+          className={styles.input}
+        />
+      </div>
+      <div className={styles.inputContainer}>
+        <label htmlFor="thumbnail_url">Thumbnail URL:</label>
+        <input
+          type="text"
+          id="thumbnail_url"
           value={thumbnail}
           onChange={(e) => setThumbnail(e.target.value)}
           placeholder="https://example.com/image.png"
@@ -126,7 +158,8 @@ const EventPage: React.FC = () => {
         </button>
       </div>
 
+     
     </div>
   );
 };
-export default EventPage;
+export default BlogPage;

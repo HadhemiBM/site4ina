@@ -35,14 +35,14 @@ const Footer = () => {
             </div>
             <div className={styles.row}>
               <Link
-                href="mailto:benmansourhadhemi99@gmail.com"
+                href="mailto:contact@4inatechnologie.com"
                 className={styles.textNo}
               >
                 <i className="fa-solid fa-envelope"></i>
               </Link>
 
               <Link
-                href="mailto:benmansourhadhemi99@gmail.com"
+                href="mailto:contact@4inatechnologie.com"
                 className={styles.textNo}
               >
                 <p className={styles.textNo}>contact@4inatechnologie.com</p>

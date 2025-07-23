@@ -39,7 +39,7 @@ const LoginPage: React.FC = () => {
 
       console.log("succ"); // 👈 add this for more insight
 
-      router.push("/admin/event");
+      router.push("/admin/dash");
     } catch (err: any) {
       console.error("Login error:", err.message);
       console.dir(err); // 👈 add this for more insight

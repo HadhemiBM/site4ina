@@ -6,7 +6,7 @@ import Image from "next/image";
 import Header from "../components/HeaderSection";
 import arrowLeft from "../Assests/svg/arrowLeft.svg";
 import arrowRight from "../Assests/svg/arrowRight.svg";
-import { blogs } from "../data/BlogData";
+
 import Link from "next/link";
 import Swal from "sweetalert2";
 
@@ -15,6 +15,14 @@ import { AnimatePresence, motion } from "framer-motion";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { solutions } from "../data/solutionsData";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
+interface Blog {
+  id: number;
+  title: string;
+  description: string;
+  date: string;
+  thumbnail_url: string;
+  createAt:Date;
+}
 
 interface Spotlight {
   id: number;
@@ -26,6 +34,9 @@ interface Spotlight {
   createAt:Date;
 }
 const Accueil: React.FC = () => {
+  const [blogs, setBlogs] = useState<Blog[]>([]);
+    const [loading, setLoading] = useState<boolean>(true);
+   const [error, setError] = useState<boolean>(false);
   const games = [
     {
       id: "technical-support",
@@ -81,7 +92,40 @@ const Accueil: React.FC = () => {
     },
   ];
   const [spotlights, setSpotlight] = useState<Spotlight[]>([]);
+const fetchBlogs = async () => {
+    try {
+      const response = await fetch("https://site4ina-back.onrender.com/blogs/getAll", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
 
+      if (!response.ok) {
+        const errData = await response.json();
+        console.error("Error from server:", errData);
+        throw new Error(errData.message || "Failed to fetch blogs");
+      }
+
+      const data = await response.json();
+      setBlogs(data); // Met à jour l'état avec les blogs récupérés
+    } catch (error) {
+      setError(true);
+
+      console.error("Error fetching blogs:", error);
+      // alert("Something went wrong. Please try again.");
+      Swal.fire({
+    icon: "warning",
+    title: "Oops!",
+    text: "We couldn't load the blog articles at the moment. Please try again later.",
+    confirmButtonColor: "#0003da",
+  });
+    }
+    finally {
+        setLoading(false);
+      }
+  };
+    
    const fetchSpotlights = async () => {
       try {
         const response = await fetch("https://site4ina-back.onrender.com/spotlights/getAll", {
@@ -113,6 +157,8 @@ const Accueil: React.FC = () => {
     };
     useEffect(() => {
         fetchSpotlights();
+                fetchBlogs();
+
       }, []);
         const formattedTestimonials = [...spotlights]
   .reverse() // pour afficher les plus récents en premier
