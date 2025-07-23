@@ -4,12 +4,17 @@ import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useState } from "react";
 import styles from "./index.module.css";
-type Testimonial = {
-  quote: string;
-  name: string;
-  designation: string;
-  src: string;
-};
+import Swal from "sweetalert2";
+
+interface Testimonial {
+  id: number;
+  title: string;
+  description: string;
+  date: string;
+  place: string;
+  thumbnail_url: string;
+  createAt:Date;
+}
 export const AnimatedTestimonials = ({
   testimonials,
   autoplay = false,
@@ -22,7 +27,6 @@ export const AnimatedTestimonials = ({
   const [modalTestimonial, setModalTestimonial] = useState<Testimonial | null>(
     null
   );
-
   const handleNext = () => {
     setActive((prev) => (prev + 1) % testimonials.length);
   };
@@ -30,16 +34,10 @@ export const AnimatedTestimonials = ({
   const handlePrev = () => {
     setActive((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
-
+  
   const isActive = (index: number) => {
     return index === active;
   };
-  // useEffect(() => {
-  //   if (autoplay) {
-  //     const interval = setInterval(handleNext, 3000);
-  //     return () => clearInterval(interval);
-  //   }
-  // }, [autoplay]);
   useEffect(() => {
     if (autoplay && !showModal) {
       const interval = setInterval(() => {
@@ -60,7 +58,7 @@ export const AnimatedTestimonials = ({
             <AnimatePresence>
               {testimonials.map((testimonial, index) => (
                 <motion.div
-                  key={testimonial.src}
+                  key={testimonial.thumbnail_url}
                   initial={{
                     opacity: 0,
                     scale: 0.9,
@@ -90,8 +88,8 @@ export const AnimatedTestimonials = ({
                   className="absolute inset-0 origin-bottom"
                 >
                   <img
-                    src={testimonial.src}
-                    alt={testimonial.name}
+                    src={testimonial.thumbnail_url}
+                    alt={testimonial.title}
                     width={500}
                     height={500}
                     draggable={false}
@@ -129,10 +127,10 @@ export const AnimatedTestimonials = ({
                 setShowModal(true);
               }}
             >
-              {testimonials[active].name}
+              {testimonials[active].title}
             </h3>
             <p className="text-sm text-gray-500 dark:text-neutral-500">
-              {testimonials[active].designation}
+              {testimonials[active].date} -   {testimonials[active].place}
             </p>
             {/* <p className="text-sm text-blue-500 da">See more</p> */}
             <p
@@ -169,19 +167,19 @@ export const AnimatedTestimonials = ({
                   </button>
                   <div className="flex flex-col md:flex-row gap-6">
                     <img
-                      src={modalTestimonial.src}
-                      alt={modalTestimonial.name}
+                      src={modalTestimonial.thumbnail_url}
+                      alt={modalTestimonial.title}
                       className="h-full w-full md:w-1/2 object-cover rounded-xl shadow-lg"
                     />
                     <div className="md:w-1/2">
                       <h3 className="text-2xl font-bold mb-2 text-black dark:text-white">
-                        {modalTestimonial.name}
+                        {modalTestimonial.title}
                       </h3>
                       <p className="text-sm text-black  mb-4">
-                        {modalTestimonial.designation}
+                        {modalTestimonial.date} -  {modalTestimonial.place}
                       </p>
                       <p className="text-base text-black ">
-                        {modalTestimonial.quote}
+                        {modalTestimonial.description}
                       </p>
                     </div>
                   </div>
@@ -195,7 +193,8 @@ export const AnimatedTestimonials = ({
                 setShowModal(true);
               }}
             >
-              {testimonials[active].quote.split(" ").map((word, index) => (
+              {testimonials[active].description.split(" ").map((word, index) => (
+         
                 <motion.span
                   key={index}
                   initial={{

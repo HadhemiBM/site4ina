@@ -286,17 +286,9 @@
 "use client";
 import styles from "./index.module.css";
 import React, { useEffect, useState } from "react";
-import { useRef } from "react";
 import PageTransition from "../../components/PageTransition";
-import parti from "../../Assests/svg/parti.svg";
-import foire from "../../Assests/foire.png";
-import foire2 from "../../Assests/foire2.png";
 import Image from "next/image";
-import Video from "./video";
-import Video2 from "./video2";
-import Modal from "./Modal";
 import { Lens } from "@/components/ui/lens";
-
 import Swal from "sweetalert2";
 import spinner from "../../Assests/svg/Spinne.svg";
 import Empty from "../../Assests/gif/Empty.gif";

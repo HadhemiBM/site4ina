@@ -4,6 +4,8 @@ import React, { useEffect, useState } from "react";
 import PageTransition from "../../components/PageTransition";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import spinner from "../../Assests/svg/Spinne.svg";
+import Empty from "../../Assests/gif/Empty.gif";
 // import { Blog, blogs } from "../../data/BlogData";
 import Link from "next/link";
 import Swal from "sweetalert2";
@@ -19,6 +21,9 @@ interface Blog {
 const Blogg: React.FC = () => {
   const router = useRouter();
 const [blogs, setBlogs] = useState<Blog[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+ const [error, setError] = useState<boolean>(false);
+
   const handleGo = (id: number) => {
     router.push(`/posts/blogDetails?id=${id}`);
   };
@@ -40,6 +45,8 @@ const [blogs, setBlogs] = useState<Blog[]>([]);
       const data = await response.json();
       setBlogs(data); // Met à jour l'état avec les blogs récupérés
     } catch (error) {
+      setError(true);
+
       console.error("Error fetching blogs:", error);
       // alert("Something went wrong. Please try again.");
       Swal.fire({
@@ -49,6 +56,9 @@ const [blogs, setBlogs] = useState<Blog[]>([]);
     confirmButtonColor: "#0003da",
   });
     }
+    finally {
+        setLoading(false);
+      }
   };
     useEffect(() => {
     fetchBlogs();
@@ -65,7 +75,37 @@ const [blogs, setBlogs] = useState<Blog[]>([]);
         </div>
 
         <div className={styles.AllBlog}>
-          {blogs.map((blog) => (
+         
+          
+          
+           {loading ? (
+                  <div  className={styles.noevents}>
+
+        {/* <p>Loading blogs...</p> */}
+        <Image
+            src={spinner}
+            alt="Loading blogs"
+            width={400}
+            height={400}
+            />
+            </div>
+      ) : error || blogs.length === 0 ? (
+        <div  className={styles.noevents}>
+          <Image
+            src={Empty}
+            alt="No blogs"
+            width={500}
+            height={500}
+          />
+         
+           {/* <p className={styles.noEventsText}>
+            {error
+              ? "Failed to load blogs. Please try again later."
+              : "No blogs available at the moment."}
+          </p> */}
+        </div>
+      ) : (
+          blogs.map((blog) => (
             <div key={blog.id} className={styles.Blog1}>
               <div className={styles.BlogIcon}>
                 <Image
@@ -99,7 +139,7 @@ const [blogs, setBlogs] = useState<Blog[]>([]);
                 </div>
               </div>
             </div>
-          ))}
+          )))}
         </div>
       </div>
     </PageTransition>

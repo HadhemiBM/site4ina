@@ -8,11 +8,23 @@ import arrowLeft from "../Assests/svg/arrowLeft.svg";
 import arrowRight from "../Assests/svg/arrowRight.svg";
 import { blogs } from "../data/BlogData";
 import Link from "next/link";
+import Swal from "sweetalert2";
+
 import { useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { solutions } from "../data/solutionsData";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
+
+interface Spotlight {
+  id: number;
+  title: string;
+  description: string;
+  date: string;
+  place: string;
+  thumbnail_url: string;
+  createAt:Date;
+}
 const Accueil: React.FC = () => {
   const games = [
     {
@@ -68,6 +80,52 @@ const Accueil: React.FC = () => {
         "https://res.cloudinary.com/ddngbriyu/image/upload/v1730734549/iso_kvcqa0.png",
     },
   ];
+  const [spotlights, setSpotlight] = useState<Spotlight[]>([]);
+
+   const fetchSpotlights = async () => {
+      try {
+        const response = await fetch("https://site4ina-back.onrender.com/spotlights/getAll", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+  
+        if (!response.ok) {
+          const errData = await response.json();
+          console.error("Error from server:", errData);
+          throw new Error(errData.message || "Failed to fetch spotlights");
+        }
+  
+        const data = await response.json();
+        setSpotlight(data); 
+        console.log(data)
+      } catch (error) {
+        console.error("Error fetching spotlights:", error);
+        
+        Swal.fire({
+      icon: "warning",
+      title: "Oops!",
+      text: "We couldn't load the spotlight articles at the moment. Please try again later.",
+      confirmButtonColor: "#0003da",
+    });
+      }
+    };
+    useEffect(() => {
+        fetchSpotlights();
+      }, []);
+        const formattedTestimonials = [...spotlights]
+  .reverse() // pour afficher les plus récents en premier
+  .map((item) => ({
+    id: item.id,
+    description: item.description,
+    title: item.title,
+    date: item.date,
+    place: item.place,
+    thumbnail_url: item.thumbnail_url,
+    createAt:item.createAt,
+  }));
+
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const handleCardClick = (index: number) => {
     setActiveIndex(index === activeIndex ? null : index);
@@ -142,28 +200,7 @@ const Accueil: React.FC = () => {
         "https://res.cloudinary.com/ddngbriyu/image/upload/v1745246764/Business_qomkvv.png",
     },
   ];
-const testimonials = [
-  {
-    id:1,
-    quote:
-      "We’re proud to be part of the #619TechVibes Program by Business Keys ; a dynamic accelerator designed to empower innovative startups through hands-on mentoring, matchmaking with key industry players , and strategic business development. This opportunity opens strategic gateways into Mauritania and Senegal ,  two priority markets with immense potential, where the demand for intelligent energy solutions is accelerating and where 4InA Technologie is uniquely positioned to lead the transformation. 4InA Technologie is proud to be driving innovation across borders and this is just the beginning.",
-       name: "4InA Technologie Joins the #619TechVibes Accelerator by Business Keys ",
 
-    designation: "April 2025 - InnovateAfrica",
-    src: "https://res.cloudinary.com/ddngbriyu/image/upload/v1750170237/WhatsApp_Image_2025-06-17_at_16.07.16_qoc2t9.jpg",
-  },
-  {
-    id:2,
-
-    quote:
-      "Proud to represent Tunisia’s energy innovation on an international stage . 4InA Technologie has been  selected among 1,400+ startups to participate in the 5th Edition of Lab’Innova for Tunisia Startups 2025 ;  an exclusive program organized by the Italian Embassy in Tunisia in partnership with the Tunisian Ministry of Technology. As a selected startup, we’re proud to act as a tech innovation ambassador, showcasing our AI-powered energy management solutions as part of a forward-looking ecosystem. Lab’Innova is more than an event,  it’s a gateway to international collaboration, visibility, and impactful partnerships for the most promising Tunisian startups. Stay tuned for the next stages of the program",
-    name: "Selected from 1,400+ startups:  4InA joins Lab’Innova 2025 with the Italian Embassy & Tunisian Ministry!",
-
-    designation: "JUNE 2025 - Lab’Innova",
-    src: "https://res.cloudinary.com/ddngbriyu/image/upload/v1750170233/WhatsApp_Image_2025-06-17_at_16.05.47_hvptdo.jpg",
-  },
-  
-];
 
   const [index, setIndex] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -200,8 +237,12 @@ const testimonials = [
       <Header  />
       <div className={styles.Actuties} >
       <h1 className={styles.SolutionTitle2}>4InA Technologie in the Spotlight!</h1>
+{formattedTestimonials.length > 0 && (
+  <AnimatedTestimonials testimonials={formattedTestimonials} autoplay={true} />
+)}
 
-      <AnimatedTestimonials testimonials={testimonials} autoplay={true}/>
+
+      {/* <AnimatedTestimonials testimonials={testimonials} autoplay={true}/> */}
       </div>
       <div className={styles.CibleSection}>
         <div className={styles.CibleLeft}>
