@@ -12,7 +12,7 @@ interface Blog {
   images: string[];
 }
 
-const BlogPage: React.FC = () => {
+const SpotlightsPage: React.FC = () => {
   const [title, setTitle] = useState<string>("");
   const [date, setDate] = useState<string>("");
   const [place, setPlace] = useState<string>("");
@@ -72,16 +72,6 @@ const BlogPage: React.FC = () => {
     setPlace(e.target.value);
   };
 
-  const handleThumbnailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = function (event) {
-        setThumbnail(event.target?.result as string);
-      };
-      reader.readAsDataURL(file);
-    }
-  };
 
 
   useEffect(() => {
@@ -162,4 +152,4 @@ const BlogPage: React.FC = () => {
     </div>
   );
 };
-export default BlogPage;
+export default SpotlightsPage;
