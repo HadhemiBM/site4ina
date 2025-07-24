@@ -41,29 +41,7 @@ const handleTextFormatting = (command: string) => {
       onChange(newContent); 
     }
   };
-  const handleImageInsert = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = function (event) {
-        const img = `<img src="${event.target?.result}" alt="image" />`;
-        document.execCommand("insertHTML", false, img); 
-        if (onChange && editorRef.current) {
-          const newContent = editorRef.current.innerHTML || "";
-          onChange(newContent);
-        }
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-  const handleFontSizeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setFontSize(e.target.value);
-    document.execCommand("fontSize", false, e.target.value); 
-    if (onChange && editorRef.current) {
-      const newContent = editorRef.current.innerHTML || "";
-      onChange(newContent); 
-    }
-  };
+ 
 
   return (
     <div className={styles.editorContainer}>
@@ -87,17 +65,7 @@ const handleTextFormatting = (command: string) => {
           className={styles.colorPalette}
         />
    
-        <label htmlFor="imageUpload"    className={styles.btnupload}>
-  Upload Image
-</label>
-<input
-  id="imageUpload"
-  type="file"
 
-  accept="image/*"
-  style={{ display: 'none' }}
-  onChange={handleImageInsert}
-/>
       </div>
       <div
          ref={editorRef}

@@ -9,6 +9,7 @@ import arrowRight from "../Assests/svg/arrowRight.svg";
 
 import Link from "next/link";
 import Swal from "sweetalert2";
+import spinner from "../Assests/svg/Dual.svg";
 
 import { useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
@@ -283,10 +284,22 @@ const fetchBlogs = async () => {
       <Header  />
       <div className={styles.Actuties} >
       <h1 className={styles.SolutionTitle2}>4InA Technologie in the Spotlight!</h1>
-{formattedTestimonials.length > 0 && (
-  <AnimatedTestimonials testimonials={formattedTestimonials} autoplay={true} />
-)}
+      {loading ? (
+                  <div  className={styles.noevents}>
 
+     
+        <Image
+            src={spinner}
+            alt="Loading events"
+            width={400}
+            height={400}
+            />
+            </div>
+      ) : 
+// {formattedTestimonials.length > 0 && (
+  <AnimatedTestimonials testimonials={formattedTestimonials} autoplay={true} />
+// )}
+}
 
       {/* <AnimatedTestimonials testimonials={testimonials} autoplay={true}/> */}
       </div>

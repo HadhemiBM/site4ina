@@ -3,13 +3,12 @@ import React, { useState, useEffect, useRef } from "react";
 import RichTextEditor from "./RichTextEditor";
 import styles from "./index.module.css";
 
-interface Blog {
+interface Spotlight {
   title: string;
   description: string;
   thumbnail_url: string;
   date: string;
   place: string;
-  images: string[];
 }
 
 const SpotlightsPage: React.FC = () => {
@@ -19,16 +18,16 @@ const SpotlightsPage: React.FC = () => {
   const [message, setMessage] = useState<string>("");
   const [thumbnail, setThumbnail] = useState<string>("");
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
-  const fileInputRef = useRef<HTMLInputElement | null>(null);
+
   const previewRef = useRef<HTMLDivElement | null>(null);
   const handleSubmit = async () => {
-    const newBlog: Blog = {
+    const newSpotlight: Spotlight = {
       title: title,
       description: message,
       date: date,
       place: place,
       thumbnail_url: thumbnail,
-      images: [], 
+
     };
    
     try {
@@ -40,7 +39,7 @@ const SpotlightsPage: React.FC = () => {
             "Content-Type": "application/json",
            
           },
-          body: JSON.stringify(newBlog),
+          body: JSON.stringify(newSpotlight),
           credentials: "include", 
         }
       );

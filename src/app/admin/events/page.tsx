@@ -7,7 +7,6 @@ interface Event {
   title: string;
   description: string;
   thumbnail_url: string;
-  images: string[];
 }
 
 const EventPage: React.FC = () => {
@@ -22,7 +21,7 @@ const EventPage: React.FC = () => {
       title: title,
       description: message,
       thumbnail_url: thumbnail,
-      images: [], // tu peux gérer ça plus tard si tu ajoutes des images multiples
+      // tu peux gérer ça plus tard si tu ajoutes des images multiples
     };
     const token = localStorage.getItem("token");
     try {
@@ -60,16 +59,6 @@ const EventPage: React.FC = () => {
     setTitle(e.target.value);
   };
 
-  const handleThumbnailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = function (event) {
-        setThumbnail(event.target?.result as string);
-      };
-      reader.readAsDataURL(file);
-    }
-  };
 
 
   useEffect(() => {
